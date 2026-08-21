@@ -23,10 +23,16 @@ const ICON: Record<ThemePreference, string> = {
   dark: '☾',
 };
 
-/** Màu thanh trình duyệt trên di động, khớp với nền của từng tông. */
+/**
+ * Màu thanh trình duyệt trên di động, khớp với nền của từng tông.
+ *
+ * Phải viết cứng chứ không đọc được từ `--accent`: thẻ <meta> chỉ nhận một mã màu
+ * cụ thể, không hiểu biến CSS. Sửa bảng màu trong styles.css thì nhớ sửa cả ở đây,
+ * nếu không thanh trình duyệt sẽ lệch tông so với trang.
+ */
 const THEME_COLOR: Record<'light' | 'dark', string> = {
-  light: '#0f766e',
-  dark: '#101a1c',
+  light: '#1d4ed8',
+  dark: '#0d1117',
 };
 
 /**

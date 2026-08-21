@@ -56,33 +56,38 @@
 :root {
   color-scheme: light dark;
 
-  /* --- Nền: bốn bậc, từ nền trang ra tới ô lõm sâu nhất -------------------- */
-  --bg: light-dark(#f2f6f6, #0d1416);
-  --bg-elevated: light-dark(#ffffff, #161f21);
-  --bg-subtle: light-dark(#eaf0f0, #1e2a2c);
-  --bg-inset: light-dark(#dde7e7, #273638);
+  /* --- Nền: bốn bậc, từ nền trang ra tới ô lõm sâu nhất --------------------
+     Ám sắc XANH DƯƠNG, rất nhạt. Nền không bao giờ được là màu xám thuần: một
+     mặt phẳng xám tuyệt đối trông chết và làm chữ đen nhìn gắt hơn thực tế. */
+  --bg: light-dark(#f2f5fa, #0d1117);
+  --bg-elevated: light-dark(#ffffff, #161d26);
+  --bg-subtle: light-dark(#eaeff7, #1e2733);
+  --bg-inset: light-dark(#dde5f0, #27323f);
 
   /* --- Chữ ---------------------------------------------------------------
      Ba bậc, và cả ba đều phải ĐỌC ĐƯỢC: bậc nhạt nhất vẫn giữ trên ngưỡng
      4.5:1 của WCAG AA, vì nó lại đang dùng cho đúng loại chữ nhỏ nhất trong
      app — nhãn cột, chú thích, dòng đếm số kết quả. */
-  --text: light-dark(#0f1e20, #eaf1f1);
-  --text-muted: light-dark(#4e6165, #a3b4b6);
-  --text-faint: light-dark(#67797d, #849698);
+  --text: light-dark(#0f1826, #eaeff5);
+  --text-muted: light-dark(#4e5b6e, #a3b0c0);
+  --text-faint: light-dark(#67748a, #8494a6);
 
-  --border: light-dark(#dbe5e5, #273436);
-  --border-strong: light-dark(#bccbcb, #3c4e51);
+  --border: light-dark(#dbe2ec, #273240);
+  --border-strong: light-dark(#bcc7d6, #3c4a5e);
 
-  --accent: light-dark(#0f766e, #5eddcd);
-  --accent-hover: light-dark(#0c605a, #8aebde);
-  --accent-soft: light-dark(#dcf3f0, #10312e);
-  --accent-text: light-dark(#ffffff, #06201d);
+  /* Màu nhấn. Tông sáng dùng xanh đậm để chữ trắng trên nút vẫn đạt ngưỡng
+     tương phản; tông tối phải lật ngược lại — xanh nhạt trên nền tối, và chữ
+     TRÊN nút lúc đó phải là màu tối (xem --accent-text). */
+  --accent: light-dark(#1d4ed8, #74a9ff);
+  --accent-hover: light-dark(#1740b0, #9cc2ff);
+  --accent-soft: light-dark(#e2e9fd, #14243f);
+  --accent-text: light-dark(#ffffff, #0a1626);
   /* Vòng sáng quanh phần tử đang focus hoặc đang được chọn. Màu trong suốt nên
      chồng lên nền nào cũng hợp, không phải khai báo lại theo từng chỗ đặt. */
-  --accent-ring: light-dark(rgb(15 118 110 / 16%), rgb(94 221 205 / 22%));
+  --accent-ring: light-dark(rgb(29 78 216 / 16%), rgb(116 169 255 / 22%));
 
   --success: light-dark(#15803d, #6ee7a0);
-  --success-soft: light-dark(#dcfce7, #102c1c);
+  --success-soft: light-dark(#dcfce7, #10281d);
   --success-border: light-dark(#86efac, #2f6b45);
 
   --danger: light-dark(#be123c, #ff9aae);
@@ -100,9 +105,9 @@
   --radius-lg: 18px;
   --radius-pill: 999px;
 
-  --shadow-sm: 0 1px 2px light-dark(rgb(12 34 32 / 6%), rgb(0 0 0 / 30%));
-  --shadow: 0 4px 16px light-dark(rgb(12 34 32 / 8%), rgb(0 0 0 / 35%));
-  --shadow-lg: 0 12px 32px light-dark(rgb(12 34 32 / 12%), rgb(0 0 0 / 45%));
+  --shadow-sm: 0 1px 2px light-dark(rgb(15 25 45 / 6%), rgb(0 0 0 / 30%));
+  --shadow: 0 4px 16px light-dark(rgb(15 25 45 / 8%), rgb(0 0 0 / 35%));
+  --shadow-lg: 0 12px 32px light-dark(rgb(15 25 45 / 12%), rgb(0 0 0 / 45%));
 
   /* --- Thang cỡ chữ ------------------------------------------------------
      Bảy bậc cách nhau đủ xa để nhìn là biết cái nào quan trọng hơn. Đặt cỡ chữ
