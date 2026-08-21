@@ -9,7 +9,7 @@
     "en": "The office basics: appointments, orders, customers and deliveries. These turn up in every part of the test."
   },
   "kind": "vocabulary",
-  "itemCount": 40,
+  "itemCount": 118,
   "words": [
     {
       "id": "w-10bq9fe",
@@ -370,6 +370,708 @@
       "meaning": "thông báo",
       "example": "A notice about the closure is on the door.",
       "exampleVi": "Thông báo về việc đóng cửa được dán trên cửa."
+    },
+    {
+      "id": "w-p9t0ec",
+      "word": "colleague",
+      "ipa": "/ˈkɑːliːɡ/",
+      "pos": "noun",
+      "meaning": "đồng nghiệp",
+      "example": "My colleague will cover my shift tomorrow.",
+      "exampleVi": "Đồng nghiệp của tôi sẽ trực ca thay tôi ngày mai."
+    },
+    {
+      "id": "w-1en81mt",
+      "word": "branch",
+      "ipa": "/bræntʃ/",
+      "pos": "noun",
+      "meaning": "chi nhánh",
+      "example": "Our new branch opens next month.",
+      "exampleVi": "Chi nhánh mới của chúng tôi khai trương vào tháng tới."
+    },
+    {
+      "id": "w-xtkq7y",
+      "word": "headquarters",
+      "ipa": "/ˈhedkwɔːrtərz/",
+      "pos": "noun",
+      "meaning": "trụ sở chính",
+      "example": "The headquarters moved to a larger building.",
+      "exampleVi": "Trụ sở chính đã chuyển sang một toà nhà lớn hơn."
+    },
+    {
+      "id": "w-8i05ni",
+      "word": "reception",
+      "ipa": "/rɪˈsepʃn/",
+      "pos": "noun",
+      "meaning": "quầy lễ tân",
+      "example": "Please wait at reception until your name is called.",
+      "exampleVi": "Vui lòng đợi ở quầy lễ tân cho tới khi được gọi tên."
+    },
+    {
+      "id": "w-643eev",
+      "word": "elevator",
+      "ipa": "/ˈelɪveɪtər/",
+      "pos": "noun",
+      "meaning": "thang máy",
+      "example": "The elevator is out of order today.",
+      "exampleVi": "Thang máy hôm nay bị hỏng."
+    },
+    {
+      "id": "w-1g20aqv",
+      "word": "parking",
+      "ipa": "/ˈpɑːrkɪŋ/",
+      "pos": "noun",
+      "meaning": "chỗ đỗ xe",
+      "example": "Free parking is available behind the building.",
+      "exampleVi": "Có chỗ đỗ xe miễn phí phía sau toà nhà."
+    },
+    {
+      "id": "w-etbnug",
+      "word": "badge",
+      "ipa": "/bædʒ/",
+      "pos": "noun",
+      "meaning": "thẻ ra vào",
+      "example": "Wear your badge at all times inside the plant.",
+      "exampleVi": "Luôn đeo thẻ ra vào khi ở trong nhà máy."
+    },
+    {
+      "id": "w-lz5bc3",
+      "word": "copier",
+      "ipa": "/ˈkɑːpiər/",
+      "pos": "noun",
+      "meaning": "máy photocopy",
+      "example": "The copier on this floor needs more paper.",
+      "exampleVi": "Máy photocopy ở tầng này cần thêm giấy."
+    },
+    {
+      "id": "w-1obvefx",
+      "word": "folder",
+      "ipa": "/ˈfoʊldər/",
+      "pos": "noun",
+      "meaning": "tập hồ sơ",
+      "example": "Put the contract in the blue folder.",
+      "exampleVi": "Hãy để hợp đồng vào tập hồ sơ màu xanh."
+    },
+    {
+      "id": "w-15noo9g",
+      "word": "document",
+      "ipa": "/ˈdɑːkjumənt/",
+      "pos": "noun",
+      "meaning": "tài liệu/ giấy tờ",
+      "example": "Please sign every document before you leave.",
+      "exampleVi": "Vui lòng ký mọi tài liệu trước khi bạn về."
+    },
+    {
+      "id": "w-18d84eb",
+      "word": "memo",
+      "ipa": "/ˈmemoʊ/",
+      "pos": "noun",
+      "meaning": "thông báo nội bộ",
+      "example": "A memo about the new hours was sent yesterday.",
+      "exampleVi": "Một thông báo nội bộ về giờ làm mới đã được gửi hôm qua."
+    },
+    {
+      "id": "w-1d6uhhx",
+      "word": "agenda",
+      "ipa": "/əˈdʒendə/",
+      "pos": "noun",
+      "meaning": "chương trình họp",
+      "example": "The agenda for Monday has five items.",
+      "exampleVi": "Chương trình họp thứ Hai có năm mục."
+    },
+    {
+      "id": "w-1c7ex2m",
+      "word": "minutes",
+      "ipa": "/ˈmɪnɪts/",
+      "pos": "noun",
+      "meaning": "biên bản họp",
+      "example": "Who is taking the minutes today?",
+      "exampleVi": "Hôm nay ai ghi biên bản họp?"
+    },
+    {
+      "id": "w-1xcjj7u",
+      "word": "vacation",
+      "ipa": "/veɪˈkeɪʃn/",
+      "pos": "noun",
+      "meaning": "kỳ nghỉ phép",
+      "example": "He is on vacation until next Wednesday.",
+      "exampleVi": "Anh ấy nghỉ phép tới thứ Tư tuần sau."
+    },
+    {
+      "id": "w-2a1wyg",
+      "word": "absent",
+      "ipa": "/ˈæbsənt/",
+      "pos": "adjective",
+      "meaning": "vắng mặt",
+      "example": "Two members were absent from the meeting.",
+      "exampleVi": "Hai thành viên đã vắng mặt trong cuộc họp."
+    },
+    {
+      "id": "w-13u3vha",
+      "word": "client",
+      "ipa": "/ˈklaɪənt/",
+      "pos": "noun",
+      "meaning": "khách hàng (dịch vụ)",
+      "example": "Our biggest client renewed the contract.",
+      "exampleVi": "Khách hàng lớn nhất của chúng tôi đã gia hạn hợp đồng."
+    },
+    {
+      "id": "w-kxmguw",
+      "word": "quantity",
+      "ipa": "/ˈkwɑːntəti/",
+      "pos": "noun",
+      "meaning": "số lượng",
+      "example": "Please confirm the quantity before we ship.",
+      "exampleVi": "Vui lòng xác nhận số lượng trước khi chúng tôi gửi hàng."
+    },
+    {
+      "id": "w-186edwm",
+      "word": "item",
+      "ipa": "/ˈaɪtəm/",
+      "pos": "noun",
+      "meaning": "món hàng/ mục",
+      "example": "Each item is checked before packing.",
+      "exampleVi": "Mỗi món hàng đều được kiểm tra trước khi đóng gói."
+    },
+    {
+      "id": "w-1huat1x",
+      "word": "stock",
+      "ipa": "/stɑːk/",
+      "pos": "noun",
+      "meaning": "hàng trong kho",
+      "example": "That model is out of stock right now.",
+      "exampleVi": "Mẫu đó hiện đang hết hàng trong kho."
+    },
+    {
+      "id": "w-1d4kb0e",
+      "word": "sale",
+      "ipa": "/seɪl/",
+      "pos": "noun",
+      "meaning": "đợt giảm giá",
+      "example": "The winter sale ends on Sunday.",
+      "exampleVi": "Đợt giảm giá mùa đông kết thúc vào Chủ nhật."
+    },
+    {
+      "id": "w-srjf96",
+      "word": "complaint",
+      "ipa": "/kəmˈpleɪnt/",
+      "pos": "noun",
+      "meaning": "lời khiếu nại",
+      "example": "We received a complaint about the delivery.",
+      "exampleVi": "Chúng tôi nhận được một khiếu nại về việc giao hàng."
+    },
+    {
+      "id": "w-rzrjog",
+      "word": "exchange",
+      "ipa": "/ɪksˈtʃeɪndʒ/",
+      "pos": "verb",
+      "meaning": "đổi (hàng)",
+      "example": "You may exchange the shirt within seven days.",
+      "exampleVi": "Bạn có thể đổi chiếc áo trong vòng bảy ngày."
+    },
+    {
+      "id": "w-12y527d",
+      "word": "guarantee",
+      "ipa": "/ˌɡærənˈtiː/",
+      "pos": "noun",
+      "meaning": "sự bảo đảm",
+      "example": "The shop offers a money-back guarantee.",
+      "exampleVi": "Cửa hàng có bảo đảm hoàn tiền."
+    },
+    {
+      "id": "w-1fyyrrw",
+      "word": "bill",
+      "ipa": "/bɪl/",
+      "pos": "noun",
+      "meaning": "hoá đơn tiền",
+      "example": "Could we have the bill, please?",
+      "exampleVi": "Cho chúng tôi xin hoá đơn được không?"
+    },
+    {
+      "id": "w-15nrc2a",
+      "word": "cash",
+      "ipa": "/kæʃ/",
+      "pos": "noun",
+      "meaning": "tiền mặt",
+      "example": "We accept cash and credit cards.",
+      "exampleVi": "Chúng tôi nhận tiền mặt và thẻ tín dụng."
+    },
+    {
+      "id": "w-1hhpz75",
+      "word": "charge",
+      "ipa": "/tʃɑːrdʒ/",
+      "pos": "verb",
+      "meaning": "tính phí",
+      "example": "The hotel charges extra for late checkout.",
+      "exampleVi": "Khách sạn tính thêm phí nếu trả phòng muộn."
+    },
+    {
+      "id": "w-15ereke",
+      "word": "expensive",
+      "ipa": "/ɪkˈspensɪv/",
+      "pos": "adjective",
+      "meaning": "đắt/ tốn kém",
+      "example": "This model is more expensive than that one.",
+      "exampleVi": "Mẫu này đắt hơn mẫu kia."
+    },
+    {
+      "id": "w-1sqamrn",
+      "word": "flight",
+      "ipa": "/flaɪt/",
+      "pos": "noun",
+      "meaning": "chuyến bay",
+      "example": "Our flight leaves at seven in the morning.",
+      "exampleVi": "Chuyến bay của chúng tôi khởi hành lúc bảy giờ sáng."
+    },
+    {
+      "id": "w-15s7fzk",
+      "word": "airport",
+      "ipa": "/ˈerpɔːrt/",
+      "pos": "noun",
+      "meaning": "sân bay",
+      "example": "A shuttle bus runs to the airport every hour.",
+      "exampleVi": "Có xe buýt chạy tới sân bay mỗi giờ."
+    },
+    {
+      "id": "w-a2rz23",
+      "word": "luggage",
+      "ipa": "/ˈlʌɡɪdʒ/",
+      "pos": "noun",
+      "meaning": "hành lý",
+      "example": "Leave your luggage at the front desk.",
+      "exampleVi": "Hãy để hành lý của bạn ở quầy lễ tân."
+    },
+    {
+      "id": "w-a19jyy",
+      "word": "boarding pass",
+      "ipa": "/ˈbɔːrdɪŋ pæs/",
+      "pos": "phrase",
+      "meaning": "thẻ lên máy bay",
+      "example": "Show your boarding pass at the gate.",
+      "exampleVi": "Xuất trình thẻ lên máy bay ở cửa ra."
+    },
+    {
+      "id": "w-3ujqdf",
+      "word": "depart",
+      "ipa": "/dɪˈpɑːrt/",
+      "pos": "verb",
+      "meaning": "khởi hành",
+      "example": "The train departs from platform three.",
+      "exampleVi": "Tàu khởi hành từ sân ga số ba."
+    },
+    {
+      "id": "w-lvb8bc",
+      "word": "delay",
+      "ipa": "/dɪˈleɪ/",
+      "pos": "noun",
+      "meaning": "sự chậm trễ",
+      "example": "The delay was caused by heavy rain.",
+      "exampleVi": "Sự chậm trễ là do mưa lớn."
+    },
+    {
+      "id": "w-av5wln",
+      "word": "reserve",
+      "ipa": "/rɪˈzɜːrv/",
+      "pos": "verb",
+      "meaning": "đặt chỗ trước",
+      "example": "I reserved a table for four people.",
+      "exampleVi": "Tôi đã đặt bàn cho bốn người."
+    },
+    {
+      "id": "w-12uqxxs",
+      "word": "booking",
+      "ipa": "/ˈbʊkɪŋ/",
+      "pos": "noun",
+      "meaning": "việc đặt chỗ",
+      "example": "Your booking is confirmed for two nights.",
+      "exampleVi": "Việc đặt chỗ của bạn đã được xác nhận cho hai đêm."
+    },
+    {
+      "id": "w-7v74r7",
+      "word": "lobby",
+      "ipa": "/ˈlɑːbi/",
+      "pos": "noun",
+      "meaning": "sảnh",
+      "example": "Please meet me in the lobby at eight.",
+      "exampleVi": "Hãy gặp tôi ở sảnh lúc tám giờ."
+    },
+    {
+      "id": "w-gv56u4",
+      "word": "prepare",
+      "ipa": "/prɪˈper/",
+      "pos": "verb",
+      "meaning": "chuẩn bị",
+      "example": "She prepared the slides for the presentation.",
+      "exampleVi": "Cô ấy đã chuẩn bị slide cho buổi thuyết trình."
+    },
+    {
+      "id": "w-1iyzzxi",
+      "word": "provide",
+      "ipa": "/prəˈvaɪd/",
+      "pos": "verb",
+      "meaning": "cung cấp",
+      "example": "The company provides free lunch on Fridays.",
+      "exampleVi": "Công ty cung cấp bữa trưa miễn phí vào thứ Sáu."
+    },
+    {
+      "id": "w-1yfkcyq",
+      "word": "receive",
+      "ipa": "/rɪˈsiːv/",
+      "pos": "verb",
+      "meaning": "nhận",
+      "example": "We received your email this morning.",
+      "exampleVi": "Chúng tôi đã nhận được email của bạn sáng nay."
+    },
+    {
+      "id": "w-115sm2n",
+      "word": "return",
+      "ipa": "/rɪˈtɜːrn/",
+      "pos": "verb",
+      "meaning": "trả lại/ quay lại",
+      "example": "You can return the item with the receipt.",
+      "exampleVi": "Bạn có thể trả lại món hàng kèm biên lai."
+    },
+    {
+      "id": "w-jp6mgw",
+      "word": "choose",
+      "ipa": "/tʃuːz/",
+      "pos": "verb",
+      "meaning": "chọn",
+      "example": "Please choose a date that suits you.",
+      "exampleVi": "Vui lòng chọn một ngày thuận tiện cho bạn."
+    },
+    {
+      "id": "w-548cws",
+      "word": "explain",
+      "ipa": "/ɪkˈspleɪn/",
+      "pos": "verb",
+      "meaning": "giải thích",
+      "example": "He explained the new rule to the whole team.",
+      "exampleVi": "Anh ấy đã giải thích quy định mới cho cả nhóm."
+    },
+    {
+      "id": "w-wszl1h",
+      "word": "suggest",
+      "ipa": "/səˈdʒest/",
+      "pos": "verb",
+      "meaning": "đề xuất/ gợi ý",
+      "example": "I suggest moving the meeting to Thursday.",
+      "exampleVi": "Tôi đề xuất dời cuộc họp sang thứ Năm."
+    },
+    {
+      "id": "w-1u27rxd",
+      "word": "decide",
+      "ipa": "/dɪˈsaɪd/",
+      "pos": "verb",
+      "meaning": "quyết định",
+      "example": "The board decided to open a second plant.",
+      "exampleVi": "Hội đồng đã quyết định mở nhà máy thứ hai."
+    },
+    {
+      "id": "w-nsyj5u",
+      "word": "complete",
+      "ipa": "/kəmˈpliːt/",
+      "pos": "verb",
+      "meaning": "hoàn thành",
+      "example": "Please complete the form in black ink.",
+      "exampleVi": "Vui lòng hoàn thành tờ khai bằng mực đen."
+    },
+    {
+      "id": "w-1ytatd9",
+      "word": "increase",
+      "ipa": "/ɪnˈkriːs/",
+      "pos": "verb",
+      "meaning": "tăng",
+      "example": "Sales increased by ten percent last month.",
+      "exampleVi": "Doanh số đã tăng mười phần trăm trong tháng trước."
+    },
+    {
+      "id": "w-x3ygh3",
+      "word": "reduce",
+      "ipa": "/rɪˈduːs/",
+      "pos": "verb",
+      "meaning": "giảm",
+      "example": "We reduced the price to attract buyers.",
+      "exampleVi": "Chúng tôi đã giảm giá để thu hút người mua."
+    },
+    {
+      "id": "w-jy6vrf",
+      "word": "improve",
+      "ipa": "/ɪmˈpruːv/",
+      "pos": "verb",
+      "meaning": "cải thiện",
+      "example": "The new system improved our response time.",
+      "exampleVi": "Hệ thống mới đã cải thiện thời gian phản hồi của chúng tôi."
+    },
+    {
+      "id": "w-1undzpg",
+      "word": "require",
+      "ipa": "/rɪˈkwaɪər/",
+      "pos": "verb",
+      "meaning": "yêu cầu/ đòi hỏi",
+      "example": "This job requires two years of experience.",
+      "exampleVi": "Công việc này đòi hỏi hai năm kinh nghiệm."
+    },
+    {
+      "id": "w-1cgywc2",
+      "word": "allow",
+      "ipa": "/əˈlaʊ/",
+      "pos": "verb",
+      "meaning": "cho phép",
+      "example": "Visitors are not allowed in the warehouse.",
+      "exampleVi": "Khách không được phép vào nhà kho."
+    },
+    {
+      "id": "w-d4scke",
+      "word": "avoid",
+      "ipa": "/əˈvɔɪd/",
+      "pos": "verb",
+      "meaning": "tránh",
+      "example": "Leave early to avoid the traffic.",
+      "exampleVi": "Hãy đi sớm để tránh tắc đường."
+    },
+    {
+      "id": "w-rr2bp4",
+      "word": "remind",
+      "ipa": "/rɪˈmaɪnd/",
+      "pos": "verb",
+      "meaning": "nhắc nhở",
+      "example": "Please remind me to call the supplier.",
+      "exampleVi": "Vui lòng nhắc tôi gọi cho nhà cung cấp."
+    },
+    {
+      "id": "w-1qftzze",
+      "word": "announce",
+      "ipa": "/əˈnaʊns/",
+      "pos": "verb",
+      "meaning": "thông báo/ công bố",
+      "example": "The winner will be announced on Friday.",
+      "exampleVi": "Người thắng cuộc sẽ được công bố vào thứ Sáu."
+    },
+    {
+      "id": "w-xll16e",
+      "word": "introduce",
+      "ipa": "/ˌɪntrəˈduːs/",
+      "pos": "verb",
+      "meaning": "giới thiệu",
+      "example": "Let me introduce our new sales manager.",
+      "exampleVi": "Cho phép tôi giới thiệu trưởng phòng kinh doanh mới."
+    },
+    {
+      "id": "w-ile0wz",
+      "word": "contact",
+      "ipa": "/ˈkɑːntækt/",
+      "pos": "verb",
+      "meaning": "liên hệ",
+      "example": "Contact us if the item arrives damaged.",
+      "exampleVi": "Hãy liên hệ với chúng tôi nếu hàng tới bị hỏng."
+    },
+    {
+      "id": "w-psrqtc",
+      "word": "busy",
+      "ipa": "/ˈbɪzi/",
+      "pos": "adjective",
+      "meaning": "bận",
+      "example": "The line is busy, so I will call back later.",
+      "exampleVi": "Máy đang bận nên tôi sẽ gọi lại sau."
+    },
+    {
+      "id": "w-sbfb3o",
+      "word": "ready",
+      "ipa": "/ˈredi/",
+      "pos": "adjective",
+      "meaning": "sẵn sàng",
+      "example": "The samples will be ready by noon.",
+      "exampleVi": "Các mẫu hàng sẽ sẵn sàng trước buổi trưa."
+    },
+    {
+      "id": "w-62n6k1",
+      "word": "correct",
+      "ipa": "/kəˈrekt/",
+      "pos": "adjective",
+      "meaning": "đúng/ chính xác",
+      "example": "Please make sure the address is correct.",
+      "exampleVi": "Vui lòng chắc chắn rằng địa chỉ là chính xác."
+    },
+    {
+      "id": "w-3077q6",
+      "word": "recent",
+      "ipa": "/ˈriːsnt/",
+      "pos": "adjective",
+      "meaning": "gần đây",
+      "example": "Thank you for your recent order.",
+      "exampleVi": "Cảm ơn về đơn hàng gần đây của bạn."
+    },
+    {
+      "id": "w-a2lc13",
+      "word": "careful",
+      "ipa": "/ˈkerfl/",
+      "pos": "adjective",
+      "meaning": "cẩn thận",
+      "example": "Be careful with the glass panels.",
+      "exampleVi": "Hãy cẩn thận với các tấm kính."
+    },
+    {
+      "id": "w-znms2",
+      "word": "usually",
+      "ipa": "/ˈjuːʒuəli/",
+      "pos": "adverb",
+      "meaning": "thường thường",
+      "example": "She usually arrives before eight.",
+      "exampleVi": "Cô ấy thường tới trước tám giờ."
+    },
+    {
+      "id": "w-qc9kby",
+      "word": "rarely",
+      "ipa": "/ˈrerli/",
+      "pos": "adverb",
+      "meaning": "hiếm khi",
+      "example": "He rarely misses a deadline.",
+      "exampleVi": "Anh ấy hiếm khi trễ hạn."
+    },
+    {
+      "id": "w-1sgxlgy",
+      "word": "soon",
+      "ipa": "/suːn/",
+      "pos": "adverb",
+      "meaning": "sớm",
+      "example": "We will send the invoice soon.",
+      "exampleVi": "Chúng tôi sẽ gửi hoá đơn sớm."
+    },
+    {
+      "id": "w-10qk6if",
+      "word": "already",
+      "ipa": "/ɔːlˈredi/",
+      "pos": "adverb",
+      "meaning": "rồi/ đã",
+      "example": "The package has already arrived.",
+      "exampleVi": "Kiện hàng đã tới rồi."
+    },
+    {
+      "id": "w-j39mup",
+      "word": "instead",
+      "ipa": "/ɪnˈsted/",
+      "pos": "adverb",
+      "meaning": "thay vào đó",
+      "example": "The store was closed, so we ordered online instead.",
+      "exampleVi": "Cửa hàng đã đóng nên thay vào đó chúng tôi đặt trực tuyến."
+    },
+    {
+      "id": "w-1wlgpuo",
+      "word": "nearly",
+      "ipa": "/ˈnɪrli/",
+      "pos": "adverb",
+      "meaning": "gần như",
+      "example": "The project is nearly finished.",
+      "exampleVi": "Dự án gần như đã xong."
+    },
+    {
+      "id": "w-1elanop",
+      "word": "on time",
+      "ipa": "/ɑːn taɪm/",
+      "pos": "phrase",
+      "meaning": "đúng giờ",
+      "example": "The shipment arrived on time.",
+      "exampleVi": "Lô hàng đã tới đúng giờ."
+    },
+    {
+      "id": "w-1f9vx0b",
+      "word": "as soon as possible",
+      "ipa": "/əz suːn əz ˈpɑːsəbl/",
+      "pos": "phrase",
+      "meaning": "càng sớm càng tốt",
+      "example": "Please reply as soon as possible.",
+      "exampleVi": "Vui lòng trả lời càng sớm càng tốt."
+    },
+    {
+      "id": "w-xntwkx",
+      "word": "be able to",
+      "ipa": "/bi ˈeɪbl tuː/",
+      "pos": "phrase",
+      "meaning": "có thể",
+      "example": "You will be able to collect your badge tomorrow.",
+      "exampleVi": "Bạn sẽ có thể lấy thẻ ra vào vào ngày mai."
+    },
+    {
+      "id": "w-1x84g0s",
+      "word": "look forward to",
+      "ipa": "/lʊk ˈfɔːrwərd tuː/",
+      "pos": "phrase",
+      "meaning": "mong chờ",
+      "example": "I look forward to meeting you next week.",
+      "exampleVi": "Tôi mong được gặp bạn vào tuần tới."
+    },
+    {
+      "id": "w-13dn65p",
+      "word": "take place",
+      "ipa": "/teɪk pleɪs/",
+      "pos": "phrase",
+      "meaning": "diễn ra",
+      "example": "The training will take place in Room B.",
+      "exampleVi": "Buổi đào tạo sẽ diễn ra ở Phòng B."
+    },
+    {
+      "id": "w-f9wplk",
+      "word": "make sure",
+      "ipa": "/meɪk ʃʊr/",
+      "pos": "phrase",
+      "meaning": "bảo đảm rằng",
+      "example": "Make sure the door is locked.",
+      "exampleVi": "Hãy bảo đảm rằng cửa đã khoá."
+    },
+    {
+      "id": "w-1pf752n",
+      "word": "in charge of",
+      "ipa": "/ɪn tʃɑːrdʒ əv/",
+      "pos": "phrase",
+      "meaning": "phụ trách",
+      "example": "She is in charge of the whole floor.",
+      "exampleVi": "Cô ấy phụ trách cả tầng này."
+    },
+    {
+      "id": "w-1u1x21w",
+      "word": "according to",
+      "ipa": "/əˈkɔːrdɪŋ tuː/",
+      "pos": "phrase",
+      "meaning": "theo như",
+      "example": "According to the schedule, we finish at five.",
+      "exampleVi": "Theo như lịch trình, chúng ta xong lúc năm giờ."
+    },
+    {
+      "id": "w-174vo2k",
+      "word": "fill out",
+      "ipa": "/fɪl aʊt/",
+      "pos": "phrase",
+      "meaning": "điền vào (đơn)",
+      "example": "Fill out this form and hand it to reception.",
+      "exampleVi": "Hãy điền vào tờ đơn này rồi đưa cho lễ tân."
+    },
+    {
+      "id": "w-1fk1u6t",
+      "word": "pick up",
+      "ipa": "/pɪk ʌp/",
+      "pos": "phrase",
+      "meaning": "đón/ lấy",
+      "example": "I will pick up the samples on my way back.",
+      "exampleVi": "Tôi sẽ lấy các mẫu hàng trên đường về."
+    },
+    {
+      "id": "w-sltxgr",
+      "word": "turn off",
+      "ipa": "/tɜːrn ɔːf/",
+      "pos": "phrase",
+      "meaning": "tắt",
+      "example": "Please turn off the lights when you leave.",
+      "exampleVi": "Vui lòng tắt đèn khi bạn về."
+    },
+    {
+      "id": "w-bvaimf",
+      "word": "put off",
+      "ipa": "/pʊt ɔːf/",
+      "pos": "phrase",
+      "meaning": "hoãn lại",
+      "example": "They put off the meeting until next week.",
+      "exampleVi": "Họ đã hoãn cuộc họp tới tuần sau."
     }
   ],
   "tensePoints": [],

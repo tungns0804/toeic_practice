@@ -9,7 +9,7 @@
     "en": "Financial reporting, legal and management vocabulary. Dense in the long Part 7 passages."
   },
   "kind": "vocabulary",
-  "itemCount": 40,
+  "itemCount": 107,
   "words": [
     {
       "id": "w-1kb9moo",
@@ -370,6 +370,609 @@
       "meaning": "chiểu theo/ theo đúng",
       "example": "Pursuant to clause 8, either party may withdraw.",
       "exampleVi": "Chiểu theo điều 8, bên nào cũng có thể rút lui."
+    },
+    {
+      "id": "w-1paeeu3",
+      "word": "asset",
+      "ipa": "/ˈæset/",
+      "pos": "noun",
+      "meaning": "tài sản",
+      "example": "The building is our largest asset.",
+      "exampleVi": "Toà nhà là tài sản lớn nhất của chúng tôi."
+    },
+    {
+      "id": "w-1dbho42",
+      "word": "equity",
+      "ipa": "/ˈekwəti/",
+      "pos": "noun",
+      "meaning": "vốn chủ sở hữu",
+      "example": "Shareholder equity grew by nine percent.",
+      "exampleVi": "Vốn chủ sở hữu đã tăng chín phần trăm."
+    },
+    {
+      "id": "w-1qgpwa3",
+      "word": "capital",
+      "ipa": "/ˈkæpɪtl/",
+      "pos": "noun",
+      "meaning": "vốn",
+      "example": "The firm raised capital through a share issue.",
+      "exampleVi": "Công ty đã huy động vốn bằng cách phát hành cổ phiếu."
+    },
+    {
+      "id": "w-kzvmfy",
+      "word": "expenditure",
+      "ipa": "/ɪkˈspendɪtʃər/",
+      "pos": "noun",
+      "meaning": "khoản chi",
+      "example": "Capital expenditure was frozen this year.",
+      "exampleVi": "Khoản chi đầu tư đã bị đóng băng năm nay."
+    },
+    {
+      "id": "w-1w2x1dh",
+      "word": "overhead",
+      "ipa": "/ˈoʊvərhed/",
+      "pos": "noun",
+      "meaning": "chi phí chung",
+      "example": "Moving offices cut our overhead sharply.",
+      "exampleVi": "Chuyển văn phòng đã cắt mạnh chi phí chung."
+    },
+    {
+      "id": "w-1ojr0ut",
+      "word": "allowance",
+      "ipa": "/əˈlaʊəns/",
+      "pos": "noun",
+      "meaning": "khoản trợ cấp/ dự phòng",
+      "example": "A travel allowance is paid every month.",
+      "exampleVi": "Khoản trợ cấp đi lại được trả hằng tháng."
+    },
+    {
+      "id": "w-m1172u",
+      "word": "accrue",
+      "ipa": "/əˈkruː/",
+      "pos": "verb",
+      "meaning": "dồn tích/ cộng dồn",
+      "example": "Interest accrues from the invoice date.",
+      "exampleVi": "Lãi được cộng dồn kể từ ngày ghi hoá đơn."
+    },
+    {
+      "id": "w-lpbol4",
+      "word": "offset a loss",
+      "ipa": "/ˈɔːfset ə lɔːs/",
+      "pos": "phrase",
+      "meaning": "bù đắp khoản lỗ",
+      "example": "New contracts helped offset a loss in Europe.",
+      "exampleVi": "Các hợp đồng mới đã giúp bù đắp khoản lỗ ở châu Âu."
+    },
+    {
+      "id": "w-18ycdrt",
+      "word": "write off",
+      "ipa": "/raɪt ɔːf/",
+      "pos": "phrase",
+      "meaning": "xoá sổ (nợ)",
+      "example": "The bank agreed to write off the balance.",
+      "exampleVi": "Ngân hàng đã đồng ý xoá sổ khoản dư nợ."
+    },
+    {
+      "id": "w-1rcamps",
+      "word": "projection",
+      "ipa": "/prəˈdʒekʃn/",
+      "pos": "noun",
+      "meaning": "dự phóng",
+      "example": "The projection assumes stable fuel prices.",
+      "exampleVi": "Bản dự phóng giả định giá nhiên liệu ổn định."
+    },
+    {
+      "id": "w-2t2mww",
+      "word": "valuation",
+      "ipa": "/ˌvæljuˈeɪʃn/",
+      "pos": "noun",
+      "meaning": "định giá",
+      "example": "An independent valuation was commissioned.",
+      "exampleVi": "Một cuộc định giá độc lập đã được đặt hàng."
+    },
+    {
+      "id": "w-1pt8qzt",
+      "word": "statute",
+      "ipa": "/ˈstætʃuːt/",
+      "pos": "noun",
+      "meaning": "đạo luật",
+      "example": "The statute took effect in January.",
+      "exampleVi": "Đạo luật có hiệu lực từ tháng Giêng."
+    },
+    {
+      "id": "w-17m1u1d",
+      "word": "regulation",
+      "ipa": "/ˌreɡjuˈleɪʃn/",
+      "pos": "noun",
+      "meaning": "quy định",
+      "example": "New safety regulations apply from May.",
+      "exampleVi": "Các quy định an toàn mới áp dụng từ tháng Năm."
+    },
+    {
+      "id": "w-13mn4mh",
+      "word": "provision of law",
+      "ipa": "/prəˈvɪʒn əv lɔː/",
+      "pos": "phrase",
+      "meaning": "điều khoản luật",
+      "example": "This provision of law protects the buyer.",
+      "exampleVi": "Điều khoản luật này bảo vệ bên mua."
+    },
+    {
+      "id": "w-jsdd67",
+      "word": "litigation",
+      "ipa": "/ˌlɪtɪˈɡeɪʃn/",
+      "pos": "noun",
+      "meaning": "việc kiện tụng",
+      "example": "Litigation would cost more than settling.",
+      "exampleVi": "Kiện tụng sẽ tốn kém hơn là dàn xếp."
+    },
+    {
+      "id": "w-rerj4s",
+      "word": "plaintiff",
+      "ipa": "/ˈpleɪntɪf/",
+      "pos": "noun",
+      "meaning": "nguyên đơn",
+      "example": "The plaintiff withdrew the claim.",
+      "exampleVi": "Nguyên đơn đã rút đơn kiện."
+    },
+    {
+      "id": "w-huo256",
+      "word": "defendant",
+      "ipa": "/dɪˈfendənt/",
+      "pos": "noun",
+      "meaning": "bị đơn",
+      "example": "The defendant denied all charges.",
+      "exampleVi": "Bị đơn đã phủ nhận mọi cáo buộc."
+    },
+    {
+      "id": "w-xcxfl9",
+      "word": "testimony",
+      "ipa": "/ˈtestɪmoʊni/",
+      "pos": "noun",
+      "meaning": "lời khai",
+      "example": "Her testimony changed the outcome.",
+      "exampleVi": "Lời khai của cô ấy đã thay đổi kết quả."
+    },
+    {
+      "id": "w-18838q1",
+      "word": "allegation",
+      "ipa": "/ˌæləˈɡeɪʃn/",
+      "pos": "noun",
+      "meaning": "cáo buộc",
+      "example": "The allegation was found to be baseless.",
+      "exampleVi": "Cáo buộc đó được xác định là vô căn cứ."
+    },
+    {
+      "id": "w-1n8ltue",
+      "word": "verdict",
+      "ipa": "/ˈvɜːrdɪkt/",
+      "pos": "noun",
+      "meaning": "phán quyết",
+      "example": "The verdict favoured the smaller firm.",
+      "exampleVi": "Phán quyết nghiêng về công ty nhỏ hơn."
+    },
+    {
+      "id": "w-1nlp84q",
+      "word": "liable",
+      "ipa": "/ˈlaɪəbl/",
+      "pos": "adjective",
+      "meaning": "phải chịu trách nhiệm",
+      "example": "The carrier is liable for damage in transit.",
+      "exampleVi": "Đơn vị vận chuyển phải chịu trách nhiệm về hư hỏng trên đường."
+    },
+    {
+      "id": "w-1h1k1w9",
+      "word": "null and void",
+      "ipa": "/nʌl ənd vɔɪd/",
+      "pos": "phrase",
+      "meaning": "vô hiệu",
+      "example": "Without a signature the contract is null and void.",
+      "exampleVi": "Thiếu chữ ký thì hợp đồng là vô hiệu."
+    },
+    {
+      "id": "w-8fhzpx",
+      "word": "board of directors",
+      "ipa": "/bɔːrd əv dəˈrektərz/",
+      "pos": "phrase",
+      "meaning": "hội đồng quản trị",
+      "example": "The board of directors meets every quarter.",
+      "exampleVi": "Hội đồng quản trị họp mỗi quý."
+    },
+    {
+      "id": "w-nwo6nl",
+      "word": "executive",
+      "ipa": "/ɪɡˈzekjətɪv/",
+      "pos": "noun",
+      "meaning": "lãnh đạo cấp cao",
+      "example": "A senior executive will chair the session.",
+      "exampleVi": "Một lãnh đạo cấp cao sẽ chủ trì phiên họp."
+    },
+    {
+      "id": "w-1qaz8a3",
+      "word": "mandate",
+      "ipa": "/ˈmændeɪt/",
+      "pos": "noun",
+      "meaning": "sự uỷ nhiệm/ nhiệm vụ",
+      "example": "The committee has a clear mandate.",
+      "exampleVi": "Uỷ ban có một nhiệm vụ rõ ràng."
+    },
+    {
+      "id": "w-1bfg93t",
+      "word": "governance",
+      "ipa": "/ˈɡʌvərnəns/",
+      "pos": "noun",
+      "meaning": "quản trị (điều hành)",
+      "example": "Good governance reassured investors.",
+      "exampleVi": "Quản trị tốt đã trấn an các nhà đầu tư."
+    },
+    {
+      "id": "w-1l2gjit",
+      "word": "restructure",
+      "ipa": "/ˌriːˈstrʌktʃər/",
+      "pos": "verb",
+      "meaning": "tái cơ cấu",
+      "example": "The group restructured its Asian operations.",
+      "exampleVi": "Tập đoàn đã tái cơ cấu hoạt động ở châu Á."
+    },
+    {
+      "id": "w-y9xsi0",
+      "word": "divest",
+      "ipa": "/daɪˈvest/",
+      "pos": "verb",
+      "meaning": "thoái vốn",
+      "example": "They divested the loss-making unit.",
+      "exampleVi": "Họ đã thoái vốn khỏi đơn vị thua lỗ."
+    },
+    {
+      "id": "w-1mg5kb7",
+      "word": "acquire",
+      "ipa": "/əˈkwaɪər/",
+      "pos": "verb",
+      "meaning": "mua lại/ thâu tóm",
+      "example": "The group acquired a rival last spring.",
+      "exampleVi": "Tập đoàn đã mua lại một đối thủ vào mùa xuân năm ngoái."
+    },
+    {
+      "id": "w-srxtoq",
+      "word": "appoint",
+      "ipa": "/əˈpɔɪnt/",
+      "pos": "verb",
+      "meaning": "bổ nhiệm",
+      "example": "The board appointed a new finance director.",
+      "exampleVi": "Hội đồng đã bổ nhiệm giám đốc tài chính mới."
+    },
+    {
+      "id": "w-1bwhnbq",
+      "word": "succession",
+      "ipa": "/səkˈseʃn/",
+      "pos": "noun",
+      "meaning": "việc kế nhiệm",
+      "example": "A succession plan is now in place.",
+      "exampleVi": "Kế hoạch kế nhiệm hiện đã có."
+    },
+    {
+      "id": "w-7ep97w",
+      "word": "benchmark",
+      "ipa": "/ˈbentʃmɑːrk/",
+      "pos": "noun",
+      "meaning": "chuẩn đối sánh",
+      "example": "We use the industry benchmark for delivery times.",
+      "exampleVi": "Chúng tôi dùng chuẩn đối sánh ngành cho thời gian giao hàng."
+    },
+    {
+      "id": "w-1jykkjl",
+      "word": "metric",
+      "ipa": "/ˈmetrɪk/",
+      "pos": "noun",
+      "meaning": "chỉ số đo lường",
+      "example": "Every metric improved except returns.",
+      "exampleVi": "Mọi chỉ số đều tốt lên trừ tỷ lệ hàng trả lại."
+    },
+    {
+      "id": "w-3tzv0e",
+      "word": "variance",
+      "ipa": "/ˈveriəns/",
+      "pos": "noun",
+      "meaning": "mức chênh lệch",
+      "example": "The variance between plan and actual was small.",
+      "exampleVi": "Mức chênh lệch giữa kế hoạch và thực tế là nhỏ."
+    },
+    {
+      "id": "w-1n1xo9b",
+      "word": "correlation",
+      "ipa": "/ˌkɔːrəˈleɪʃn/",
+      "pos": "noun",
+      "meaning": "mối tương quan",
+      "example": "There is a clear correlation between price and volume.",
+      "exampleVi": "Có mối tương quan rõ giữa giá và sản lượng."
+    },
+    {
+      "id": "w-14bfbbu",
+      "word": "margin of error",
+      "ipa": "/ˈmɑːrdʒɪn əv ˈerər/",
+      "pos": "phrase",
+      "meaning": "biên độ sai số",
+      "example": "The survey has a margin of error of three percent.",
+      "exampleVi": "Khảo sát có biên độ sai số ba phần trăm."
+    },
+    {
+      "id": "w-17zdync",
+      "word": "aggregate",
+      "ipa": "/ˈæɡrɪɡət/",
+      "pos": "adjective",
+      "meaning": "tổng gộp",
+      "example": "Aggregate demand fell in the second half.",
+      "exampleVi": "Tổng cầu đã giảm trong nửa cuối năm."
+    },
+    {
+      "id": "w-kx2nmi",
+      "word": "cumulative",
+      "ipa": "/ˈkjuːmjələtɪv/",
+      "pos": "adjective",
+      "meaning": "luỹ kế",
+      "example": "Cumulative losses reached four million.",
+      "exampleVi": "Lỗ luỹ kế đã lên tới bốn triệu."
+    },
+    {
+      "id": "w-u0fdg2",
+      "word": "allocate funds",
+      "ipa": "/ˈæləkeɪt fʌndz/",
+      "pos": "phrase",
+      "meaning": "phân bổ kinh phí",
+      "example": "The council will allocate funds to the project.",
+      "exampleVi": "Hội đồng sẽ phân bổ kinh phí cho dự án."
+    },
+    {
+      "id": "w-f7w2u9",
+      "word": "anticipate",
+      "ipa": "/ænˈtɪsɪpeɪt/",
+      "pos": "verb",
+      "meaning": "dự liệu trước",
+      "example": "We anticipate stronger demand in autumn.",
+      "exampleVi": "Chúng tôi dự liệu nhu cầu mạnh hơn vào mùa thu."
+    },
+    {
+      "id": "w-xwnmwx",
+      "word": "ascertain the cause",
+      "ipa": "/ˌæsərˈteɪn ðə kɔːz/",
+      "pos": "phrase",
+      "meaning": "xác định nguyên nhân",
+      "example": "Engineers could not ascertain the cause of the fault.",
+      "exampleVi": "Kỹ sư đã không xác định được nguyên nhân của sự cố."
+    },
+    {
+      "id": "w-sg87zz",
+      "word": "comprise",
+      "ipa": "/kəmˈpraɪz/",
+      "pos": "verb",
+      "meaning": "bao gồm/ gồm có",
+      "example": "The group comprises eleven subsidiaries.",
+      "exampleVi": "Tập đoàn gồm mười một công ty con."
+    },
+    {
+      "id": "w-n7ukhr",
+      "word": "constitute",
+      "ipa": "/ˈkɑːnstɪtuːt/",
+      "pos": "verb",
+      "meaning": "cấu thành",
+      "example": "Late payment constitutes a breach of contract.",
+      "exampleVi": "Chậm thanh toán cấu thành hành vi vi phạm hợp đồng."
+    },
+    {
+      "id": "w-1yv2zgt",
+      "word": "designate",
+      "ipa": "/ˈdezɪɡneɪt/",
+      "pos": "verb",
+      "meaning": "chỉ định",
+      "example": "The area was designated a safety zone.",
+      "exampleVi": "Khu vực này đã được chỉ định là vùng an toàn."
+    },
+    {
+      "id": "w-jbq21p",
+      "word": "implement a policy",
+      "ipa": "/ˈɪmplɪment ə ˈpɑːləsi/",
+      "pos": "phrase",
+      "meaning": "triển khai một chính sách",
+      "example": "We will implement a policy on remote work.",
+      "exampleVi": "Chúng tôi sẽ triển khai một chính sách về làm việc từ xa."
+    },
+    {
+      "id": "w-13n19vy",
+      "word": "mitigate risk",
+      "ipa": "/ˈmɪtɪɡeɪt rɪsk/",
+      "pos": "phrase",
+      "meaning": "giảm thiểu rủi ro",
+      "example": "Hedging helps mitigate risk from currency moves.",
+      "exampleVi": "Phòng vệ giá giúp giảm thiểu rủi ro từ biến động tỷ giá."
+    },
+    {
+      "id": "w-o8e61k",
+      "word": "oversee operations",
+      "ipa": "/ˌoʊvərˈsiː ˌɑːpəˈreɪʃnz/",
+      "pos": "phrase",
+      "meaning": "giám sát hoạt động",
+      "example": "She was hired to oversee operations in Asia.",
+      "exampleVi": "Cô ấy được tuyển để giám sát hoạt động ở châu Á."
+    },
+    {
+      "id": "w-1ckldc9",
+      "word": "streamline the process",
+      "ipa": "/ˈstriːmlaɪn ðə ˈprɑːses/",
+      "pos": "phrase",
+      "meaning": "tinh gọn quy trình",
+      "example": "The team will streamline the process this quarter.",
+      "exampleVi": "Nhóm sẽ tinh gọn quy trình trong quý này."
+    },
+    {
+      "id": "w-jbkd43",
+      "word": "undergo",
+      "ipa": "/ˌʌndərˈɡoʊ/",
+      "pos": "verb",
+      "meaning": "trải qua",
+      "example": "All staff undergo annual safety training.",
+      "exampleVi": "Mọi nhân viên đều trải qua đào tạo an toàn hằng năm."
+    },
+    {
+      "id": "w-16us5tp",
+      "word": "adverse",
+      "ipa": "/ædˈvɜːrs/",
+      "pos": "adjective",
+      "meaning": "bất lợi",
+      "example": "Adverse weather delayed the whole schedule.",
+      "exampleVi": "Thời tiết bất lợi đã làm chậm cả lịch trình."
+    },
+    {
+      "id": "w-19io7lg",
+      "word": "conservative",
+      "ipa": "/kənˈsɜːrvətɪv/",
+      "pos": "adjective",
+      "meaning": "thận trọng (ước tính)",
+      "example": "The estimate is deliberately conservative.",
+      "exampleVi": "Con số ước tính được để thận trọng một cách có chủ ý."
+    },
+    {
+      "id": "w-1hom5hv",
+      "word": "diverse",
+      "ipa": "/daɪˈvɜːrs/",
+      "pos": "adjective",
+      "meaning": "đa dạng",
+      "example": "The firm serves a diverse client base.",
+      "exampleVi": "Công ty phục vụ một tệp khách hàng đa dạng."
+    },
+    {
+      "id": "w-11gvt4a",
+      "word": "exempt",
+      "ipa": "/ɪɡˈzempt/",
+      "pos": "adjective",
+      "meaning": "được miễn",
+      "example": "Small firms are exempt from this rule.",
+      "exampleVi": "Doanh nghiệp nhỏ được miễn quy định này."
+    },
+    {
+      "id": "w-ywwb65",
+      "word": "integral",
+      "ipa": "/ˈɪntɪɡrəl/",
+      "pos": "adjective",
+      "meaning": "không thể thiếu",
+      "example": "Quality control is integral to our process.",
+      "exampleVi": "Kiểm soát chất lượng là phần không thể thiếu trong quy trình của chúng tôi."
+    },
+    {
+      "id": "w-1kaylab",
+      "word": "nominal",
+      "ipa": "/ˈnɑːmɪnl/",
+      "pos": "adjective",
+      "meaning": "danh nghĩa/ tượng trưng",
+      "example": "A nominal fee covers the paperwork.",
+      "exampleVi": "Một khoản phí tượng trưng để trang trải giấy tờ."
+    },
+    {
+      "id": "w-deln0t",
+      "word": "provisional",
+      "ipa": "/prəˈvɪʒənl/",
+      "pos": "adjective",
+      "meaning": "tạm thời/ tạm tính",
+      "example": "These are provisional figures only.",
+      "exampleVi": "Đây chỉ là các con số tạm tính."
+    },
+    {
+      "id": "w-nll7ta",
+      "word": "sustainable",
+      "ipa": "/səˈsteɪnəbl/",
+      "pos": "adjective",
+      "meaning": "bền vững",
+      "example": "Growth at this rate is not sustainable.",
+      "exampleVi": "Tăng trưởng ở tốc độ này là không bền vững."
+    },
+    {
+      "id": "w-15b3z3h",
+      "word": "volatile",
+      "ipa": "/ˈvɑːlətl/",
+      "pos": "adjective",
+      "meaning": "biến động mạnh",
+      "example": "Raw material prices remain volatile.",
+      "exampleVi": "Giá nguyên liệu thô vẫn biến động mạnh."
+    },
+    {
+      "id": "w-uzkg0v",
+      "word": "subject to approval",
+      "ipa": "/ˈsʌbdʒɪkt tuː əˈpruːvl/",
+      "pos": "phrase",
+      "meaning": "tuỳ thuộc vào việc phê duyệt",
+      "example": "The plan is subject to approval by the board.",
+      "exampleVi": "Kế hoạch tuỳ thuộc vào việc hội đồng phê duyệt."
+    },
+    {
+      "id": "w-m6e6pc",
+      "word": "on the grounds that",
+      "ipa": "/ɑːn ðə ɡraʊndz ðæt/",
+      "pos": "phrase",
+      "meaning": "với lý do rằng",
+      "example": "They refused on the grounds that the deadline had passed.",
+      "exampleVi": "Họ từ chối với lý do rằng hạn chót đã qua."
+    },
+    {
+      "id": "w-1mkhyr3",
+      "word": "in the absence of",
+      "ipa": "/ɪn ði ˈæbsəns əv/",
+      "pos": "phrase",
+      "meaning": "khi không có",
+      "example": "In the absence of the director, I will sign.",
+      "exampleVi": "Khi không có giám đốc, tôi sẽ ký."
+    },
+    {
+      "id": "w-s1kpuy",
+      "word": "for the purpose of",
+      "ipa": "/fɔːr ðə ˈpɜːrpəs əv/",
+      "pos": "phrase",
+      "meaning": "nhằm mục đích",
+      "example": "The data is kept for the purpose of auditing.",
+      "exampleVi": "Dữ liệu được lưu nhằm mục đích kiểm toán."
+    },
+    {
+      "id": "w-1hd7ttp",
+      "word": "with immediate effect",
+      "ipa": "/wɪð ɪˈmiːdiət ɪˈfekt/",
+      "pos": "phrase",
+      "meaning": "có hiệu lực ngay",
+      "example": "The rule applies with immediate effect.",
+      "exampleVi": "Quy định áp dụng có hiệu lực ngay."
+    },
+    {
+      "id": "w-cz8bzk",
+      "word": "subject matter",
+      "ipa": "/ˈsʌbdʒɪkt ˈmætər/",
+      "pos": "phrase",
+      "meaning": "nội dung/ đối tượng",
+      "example": "The subject matter of the clause is unclear.",
+      "exampleVi": "Nội dung của điều khoản này chưa rõ."
+    },
+    {
+      "id": "w-1629sw6",
+      "word": "give rise to",
+      "ipa": "/ɡɪv raɪz tuː/",
+      "pos": "phrase",
+      "meaning": "làm phát sinh",
+      "example": "The change may give rise to extra costs.",
+      "exampleVi": "Thay đổi này có thể làm phát sinh chi phí thêm."
+    },
+    {
+      "id": "w-ps8t70",
+      "word": "phase out",
+      "ipa": "/feɪz aʊt/",
+      "pos": "phrase",
+      "meaning": "loại bỏ dần",
+      "example": "We will phase out the older models.",
+      "exampleVi": "Chúng tôi sẽ loại bỏ dần các mẫu cũ."
+    },
+    {
+      "id": "w-10rnisj",
+      "word": "account for the difference",
+      "ipa": "/əˈkaʊnt fɔːr ðə ˈdɪfrəns/",
+      "pos": "phrase",
+      "meaning": "giải thích cho khoản chênh lệch",
+      "example": "Currency moves account for the difference.",
+      "exampleVi": "Biến động tỷ giá giải thích cho khoản chênh lệch."
     }
   ],
   "tensePoints": [],

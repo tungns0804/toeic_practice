@@ -9,7 +9,7 @@
     "en": "Academic and formal vocabulary plus the fixed phrases that set the traps. This is what decides the last stretch to 990."
   },
   "kind": "vocabulary",
-  "itemCount": 40,
+  "itemCount": 109,
   "words": [
     {
       "id": "w-xv3yq1",
@@ -370,6 +370,627 @@
       "meaning": "được ưu tiên hơn",
       "example": "Safety takes precedence over speed.",
       "exampleVi": "An toàn được ưu tiên hơn tốc độ."
+    },
+    {
+      "id": "w-ei4er1",
+      "word": "astute",
+      "ipa": "/əˈstuːt/",
+      "pos": "adjective",
+      "meaning": "sắc sảo/ khôn ngoan",
+      "example": "It was an astute decision to sell early.",
+      "exampleVi": "Bán sớm là một quyết định sắc sảo."
+    },
+    {
+      "id": "w-t71ups",
+      "word": "tenuous",
+      "ipa": "/ˈtenjuəs/",
+      "pos": "adjective",
+      "meaning": "mong manh/ yếu ớt",
+      "example": "The link between the two events is tenuous.",
+      "exampleVi": "Mối liên hệ giữa hai sự kiện rất mong manh."
+    },
+    {
+      "id": "w-1mkx057",
+      "word": "negligible",
+      "ipa": "/ˈneɡlɪdʒəbl/",
+      "pos": "adjective",
+      "meaning": "không đáng kể",
+      "example": "The difference in cost was negligible.",
+      "exampleVi": "Chênh lệch chi phí là không đáng kể."
+    },
+    {
+      "id": "w-13m3jny",
+      "word": "formidable",
+      "ipa": "/ˈfɔːrmɪdəbl/",
+      "pos": "adjective",
+      "meaning": "đáng gờm",
+      "example": "They face a formidable competitor in Asia.",
+      "exampleVi": "Họ đối mặt với một đối thủ đáng gờm ở châu Á."
+    },
+    {
+      "id": "w-12p39xw",
+      "word": "redundant staff",
+      "ipa": "/rɪˈdʌndənt stæf/",
+      "pos": "phrase",
+      "meaning": "nhân sự bị cắt giảm",
+      "example": "Redundant staff received six months of pay.",
+      "exampleVi": "Nhân sự bị cắt giảm nhận sáu tháng lương."
+    },
+    {
+      "id": "w-140yn0n",
+      "word": "pragmatic",
+      "ipa": "/præɡˈmætɪk/",
+      "pos": "adjective",
+      "meaning": "thực tế/ thực dụng",
+      "example": "She took a pragmatic view of the delay.",
+      "exampleVi": "Cô ấy nhìn nhận sự chậm trễ một cách thực tế."
+    },
+    {
+      "id": "w-1q2jppl",
+      "word": "arbitrary",
+      "ipa": "/ˈɑːrbɪtreri/",
+      "pos": "adjective",
+      "meaning": "tuỳ tiện/ độc đoán",
+      "example": "The cut-off date seems entirely arbitrary.",
+      "exampleVi": "Ngày chốt có vẻ hoàn toàn tuỳ tiện."
+    },
+    {
+      "id": "w-j8y43f",
+      "word": "coherent",
+      "ipa": "/koʊˈhɪrənt/",
+      "pos": "adjective",
+      "meaning": "mạch lạc",
+      "example": "The report presents a coherent argument.",
+      "exampleVi": "Bản báo cáo đưa ra một lập luận mạch lạc."
+    },
+    {
+      "id": "w-hosjoa",
+      "word": "superfluous",
+      "ipa": "/suːˈpɜːrfluəs/",
+      "pos": "adjective",
+      "meaning": "thừa/ không cần thiết",
+      "example": "Half the paperwork proved superfluous.",
+      "exampleVi": "Một nửa giấy tờ hoá ra là thừa."
+    },
+    {
+      "id": "w-17vr06",
+      "word": "indispensable",
+      "ipa": "/ˌɪndɪˈspensəbl/",
+      "pos": "adjective",
+      "meaning": "tối cần thiết",
+      "example": "Her local knowledge is indispensable.",
+      "exampleVi": "Hiểu biết địa phương của cô ấy là tối cần thiết."
+    },
+    {
+      "id": "w-bix4rw",
+      "word": "plausible",
+      "ipa": "/ˈplɔːzəbl/",
+      "pos": "adjective",
+      "meaning": "nghe hợp lý",
+      "example": "The explanation sounds plausible enough.",
+      "exampleVi": "Lời giải thích nghe khá hợp lý."
+    },
+    {
+      "id": "w-1gvhmzb",
+      "word": "sceptical",
+      "ipa": "/ˈskeptɪkl/",
+      "pos": "adjective",
+      "meaning": "hoài nghi",
+      "example": "Investors remain sceptical about the merger.",
+      "exampleVi": "Các nhà đầu tư vẫn hoài nghi về vụ sáp nhập."
+    },
+    {
+      "id": "w-1pxrki8",
+      "word": "unanimous",
+      "ipa": "/juˈnænɪməs/",
+      "pos": "adjective",
+      "meaning": "nhất trí hoàn toàn",
+      "example": "The vote was unanimous in favour.",
+      "exampleVi": "Cuộc bỏ phiếu nhất trí hoàn toàn ủng hộ."
+    },
+    {
+      "id": "w-1w23i0y",
+      "word": "rationale",
+      "ipa": "/ˌræʃəˈnæl/",
+      "pos": "noun",
+      "meaning": "lý lẽ căn bản",
+      "example": "The rationale for the change was never explained.",
+      "exampleVi": "Lý lẽ căn bản cho thay đổi này chưa bao giờ được giải thích."
+    },
+    {
+      "id": "w-p3aa9c",
+      "word": "implication",
+      "ipa": "/ˌɪmplɪˈkeɪʃn/",
+      "pos": "noun",
+      "meaning": "hàm ý/ hệ quả",
+      "example": "The implication is that costs will rise.",
+      "exampleVi": "Hàm ý ở đây là chi phí sẽ tăng."
+    },
+    {
+      "id": "w-1f3aafu",
+      "word": "constraint",
+      "ipa": "/kənˈstreɪnt/",
+      "pos": "noun",
+      "meaning": "ràng buộc/ hạn chế",
+      "example": "Budget constraints delayed the second phase.",
+      "exampleVi": "Ràng buộc ngân sách đã làm chậm giai đoạn hai."
+    },
+    {
+      "id": "w-d8oe56",
+      "word": "discrepancy in figures",
+      "ipa": "/dɪsˈkrepənsi ɪn ˈfɪɡjərz/",
+      "pos": "phrase",
+      "meaning": "chênh lệch số liệu",
+      "example": "Auditors found a discrepancy in figures for March.",
+      "exampleVi": "Kiểm toán viên phát hiện chênh lệch số liệu của tháng Ba."
+    },
+    {
+      "id": "w-8ebe1w",
+      "word": "paradigm",
+      "ipa": "/ˈpærədaɪm/",
+      "pos": "noun",
+      "meaning": "hệ hình/ khuôn mẫu",
+      "example": "Remote work changed the paradigm entirely.",
+      "exampleVi": "Làm việc từ xa đã thay đổi hoàn toàn khuôn mẫu cũ."
+    },
+    {
+      "id": "w-1yngcao",
+      "word": "criterion",
+      "ipa": "/kraɪˈtɪriən/",
+      "pos": "noun",
+      "meaning": "tiêu chí",
+      "example": "Price is only one criterion in the decision.",
+      "exampleVi": "Giá chỉ là một tiêu chí trong quyết định."
+    },
+    {
+      "id": "w-4ghm3s",
+      "word": "hierarchy",
+      "ipa": "/ˈhaɪərɑːrki/",
+      "pos": "noun",
+      "meaning": "thứ bậc",
+      "example": "The company has a very flat hierarchy.",
+      "exampleVi": "Công ty có thứ bậc rất phẳng."
+    },
+    {
+      "id": "w-xoqsq7",
+      "word": "initiative",
+      "ipa": "/ɪˈnɪʃətɪv/",
+      "pos": "noun",
+      "meaning": "sáng kiến",
+      "example": "The recycling initiative saved thousands.",
+      "exampleVi": "Sáng kiến tái chế đã tiết kiệm được hàng nghìn."
+    },
+    {
+      "id": "w-1xj49u7",
+      "word": "momentum",
+      "ipa": "/moʊˈmentəm/",
+      "pos": "noun",
+      "meaning": "đà tiến",
+      "example": "The campaign lost momentum after June.",
+      "exampleVi": "Chiến dịch mất đà sau tháng Sáu."
+    },
+    {
+      "id": "w-c0kkie",
+      "word": "proponent",
+      "ipa": "/prəˈpoʊnənt/",
+      "pos": "noun",
+      "meaning": "người ủng hộ",
+      "example": "She is a leading proponent of the plan.",
+      "exampleVi": "Cô ấy là người ủng hộ hàng đầu của kế hoạch."
+    },
+    {
+      "id": "w-17ahxf0",
+      "word": "scrutiny",
+      "ipa": "/ˈskruːtəni/",
+      "pos": "noun",
+      "meaning": "sự soi xét kỹ",
+      "example": "The deal came under intense scrutiny.",
+      "exampleVi": "Thương vụ bị soi xét rất kỹ."
+    },
+    {
+      "id": "w-1d2bq8l",
+      "word": "surplus",
+      "ipa": "/ˈsɜːrpləs/",
+      "pos": "noun",
+      "meaning": "phần dư/ thặng dư",
+      "example": "The surplus was reinvested in equipment.",
+      "exampleVi": "Phần thặng dư đã được tái đầu tư vào thiết bị."
+    },
+    {
+      "id": "w-1cxb9vt",
+      "word": "deficit",
+      "ipa": "/ˈdefɪsɪt/",
+      "pos": "noun",
+      "meaning": "khoản thâm hụt",
+      "example": "The deficit narrowed in the second half.",
+      "exampleVi": "Khoản thâm hụt đã thu hẹp trong nửa cuối năm."
+    },
+    {
+      "id": "w-1r8x8ng",
+      "word": "advocate",
+      "ipa": "/ˈædvəkeɪt/",
+      "pos": "verb",
+      "meaning": "ủng hộ/ chủ trương",
+      "example": "The report advocates a slower rollout.",
+      "exampleVi": "Bản báo cáo chủ trương triển khai chậm hơn."
+    },
+    {
+      "id": "w-g7vuoe",
+      "word": "undermine",
+      "ipa": "/ˌʌndərˈmaɪn/",
+      "pos": "verb",
+      "meaning": "làm suy yếu",
+      "example": "Constant changes undermine staff confidence.",
+      "exampleVi": "Thay đổi liên tục làm suy yếu niềm tin của nhân viên."
+    },
+    {
+      "id": "w-6fae2b",
+      "word": "curtail",
+      "ipa": "/kɜːrˈteɪl/",
+      "pos": "verb",
+      "meaning": "cắt giảm/ rút ngắn",
+      "example": "They curtailed travel to save money.",
+      "exampleVi": "Họ đã cắt giảm việc đi lại để tiết kiệm."
+    },
+    {
+      "id": "w-1fawp6g",
+      "word": "augment",
+      "ipa": "/ɔːɡˈment/",
+      "pos": "verb",
+      "meaning": "tăng cường/ bổ sung",
+      "example": "Extra staff will augment the night shift.",
+      "exampleVi": "Nhân sự thêm sẽ tăng cường cho ca đêm."
+    },
+    {
+      "id": "w-1gvlcz4",
+      "word": "delineate",
+      "ipa": "/dɪˈlɪnieɪt/",
+      "pos": "verb",
+      "meaning": "vạch rõ ranh giới",
+      "example": "The contract delineates each party's duties.",
+      "exampleVi": "Hợp đồng vạch rõ nghĩa vụ của từng bên."
+    },
+    {
+      "id": "w-ikaw33",
+      "word": "disseminate",
+      "ipa": "/dɪˈsemɪneɪt/",
+      "pos": "verb",
+      "meaning": "phổ biến rộng",
+      "example": "The findings were disseminated to all branches.",
+      "exampleVi": "Các phát hiện đã được phổ biến tới mọi chi nhánh."
+    },
+    {
+      "id": "w-b9b060",
+      "word": "consolidate operations",
+      "ipa": "/kənˈsɑːlɪdeɪt ˌɑːpəˈreɪʃnz/",
+      "pos": "phrase",
+      "meaning": "hợp nhất hoạt động",
+      "example": "The group will consolidate operations in one site.",
+      "exampleVi": "Tập đoàn sẽ hợp nhất hoạt động về một địa điểm."
+    },
+    {
+      "id": "w-284ied",
+      "word": "exacerbate",
+      "ipa": "/ɪɡˈzæsərbeɪt/",
+      "pos": "verb",
+      "meaning": "làm trầm trọng thêm",
+      "example": "The strike exacerbated the shortage.",
+      "exampleVi": "Cuộc đình công đã làm tình trạng thiếu hụt trầm trọng thêm."
+    },
+    {
+      "id": "w-1o9m6yn",
+      "word": "facilitate access",
+      "ipa": "/fəˈsɪlɪteɪt ˈækses/",
+      "pos": "phrase",
+      "meaning": "tạo điều kiện tiếp cận",
+      "example": "The portal will facilitate access to records.",
+      "exampleVi": "Cổng thông tin sẽ tạo điều kiện tiếp cận hồ sơ."
+    },
+    {
+      "id": "w-cfz5cf",
+      "word": "preclude",
+      "ipa": "/prɪˈkluːd/",
+      "pos": "verb",
+      "meaning": "loại trừ/ ngăn không cho",
+      "example": "Nothing in this clause precludes a refund.",
+      "exampleVi": "Không điều nào trong điều khoản này ngăn việc hoàn tiền."
+    },
+    {
+      "id": "w-1p46s57",
+      "word": "relinquish",
+      "ipa": "/rɪˈlɪŋkwɪʃ/",
+      "pos": "verb",
+      "meaning": "từ bỏ (quyền)",
+      "example": "He relinquished his seat on the board.",
+      "exampleVi": "Ông ấy đã từ bỏ ghế trong hội đồng."
+    },
+    {
+      "id": "w-1ub1slp",
+      "word": "render",
+      "ipa": "/ˈrendər/",
+      "pos": "verb",
+      "meaning": "khiến trở nên/ cung cấp",
+      "example": "The fault rendered the machine unusable.",
+      "exampleVi": "Sự cố khiến chiếc máy không dùng được."
+    },
+    {
+      "id": "w-hip5o9",
+      "word": "stipulate terms",
+      "ipa": "/ˈstɪpjuleɪt tɜːrmz/",
+      "pos": "phrase",
+      "meaning": "quy định rõ điều khoản",
+      "example": "The annex stipulates terms for early exit.",
+      "exampleVi": "Phụ lục quy định rõ điều khoản rút lui sớm."
+    },
+    {
+      "id": "w-ho2gvv",
+      "word": "undertake a review",
+      "ipa": "/ˌʌndərˈteɪk ə rɪˈvjuː/",
+      "pos": "phrase",
+      "meaning": "tiến hành rà soát",
+      "example": "The firm will undertake a review of suppliers.",
+      "exampleVi": "Công ty sẽ tiến hành rà soát nhà cung cấp."
+    },
+    {
+      "id": "w-63656s",
+      "word": "carry out an audit",
+      "ipa": "/ˈkæri aʊt ən ˈɔːdɪt/",
+      "pos": "phrase",
+      "meaning": "tiến hành kiểm toán",
+      "example": "External accountants carry out an audit each year.",
+      "exampleVi": "Kế toán bên ngoài tiến hành kiểm toán hằng năm."
+    },
+    {
+      "id": "w-17ymzpo",
+      "word": "draw up",
+      "ipa": "/drɔː ʌp/",
+      "pos": "phrase",
+      "meaning": "soạn thảo",
+      "example": "Lawyers will draw up the final version.",
+      "exampleVi": "Luật sư sẽ soạn thảo bản cuối cùng."
+    },
+    {
+      "id": "w-h08ldn",
+      "word": "iron out",
+      "ipa": "/ˈaɪərn aʊt/",
+      "pos": "phrase",
+      "meaning": "giải quyết ổn thoả",
+      "example": "We need to iron out the payment details.",
+      "exampleVi": "Chúng ta cần giải quyết ổn thoả các chi tiết thanh toán."
+    },
+    {
+      "id": "w-hgajgs",
+      "word": "scale back",
+      "ipa": "/skeɪl bæk/",
+      "pos": "phrase",
+      "meaning": "thu hẹp quy mô",
+      "example": "The firm decided to scale back its expansion.",
+      "exampleVi": "Công ty quyết định thu hẹp quy mô mở rộng."
+    },
+    {
+      "id": "w-1796kgd",
+      "word": "step down",
+      "ipa": "/step daʊn/",
+      "pos": "phrase",
+      "meaning": "từ chức",
+      "example": "The chairman will step down in December.",
+      "exampleVi": "Chủ tịch sẽ từ chức vào tháng Mười Hai."
+    },
+    {
+      "id": "w-1ja6kw",
+      "word": "weigh up",
+      "ipa": "/weɪ ʌp/",
+      "pos": "phrase",
+      "meaning": "cân nhắc",
+      "example": "The board must weigh up both offers.",
+      "exampleVi": "Hội đồng phải cân nhắc cả hai lời chào giá."
+    },
+    {
+      "id": "w-l09zah",
+      "word": "fall through",
+      "ipa": "/fɔːl θruː/",
+      "pos": "phrase",
+      "meaning": "đổ bể",
+      "example": "A deal this size can fall through at the last minute.",
+      "exampleVi": "Một thương vụ cỡ này có thể đổ bể vào phút chót."
+    },
+    {
+      "id": "w-7ilz0e",
+      "word": "come up with",
+      "ipa": "/kʌm ʌp wɪð/",
+      "pos": "phrase",
+      "meaning": "nghĩ ra",
+      "example": "We need to come up with a cheaper solution.",
+      "exampleVi": "Chúng ta cần nghĩ ra một giải pháp rẻ hơn."
+    },
+    {
+      "id": "w-13pm1rb",
+      "word": "put forward",
+      "ipa": "/pʊt ˈfɔːrwərd/",
+      "pos": "phrase",
+      "meaning": "đưa ra (đề xuất)",
+      "example": "They put forward a compromise.",
+      "exampleVi": "Họ đã đưa ra một phương án dung hoà."
+    },
+    {
+      "id": "w-1q00mf7",
+      "word": "rule out",
+      "ipa": "/ruːl aʊt/",
+      "pos": "phrase",
+      "meaning": "loại trừ khả năng",
+      "example": "We cannot rule out further delays.",
+      "exampleVi": "Chúng tôi không thể loại trừ khả năng chậm trễ thêm."
+    },
+    {
+      "id": "w-1h7bsq2",
+      "word": "bear in mind",
+      "ipa": "/ber ɪn maɪnd/",
+      "pos": "phrase",
+      "meaning": "ghi nhớ rằng",
+      "example": "Bear in mind that the office closes early.",
+      "exampleVi": "Ghi nhớ rằng văn phòng đóng cửa sớm."
+    },
+    {
+      "id": "w-1hi77mr",
+      "word": "in accordance with policy",
+      "ipa": "/ɪn əˈkɔːrdns wɪð ˈpɑːləsi/",
+      "pos": "phrase",
+      "meaning": "theo đúng chính sách",
+      "example": "Refunds are issued in accordance with policy.",
+      "exampleVi": "Việc hoàn tiền được thực hiện theo đúng chính sách."
+    },
+    {
+      "id": "w-1j37gpa",
+      "word": "to the best of our knowledge",
+      "ipa": "/tuː ðə best əv ˈaʊər ˈnɑːlɪdʒ/",
+      "pos": "phrase",
+      "meaning": "theo hiểu biết tốt nhất của chúng tôi",
+      "example": "To the best of our knowledge, the data is complete.",
+      "exampleVi": "Theo hiểu biết tốt nhất của chúng tôi, dữ liệu là đầy đủ."
+    },
+    {
+      "id": "w-19azklp",
+      "word": "without prejudice to",
+      "ipa": "/wɪˈðaʊt ˈpredʒudɪs tuː/",
+      "pos": "phrase",
+      "meaning": "không làm phương hại tới",
+      "example": "This offer is made without prejudice to our rights.",
+      "exampleVi": "Đề nghị này không làm phương hại tới quyền của chúng tôi."
+    },
+    {
+      "id": "w-1r0vf5e",
+      "word": "on a case-by-case basis",
+      "ipa": "/ɑːn ə keɪs baɪ keɪs ˈbeɪsɪs/",
+      "pos": "phrase",
+      "meaning": "xét theo từng trường hợp",
+      "example": "Exceptions are granted on a case-by-case basis.",
+      "exampleVi": "Ngoại lệ được cho phép xét theo từng trường hợp."
+    },
+    {
+      "id": "w-1i5pu19",
+      "word": "in due course",
+      "ipa": "/ɪn duː kɔːrs/",
+      "pos": "phrase",
+      "meaning": "vào thời điểm thích hợp",
+      "example": "You will be notified in due course.",
+      "exampleVi": "Bạn sẽ được thông báo vào thời điểm thích hợp."
+    },
+    {
+      "id": "w-1d4y8r8",
+      "word": "subject to change",
+      "ipa": "/ˈsʌbdʒɪkt tuː tʃeɪndʒ/",
+      "pos": "phrase",
+      "meaning": "có thể thay đổi",
+      "example": "All prices are subject to change without notice.",
+      "exampleVi": "Mọi mức giá đều có thể thay đổi mà không báo trước."
+    },
+    {
+      "id": "w-1915m26",
+      "word": "at short notice",
+      "ipa": "/ət ʃɔːrt ˈnoʊtɪs/",
+      "pos": "phrase",
+      "meaning": "báo gấp/ gấp gáp",
+      "example": "The meeting was arranged at short notice.",
+      "exampleVi": "Cuộc họp được sắp xếp một cách gấp gáp."
+    },
+    {
+      "id": "w-14ogzt7",
+      "word": "in light of",
+      "ipa": "/ɪn laɪt əv/",
+      "pos": "phrase",
+      "meaning": "xét trong bối cảnh",
+      "example": "In light of the results, we revised the plan.",
+      "exampleVi": "Xét trong bối cảnh kết quả đó, chúng tôi đã sửa kế hoạch."
+    },
+    {
+      "id": "w-1ipy929",
+      "word": "by no means",
+      "ipa": "/baɪ noʊ miːnz/",
+      "pos": "phrase",
+      "meaning": "hoàn toàn không",
+      "example": "The matter is by no means settled.",
+      "exampleVi": "Vấn đề hoàn toàn chưa được giải quyết."
+    },
+    {
+      "id": "w-wyr9oh",
+      "word": "all things considered",
+      "ipa": "/ɔːl θɪŋz kənˈsɪdərd/",
+      "pos": "phrase",
+      "meaning": "xét mọi mặt",
+      "example": "All things considered, the quarter went well.",
+      "exampleVi": "Xét mọi mặt, quý này diễn ra tốt đẹp."
+    },
+    {
+      "id": "w-b7rh3s",
+      "word": "with a view to",
+      "ipa": "/wɪð ə vjuː tuː/",
+      "pos": "phrase",
+      "meaning": "với mục đích",
+      "example": "They met with a view to signing a contract.",
+      "exampleVi": "Họ gặp nhau với mục đích ký hợp đồng."
+    },
+    {
+      "id": "w-1i69s81",
+      "word": "consequently",
+      "ipa": "/ˈkɑːnsəkwentli/",
+      "pos": "adverb",
+      "meaning": "do đó",
+      "example": "Demand fell; consequently, we cut production.",
+      "exampleVi": "Nhu cầu giảm; do đó chúng tôi cắt sản lượng."
+    },
+    {
+      "id": "w-yw8lq4",
+      "word": "furthermore",
+      "ipa": "/ˈfɜːrðərmɔːr/",
+      "pos": "adverb",
+      "meaning": "hơn nữa",
+      "example": "Furthermore, the warranty covers parts and labour.",
+      "exampleVi": "Hơn nữa, bảo hành bao gồm cả linh kiện lẫn công."
+    },
+    {
+      "id": "w-1rtdb19",
+      "word": "otherwise",
+      "ipa": "/ˈʌðərwaɪz/",
+      "pos": "adverb",
+      "meaning": "nếu không thì",
+      "example": "Confirm today; otherwise the booking lapses.",
+      "exampleVi": "Hãy xác nhận hôm nay, nếu không thì việc đặt chỗ mất hiệu lực."
+    },
+    {
+      "id": "w-42hudl",
+      "word": "meanwhile",
+      "ipa": "/ˈmiːnwaɪl/",
+      "pos": "adverb",
+      "meaning": "trong khi đó",
+      "example": "Meanwhile, the second team continued testing.",
+      "exampleVi": "Trong khi đó, nhóm thứ hai tiếp tục kiểm thử."
+    },
+    {
+      "id": "w-13097y4",
+      "word": "hence",
+      "ipa": "/hens/",
+      "pos": "adverb",
+      "meaning": "vì thế",
+      "example": "The part was faulty; hence the recall.",
+      "exampleVi": "Linh kiện bị lỗi, vì thế mới có đợt thu hồi."
+    },
+    {
+      "id": "w-stalvg",
+      "word": "thereby",
+      "ipa": "/ˌðerˈbaɪ/",
+      "pos": "adverb",
+      "meaning": "qua đó",
+      "example": "We automated the check, thereby saving an hour.",
+      "exampleVi": "Chúng tôi tự động hoá bước kiểm tra, qua đó tiết kiệm một tiếng."
+    },
+    {
+      "id": "w-1acgc1z",
+      "word": "insofar as",
+      "ipa": "/ˌɪnsoʊˈfɑːr əz/",
+      "pos": "phrase",
+      "meaning": "trong chừng mực mà",
+      "example": "The rule applies insofar as local law permits.",
+      "exampleVi": "Quy định áp dụng trong chừng mực luật địa phương cho phép."
     }
   ],
   "tensePoints": [],

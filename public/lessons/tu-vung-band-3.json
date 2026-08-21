@@ -9,7 +9,7 @@
     "en": "Contracts, negotiation and operations — the band that separates readers who understand from readers who guess."
   },
   "kind": "vocabulary",
-  "itemCount": 40,
+  "itemCount": 113,
   "words": [
     {
       "id": "w-15bryb7",
@@ -370,6 +370,663 @@
       "meaning": "chịu trách nhiệm về",
       "example": "Each team leader must be responsible for their own budget.",
       "exampleVi": "Mỗi trưởng nhóm phải chịu trách nhiệm về ngân sách của mình."
+    },
+    {
+      "id": "w-1uzhvt3",
+      "word": "agreement",
+      "ipa": "/əˈɡriːmənt/",
+      "pos": "noun",
+      "meaning": "thoả thuận",
+      "example": "Both parties signed the agreement in Tokyo.",
+      "exampleVi": "Hai bên đã ký thoả thuận tại Tokyo."
+    },
+    {
+      "id": "w-q5cgwn",
+      "word": "party",
+      "ipa": "/ˈpɑːrti/",
+      "pos": "noun",
+      "meaning": "bên (trong hợp đồng)",
+      "example": "Neither party may transfer this contract.",
+      "exampleVi": "Không bên nào được chuyển nhượng hợp đồng này."
+    },
+    {
+      "id": "w-1eckznw",
+      "word": "draft",
+      "ipa": "/dræft/",
+      "pos": "noun",
+      "meaning": "bản thảo",
+      "example": "Please review the draft before Friday.",
+      "exampleVi": "Vui lòng rà soát bản thảo trước thứ Sáu."
+    },
+    {
+      "id": "w-1itlsv6",
+      "word": "binding",
+      "ipa": "/ˈbaɪndɪŋ/",
+      "pos": "adjective",
+      "meaning": "có tính ràng buộc",
+      "example": "The memorandum is not legally binding.",
+      "exampleVi": "Bản ghi nhớ không có tính ràng buộc pháp lý."
+    },
+    {
+      "id": "w-capuoh",
+      "word": "enforce",
+      "ipa": "/ɪnˈfɔːrs/",
+      "pos": "verb",
+      "meaning": "thi hành/ cưỡng chế",
+      "example": "The court will enforce the payment terms.",
+      "exampleVi": "Toà sẽ cưỡng chế thi hành các điều khoản thanh toán."
+    },
+    {
+      "id": "w-zl9s82",
+      "word": "expire",
+      "ipa": "/ɪkˈspaɪər/",
+      "pos": "verb",
+      "meaning": "hết hạn",
+      "example": "The licence expires at the end of June.",
+      "exampleVi": "Giấy phép hết hạn vào cuối tháng Sáu."
+    },
+    {
+      "id": "w-1fulqca",
+      "word": "extension",
+      "ipa": "/ɪkˈstenʃn/",
+      "pos": "noun",
+      "meaning": "sự gia hạn",
+      "example": "We requested a three-month extension.",
+      "exampleVi": "Chúng tôi đã xin gia hạn ba tháng."
+    },
+    {
+      "id": "w-1cb511y",
+      "word": "penalty",
+      "ipa": "/ˈpenəlti/",
+      "pos": "noun",
+      "meaning": "khoản phạt",
+      "example": "Late delivery carries a penalty of five percent.",
+      "exampleVi": "Giao hàng chậm chịu khoản phạt năm phần trăm."
+    },
+    {
+      "id": "w-1e19hmj",
+      "word": "dispute",
+      "ipa": "/dɪˈspjuːt/",
+      "pos": "noun",
+      "meaning": "tranh chấp",
+      "example": "The dispute was settled out of court.",
+      "exampleVi": "Tranh chấp đã được giải quyết ngoài toà."
+    },
+    {
+      "id": "w-1oaiyd6",
+      "word": "settle",
+      "ipa": "/ˈsetl/",
+      "pos": "verb",
+      "meaning": "dàn xếp/ thanh toán",
+      "example": "They settled the claim within a month.",
+      "exampleVi": "Họ đã dàn xếp xong khiếu nại trong vòng một tháng."
+    },
+    {
+      "id": "w-her7iv",
+      "word": "confidential",
+      "ipa": "/ˌkɑːnfɪˈdenʃl/",
+      "pos": "adjective",
+      "meaning": "mật/ bảo mật",
+      "example": "Treat all pricing data as confidential.",
+      "exampleVi": "Hãy coi mọi dữ liệu giá là thông tin mật."
+    },
+    {
+      "id": "w-cqzl26",
+      "word": "counterpart",
+      "ipa": "/ˈkaʊntərpɑːrt/",
+      "pos": "noun",
+      "meaning": "người đồng cấp",
+      "example": "She met her counterpart from the Seoul office.",
+      "exampleVi": "Cô ấy đã gặp người đồng cấp từ văn phòng Seoul."
+    },
+    {
+      "id": "w-1iqju1x",
+      "word": "concession",
+      "ipa": "/kənˈseʃn/",
+      "pos": "noun",
+      "meaning": "sự nhượng bộ",
+      "example": "We made one concession on the delivery date.",
+      "exampleVi": "Chúng tôi đã nhượng bộ một điểm về ngày giao hàng."
+    },
+    {
+      "id": "w-an7ig2",
+      "word": "leverage",
+      "ipa": "/ˈlevərɪdʒ/",
+      "pos": "noun",
+      "meaning": "lợi thế đàm phán",
+      "example": "Volume gives us leverage on price.",
+      "exampleVi": "Sản lượng cho chúng tôi lợi thế đàm phán về giá."
+    },
+    {
+      "id": "w-1nrzrej",
+      "word": "margin",
+      "ipa": "/ˈmɑːrdʒɪn/",
+      "pos": "noun",
+      "meaning": "biên lợi nhuận",
+      "example": "The margin on this line is very thin.",
+      "exampleVi": "Biên lợi nhuận của dòng hàng này rất mỏng."
+    },
+    {
+      "id": "w-dz7ako",
+      "word": "target",
+      "ipa": "/ˈtɑːrɡɪt/",
+      "pos": "noun",
+      "meaning": "chỉ tiêu",
+      "example": "The team missed its quarterly target.",
+      "exampleVi": "Nhóm đã không đạt chỉ tiêu quý."
+    },
+    {
+      "id": "w-1cfd11n",
+      "word": "quota",
+      "ipa": "/ˈkwoʊtə/",
+      "pos": "noun",
+      "meaning": "hạn ngạch/ định mức",
+      "example": "Each region has its own sales quota.",
+      "exampleVi": "Mỗi khu vực có định mức doanh số riêng."
+    },
+    {
+      "id": "w-12ht57m",
+      "word": "retail",
+      "ipa": "/ˈriːteɪl/",
+      "pos": "noun",
+      "meaning": "bán lẻ",
+      "example": "Retail accounts for most of our income.",
+      "exampleVi": "Bán lẻ chiếm phần lớn thu nhập của chúng tôi."
+    },
+    {
+      "id": "w-17uf8qn",
+      "word": "wholesale",
+      "ipa": "/ˈhoʊlseɪl/",
+      "pos": "noun",
+      "meaning": "bán buôn",
+      "example": "Wholesale prices are listed separately.",
+      "exampleVi": "Giá bán buôn được niêm yết riêng."
+    },
+    {
+      "id": "w-13do56e",
+      "word": "distributor",
+      "ipa": "/dɪˈstrɪbjətər/",
+      "pos": "noun",
+      "meaning": "nhà phân phối",
+      "example": "We appointed a distributor in Thailand.",
+      "exampleVi": "Chúng tôi đã chỉ định một nhà phân phối ở Thái Lan."
+    },
+    {
+      "id": "w-1ab5fpq",
+      "word": "procedure",
+      "ipa": "/prəˈsiːdʒər/",
+      "pos": "noun",
+      "meaning": "quy trình",
+      "example": "Follow the standard procedure for returns.",
+      "exampleVi": "Hãy làm theo quy trình chuẩn cho hàng trả lại."
+    },
+    {
+      "id": "w-1xoqawl",
+      "word": "protocol",
+      "ipa": "/ˈproʊtəkɔːl/",
+      "pos": "noun",
+      "meaning": "quy tắc/ nghi thức",
+      "example": "The lab has a strict safety protocol.",
+      "exampleVi": "Phòng thí nghiệm có quy tắc an toàn nghiêm ngặt."
+    },
+    {
+      "id": "w-1uzjrfs",
+      "word": "workflow",
+      "ipa": "/ˈwɜːrkfloʊ/",
+      "pos": "noun",
+      "meaning": "luồng công việc",
+      "example": "The new workflow cut approval time in half.",
+      "exampleVi": "Luồng công việc mới đã giảm một nửa thời gian phê duyệt."
+    },
+    {
+      "id": "w-2owfwd",
+      "word": "milestone",
+      "ipa": "/ˈmaɪlstoʊn/",
+      "pos": "noun",
+      "meaning": "mốc quan trọng",
+      "example": "We reached the first milestone ahead of time.",
+      "exampleVi": "Chúng tôi đã đạt mốc đầu tiên sớm hơn dự kiến."
+    },
+    {
+      "id": "w-bm9alx",
+      "word": "resource",
+      "ipa": "/ˈriːsɔːrs/",
+      "pos": "noun",
+      "meaning": "nguồn lực",
+      "example": "We lack the resources for a second shift.",
+      "exampleVi": "Chúng tôi thiếu nguồn lực cho ca thứ hai."
+    },
+    {
+      "id": "w-tfrt6x",
+      "word": "capacity",
+      "ipa": "/kəˈpæsəti/",
+      "pos": "noun",
+      "meaning": "công suất/ sức chứa",
+      "example": "The plant is running at full capacity.",
+      "exampleVi": "Nhà máy đang chạy hết công suất."
+    },
+    {
+      "id": "w-mgt89g",
+      "word": "downtime",
+      "ipa": "/ˈdaʊntaɪm/",
+      "pos": "noun",
+      "meaning": "thời gian ngừng máy",
+      "example": "Downtime cost us two days of output.",
+      "exampleVi": "Thời gian ngừng máy khiến chúng tôi mất hai ngày sản lượng."
+    },
+    {
+      "id": "w-ehdgmu",
+      "word": "bottleneck",
+      "ipa": "/ˈbɑːtlnek/",
+      "pos": "noun",
+      "meaning": "điểm nghẽn",
+      "example": "Packing is the bottleneck in this line.",
+      "exampleVi": "Đóng gói là điểm nghẽn của dây chuyền này."
+    },
+    {
+      "id": "w-hd3594",
+      "word": "efficiency",
+      "ipa": "/ɪˈfɪʃnsi/",
+      "pos": "noun",
+      "meaning": "hiệu suất",
+      "example": "Efficiency improved after the layout change.",
+      "exampleVi": "Hiệu suất đã tăng sau khi đổi cách bố trí."
+    },
+    {
+      "id": "w-g2v65g",
+      "word": "defect",
+      "ipa": "/ˈdiːfekt/",
+      "pos": "noun",
+      "meaning": "khuyết tật/ lỗi sản phẩm",
+      "example": "Any defect must be logged immediately.",
+      "exampleVi": "Mọi lỗi sản phẩm đều phải được ghi nhận ngay."
+    },
+    {
+      "id": "w-p41p68",
+      "word": "recall",
+      "ipa": "/rɪˈkɔːl/",
+      "pos": "noun",
+      "meaning": "đợt thu hồi",
+      "example": "The recall affected two thousand units.",
+      "exampleVi": "Đợt thu hồi ảnh hưởng tới hai nghìn sản phẩm."
+    },
+    {
+      "id": "w-e26q9w",
+      "word": "compliance officer",
+      "ipa": "/kəmˈplaɪəns ˈɔːfɪsər/",
+      "pos": "phrase",
+      "meaning": "cán bộ tuân thủ",
+      "example": "The compliance officer reviews every contract.",
+      "exampleVi": "Cán bộ tuân thủ rà soát từng hợp đồng."
+    },
+    {
+      "id": "w-1gxz7w3",
+      "word": "campaign",
+      "ipa": "/kæmˈpeɪn/",
+      "pos": "noun",
+      "meaning": "chiến dịch",
+      "example": "The campaign ran for six weeks.",
+      "exampleVi": "Chiến dịch đã chạy trong sáu tuần."
+    },
+    {
+      "id": "w-171ksty",
+      "word": "brand",
+      "ipa": "/brænd/",
+      "pos": "noun",
+      "meaning": "thương hiệu",
+      "example": "The brand is well known in Asia.",
+      "exampleVi": "Thương hiệu này rất nổi tiếng ở châu Á."
+    },
+    {
+      "id": "w-pua6g7",
+      "word": "survey",
+      "ipa": "/ˈsɜːrveɪ/",
+      "pos": "noun",
+      "meaning": "cuộc khảo sát",
+      "example": "The survey covered five hundred customers.",
+      "exampleVi": "Cuộc khảo sát bao phủ năm trăm khách hàng."
+    },
+    {
+      "id": "w-f4kef6",
+      "word": "feedback",
+      "ipa": "/ˈfiːdbæk/",
+      "pos": "noun",
+      "meaning": "phản hồi",
+      "example": "Customer feedback shaped the new design.",
+      "exampleVi": "Phản hồi của khách hàng đã định hình thiết kế mới."
+    },
+    {
+      "id": "w-1v2gwva",
+      "word": "launch",
+      "ipa": "/lɔːntʃ/",
+      "pos": "verb",
+      "meaning": "ra mắt",
+      "example": "They will launch the product in October.",
+      "exampleVi": "Họ sẽ ra mắt sản phẩm vào tháng Mười."
+    },
+    {
+      "id": "w-1cq7abn",
+      "word": "subscribe",
+      "ipa": "/səbˈskraɪb/",
+      "pos": "verb",
+      "meaning": "đăng ký (dài hạn)",
+      "example": "Over a thousand readers subscribe monthly.",
+      "exampleVi": "Hơn một nghìn độc giả đăng ký hằng tháng."
+    },
+    {
+      "id": "w-1o8glr2",
+      "word": "advertise",
+      "ipa": "/ˈædvərtaɪz/",
+      "pos": "verb",
+      "meaning": "quảng cáo",
+      "example": "The firm advertises mainly online.",
+      "exampleVi": "Công ty quảng cáo chủ yếu trên mạng."
+    },
+    {
+      "id": "w-9c0all",
+      "word": "sponsor",
+      "ipa": "/ˈspɑːnsər/",
+      "pos": "verb",
+      "meaning": "tài trợ",
+      "example": "A local bank sponsored the trade fair.",
+      "exampleVi": "Một ngân hàng địa phương đã tài trợ hội chợ thương mại."
+    },
+    {
+      "id": "w-vl13gs",
+      "word": "assign",
+      "ipa": "/əˈsaɪn/",
+      "pos": "verb",
+      "meaning": "phân công",
+      "example": "She assigned the audit to two juniors.",
+      "exampleVi": "Cô ấy đã phân công cuộc kiểm toán cho hai nhân viên trẻ."
+    },
+    {
+      "id": "w-11icptc",
+      "word": "authorize",
+      "ipa": "/ˈɔːθəraɪz/",
+      "pos": "verb",
+      "meaning": "cho phép/ uỷ quyền",
+      "example": "Only the director can authorize this payment.",
+      "exampleVi": "Chỉ giám đốc mới có quyền cho phép khoản chi này."
+    },
+    {
+      "id": "w-m086dn",
+      "word": "coordinate",
+      "ipa": "/koʊˈɔːrdɪneɪt/",
+      "pos": "verb",
+      "meaning": "điều phối",
+      "example": "He coordinates the work of three teams.",
+      "exampleVi": "Anh ấy điều phối công việc của ba nhóm."
+    },
+    {
+      "id": "w-185kxt7",
+      "word": "facilitate",
+      "ipa": "/fəˈsɪlɪteɪt/",
+      "pos": "verb",
+      "meaning": "tạo điều kiện",
+      "example": "The new software facilitates remote work.",
+      "exampleVi": "Phần mềm mới tạo điều kiện cho làm việc từ xa."
+    },
+    {
+      "id": "w-1l0u8ia",
+      "word": "generate",
+      "ipa": "/ˈdʒenəreɪt/",
+      "pos": "verb",
+      "meaning": "tạo ra",
+      "example": "The branch generates half our profit.",
+      "exampleVi": "Chi nhánh tạo ra một nửa lợi nhuận của chúng tôi."
+    },
+    {
+      "id": "w-wt36s9",
+      "word": "monitor",
+      "ipa": "/ˈmɑːnɪtər/",
+      "pos": "verb",
+      "meaning": "theo dõi/ giám sát",
+      "example": "Sensors monitor the temperature all night.",
+      "exampleVi": "Cảm biến theo dõi nhiệt độ suốt đêm."
+    },
+    {
+      "id": "w-1x0660e",
+      "word": "negotiate a deal",
+      "ipa": "/nɪˈɡoʊʃieɪt ə diːl/",
+      "pos": "phrase",
+      "meaning": "đàm phán một thương vụ",
+      "example": "They negotiated a deal worth ten million.",
+      "exampleVi": "Họ đã đàm phán một thương vụ trị giá mười triệu."
+    },
+    {
+      "id": "w-1xc7nda",
+      "word": "optimize",
+      "ipa": "/ˈɑːptɪmaɪz/",
+      "pos": "verb",
+      "meaning": "tối ưu hoá",
+      "example": "We optimized the route to save fuel.",
+      "exampleVi": "Chúng tôi đã tối ưu hoá lộ trình để tiết kiệm nhiên liệu."
+    },
+    {
+      "id": "w-1dg25ro",
+      "word": "prioritize",
+      "ipa": "/praɪˈɔːrətaɪz/",
+      "pos": "verb",
+      "meaning": "ưu tiên",
+      "example": "Please prioritize the export orders.",
+      "exampleVi": "Vui lòng ưu tiên các đơn hàng xuất khẩu."
+    },
+    {
+      "id": "w-1cjiu77",
+      "word": "resolve",
+      "ipa": "/rɪˈzɑːlv/",
+      "pos": "verb",
+      "meaning": "giải quyết",
+      "example": "The team resolved the issue in one day.",
+      "exampleVi": "Nhóm đã giải quyết vấn đề trong một ngày."
+    },
+    {
+      "id": "w-11xtxto",
+      "word": "retain",
+      "ipa": "/rɪˈteɪn/",
+      "pos": "verb",
+      "meaning": "giữ lại",
+      "example": "We retain records for seven years.",
+      "exampleVi": "Chúng tôi giữ lại hồ sơ trong bảy năm."
+    },
+    {
+      "id": "w-1rhh0dg",
+      "word": "verify",
+      "ipa": "/ˈverɪfaɪ/",
+      "pos": "verb",
+      "meaning": "xác minh",
+      "example": "Please verify the account details first.",
+      "exampleVi": "Vui lòng xác minh thông tin tài khoản trước."
+    },
+    {
+      "id": "w-1hs5xeq",
+      "word": "waive a fee",
+      "ipa": "/weɪv ə fiː/",
+      "pos": "phrase",
+      "meaning": "miễn một khoản phí",
+      "example": "The bank agreed to waive a fee for us.",
+      "exampleVi": "Ngân hàng đã đồng ý miễn một khoản phí cho chúng tôi."
+    },
+    {
+      "id": "w-ey2qbw",
+      "word": "competitive",
+      "ipa": "/kəmˈpetətɪv/",
+      "pos": "adjective",
+      "meaning": "cạnh tranh",
+      "example": "Our prices remain competitive in this market.",
+      "exampleVi": "Giá của chúng tôi vẫn cạnh tranh ở thị trường này."
+    },
+    {
+      "id": "w-9he0e9",
+      "word": "consistent",
+      "ipa": "/kənˈsɪstənt/",
+      "pos": "adjective",
+      "meaning": "nhất quán",
+      "example": "Quality has been consistent all year.",
+      "exampleVi": "Chất lượng đã nhất quán suốt cả năm."
+    },
+    {
+      "id": "w-1s9upgq",
+      "word": "crucial",
+      "ipa": "/ˈkruːʃl/",
+      "pos": "adjective",
+      "meaning": "then chốt",
+      "example": "Timing is crucial in this negotiation.",
+      "exampleVi": "Thời điểm là yếu tố then chốt trong cuộc đàm phán này."
+    },
+    {
+      "id": "w-1vqbb3k",
+      "word": "eligible",
+      "ipa": "/ˈelɪdʒəbl/",
+      "pos": "adjective",
+      "meaning": "đủ điều kiện",
+      "example": "Only full-time staff are eligible for the bonus.",
+      "exampleVi": "Chỉ nhân viên toàn thời gian mới đủ điều kiện nhận thưởng."
+    },
+    {
+      "id": "w-1l8lh2g",
+      "word": "inevitable",
+      "ipa": "/ɪnˈevɪtəbl/",
+      "pos": "adjective",
+      "meaning": "không thể tránh khỏi",
+      "example": "Some delay was inevitable after the storm.",
+      "exampleVi": "Chậm trễ ít nhiều là không thể tránh khỏi sau cơn bão."
+    },
+    {
+      "id": "w-1e4gv7l",
+      "word": "comprehensive review",
+      "ipa": "/ˌkɑːmprɪˈhensɪv rɪˈvjuː/",
+      "pos": "phrase",
+      "meaning": "cuộc rà soát toàn diện",
+      "example": "The board ordered a comprehensive review of costs.",
+      "exampleVi": "Hội đồng đã yêu cầu một cuộc rà soát toàn diện về chi phí."
+    },
+    {
+      "id": "w-sfbawn",
+      "word": "thorough",
+      "ipa": "/ˈθɜːroʊ/",
+      "pos": "adjective",
+      "meaning": "kỹ lưỡng",
+      "example": "The inspection was thorough and well documented.",
+      "exampleVi": "Cuộc kiểm tra rất kỹ lưỡng và được ghi chép đầy đủ."
+    },
+    {
+      "id": "w-r4dx02",
+      "word": "gradually",
+      "ipa": "/ˈɡrædʒuəli/",
+      "pos": "adverb",
+      "meaning": "dần dần",
+      "example": "Demand recovered gradually over six months.",
+      "exampleVi": "Nhu cầu hồi phục dần trong sáu tháng."
+    },
+    {
+      "id": "w-18aor5z",
+      "word": "significantly",
+      "ipa": "/sɪɡˈnɪfɪkəntli/",
+      "pos": "adverb",
+      "meaning": "đáng kể",
+      "example": "Costs fell significantly after the merger.",
+      "exampleVi": "Chi phí đã giảm đáng kể sau khi sáp nhập."
+    },
+    {
+      "id": "w-zzdx0a",
+      "word": "respectively",
+      "ipa": "/rɪˈspektɪvli/",
+      "pos": "adverb",
+      "meaning": "theo thứ tự đó",
+      "example": "Sales rose eight and twelve percent respectively.",
+      "exampleVi": "Doanh số tăng lần lượt tám và mười hai phần trăm."
+    },
+    {
+      "id": "w-1d3tan5",
+      "word": "on behalf of the company",
+      "ipa": "/ɑːn bɪˈhæf əv ðə ˈkʌmpəni/",
+      "pos": "phrase",
+      "meaning": "thay mặt công ty",
+      "example": "She signed on behalf of the company.",
+      "exampleVi": "Cô ấy đã ký thay mặt công ty."
+    },
+    {
+      "id": "w-nfc1pb",
+      "word": "in the meantime",
+      "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "pos": "phrase",
+      "meaning": "trong lúc chờ đợi",
+      "example": "In the meantime, please use the old form.",
+      "exampleVi": "Trong lúc chờ đợi, vui lòng dùng mẫu cũ."
+    },
+    {
+      "id": "w-1ihjy6o",
+      "word": "as a result of",
+      "ipa": "/əz ə rɪˈzʌlt əv/",
+      "pos": "phrase",
+      "meaning": "do kết quả của",
+      "example": "As a result of the delay, we lost the order.",
+      "exampleVi": "Do kết quả của sự chậm trễ, chúng tôi mất đơn hàng."
+    },
+    {
+      "id": "w-1u100r0",
+      "word": "with the exception of",
+      "ipa": "/wɪð ði ɪkˈsepʃn əv/",
+      "pos": "phrase",
+      "meaning": "ngoại trừ",
+      "example": "All branches closed with the exception of Hanoi.",
+      "exampleVi": "Mọi chi nhánh đều đóng cửa ngoại trừ Hà Nội."
+    },
+    {
+      "id": "w-w7du5w",
+      "word": "prior to",
+      "ipa": "/ˈpraɪər tuː/",
+      "pos": "preposition",
+      "meaning": "trước khi",
+      "example": "Prior to the audit, we reorganised the files.",
+      "exampleVi": "Trước khi kiểm toán, chúng tôi đã sắp xếp lại hồ sơ."
+    },
+    {
+      "id": "w-1fw78r2",
+      "word": "in terms of",
+      "ipa": "/ɪn tɜːrmz əv/",
+      "pos": "phrase",
+      "meaning": "xét về mặt",
+      "example": "In terms of cost, the second option wins.",
+      "exampleVi": "Xét về mặt chi phí, phương án thứ hai thắng."
+    },
+    {
+      "id": "w-5a1ptp",
+      "word": "follow up",
+      "ipa": "/ˈfɑːloʊ ʌp/",
+      "pos": "phrase",
+      "meaning": "theo dõi tiếp",
+      "example": "I will follow up with the supplier tomorrow.",
+      "exampleVi": "Tôi sẽ theo dõi tiếp với nhà cung cấp vào ngày mai."
+    },
+    {
+      "id": "w-jjk8ij",
+      "word": "back up",
+      "ipa": "/bæk ʌp/",
+      "pos": "phrase",
+      "meaning": "sao lưu/ hỗ trợ",
+      "example": "Please back up the files before the update.",
+      "exampleVi": "Vui lòng sao lưu các tệp trước khi cập nhật."
+    },
+    {
+      "id": "w-98byuu",
+      "word": "turn down",
+      "ipa": "/tɜːrn daʊn/",
+      "pos": "phrase",
+      "meaning": "từ chối",
+      "example": "They turned down our first offer.",
+      "exampleVi": "Họ đã từ chối lời chào giá đầu tiên của chúng tôi."
+    },
+    {
+      "id": "w-10ygyt0",
+      "word": "bring up",
+      "ipa": "/brɪŋ ʌp/",
+      "pos": "phrase",
+      "meaning": "nêu ra (vấn đề)",
+      "example": "She will bring up the issue at the meeting.",
+      "exampleVi": "Cô ấy sẽ nêu vấn đề đó ra tại cuộc họp."
     }
   ],
   "tensePoints": [],

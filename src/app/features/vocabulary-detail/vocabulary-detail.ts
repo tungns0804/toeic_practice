@@ -8,14 +8,18 @@ import {
   Lesson,
   LocalizedText,
   POS_SHORT_KEY,
+  PARTS_OF_SPEECH,
+  PartOfSpeech,
   VocabularyWord,
   localized,
 } from '../../core/models/lesson.model';
+import type { MessageKey } from '../../core/i18n/messages';
 import {
   AnswerMode,
   DEFAULT_MAX_WRONG_ATTEMPTS,
   PracticeConfig,
   PracticeScope,
+  SCOPE_LABEL_KEY,
   VOCAB_DIRECTIONS,
   VocabDirection,
   vocabDirectionInfo,
@@ -49,6 +53,17 @@ export class VocabularyDetail {
   readonly directions = VOCAB_DIRECTIONS;
   readonly posShortKey = POS_SHORT_KEY;
 
+
+  /**
+   * Khung thiết lập đang mở hay đang thu gọn.
+   *
+   * Mặc định THU GỌN. Trước đây nó luôn mở, chiếm gần trọn màn hình đầu tiên —
+   * người vào đọc lý thuyết hoặc tra bảng phải cuộn qua một bức tường điều khiển
+   * mới tới được nội dung. Phần lớn người học bấm thẳng "Bắt đầu luyện" với thiết
+   * lập mặc định, nên thứ họ cần thấy trước là nút đó, không phải sáu nhóm tuỳ chọn.
+   */
+  readonly setupOpen = signal(false);
+
   readonly lessonId = signal('');
   readonly lesson = signal<Lesson | null>(null);
   readonly loading = signal(true);
@@ -65,6 +80,8 @@ export class VocabularyDetail {
   // --- Bộ lọc bảng ---
   readonly search = signal('');
   readonly onlyFavorites = signal(false);
+  /** null = không lọc theo từ loại. */
+  readonly posFilter = signal<PartOfSpeech | null>(null);
 
   readonly notFound = computed(() => !this.loading() && this.lesson() === null);
   readonly words = computed<VocabularyWord[]>(() => this.lesson()?.words ?? []);
@@ -105,16 +122,40 @@ export class VocabularyDetail {
 
   readonly canStart = computed(() => this.plannedQuestionCount() > 0);
 
+  /** Nhãn tóm tắt thiết lập, hiện khi khung đang thu gọn. */
+  readonly summaryKeys = computed<MessageKey[]>(() => [
+    this.currentDirection().shortKey,
+    this.answerMode() === 'choice' ? 'setup.answerMode.choice' : 'setup.answerMode.typing',
+    SCOPE_LABEL_KEY[this.scope()],
+  ]);
+
   readonly limitChoices = computed(() =>
     LIMIT_CHOICES.filter((limit) => limit < this.usableCount()),
   );
 
   // --- Bảng tra cứu ---
 
+  /**
+   * Các từ loại thực sự CÓ trong band này, kèm số lượng.
+   *
+   * Dựng từ dữ liệu chứ không liệt kê cứng bảy từ loại: band nào không có giới từ
+   * thì không hiện nút "Giới từ (0)" để bấm vào rồi nhận bảng trống.
+   */
+  readonly posOptions = computed(() =>
+    PARTS_OF_SPEECH.map((pos) => ({
+      pos,
+      count: this.words().filter((word) => word.pos === pos).length,
+    })).filter((item) => item.count > 0),
+  );
+
   readonly filteredWords = computed<VocabularyWord[]>(() => {
-    const base = this.onlyFavorites()
+    let base = this.onlyFavorites()
       ? this.words().filter((word) => this.favoriteIds().has(word.id))
       : this.words();
+
+    const pos = this.posFilter();
+    if (pos) base = base.filter((word) => word.pos === pos);
+
     const keyword = normalizeSearch(this.search());
     if (!keyword) return base;
     return base.filter((word) =>
@@ -144,11 +185,17 @@ export class VocabularyDetail {
     this.questionLimit.set(null);
     this.search.set('');
     this.onlyFavorites.set(false);
+    this.posFilter.set(null);
   }
 
   /** Chữ của một cặp hai ngôn ngữ, theo ngôn ngữ đang chọn. */
   localizedText(text: LocalizedText): string {
     return localized(text, this.lang.language());
+  }
+
+
+  toggleSetup(): void {
+    this.setupOpen.update((open) => !open);
   }
 
   // --- Sự kiện thiết lập ---
@@ -195,6 +242,11 @@ export class VocabularyDetail {
 
   toggleOnlyFavorites(event: Event): void {
     this.onlyFavorites.set((event.target as HTMLInputElement).checked);
+  }
+
+  /** Bấm lại đúng từ loại đang chọn thì bỏ lọc — không cần thêm nút "Tất cả". */
+  togglePos(pos: PartOfSpeech): void {
+    this.posFilter.update((current) => (current === pos ? null : pos));
   }
 
   // --- Favorite ---

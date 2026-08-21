@@ -56,7 +56,7 @@
         "en": "The office basics: appointments, orders, customers and deliveries. These turn up in every part of the test."
       },
       "kind": "vocabulary",
-      "itemCount": 40,
+      "itemCount": 118,
       "file": "tu-vung-band-1.json",
       "bandFrom": 300,
       "bandTo": 450
@@ -72,7 +72,7 @@
         "en": "Everyday working vocabulary: hiring, logistics and basic finance. The core of Parts 5 and 7."
       },
       "kind": "vocabulary",
-      "itemCount": 40,
+      "itemCount": 110,
       "file": "tu-vung-band-2.json",
       "bandFrom": 450,
       "bandTo": 600
@@ -88,7 +88,7 @@
         "en": "Contracts, negotiation and operations — the band that separates readers who understand from readers who guess."
       },
       "kind": "vocabulary",
-      "itemCount": 40,
+      "itemCount": 113,
       "file": "tu-vung-band-3.json",
       "bandFrom": 600,
       "bandTo": 750
@@ -104,7 +104,7 @@
         "en": "Financial reporting, legal and management vocabulary. Dense in the long Part 7 passages."
       },
       "kind": "vocabulary",
-      "itemCount": 40,
+      "itemCount": 107,
       "file": "tu-vung-band-4.json",
       "bandFrom": 750,
       "bandTo": 860
@@ -120,7 +120,7 @@
         "en": "Academic and formal vocabulary plus the fixed phrases that set the traps. This is what decides the last stretch to 990."
       },
       "kind": "vocabulary",
-      "itemCount": 40,
+      "itemCount": 109,
       "file": "tu-vung-band-5.json",
       "bandFrom": 860,
       "bandTo": 990

@@ -41,3 +41,81 @@ immediately | /ɪˈmiːdiətli/ | adv | ngay lập tức | Report any accident i
 in advance | /ɪn ədˈvæns/ | phr | trước/ trước thời hạn | Payment must be made in advance. | Phải thanh toán trước.
 on behalf of | /ɑːn bɪˈhæf əv/ | phr | thay mặt cho | I am writing on behalf of the sales team. | Tôi viết thư này thay mặt cho đội kinh doanh.
 due to | /ˈduː tuː/ | phr | do/ bởi vì | The flight was delayed due to bad weather. | Chuyến bay bị hoãn do thời tiết xấu.
+
+# ── Bổ sung: tuyển dụng và nhân sự ─────────────────────────────────────────
+applicant | /ˈæplɪkənt/ | n | người nộp đơn | Every applicant must submit two references. | Mọi người nộp đơn đều phải nộp hai thư giới thiệu.
+resume | /ˈrezəmeɪ/ | n | sơ yếu lý lịch | Attach your resume to the online form. | Đính kèm sơ yếu lý lịch vào tờ khai trực tuyến.
+interview | /ˈɪntərvjuː/ | n | buổi phỏng vấn | The second interview lasts about an hour. | Buổi phỏng vấn thứ hai kéo dài khoảng một tiếng.
+vacancy | /ˈveɪkənsi/ | n | vị trí còn trống | There is a vacancy in the shipping department. | Có một vị trí còn trống ở phòng vận chuyển.
+personnel | /ˌpɜːrsəˈnel/ | n | nhân sự (bộ phận) | Personnel handles all leave requests. | Bộ phận nhân sự xử lý mọi đơn xin nghỉ.
+staffing | /ˈstæfɪŋ/ | n | việc bố trí nhân sự | Staffing levels drop during the holidays. | Mức bố trí nhân sự giảm xuống trong kỳ nghỉ lễ.
+trainee | /ˌtreɪˈniː/ | n | thực tập sinh | Each trainee works with a senior engineer. | Mỗi thực tập sinh làm việc cùng một kỹ sư lâu năm.
+supervise | /ˈsuːpərvaɪz/ | v | giám sát | She supervises a team of twelve. | Cô ấy giám sát một nhóm mười hai người.
+evaluate | /ɪˈvæljueɪt/ | v | đánh giá | Managers evaluate their staff twice a year. | Quản lý đánh giá nhân viên hai lần mỗi năm.
+performance | /pərˈfɔːrməns/ | n | hiệu suất làm việc | Her performance improved after the training. | Hiệu suất làm việc của cô ấy tốt lên sau khoá đào tạo.
+raise | /reɪz/ | n | đợt tăng lương | He received a raise after two years. | Anh ấy được tăng lương sau hai năm.
+retire | /rɪˈtaɪər/ | v | nghỉ hưu | Our chief engineer retires in June. | Kỹ sư trưởng của chúng tôi nghỉ hưu vào tháng Sáu.
+attendance | /əˈtendəns/ | n | việc có mặt/ điểm danh | Attendance at the safety briefing is required. | Việc có mặt ở buổi phổ biến an toàn là bắt buộc.
+leave | /liːv/ | n | kỳ nghỉ phép | She is on maternity leave until March. | Cô ấy nghỉ thai sản tới tháng Ba.
+# ── Bổ sung: hậu cần và kho vận ────────────────────────────────────────────
+freight | /freɪt/ | n | hàng vận chuyển/ cước | Freight costs rose sharply this quarter. | Cước vận chuyển đã tăng mạnh trong quý này.
+cargo | /ˈkɑːrɡoʊ/ | n | hàng hoá chuyên chở | The cargo was unloaded at the port. | Hàng hoá đã được dỡ xuống ở cảng.
+customs | /ˈkʌstəmz/ | n | hải quan | The goods are still held at customs. | Hàng hoá vẫn đang bị giữ ở hải quan.
+courier | /ˈkʊriər/ | n | nhân viên chuyển phát | A courier will collect the parcel at noon. | Nhân viên chuyển phát sẽ tới lấy bưu kiện lúc trưa.
+parcel | /ˈpɑːrsl/ | n | bưu kiện | Your parcel was delivered to the wrong address. | Bưu kiện của bạn đã được giao nhầm địa chỉ.
+pallet | /ˈpælət/ | n | pa-lét kê hàng | Each pallet holds forty boxes. | Mỗi pa-lét chứa bốn mươi thùng.
+load | /loʊd/ | v | xếp hàng lên | The crew loaded the truck in an hour. | Đội bốc xếp đã xếp hàng lên xe tải trong một tiếng.
+unload | /ʌnˈloʊd/ | v | dỡ hàng xuống | Please unload the containers by five. | Vui lòng dỡ các container xuống trước năm giờ.
+dispatch | /dɪˈspætʃ/ | v | gửi đi/ điều đi | We dispatch orders every weekday morning. | Chúng tôi gửi đơn hàng đi vào mỗi sáng ngày thường.
+track | /træk/ | v | theo dõi (hành trình) | You can track your order on our website. | Bạn có thể theo dõi đơn hàng trên trang web của chúng tôi.
+storage | /ˈstɔːrɪdʒ/ | n | việc lưu kho | Storage costs are charged by the month. | Chi phí lưu kho được tính theo tháng.
+# ── Bổ sung: tài chính cơ bản ──────────────────────────────────────────────
+invoice number | /ˈɪnvɔɪs ˈnʌmbər/ | phr | số hoá đơn | Quote the invoice number in your email. | Hãy ghi rõ số hoá đơn trong email của bạn.
+balance | /ˈbæləns/ | n | số dư | The account balance is updated every night. | Số dư tài khoản được cập nhật mỗi đêm.
+deposit | /dɪˈpɑːzɪt/ | n | tiền đặt cọc | A deposit of ten percent is required. | Cần đặt cọc mười phần trăm.
+installment | /ɪnˈstɔːlmənt/ | n | kỳ trả góp | You may pay in three monthly installments. | Bạn có thể trả góp trong ba kỳ hằng tháng.
+receipt of payment | /rɪˈsiːt əv ˈpeɪmənt/ | phr | việc nhận thanh toán | We will ship upon receipt of payment. | Chúng tôi sẽ gửi hàng ngay khi nhận được thanh toán.
+overdue | /ˌoʊvərˈduː/ | adj | quá hạn | Two invoices are now overdue. | Hai hoá đơn hiện đã quá hạn.
+fee | /fiː/ | n | khoản phí | A small fee applies to bank transfers. | Có một khoản phí nhỏ cho việc chuyển khoản.
+discount rate | /ˈdɪskaʊnt reɪt/ | phr | mức chiết khấu | We offer a better discount rate for bulk orders. | Chúng tôi có mức chiết khấu tốt hơn cho đơn hàng số lượng lớn.
+quote | /kwoʊt/ | n | bản báo giá | Could you send us a quote by Thursday? | Bạn gửi cho chúng tôi bản báo giá trước thứ Năm được không?
+# ── Bổ sung: họp hành và trao đổi ──────────────────────────────────────────
+attendee | /ˌætenˈdiː/ | n | người tham dự | Each attendee receives a printed handout. | Mỗi người tham dự nhận một tờ tài liệu in.
+presentation | /ˌpriːzenˈteɪʃn/ | n | buổi thuyết trình | His presentation lasted twenty minutes. | Buổi thuyết trình của anh ấy kéo dài hai mươi phút.
+handout | /ˈhændaʊt/ | n | tài liệu phát tay | The handout summarises the main points. | Tài liệu phát tay tóm tắt các ý chính.
+proposal | /prəˈpoʊzl/ | n | bản đề xuất | The proposal was approved without changes. | Bản đề xuất đã được duyệt mà không cần sửa.
+approve | /əˈpruːv/ | v | phê duyệt | The director approved the new layout. | Giám đốc đã phê duyệt bố trí mới.
+reject | /rɪˈdʒekt/ | v | từ chối/ bác bỏ | The committee rejected the first design. | Hội đồng đã bác bỏ bản thiết kế đầu tiên.
+reschedule | /ˌriːˈskedʒuːl/ | v | dời lịch | Can we reschedule the call to Friday? | Chúng ta dời cuộc gọi sang thứ Sáu được không?
+clarify | /ˈklærɪfaɪ/ | v | làm rõ | Could you clarify the second clause? | Bạn làm rõ điều khoản thứ hai được không?
+summarize | /ˈsʌməraɪz/ | v | tóm tắt | Please summarize the results in one page. | Vui lòng tóm tắt kết quả trong một trang.
+distribute | /dɪˈstrɪbjuːt/ | v | phân phát | The agenda was distributed on Monday. | Chương trình họp đã được phân phát vào thứ Hai.
+# ── Bổ sung: cơ sở vật chất và vận hành ────────────────────────────────────
+premises | /ˈpremɪsɪz/ | n | khuôn viên/ mặt bằng | Smoking is not allowed on the premises. | Không được hút thuốc trong khuôn viên.
+plant | /plænt/ | n | nhà máy | The plant runs two shifts a day. | Nhà máy chạy hai ca mỗi ngày.
+machinery | /məˈʃiːnəri/ | n | máy móc | The machinery is serviced every quarter. | Máy móc được bảo dưỡng mỗi quý.
+inspect | /ɪnˈspekt/ | v | kiểm tra/ thanh tra | Officials inspect the kitchen twice a year. | Cán bộ thanh tra bếp hai lần mỗi năm.
+install | /ɪnˈstɔːl/ | v | lắp đặt | Technicians installed the new system overnight. | Kỹ thuật viên đã lắp đặt hệ thống mới qua đêm.
+replace | /rɪˈpleɪs/ | v | thay thế | We replaced the old printers last month. | Chúng tôi đã thay thế các máy in cũ tháng trước.
+renovate | /ˈrenəveɪt/ | v | cải tạo | They will renovate the lobby in August. | Họ sẽ cải tạo sảnh vào tháng Tám.
+hazard | /ˈhæzərd/ | n | mối nguy hiểm | Report any hazard to your supervisor. | Hãy báo mọi mối nguy hiểm cho người giám sát.
+# ── Bổ sung: tính từ và trạng từ ───────────────────────────────────────────
+suitable | /ˈsuːtəbl/ | adj | phù hợp | This room is not suitable for large groups. | Phòng này không phù hợp với nhóm đông người.
+sufficient | /səˈfɪʃnt/ | adj | đủ | We have sufficient stock for this month. | Chúng tôi có đủ hàng cho tháng này.
+faulty | /ˈfɔːlti/ | adj | bị lỗi | Return any faulty item within a week. | Hãy trả lại món hàng bị lỗi trong vòng một tuần.
+prompt | /prɑːmpt/ | adj | mau lẹ/ kịp thời | Thank you for your prompt reply. | Cảm ơn về hồi âm kịp thời của bạn.
+flexible | /ˈfleksəbl/ | adj | linh hoạt | Our working hours are quite flexible. | Giờ làm của chúng tôi khá linh hoạt.
+accurate | /ˈækjərət/ | adj | chính xác | Please keep accurate records of every visit. | Vui lòng ghi chép chính xác từng lượt tới thăm.
+frequently | /ˈfriːkwəntli/ | adv | thường xuyên | The bus runs frequently during rush hour. | Xe buýt chạy thường xuyên vào giờ cao điểm.
+temporarily | /ˌtempəˈrerəli/ | adv | tạm thời | The service is temporarily unavailable. | Dịch vụ tạm thời không dùng được.
+currently | /ˈkɜːrəntli/ | adv | hiện tại | We are currently reviewing your application. | Chúng tôi hiện đang xem xét hồ sơ của bạn.
+# ── Bổ sung: cụm từ hay gặp ────────────────────────────────────────────────
+in stock | /ɪn stɑːk/ | phr | còn hàng | The item is back in stock today. | Món hàng hôm nay đã có lại trong kho.
+out of order | /aʊt əv ˈɔːrdər/ | phr | hỏng/ không dùng được | The vending machine is out of order. | Máy bán hàng tự động đang hỏng.
+free of charge | /friː əv tʃɑːrdʒ/ | phr | miễn phí | Delivery within the city is free of charge. | Giao hàng trong thành phố là miễn phí.
+in writing | /ɪn ˈraɪtɪŋ/ | phr | bằng văn bản | Please confirm your order in writing. | Vui lòng xác nhận đơn hàng bằng văn bản.
+ahead of schedule | /əˈhed əv ˈskedʒuːl/ | phr | sớm hơn kế hoạch | The work finished ahead of schedule. | Công việc đã xong sớm hơn kế hoạch.
+run out of | /rʌn aʊt əv/ | phr | hết (thứ gì) | Order more tape so we do not run out of it. | Hãy đặt thêm băng dính để chúng ta không bị hết.
+set up | /set ʌp/ | phr | dựng/ thiết lập | They set up the booth before the fair opened. | Họ đã dựng gian hàng trước khi hội chợ mở cửa.
+hand in | /hænd ɪn/ | phr | nộp | Hand in your timesheet before Friday. | Hãy nộp bảng chấm công trước thứ Sáu.
+call off | /kɔːl ɔːf/ | phr | huỷ bỏ | They called off the trip because of the storm. | Họ đã huỷ chuyến đi vì bão.

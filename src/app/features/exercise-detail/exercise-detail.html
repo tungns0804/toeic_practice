@@ -27,8 +27,27 @@
                 {{ t('favorite.clear') }}
               </button>
             }
+            <button
+              type="button"
+              class="btn btn-sm setup-toggle"
+              [attr.aria-expanded]="setupOpen()"
+              (click)="toggleSetup()"
+            >
+              <app-t [key]="setupOpen() ? 'setup.collapse' : 'setup.customize'" />
+              <span class="setup-toggle-caret" aria-hidden="true">▾</span>
+            </button>
           </div>
 
+
+          @if (!setupOpen()) {
+            <div class="setup-summary">
+              @for (key of summaryKeys(); track $index) {
+                <span class="badge"><app-t [key]="key" /></span>
+              }
+            </div>
+          }
+
+          @if (setupOpen()) {
           <div class="field">
             <span class="label"><app-t key="setup.mode" /></span>
             <div class="options-grid">
@@ -130,7 +149,9 @@
             <p class="hint"><app-t key="exercise.typingOnly" block /></p>
           </div>
 
-          <div class="row setup-start">
+          }
+
+          <div class="row setup-start" [class.is-compact]="!setupOpen()">
             <button
               type="button"
               class="btn btn-primary btn-lg"

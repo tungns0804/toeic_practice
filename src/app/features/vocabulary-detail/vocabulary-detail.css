@@ -21,7 +21,7 @@
    chia đều sáu cột, và cột ★ rộng bằng cột câu ví dụ. */
 
 .word-table {
-  min-width: 860px;
+  min-width: 940px;
 }
 
 .col-star {
@@ -30,13 +30,13 @@
 }
 
 .col-word {
-  width: 15%;
+  width: 13%;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .col-ipa {
-  width: 15%;
+  width: 12%;
   font-size: var(--fs-xs);
   white-space: nowrap;
 }
@@ -46,7 +46,7 @@
 }
 
 .col-meaning {
-  width: 25%;
+  width: 20%;
 }
 
 /* Không đặt display:flex lên chính <td>: làm thế là gỡ ô ra khỏi bố cục bảng và

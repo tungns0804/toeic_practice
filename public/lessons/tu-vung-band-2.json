@@ -9,7 +9,7 @@
     "en": "Everyday working vocabulary: hiring, logistics and basic finance. The core of Parts 5 and 7."
   },
   "kind": "vocabulary",
-  "itemCount": 40,
+  "itemCount": 110,
   "words": [
     {
       "id": "w-1u4c5r5",
@@ -370,6 +370,636 @@
       "meaning": "do/ bởi vì",
       "example": "The flight was delayed due to bad weather.",
       "exampleVi": "Chuyến bay bị hoãn do thời tiết xấu."
+    },
+    {
+      "id": "w-n2h9z5",
+      "word": "applicant",
+      "ipa": "/ˈæplɪkənt/",
+      "pos": "noun",
+      "meaning": "người nộp đơn",
+      "example": "Every applicant must submit two references.",
+      "exampleVi": "Mọi người nộp đơn đều phải nộp hai thư giới thiệu."
+    },
+    {
+      "id": "w-1ytdf8q",
+      "word": "resume",
+      "ipa": "/ˈrezəmeɪ/",
+      "pos": "noun",
+      "meaning": "sơ yếu lý lịch",
+      "example": "Attach your resume to the online form.",
+      "exampleVi": "Đính kèm sơ yếu lý lịch vào tờ khai trực tuyến."
+    },
+    {
+      "id": "w-lxqs9g",
+      "word": "interview",
+      "ipa": "/ˈɪntərvjuː/",
+      "pos": "noun",
+      "meaning": "buổi phỏng vấn",
+      "example": "The second interview lasts about an hour.",
+      "exampleVi": "Buổi phỏng vấn thứ hai kéo dài khoảng một tiếng."
+    },
+    {
+      "id": "w-1vxxb06",
+      "word": "vacancy",
+      "ipa": "/ˈveɪkənsi/",
+      "pos": "noun",
+      "meaning": "vị trí còn trống",
+      "example": "There is a vacancy in the shipping department.",
+      "exampleVi": "Có một vị trí còn trống ở phòng vận chuyển."
+    },
+    {
+      "id": "w-1jf51gj",
+      "word": "personnel",
+      "ipa": "/ˌpɜːrsəˈnel/",
+      "pos": "noun",
+      "meaning": "nhân sự (bộ phận)",
+      "example": "Personnel handles all leave requests.",
+      "exampleVi": "Bộ phận nhân sự xử lý mọi đơn xin nghỉ."
+    },
+    {
+      "id": "w-eem1xr",
+      "word": "staffing",
+      "ipa": "/ˈstæfɪŋ/",
+      "pos": "noun",
+      "meaning": "việc bố trí nhân sự",
+      "example": "Staffing levels drop during the holidays.",
+      "exampleVi": "Mức bố trí nhân sự giảm xuống trong kỳ nghỉ lễ."
+    },
+    {
+      "id": "w-ljb9qr",
+      "word": "trainee",
+      "ipa": "/ˌtreɪˈniː/",
+      "pos": "noun",
+      "meaning": "thực tập sinh",
+      "example": "Each trainee works with a senior engineer.",
+      "exampleVi": "Mỗi thực tập sinh làm việc cùng một kỹ sư lâu năm."
+    },
+    {
+      "id": "w-14cd2il",
+      "word": "supervise",
+      "ipa": "/ˈsuːpərvaɪz/",
+      "pos": "verb",
+      "meaning": "giám sát",
+      "example": "She supervises a team of twelve.",
+      "exampleVi": "Cô ấy giám sát một nhóm mười hai người."
+    },
+    {
+      "id": "w-1byypze",
+      "word": "evaluate",
+      "ipa": "/ɪˈvæljueɪt/",
+      "pos": "verb",
+      "meaning": "đánh giá",
+      "example": "Managers evaluate their staff twice a year.",
+      "exampleVi": "Quản lý đánh giá nhân viên hai lần mỗi năm."
+    },
+    {
+      "id": "w-1ci3hd1",
+      "word": "performance",
+      "ipa": "/pərˈfɔːrməns/",
+      "pos": "noun",
+      "meaning": "hiệu suất làm việc",
+      "example": "Her performance improved after the training.",
+      "exampleVi": "Hiệu suất làm việc của cô ấy tốt lên sau khoá đào tạo."
+    },
+    {
+      "id": "w-qcow83",
+      "word": "raise",
+      "ipa": "/reɪz/",
+      "pos": "noun",
+      "meaning": "đợt tăng lương",
+      "example": "He received a raise after two years.",
+      "exampleVi": "Anh ấy được tăng lương sau hai năm."
+    },
+    {
+      "id": "w-80rx86",
+      "word": "retire",
+      "ipa": "/rɪˈtaɪər/",
+      "pos": "verb",
+      "meaning": "nghỉ hưu",
+      "example": "Our chief engineer retires in June.",
+      "exampleVi": "Kỹ sư trưởng của chúng tôi nghỉ hưu vào tháng Sáu."
+    },
+    {
+      "id": "w-1jkzd4y",
+      "word": "attendance",
+      "ipa": "/əˈtendəns/",
+      "pos": "noun",
+      "meaning": "việc có mặt/ điểm danh",
+      "example": "Attendance at the safety briefing is required.",
+      "exampleVi": "Việc có mặt ở buổi phổ biến an toàn là bắt buộc."
+    },
+    {
+      "id": "w-nfkhj4",
+      "word": "leave",
+      "ipa": "/liːv/",
+      "pos": "noun",
+      "meaning": "kỳ nghỉ phép",
+      "example": "She is on maternity leave until March.",
+      "exampleVi": "Cô ấy nghỉ thai sản tới tháng Ba."
+    },
+    {
+      "id": "w-gplhak",
+      "word": "freight",
+      "ipa": "/freɪt/",
+      "pos": "noun",
+      "meaning": "hàng vận chuyển/ cước",
+      "example": "Freight costs rose sharply this quarter.",
+      "exampleVi": "Cước vận chuyển đã tăng mạnh trong quý này."
+    },
+    {
+      "id": "w-11608iv",
+      "word": "cargo",
+      "ipa": "/ˈkɑːrɡoʊ/",
+      "pos": "noun",
+      "meaning": "hàng hoá chuyên chở",
+      "example": "The cargo was unloaded at the port.",
+      "exampleVi": "Hàng hoá đã được dỡ xuống ở cảng."
+    },
+    {
+      "id": "w-1qgi3r",
+      "word": "customs",
+      "ipa": "/ˈkʌstəmz/",
+      "pos": "noun",
+      "meaning": "hải quan",
+      "example": "The goods are still held at customs.",
+      "exampleVi": "Hàng hoá vẫn đang bị giữ ở hải quan."
+    },
+    {
+      "id": "w-1br5178",
+      "word": "courier",
+      "ipa": "/ˈkʊriər/",
+      "pos": "noun",
+      "meaning": "nhân viên chuyển phát",
+      "example": "A courier will collect the parcel at noon.",
+      "exampleVi": "Nhân viên chuyển phát sẽ tới lấy bưu kiện lúc trưa."
+    },
+    {
+      "id": "w-5g3dhs",
+      "word": "parcel",
+      "ipa": "/ˈpɑːrsl/",
+      "pos": "noun",
+      "meaning": "bưu kiện",
+      "example": "Your parcel was delivered to the wrong address.",
+      "exampleVi": "Bưu kiện của bạn đã được giao nhầm địa chỉ."
+    },
+    {
+      "id": "w-x7feaj",
+      "word": "pallet",
+      "ipa": "/ˈpælət/",
+      "pos": "noun",
+      "meaning": "pa-lét kê hàng",
+      "example": "Each pallet holds forty boxes.",
+      "exampleVi": "Mỗi pa-lét chứa bốn mươi thùng."
+    },
+    {
+      "id": "w-1rtoxrd",
+      "word": "load",
+      "ipa": "/loʊd/",
+      "pos": "verb",
+      "meaning": "xếp hàng lên",
+      "example": "The crew loaded the truck in an hour.",
+      "exampleVi": "Đội bốc xếp đã xếp hàng lên xe tải trong một tiếng."
+    },
+    {
+      "id": "w-c1nx76",
+      "word": "unload",
+      "ipa": "/ʌnˈloʊd/",
+      "pos": "verb",
+      "meaning": "dỡ hàng xuống",
+      "example": "Please unload the containers by five.",
+      "exampleVi": "Vui lòng dỡ các container xuống trước năm giờ."
+    },
+    {
+      "id": "w-1b9emi3",
+      "word": "dispatch",
+      "ipa": "/dɪˈspætʃ/",
+      "pos": "verb",
+      "meaning": "gửi đi/ điều đi",
+      "example": "We dispatch orders every weekday morning.",
+      "exampleVi": "Chúng tôi gửi đơn hàng đi vào mỗi sáng ngày thường."
+    },
+    {
+      "id": "w-y70c3g",
+      "word": "track",
+      "ipa": "/træk/",
+      "pos": "verb",
+      "meaning": "theo dõi (hành trình)",
+      "example": "You can track your order on our website.",
+      "exampleVi": "Bạn có thể theo dõi đơn hàng trên trang web của chúng tôi."
+    },
+    {
+      "id": "w-hw6li",
+      "word": "storage",
+      "ipa": "/ˈstɔːrɪdʒ/",
+      "pos": "noun",
+      "meaning": "việc lưu kho",
+      "example": "Storage costs are charged by the month.",
+      "exampleVi": "Chi phí lưu kho được tính theo tháng."
+    },
+    {
+      "id": "w-1fvl2g1",
+      "word": "invoice number",
+      "ipa": "/ˈɪnvɔɪs ˈnʌmbər/",
+      "pos": "phrase",
+      "meaning": "số hoá đơn",
+      "example": "Quote the invoice number in your email.",
+      "exampleVi": "Hãy ghi rõ số hoá đơn trong email của bạn."
+    },
+    {
+      "id": "w-16cbenf",
+      "word": "balance",
+      "ipa": "/ˈbæləns/",
+      "pos": "noun",
+      "meaning": "số dư",
+      "example": "The account balance is updated every night.",
+      "exampleVi": "Số dư tài khoản được cập nhật mỗi đêm."
+    },
+    {
+      "id": "w-b9ux11",
+      "word": "deposit",
+      "ipa": "/dɪˈpɑːzɪt/",
+      "pos": "noun",
+      "meaning": "tiền đặt cọc",
+      "example": "A deposit of ten percent is required.",
+      "exampleVi": "Cần đặt cọc mười phần trăm."
+    },
+    {
+      "id": "w-9craqc",
+      "word": "installment",
+      "ipa": "/ɪnˈstɔːlmənt/",
+      "pos": "noun",
+      "meaning": "kỳ trả góp",
+      "example": "You may pay in three monthly installments.",
+      "exampleVi": "Bạn có thể trả góp trong ba kỳ hằng tháng."
+    },
+    {
+      "id": "w-zsxloq",
+      "word": "receipt of payment",
+      "ipa": "/rɪˈsiːt əv ˈpeɪmənt/",
+      "pos": "phrase",
+      "meaning": "việc nhận thanh toán",
+      "example": "We will ship upon receipt of payment.",
+      "exampleVi": "Chúng tôi sẽ gửi hàng ngay khi nhận được thanh toán."
+    },
+    {
+      "id": "w-10b7xjf",
+      "word": "overdue",
+      "ipa": "/ˌoʊvərˈduː/",
+      "pos": "adjective",
+      "meaning": "quá hạn",
+      "example": "Two invoices are now overdue.",
+      "exampleVi": "Hai hoá đơn hiện đã quá hạn."
+    },
+    {
+      "id": "w-1h9xslf",
+      "word": "fee",
+      "ipa": "/fiː/",
+      "pos": "noun",
+      "meaning": "khoản phí",
+      "example": "A small fee applies to bank transfers.",
+      "exampleVi": "Có một khoản phí nhỏ cho việc chuyển khoản."
+    },
+    {
+      "id": "w-1ylb07c",
+      "word": "discount rate",
+      "ipa": "/ˈdɪskaʊnt reɪt/",
+      "pos": "phrase",
+      "meaning": "mức chiết khấu",
+      "example": "We offer a better discount rate for bulk orders.",
+      "exampleVi": "Chúng tôi có mức chiết khấu tốt hơn cho đơn hàng số lượng lớn."
+    },
+    {
+      "id": "w-1djbftj",
+      "word": "quote",
+      "ipa": "/kwoʊt/",
+      "pos": "noun",
+      "meaning": "bản báo giá",
+      "example": "Could you send us a quote by Thursday?",
+      "exampleVi": "Bạn gửi cho chúng tôi bản báo giá trước thứ Năm được không?"
+    },
+    {
+      "id": "w-1iypgz7",
+      "word": "attendee",
+      "ipa": "/ˌætenˈdiː/",
+      "pos": "noun",
+      "meaning": "người tham dự",
+      "example": "Each attendee receives a printed handout.",
+      "exampleVi": "Mỗi người tham dự nhận một tờ tài liệu in."
+    },
+    {
+      "id": "w-5djord",
+      "word": "presentation",
+      "ipa": "/ˌpriːzenˈteɪʃn/",
+      "pos": "noun",
+      "meaning": "buổi thuyết trình",
+      "example": "His presentation lasted twenty minutes.",
+      "exampleVi": "Buổi thuyết trình của anh ấy kéo dài hai mươi phút."
+    },
+    {
+      "id": "w-bodz6s",
+      "word": "handout",
+      "ipa": "/ˈhændaʊt/",
+      "pos": "noun",
+      "meaning": "tài liệu phát tay",
+      "example": "The handout summarises the main points.",
+      "exampleVi": "Tài liệu phát tay tóm tắt các ý chính."
+    },
+    {
+      "id": "w-6y5k7z",
+      "word": "proposal",
+      "ipa": "/prəˈpoʊzl/",
+      "pos": "noun",
+      "meaning": "bản đề xuất",
+      "example": "The proposal was approved without changes.",
+      "exampleVi": "Bản đề xuất đã được duyệt mà không cần sửa."
+    },
+    {
+      "id": "w-1llajsq",
+      "word": "approve",
+      "ipa": "/əˈpruːv/",
+      "pos": "verb",
+      "meaning": "phê duyệt",
+      "example": "The director approved the new layout.",
+      "exampleVi": "Giám đốc đã phê duyệt bố trí mới."
+    },
+    {
+      "id": "w-10yk5hi",
+      "word": "reject",
+      "ipa": "/rɪˈdʒekt/",
+      "pos": "verb",
+      "meaning": "từ chối/ bác bỏ",
+      "example": "The committee rejected the first design.",
+      "exampleVi": "Hội đồng đã bác bỏ bản thiết kế đầu tiên."
+    },
+    {
+      "id": "w-w12vjx",
+      "word": "reschedule",
+      "ipa": "/ˌriːˈskedʒuːl/",
+      "pos": "verb",
+      "meaning": "dời lịch",
+      "example": "Can we reschedule the call to Friday?",
+      "exampleVi": "Chúng ta dời cuộc gọi sang thứ Sáu được không?"
+    },
+    {
+      "id": "w-kpa78x",
+      "word": "clarify",
+      "ipa": "/ˈklærɪfaɪ/",
+      "pos": "verb",
+      "meaning": "làm rõ",
+      "example": "Could you clarify the second clause?",
+      "exampleVi": "Bạn làm rõ điều khoản thứ hai được không?"
+    },
+    {
+      "id": "w-570c56",
+      "word": "summarize",
+      "ipa": "/ˈsʌməraɪz/",
+      "pos": "verb",
+      "meaning": "tóm tắt",
+      "example": "Please summarize the results in one page.",
+      "exampleVi": "Vui lòng tóm tắt kết quả trong một trang."
+    },
+    {
+      "id": "w-13rhhtq",
+      "word": "distribute",
+      "ipa": "/dɪˈstrɪbjuːt/",
+      "pos": "verb",
+      "meaning": "phân phát",
+      "example": "The agenda was distributed on Monday.",
+      "exampleVi": "Chương trình họp đã được phân phát vào thứ Hai."
+    },
+    {
+      "id": "w-7buuml",
+      "word": "premises",
+      "ipa": "/ˈpremɪsɪz/",
+      "pos": "noun",
+      "meaning": "khuôn viên/ mặt bằng",
+      "example": "Smoking is not allowed on the premises.",
+      "exampleVi": "Không được hút thuốc trong khuôn viên."
+    },
+    {
+      "id": "w-1g3t2mq",
+      "word": "plant",
+      "ipa": "/plænt/",
+      "pos": "noun",
+      "meaning": "nhà máy",
+      "example": "The plant runs two shifts a day.",
+      "exampleVi": "Nhà máy chạy hai ca mỗi ngày."
+    },
+    {
+      "id": "w-423ct3",
+      "word": "machinery",
+      "ipa": "/məˈʃiːnəri/",
+      "pos": "noun",
+      "meaning": "máy móc",
+      "example": "The machinery is serviced every quarter.",
+      "exampleVi": "Máy móc được bảo dưỡng mỗi quý."
+    },
+    {
+      "id": "w-3huxhz",
+      "word": "inspect",
+      "ipa": "/ɪnˈspekt/",
+      "pos": "verb",
+      "meaning": "kiểm tra/ thanh tra",
+      "example": "Officials inspect the kitchen twice a year.",
+      "exampleVi": "Cán bộ thanh tra bếp hai lần mỗi năm."
+    },
+    {
+      "id": "w-10qepb4",
+      "word": "install",
+      "ipa": "/ɪnˈstɔːl/",
+      "pos": "verb",
+      "meaning": "lắp đặt",
+      "example": "Technicians installed the new system overnight.",
+      "exampleVi": "Kỹ thuật viên đã lắp đặt hệ thống mới qua đêm."
+    },
+    {
+      "id": "w-18qe0n7",
+      "word": "replace",
+      "ipa": "/rɪˈpleɪs/",
+      "pos": "verb",
+      "meaning": "thay thế",
+      "example": "We replaced the old printers last month.",
+      "exampleVi": "Chúng tôi đã thay thế các máy in cũ tháng trước."
+    },
+    {
+      "id": "w-qfacq9",
+      "word": "renovate",
+      "ipa": "/ˈrenəveɪt/",
+      "pos": "verb",
+      "meaning": "cải tạo",
+      "example": "They will renovate the lobby in August.",
+      "exampleVi": "Họ sẽ cải tạo sảnh vào tháng Tám."
+    },
+    {
+      "id": "w-1494299",
+      "word": "hazard",
+      "ipa": "/ˈhæzərd/",
+      "pos": "noun",
+      "meaning": "mối nguy hiểm",
+      "example": "Report any hazard to your supervisor.",
+      "exampleVi": "Hãy báo mọi mối nguy hiểm cho người giám sát."
+    },
+    {
+      "id": "w-khkuiw",
+      "word": "suitable",
+      "ipa": "/ˈsuːtəbl/",
+      "pos": "adjective",
+      "meaning": "phù hợp",
+      "example": "This room is not suitable for large groups.",
+      "exampleVi": "Phòng này không phù hợp với nhóm đông người."
+    },
+    {
+      "id": "w-nl8ek1",
+      "word": "sufficient",
+      "ipa": "/səˈfɪʃnt/",
+      "pos": "adjective",
+      "meaning": "đủ",
+      "example": "We have sufficient stock for this month.",
+      "exampleVi": "Chúng tôi có đủ hàng cho tháng này."
+    },
+    {
+      "id": "w-13sjdde",
+      "word": "faulty",
+      "ipa": "/ˈfɔːlti/",
+      "pos": "adjective",
+      "meaning": "bị lỗi",
+      "example": "Return any faulty item within a week.",
+      "exampleVi": "Hãy trả lại món hàng bị lỗi trong vòng một tuần."
+    },
+    {
+      "id": "w-1q4gxff",
+      "word": "prompt",
+      "ipa": "/prɑːmpt/",
+      "pos": "adjective",
+      "meaning": "mau lẹ/ kịp thời",
+      "example": "Thank you for your prompt reply.",
+      "exampleVi": "Cảm ơn về hồi âm kịp thời của bạn."
+    },
+    {
+      "id": "w-16sc2f2",
+      "word": "flexible",
+      "ipa": "/ˈfleksəbl/",
+      "pos": "adjective",
+      "meaning": "linh hoạt",
+      "example": "Our working hours are quite flexible.",
+      "exampleVi": "Giờ làm của chúng tôi khá linh hoạt."
+    },
+    {
+      "id": "w-nevsan",
+      "word": "accurate",
+      "ipa": "/ˈækjərət/",
+      "pos": "adjective",
+      "meaning": "chính xác",
+      "example": "Please keep accurate records of every visit.",
+      "exampleVi": "Vui lòng ghi chép chính xác từng lượt tới thăm."
+    },
+    {
+      "id": "w-1ardf3w",
+      "word": "frequently",
+      "ipa": "/ˈfriːkwəntli/",
+      "pos": "adverb",
+      "meaning": "thường xuyên",
+      "example": "The bus runs frequently during rush hour.",
+      "exampleVi": "Xe buýt chạy thường xuyên vào giờ cao điểm."
+    },
+    {
+      "id": "w-1pcwwyj",
+      "word": "temporarily",
+      "ipa": "/ˌtempəˈrerəli/",
+      "pos": "adverb",
+      "meaning": "tạm thời",
+      "example": "The service is temporarily unavailable.",
+      "exampleVi": "Dịch vụ tạm thời không dùng được."
+    },
+    {
+      "id": "w-16wbuox",
+      "word": "currently",
+      "ipa": "/ˈkɜːrəntli/",
+      "pos": "adverb",
+      "meaning": "hiện tại",
+      "example": "We are currently reviewing your application.",
+      "exampleVi": "Chúng tôi hiện đang xem xét hồ sơ của bạn."
+    },
+    {
+      "id": "w-oysdek",
+      "word": "in stock",
+      "ipa": "/ɪn stɑːk/",
+      "pos": "phrase",
+      "meaning": "còn hàng",
+      "example": "The item is back in stock today.",
+      "exampleVi": "Món hàng hôm nay đã có lại trong kho."
+    },
+    {
+      "id": "w-161u9bs",
+      "word": "out of order",
+      "ipa": "/aʊt əv ˈɔːrdər/",
+      "pos": "phrase",
+      "meaning": "hỏng/ không dùng được",
+      "example": "The vending machine is out of order.",
+      "exampleVi": "Máy bán hàng tự động đang hỏng."
+    },
+    {
+      "id": "w-7g9x2g",
+      "word": "free of charge",
+      "ipa": "/friː əv tʃɑːrdʒ/",
+      "pos": "phrase",
+      "meaning": "miễn phí",
+      "example": "Delivery within the city is free of charge.",
+      "exampleVi": "Giao hàng trong thành phố là miễn phí."
+    },
+    {
+      "id": "w-8gkvem",
+      "word": "in writing",
+      "ipa": "/ɪn ˈraɪtɪŋ/",
+      "pos": "phrase",
+      "meaning": "bằng văn bản",
+      "example": "Please confirm your order in writing.",
+      "exampleVi": "Vui lòng xác nhận đơn hàng bằng văn bản."
+    },
+    {
+      "id": "w-1tz026o",
+      "word": "ahead of schedule",
+      "ipa": "/əˈhed əv ˈskedʒuːl/",
+      "pos": "phrase",
+      "meaning": "sớm hơn kế hoạch",
+      "example": "The work finished ahead of schedule.",
+      "exampleVi": "Công việc đã xong sớm hơn kế hoạch."
+    },
+    {
+      "id": "w-q28tpz",
+      "word": "run out of",
+      "ipa": "/rʌn aʊt əv/",
+      "pos": "phrase",
+      "meaning": "hết (thứ gì)",
+      "example": "Order more tape so we do not run out of it.",
+      "exampleVi": "Hãy đặt thêm băng dính để chúng ta không bị hết."
+    },
+    {
+      "id": "w-1ydw718",
+      "word": "set up",
+      "ipa": "/set ʌp/",
+      "pos": "phrase",
+      "meaning": "dựng/ thiết lập",
+      "example": "They set up the booth before the fair opened.",
+      "exampleVi": "Họ đã dựng gian hàng trước khi hội chợ mở cửa."
+    },
+    {
+      "id": "w-yiuedb",
+      "word": "hand in",
+      "ipa": "/hænd ɪn/",
+      "pos": "phrase",
+      "meaning": "nộp",
+      "example": "Hand in your timesheet before Friday.",
+      "exampleVi": "Hãy nộp bảng chấm công trước thứ Sáu."
+    },
+    {
+      "id": "w-1txprmw",
+      "word": "call off",
+      "ipa": "/kɔːl ɔːf/",
+      "pos": "phrase",
+      "meaning": "huỷ bỏ",
+      "example": "They called off the trip because of the storm.",
+      "exampleVi": "Họ đã huỷ chuyến đi vì bão."
     }
   ],
   "tensePoints": [],

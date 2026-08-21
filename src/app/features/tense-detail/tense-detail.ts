@@ -13,11 +13,13 @@ import {
   flattenTenseExamples,
   localized,
 } from '../../core/models/lesson.model';
+import type { MessageKey } from '../../core/i18n/messages';
 import {
   AnswerMode,
   DEFAULT_MAX_WRONG_ATTEMPTS,
   PracticeConfig,
   PracticeScope,
+  SCOPE_LABEL_KEY,
   TENSE_MODES,
   TenseMode,
   tenseModeInfo,
@@ -48,6 +50,17 @@ export class TenseDetail {
 
   readonly t = this.lang.t.bind(this.lang);
   readonly modes = TENSE_MODES;
+
+
+  /**
+   * Khung thiết lập đang mở hay đang thu gọn.
+   *
+   * Mặc định THU GỌN. Trước đây nó luôn mở, chiếm gần trọn màn hình đầu tiên —
+   * người vào đọc lý thuyết hoặc tra bảng phải cuộn qua một bức tường điều khiển
+   * mới tới được nội dung. Phần lớn người học bấm thẳng "Bắt đầu luyện" với thiết
+   * lập mặc định, nên thứ họ cần thấy trước là nút đó, không phải sáu nhóm tuỳ chọn.
+   */
+  readonly setupOpen = signal(false);
 
   readonly lessonId = signal('');
   readonly lesson = signal<Lesson | null>(null);
@@ -132,6 +145,13 @@ export class TenseDetail {
 
   readonly canStart = computed(() => this.plannedQuestionCount() > 0);
 
+  /** Nhãn tóm tắt thiết lập, hiện khi khung đang thu gọn. */
+  readonly summaryKeys = computed<MessageKey[]>(() => [
+    this.currentMode().shortKey,
+    this.answerMode() === 'choice' ? 'setup.answerMode.choice' : 'setup.answerMode.typing',
+    SCOPE_LABEL_KEY[this.scope()],
+  ]);
+
   /** Chỉ hiện mốc nhỏ hơn tổng số câu — mốc "50" khi chỉ có 24 câu là vô nghĩa. */
   readonly limitChoices = computed(() =>
     LIMIT_CHOICES.filter((limit) => limit < this.usableCount()),
@@ -157,6 +177,11 @@ export class TenseDetail {
     this.scope.set('all');
     this.questionLimit.set(null);
     this.onlyPointId.set(null);
+  }
+
+
+  toggleSetup(): void {
+    this.setupOpen.update((open) => !open);
   }
 
   // --- Sự kiện thiết lập ---

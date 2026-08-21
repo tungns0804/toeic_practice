@@ -49,3 +49,88 @@ package | /ˈpækɪdʒ/ | n | kiện hàng/ gói hàng | A package was left at t
 customer service | /ˈkʌstəmər ˈsɜːrvɪs/ | phr | bộ phận chăm sóc khách hàng | Call customer service if the item is faulty. | Hãy gọi bộ phận chăm sóc khách hàng nếu món hàng bị lỗi.
 train | /treɪn/ | v | đào tạo/ huấn luyện | We train new employees for two weeks. | Chúng tôi đào tạo nhân viên mới trong hai tuần.
 notice | /ˈnoʊtɪs/ | n | thông báo | A notice about the closure is on the door. | Thông báo về việc đóng cửa được dán trên cửa.
+
+# ── Bổ sung: văn phòng và lịch làm việc ────────────────────────────────────
+colleague | /ˈkɑːliːɡ/ | n | đồng nghiệp | My colleague will cover my shift tomorrow. | Đồng nghiệp của tôi sẽ trực ca thay tôi ngày mai.
+branch | /bræntʃ/ | n | chi nhánh | Our new branch opens next month. | Chi nhánh mới của chúng tôi khai trương vào tháng tới.
+headquarters | /ˈhedkwɔːrtərz/ | n | trụ sở chính | The headquarters moved to a larger building. | Trụ sở chính đã chuyển sang một toà nhà lớn hơn.
+reception | /rɪˈsepʃn/ | n | quầy lễ tân | Please wait at reception until your name is called. | Vui lòng đợi ở quầy lễ tân cho tới khi được gọi tên.
+elevator | /ˈelɪveɪtər/ | n | thang máy | The elevator is out of order today. | Thang máy hôm nay bị hỏng.
+parking | /ˈpɑːrkɪŋ/ | n | chỗ đỗ xe | Free parking is available behind the building. | Có chỗ đỗ xe miễn phí phía sau toà nhà.
+badge | /bædʒ/ | n | thẻ ra vào | Wear your badge at all times inside the plant. | Luôn đeo thẻ ra vào khi ở trong nhà máy.
+copier | /ˈkɑːpiər/ | n | máy photocopy | The copier on this floor needs more paper. | Máy photocopy ở tầng này cần thêm giấy.
+folder | /ˈfoʊldər/ | n | tập hồ sơ | Put the contract in the blue folder. | Hãy để hợp đồng vào tập hồ sơ màu xanh.
+document | /ˈdɑːkjumənt/ | n | tài liệu/ giấy tờ | Please sign every document before you leave. | Vui lòng ký mọi tài liệu trước khi bạn về.
+memo | /ˈmemoʊ/ | n | thông báo nội bộ | A memo about the new hours was sent yesterday. | Một thông báo nội bộ về giờ làm mới đã được gửi hôm qua.
+agenda | /əˈdʒendə/ | n | chương trình họp | The agenda for Monday has five items. | Chương trình họp thứ Hai có năm mục.
+minutes | /ˈmɪnɪts/ | n | biên bản họp | Who is taking the minutes today? | Hôm nay ai ghi biên bản họp?
+vacation | /veɪˈkeɪʃn/ | n | kỳ nghỉ phép | He is on vacation until next Wednesday. | Anh ấy nghỉ phép tới thứ Tư tuần sau.
+absent | /ˈæbsənt/ | adj | vắng mặt | Two members were absent from the meeting. | Hai thành viên đã vắng mặt trong cuộc họp.
+# ── Bổ sung: mua bán và khách hàng ─────────────────────────────────────────
+client | /ˈklaɪənt/ | n | khách hàng (dịch vụ) | Our biggest client renewed the contract. | Khách hàng lớn nhất của chúng tôi đã gia hạn hợp đồng.
+quantity | /ˈkwɑːntəti/ | n | số lượng | Please confirm the quantity before we ship. | Vui lòng xác nhận số lượng trước khi chúng tôi gửi hàng.
+item | /ˈaɪtəm/ | n | món hàng/ mục | Each item is checked before packing. | Mỗi món hàng đều được kiểm tra trước khi đóng gói.
+stock | /stɑːk/ | n | hàng trong kho | That model is out of stock right now. | Mẫu đó hiện đang hết hàng trong kho.
+sale | /seɪl/ | n | đợt giảm giá | The winter sale ends on Sunday. | Đợt giảm giá mùa đông kết thúc vào Chủ nhật.
+complaint | /kəmˈpleɪnt/ | n | lời khiếu nại | We received a complaint about the delivery. | Chúng tôi nhận được một khiếu nại về việc giao hàng.
+exchange | /ɪksˈtʃeɪndʒ/ | v | đổi (hàng) | You may exchange the shirt within seven days. | Bạn có thể đổi chiếc áo trong vòng bảy ngày.
+guarantee | /ˌɡærənˈtiː/ | n | sự bảo đảm | The shop offers a money-back guarantee. | Cửa hàng có bảo đảm hoàn tiền.
+bill | /bɪl/ | n | hoá đơn tiền | Could we have the bill, please? | Cho chúng tôi xin hoá đơn được không?
+cash | /kæʃ/ | n | tiền mặt | We accept cash and credit cards. | Chúng tôi nhận tiền mặt và thẻ tín dụng.
+charge | /tʃɑːrdʒ/ | v | tính phí | The hotel charges extra for late checkout. | Khách sạn tính thêm phí nếu trả phòng muộn.
+expensive | /ɪkˈspensɪv/ | adj | đắt/ tốn kém | This model is more expensive than that one. | Mẫu này đắt hơn mẫu kia.
+# ── Bổ sung: đi lại và khách sạn ───────────────────────────────────────────
+flight | /flaɪt/ | n | chuyến bay | Our flight leaves at seven in the morning. | Chuyến bay của chúng tôi khởi hành lúc bảy giờ sáng.
+airport | /ˈerpɔːrt/ | n | sân bay | A shuttle bus runs to the airport every hour. | Có xe buýt chạy tới sân bay mỗi giờ.
+luggage | /ˈlʌɡɪdʒ/ | n | hành lý | Leave your luggage at the front desk. | Hãy để hành lý của bạn ở quầy lễ tân.
+boarding pass | /ˈbɔːrdɪŋ pæs/ | phr | thẻ lên máy bay | Show your boarding pass at the gate. | Xuất trình thẻ lên máy bay ở cửa ra.
+depart | /dɪˈpɑːrt/ | v | khởi hành | The train departs from platform three. | Tàu khởi hành từ sân ga số ba.
+delay | /dɪˈleɪ/ | n | sự chậm trễ | The delay was caused by heavy rain. | Sự chậm trễ là do mưa lớn.
+reserve | /rɪˈzɜːrv/ | v | đặt chỗ trước | I reserved a table for four people. | Tôi đã đặt bàn cho bốn người.
+booking | /ˈbʊkɪŋ/ | n | việc đặt chỗ | Your booking is confirmed for two nights. | Việc đặt chỗ của bạn đã được xác nhận cho hai đêm.
+lobby | /ˈlɑːbi/ | n | sảnh | Please meet me in the lobby at eight. | Hãy gặp tôi ở sảnh lúc tám giờ.
+# ── Bổ sung: động từ nền tảng ──────────────────────────────────────────────
+prepare | /prɪˈper/ | v | chuẩn bị | She prepared the slides for the presentation. | Cô ấy đã chuẩn bị slide cho buổi thuyết trình.
+provide | /prəˈvaɪd/ | v | cung cấp | The company provides free lunch on Fridays. | Công ty cung cấp bữa trưa miễn phí vào thứ Sáu.
+receive | /rɪˈsiːv/ | v | nhận | We received your email this morning. | Chúng tôi đã nhận được email của bạn sáng nay.
+return | /rɪˈtɜːrn/ | v | trả lại/ quay lại | You can return the item with the receipt. | Bạn có thể trả lại món hàng kèm biên lai.
+choose | /tʃuːz/ | v | chọn | Please choose a date that suits you. | Vui lòng chọn một ngày thuận tiện cho bạn.
+explain | /ɪkˈspleɪn/ | v | giải thích | He explained the new rule to the whole team. | Anh ấy đã giải thích quy định mới cho cả nhóm.
+suggest | /səˈdʒest/ | v | đề xuất/ gợi ý | I suggest moving the meeting to Thursday. | Tôi đề xuất dời cuộc họp sang thứ Năm.
+decide | /dɪˈsaɪd/ | v | quyết định | The board decided to open a second plant. | Hội đồng đã quyết định mở nhà máy thứ hai.
+complete | /kəmˈpliːt/ | v | hoàn thành | Please complete the form in black ink. | Vui lòng hoàn thành tờ khai bằng mực đen.
+increase | /ɪnˈkriːs/ | v | tăng | Sales increased by ten percent last month. | Doanh số đã tăng mười phần trăm trong tháng trước.
+reduce | /rɪˈduːs/ | v | giảm | We reduced the price to attract buyers. | Chúng tôi đã giảm giá để thu hút người mua.
+improve | /ɪmˈpruːv/ | v | cải thiện | The new system improved our response time. | Hệ thống mới đã cải thiện thời gian phản hồi của chúng tôi.
+require | /rɪˈkwaɪər/ | v | yêu cầu/ đòi hỏi | This job requires two years of experience. | Công việc này đòi hỏi hai năm kinh nghiệm.
+allow | /əˈlaʊ/ | v | cho phép | Visitors are not allowed in the warehouse. | Khách không được phép vào nhà kho.
+avoid | /əˈvɔɪd/ | v | tránh | Leave early to avoid the traffic. | Hãy đi sớm để tránh tắc đường.
+remind | /rɪˈmaɪnd/ | v | nhắc nhở | Please remind me to call the supplier. | Vui lòng nhắc tôi gọi cho nhà cung cấp.
+announce | /əˈnaʊns/ | v | thông báo/ công bố | The winner will be announced on Friday. | Người thắng cuộc sẽ được công bố vào thứ Sáu.
+introduce | /ˌɪntrəˈduːs/ | v | giới thiệu | Let me introduce our new sales manager. | Cho phép tôi giới thiệu trưởng phòng kinh doanh mới.
+contact | /ˈkɑːntækt/ | v | liên hệ | Contact us if the item arrives damaged. | Hãy liên hệ với chúng tôi nếu hàng tới bị hỏng.
+# ── Bổ sung: tính từ và trạng từ ───────────────────────────────────────────
+busy | /ˈbɪzi/ | adj | bận | The line is busy, so I will call back later. | Máy đang bận nên tôi sẽ gọi lại sau.
+ready | /ˈredi/ | adj | sẵn sàng | The samples will be ready by noon. | Các mẫu hàng sẽ sẵn sàng trước buổi trưa.
+correct | /kəˈrekt/ | adj | đúng/ chính xác | Please make sure the address is correct. | Vui lòng chắc chắn rằng địa chỉ là chính xác.
+recent | /ˈriːsnt/ | adj | gần đây | Thank you for your recent order. | Cảm ơn về đơn hàng gần đây của bạn.
+careful | /ˈkerfl/ | adj | cẩn thận | Be careful with the glass panels. | Hãy cẩn thận với các tấm kính.
+usually | /ˈjuːʒuəli/ | adv | thường thường | She usually arrives before eight. | Cô ấy thường tới trước tám giờ.
+rarely | /ˈrerli/ | adv | hiếm khi | He rarely misses a deadline. | Anh ấy hiếm khi trễ hạn.
+soon | /suːn/ | adv | sớm | We will send the invoice soon. | Chúng tôi sẽ gửi hoá đơn sớm.
+already | /ɔːlˈredi/ | adv | rồi/ đã | The package has already arrived. | Kiện hàng đã tới rồi.
+instead | /ɪnˈsted/ | adv | thay vào đó | The store was closed, so we ordered online instead. | Cửa hàng đã đóng nên thay vào đó chúng tôi đặt trực tuyến.
+nearly | /ˈnɪrli/ | adv | gần như | The project is nearly finished. | Dự án gần như đã xong.
+# ── Bổ sung: cụm từ hay gặp ────────────────────────────────────────────────
+on time | /ɑːn taɪm/ | phr | đúng giờ | The shipment arrived on time. | Lô hàng đã tới đúng giờ.
+as soon as possible | /əz suːn əz ˈpɑːsəbl/ | phr | càng sớm càng tốt | Please reply as soon as possible. | Vui lòng trả lời càng sớm càng tốt.
+be able to | /bi ˈeɪbl tuː/ | phr | có thể | You will be able to collect your badge tomorrow. | Bạn sẽ có thể lấy thẻ ra vào vào ngày mai.
+look forward to | /lʊk ˈfɔːrwərd tuː/ | phr | mong chờ | I look forward to meeting you next week. | Tôi mong được gặp bạn vào tuần tới.
+take place | /teɪk pleɪs/ | phr | diễn ra | The training will take place in Room B. | Buổi đào tạo sẽ diễn ra ở Phòng B.
+make sure | /meɪk ʃʊr/ | phr | bảo đảm rằng | Make sure the door is locked. | Hãy bảo đảm rằng cửa đã khoá.
+in charge of | /ɪn tʃɑːrdʒ əv/ | phr | phụ trách | She is in charge of the whole floor. | Cô ấy phụ trách cả tầng này.
+according to | /əˈkɔːrdɪŋ tuː/ | phr | theo như | According to the schedule, we finish at five. | Theo như lịch trình, chúng ta xong lúc năm giờ.
+fill out | /fɪl aʊt/ | phr | điền vào (đơn) | Fill out this form and hand it to reception. | Hãy điền vào tờ đơn này rồi đưa cho lễ tân.
+pick up | /pɪk ʌp/ | phr | đón/ lấy | I will pick up the samples on my way back. | Tôi sẽ lấy các mẫu hàng trên đường về.
+turn off | /tɜːrn ɔːf/ | phr | tắt | Please turn off the lights when you leave. | Vui lòng tắt đèn khi bạn về.
+put off | /pʊt ɔːf/ | phr | hoãn lại | They put off the meeting until next week. | Họ đã hoãn cuộc họp tới tuần sau.

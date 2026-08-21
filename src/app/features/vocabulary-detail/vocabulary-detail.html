@@ -35,8 +35,27 @@
                 {{ t('favorite.clear') }}
               </button>
             }
+            <button
+              type="button"
+              class="btn btn-sm setup-toggle"
+              [attr.aria-expanded]="setupOpen()"
+              (click)="toggleSetup()"
+            >
+              <app-t [key]="setupOpen() ? 'setup.collapse' : 'setup.customize'" />
+              <span class="setup-toggle-caret" aria-hidden="true">▾</span>
+            </button>
           </div>
 
+
+          @if (!setupOpen()) {
+            <div class="setup-summary">
+              @for (key of summaryKeys(); track $index) {
+                <span class="badge"><app-t [key]="key" /></span>
+              }
+            </div>
+          }
+
+          @if (setupOpen()) {
           <div class="field">
             <span class="label"><app-t key="setup.direction" /></span>
             <div class="options-grid">
@@ -150,7 +169,9 @@
             </div>
           </div>
 
-          <div class="row setup-start">
+          }
+
+          <div class="row setup-start" [class.is-compact]="!setupOpen()">
             <button
               type="button"
               class="btn btn-primary btn-lg"
@@ -216,6 +237,23 @@
             </span>
           </div>
 
+          <!-- Lọc theo từ loại: với bảng hơn trăm dòng, đây là cách thu hẹp nhanh
+               nhất khi chưa biết cần tìm chữ gì để gõ vào ô tìm kiếm. -->
+          <div class="chip-row" role="group" [attr.aria-label]="t('vocab.filterPos')">
+            @for (option of posOptions(); track option.pos) {
+              <button
+                type="button"
+                class="chip"
+                [class.is-active]="posFilter() === option.pos"
+                [attr.aria-pressed]="posFilter() === option.pos"
+                (click)="togglePos(option.pos)"
+              >
+                <app-t [key]="posShortKey[option.pos]" />
+                <span class="chip-count tnum">{{ option.count }}</span>
+              </button>
+            }
+          </div>
+
           @if (filteredWords().length === 0) {
             <div class="empty-state">
               <span class="empty-state-icon" aria-hidden="true">🗒</span>
@@ -252,7 +290,7 @@
                         </button>
                       </td>
                       <td class="col-word en">{{ word.word }}</td>
-                      <td class="col-ipa faint">{{ word.ipa }}</td>
+                      <td class="col-ipa faint ipa">{{ word.ipa }}</td>
                       <td class="col-pos">
                         <span class="badge"><app-t [key]="posShortKey[word.pos]" /></span>
                       </td>

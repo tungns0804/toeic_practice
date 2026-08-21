@@ -18,10 +18,12 @@ import { LanguageStore } from '../../core/i18n/language-store';
 import { MESSAGES } from '../../core/i18n/messages';
 import { T } from '../../core/i18n/t';
 import { LocalizedText, localized } from '../../core/models/lesson.model';
+import type { MessageKey } from '../../core/i18n/messages';
 import {
   DEFAULT_MAX_WRONG_ATTEMPTS,
   PracticeConfig,
   PracticeScope,
+  SCOPE_LABEL_KEY,
 } from '../../core/models/practice.model';
 import { orderQuestions } from '../../core/practice/build-questions';
 import { buildPassiveQuestions, countPassiveQuestions } from '../../core/practice/passive-questions';
@@ -50,6 +52,17 @@ export class ExerciseDetail {
   readonly formulas = PASSIVE_FORMULAS;
   readonly kinds = PASSIVE_KINDS;
   readonly kindLabelKey = PASSIVE_KIND_LABEL_KEY;
+
+
+  /**
+   * Khung thiết lập đang mở hay đang thu gọn.
+   *
+   * Mặc định THU GỌN. Trước đây nó luôn mở, chiếm gần trọn màn hình đầu tiên —
+   * người vào đọc lý thuyết hoặc tra bảng phải cuộn qua một bức tường điều khiển
+   * mới tới được nội dung. Phần lớn người học bấm thẳng "Bắt đầu luyện" với thiết
+   * lập mặc định, nên thứ họ cần thấy trước là nút đó, không phải sáu nhóm tuỳ chọn.
+   */
+  readonly setupOpen = signal(false);
 
   readonly exerciseId = signal('');
   readonly info = signal<ExerciseInfo | null>(null);
@@ -123,6 +136,12 @@ export class ExerciseDetail {
 
   readonly canStart = computed(() => this.plannedQuestionCount() > 0);
 
+  /** Nhãn tóm tắt thiết lập, hiện khi khung đang thu gọn. */
+  readonly summaryKeys = computed<MessageKey[]>(() => [
+    exerciseModeInfo(this.mode()).shortKey,
+    SCOPE_LABEL_KEY[this.scope()],
+  ]);
+
   readonly limitChoices = computed(() =>
     LIMIT_CHOICES.filter((limit) => limit < this.usableCount()),
   );
@@ -156,6 +175,11 @@ export class ExerciseDetail {
     this.questionLimit.set(null);
     this.search.set('');
     this.onlyFavorites.set(false);
+  }
+
+
+  toggleSetup(): void {
+    this.setupOpen.update((open) => !open);
   }
 
   // --- Sự kiện thiết lập ---

@@ -158,6 +158,7 @@ export const MESSAGES = {
     en: 'Try a shorter keyword, or turn off the ★ filter.',
   },
   'vocab.onlyFavorites': { vi: 'Chỉ hiện mục ★', en: 'Only starred items' },
+  'vocab.filterPos': { vi: 'Lọc theo từ loại', en: 'Filter by part of speech' },
 
   // ── Từ loại ────────────────────────────────────────────────────────────
   'pos.noun': { vi: 'Danh từ', en: 'Noun' },
@@ -296,6 +297,8 @@ export const MESSAGES = {
     en: 'Only applies to Vietnamese answers in typing mode.',
   },
   'setup.showHint': { vi: 'Hiện gợi ý dưới câu hỏi', en: 'Show a hint under the question' },
+  'setup.customize': { vi: 'Tuỳ chỉnh', en: 'Customize' },
+  'setup.collapse': { vi: 'Thu gọn', en: 'Collapse' },
   'setup.start': { vi: 'Bắt đầu luyện', en: 'Start practice' },
   'setup.plan': { vi: 'Sẽ luyện {count} câu', en: '{count} questions in this session' },
   'setup.empty': {

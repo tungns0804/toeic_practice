@@ -6,7 +6,7 @@ cần tài khoản. Ba khu nội dung độc lập:
 | Khu | Đường dẫn | Nội dung |
 | --- | --- | --- |
 | **Các thì** | `/tenses` | 12 thì tiếng Anh chia thành 3 nhóm, mỗi thì có công thức, cách dùng, dấu hiệu nhận biết, lỗi hay gặp và 6 câu ví dụ. |
-| **Từ vựng** | `/vocabulary` | 200 từ chia theo 5 band điểm TOEIC (300–450 … 860–990), mỗi từ có phiên âm, từ loại, nghĩa và câu ví dụ. |
+| **Từ vựng** | `/vocabulary` | 557 từ chia theo 5 band điểm TOEIC (300–450 … 860–990), mỗi từ có phiên âm, từ loại, nghĩa và câu ví dụ. |
 | **Bài tập** | `/exercise` | Bài tập chuyên đề. Hiện có **thể bị động**: 60 câu qua 10 công thức thì, kèm các dạng đặc biệt. |
 
 Cả ba khu dùng chung một bộ máy luyện tập: chọn chiều hỏi → làm bài → xem kết quả
@@ -120,6 +120,15 @@ Vài quyết định đáng nhớ:
   lệch id của các dòng phía sau.
 - **Bảng màu khai một lần.** Mỗi màu viết bằng `light-dark(sáng, tối)` trong
   `src/styles.css`; đổi tông chỉ là đổi `color-scheme`.
+- **Một họ chữ duy nhất, tự host.** Inter (biến thể variable, 57 KB cho hai subset
+  `latin` + `vietnamese`) nằm trong `src/fonts/`, không gọi sang Google Fonts. Bản
+  đầu dùng font có chân riêng cho ngữ liệu tiếng Anh; đã bỏ vì ở cỡ lớn trên nền
+  tối nét thanh của nó mảnh tới mức khó đọc — mà đó lại chính là chữ to nhất màn
+  hình luyện tập. Việc phân biệt ngữ liệu với chữ giao diện đã có cỡ chữ, độ đậm
+  và màu lo rồi.
+- **Khung thiết lập mặc định thu gọn.** Phần lớn người học bấm thẳng "Bắt đầu
+  luyện" với thiết lập mặc định, nên thứ hiện ra trước phải là nút đó cùng một
+  dòng tóm tắt — không phải sáu nhóm tuỳ chọn chiếm trọn màn hình đầu tiên.
 
 ---
 
@@ -164,6 +173,10 @@ TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA
 
 Từ loại viết tắt: `n`, `v`, `adj`, `adv`, `phr`, `prep`, `conj`. Dòng trống và
 dòng bắt đầu bằng `#` bị bỏ qua.
+
+Một từ chỉ được thuộc về **một** band. `npm run verify` kiểm cả trong từng file
+lẫn giữa các file: band là một thang bậc, một từ nằm ở hai bậc thì người học gặp
+lại đúng nó ở band cao hơn và tưởng là từ mới.
 
 Dùng `|` chứ không dùng dấu phẩy vì nghĩa tiếng Việt và câu ví dụ đều đầy dấu
 phẩy. Câu ví dụ **nên chứa chính từ đó** (kể cả ở dạng đã chia) — dạng luyện
@@ -231,7 +244,7 @@ Ba tầng, đều là những thứ TypeScript không diễn đạt được:
 | Lệnh | Bắt lỗi gì |
 | --- | --- |
 | `verify:i18n` | Khoá thiếu bản dịch một ngôn ngữ; tham số `{ten}` có ở bản này mà thiếu ở bản kia; khoá dùng trong template mà chưa khai; khoá khai rồi mà không nơi nào dùng. |
-| `verify:data` | Câu bị động trỏ tới công thức không tồn tại; câu đánh dấu đảo ngược được nhưng lại không có "by …"; từ vựng có câu ví dụ không chứa chính từ đó; metadata hoặc ghi chú còn thiếu một vế ngôn ngữ. |
+| `verify:data` | Câu bị động trỏ tới công thức không tồn tại; câu đánh dấu đảo ngược được nhưng lại không có "by …"; từ vựng có câu ví dụ không chứa chính từ đó; **một từ bị xếp vào hai band**; metadata hoặc ghi chú còn thiếu một vế ngôn ngữ. |
 | `generate:check` | Chạy toàn bộ trình sinh dữ liệu nhưng không ghi file — dùng cho CI. |
 
 ---

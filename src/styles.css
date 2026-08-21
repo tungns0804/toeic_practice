@@ -1,3 +1,42 @@
+/* ── Chữ ────────────────────────────────────────────────────────────────────
+   Inter, tự host trong `src/fonts/`, KHÔNG gọi sang Google Fonts.
+
+   Vì sao tự host: gọi sang máy chủ ngoài thì mỗi lần mở trang phải chờ thêm một
+   vòng DNS + TLS tới một tên miền khác, và người học ở nơi chặn tên miền đó sẽ
+   thấy trang tụt về font hệ thống. Hai file dưới đây tổng cộng 57 KB — rẻ hơn
+   một tấm ảnh — nên chẳng có lý do gì phải đánh đổi.
+
+   Là VARIABLE FONT: một file phủ trọn dải đậm 400–700, thay vì bốn file rời cho
+   bốn mức. Bốn file rời tốn 560 KB.
+
+   Chỉ lấy hai subset `latin` và `vietnamese`. Bỏ `latin-ext` (83 KB) vì nó dành
+   cho tiếng Ba Lan, Séc, Thổ… — mọi chữ tiếng Việt đều đã nằm trong hai subset
+   giữ lại: ă/đ/ơ/ư ở `vietnamese`, còn à/á/ê/ô ở `latin`.
+
+   Để trong `src/` chứ không trong `public/`: file trong `src/` được trình build
+   xử lý nên nó gắn thêm mã băm vào tên (`inter-latin-A1B2C3.woff2`). Nhờ vậy đặt
+   cache vĩnh viễn cũng an toàn — đổi font là đổi tên file, trình duyệt tự tải
+   bản mới thay vì dùng bản cũ đã lưu. File trong `public/` thì được chép nguyên
+   tên, không có tính chất đó. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./fonts/inter-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ============================================================================
    Design system dùng chung cho toàn ứng dụng.
 
@@ -66,16 +105,21 @@
   --shadow-lg: 0 12px 32px light-dark(rgb(12 34 32 / 12%), rgb(0 0 0 / 45%));
 
   /* --- Thang cỡ chữ ------------------------------------------------------
-     Sáu bậc cách nhau đủ xa để nhìn là biết cái nào quan trọng hơn. Đặt cỡ chữ
+     Bảy bậc cách nhau đủ xa để nhìn là biết cái nào quan trọng hơn. Đặt cỡ chữ
      theo cảm tính (0.94rem, 0.92rem, 0.86rem…) thì mắt không phân biệt nổi hai
-     bậc cách nhau 0.02rem: chúng không tạo ra thứ bậc, chỉ tạo ra sự lộn xộn. */
-  --fs-2xs: 0.72rem;
-  --fs-xs: 0.8rem;
-  --fs-sm: 0.88rem;
+     bậc cách nhau 0.02rem: chúng không tạo ra thứ bậc, chỉ tạo ra sự lộn xộn.
+
+     Cả thang đã được nâng lên một bậc so với bản đầu: bậc nhỏ nhất trước đây là
+     11.5px, dùng cho đúng thứ người học phải đọc lâu nhất — nhãn cột trong bảng
+     40 từ và chú thích dưới câu ví dụ. Inter lại có chiều cao chữ thường nhỏ hơn
+     Segoe UI ở cùng số px, nên giữ nguyên số cũ là chữ còn bé đi thêm lần nữa. */
+  --fs-2xs: 0.75rem;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
   --fs-md: 1rem;
-  --fs-lg: 1.13rem;
-  --fs-xl: 1.3rem;
-  --fs-2xl: 1.6rem;
+  --fs-lg: 1.15rem;
+  --fs-xl: 1.35rem;
+  --fs-2xl: 1.7rem;
 
   /* --- Nhịp khoảng cách ---------------------------------------------------
      Bội số của 4px. Dùng token thay cho số lẻ tuỳ hứng thì các khối cách nhau
@@ -95,11 +139,23 @@
   --ease: cubic-bezier(0.2, 0.8, 0.3, 1);
   --dur: 0.18s;
 
-  --font-ui: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  /* Câu tiếng Anh dùng font có chân: trong một trang trộn hai thứ tiếng, khác
-     kiểu chữ là cách phân biệt nhanh nhất "đây là ngữ liệu cần đọc kỹ" với "đây
-     là chữ của giao diện" — nhanh hơn cả màu, vì không tốn một bậc màu nào. */
-  --font-en: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+  /* Một họ chữ duy nhất cho cả giao diện lẫn ngữ liệu.
+
+     Bản đầu dùng font CÓ CHÂN cho câu tiếng Anh, với ý phân biệt "ngữ liệu" khỏi
+     "chữ giao diện". Ý thì đúng, cách thì sai: ở cỡ lớn trên nền tối, nét thanh
+     của font có chân mảnh tới mức khó đọc — mà từ vựng đang học lại chính là chữ
+     to nhất màn hình luyện tập. Việc phân biệt đã có thứ bậc cỡ chữ, độ đậm và
+     màu đảm nhiệm rồi; thêm một họ chữ thứ hai chỉ là tô đậm một ranh giới vốn
+     đã rõ, và phải trả bằng khả năng đọc. */
+  --font-ui: 'Inter', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial,
+    sans-serif;
+
+  /* Ký hiệu phiên âm (ɪ ˈ ɡ ʃ ə ː) nằm ở khối IPA Extensions, KHÔNG có trong hai
+     subset Inter đang tải. Khai một stack riêng để chỗ đó rơi về một font đã chọn
+     trước và có phủ IPA, thay vì rơi về bất cứ thứ gì trình duyệt vớ được. */
+  --font-ipa: 'Segoe UI', 'Charis SIL', 'Doulos SIL', 'DejaVu Sans',
+    'Lucida Sans Unicode', var(--font-ui);
+
   --font-mono: 'Cascadia Code', Consolas, 'SF Mono', Menlo, monospace;
 
   --max-width: 1080px;
@@ -157,6 +213,9 @@ body {
   color: var(--text);
   font-family: var(--font-ui);
   font-size: 16px;
+  /* Inter được vẽ với khoảng cách chữ khá rộng để dùng ở cỡ nhỏ; ở cỡ thân bài
+     nó trông thưa. Siết một chút là vừa mắt. */
+  letter-spacing: -0.003em;
   /* 1.6 thay vì 1.5: app trộn chữ Việt có dấu (dấu thanh nằm cao, dấu nặng nằm
      thấp) với câu tiếng Anh dài, hai dòng liền nhau dễ chạm nhau. */
   line-height: 1.6;
@@ -452,10 +511,13 @@ a:hover {
 
 .checkbox {
   display: flex;
-  align-items: flex-start;
+  /* Căn giữa theo chiều dọc chứ không dính lên mép trên: trong một lưới, ô nào
+     có thêm dòng chú thích sẽ kéo cả hàng cao lên, và hai ô còn lại trước đây bị
+     bỏ lại một mảng trống lớn phía dưới. */
+  align-items: center;
   gap: 10px;
   cursor: pointer;
-  padding: 9px 12px;
+  padding: 11px 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--bg-subtle);
@@ -658,6 +720,13 @@ a:hover {
   color: var(--text);
 }
 
+/* Số đếm nhỏ bên trong chip ("Cơ bản 18", "Đ.từ 42"). */
+.chip-count {
+  margin-left: 5px;
+  opacity: 0.75;
+  font-weight: 600;
+}
+
 .chip.is-active {
   border-color: var(--accent);
   background: var(--accent-soft);
@@ -683,6 +752,32 @@ a:hover {
 .setup-start {
   padding-top: var(--sp-2);
   border-top: 1px solid var(--border);
+}
+
+/* Dòng tóm tắt hiện khi khung thiết lập đang thu gọn: cho biết sẽ luyện theo
+   thiết lập nào mà không phải mở ra xem. */
+.setup-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Nút mở/thu khung thiết lập. Mũi tên quay 180° khi mở, để trạng thái đọc được
+   ngay cả khi phần thân đã cuộn khỏi màn hình. */
+.setup-toggle-caret {
+  display: inline-block;
+  transition: transform var(--dur) var(--ease);
+}
+
+.setup-toggle[aria-expanded='true'] .setup-toggle-caret {
+  transform: rotate(180deg);
+}
+
+/* Khung thiết lập lúc thu gọn không cần đường kẻ ngăn: nó chỉ còn hai dòng. */
+.setup-start.is-compact {
+  padding-top: 0;
+  border-top: none;
 }
 
 /* Liên kết quay lại đặt ngay trên tiêu đề trang chi tiết. */
@@ -749,11 +844,20 @@ a:hover {
 }
 
 /* --- Chữ tiếng Anh --------------------------------------------------------
-   Ngữ liệu tiếng Anh (câu ví dụ, từ vựng, công thức) dùng font có chân để tách
-   khỏi chữ của giao diện. Xem ghi chú ở --font-en. */
+   Ngữ liệu tiếng Anh không còn đổi họ chữ nữa (xem ghi chú ở --font-ui), nhưng
+   lớp này vẫn giữ nguyên tên và vẫn được dùng ở mọi chỗ cũ: nó là chỗ duy nhất
+   để chỉnh riêng phần ngữ liệu, và bỏ đi thì lần sau muốn chỉnh phải đi tìm lại
+   từng chỗ trong mười mấy template.
 
+   Nới nhẹ khoảng cách chữ, ngược với phần siết ở `body`: câu tiếng Anh ở đây để
+   ĐỌC KỸ chứ không phải liếc, và người học còn phải nhận ra từng chữ cái một. */
 .en {
-  font-family: var(--font-en);
+  letter-spacing: 0;
+}
+
+/* Phiên âm IPA — xem ghi chú ở --font-ipa. */
+.ipa {
+  font-family: var(--font-ipa);
 }
 
 /* Công thức ngữ pháp: chữ đều bề rộng để "S + have/has + V3" xếp thẳng cột giữa
@@ -906,10 +1010,18 @@ a:hover {
   vertical-align: top;
 }
 
+/* KHÔNG đặt `position: sticky` cho hàng tiêu đề.
+
+   Bảng nằm trong `.scroll-x` (`overflow-x: auto`), mà một phần tử cuộn được sẽ
+   trở thành khối chứa cho mọi phần tử sticky bên trong nó. Hàng tiêu đề vì thế
+   dính theo KHUNG CUỘN NGANG chứ không theo khung nhìn của trang, và khi cuộn
+   dọc nó trôi xuống đè lên chính dòng dữ liệu đầu tiên — đúng như ảnh chụp cho
+   thấy: nhãn cột nằm chồng lên chữ của từ đầu bảng.
+
+   Muốn tiêu đề dính thật thì phải cho bảng một khung cuộn DỌC riêng, tức là
+   khoá chiều cao bảng lại. Với bảng 40 từ đọc trên điện thoại, khoá chiều cao
+   còn khó chịu hơn là phải cuộn ngược lên xem tên cột. */
 .table th {
-  position: sticky;
-  top: var(--header-h);
-  z-index: 1;
   background: var(--bg-elevated);
   font-size: var(--fs-xs);
   font-weight: 620;

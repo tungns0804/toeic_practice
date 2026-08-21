@@ -41,3 +41,84 @@ look into | /lʊk ˈɪntuː/ | phr | xem xét/ điều tra | We will look into y
 account for | /əˈkaʊnt fɔːr/ | phr | chiếm/ giải thích cho | Exports account for half of our revenue. | Xuất khẩu chiếm một nửa doanh thu của chúng tôi.
 comply with | /kəmˈplaɪ wɪð/ | phr | tuân thủ theo | All products comply with EU standards. | Mọi sản phẩm đều tuân thủ tiêu chuẩn châu Âu.
 be responsible for | /bi rɪˈspɑːnsəbl fɔːr/ | phr | chịu trách nhiệm về | Each team leader must be responsible for their own budget. | Mỗi trưởng nhóm phải chịu trách nhiệm về ngân sách của mình.
+
+# ── Bổ sung: hợp đồng và pháp lý thương mại ────────────────────────────────
+agreement | /əˈɡriːmənt/ | n | thoả thuận | Both parties signed the agreement in Tokyo. | Hai bên đã ký thoả thuận tại Tokyo.
+party | /ˈpɑːrti/ | n | bên (trong hợp đồng) | Neither party may transfer this contract. | Không bên nào được chuyển nhượng hợp đồng này.
+draft | /dræft/ | n | bản thảo | Please review the draft before Friday. | Vui lòng rà soát bản thảo trước thứ Sáu.
+binding | /ˈbaɪndɪŋ/ | adj | có tính ràng buộc | The memorandum is not legally binding. | Bản ghi nhớ không có tính ràng buộc pháp lý.
+enforce | /ɪnˈfɔːrs/ | v | thi hành/ cưỡng chế | The court will enforce the payment terms. | Toà sẽ cưỡng chế thi hành các điều khoản thanh toán.
+expire | /ɪkˈspaɪər/ | v | hết hạn | The licence expires at the end of June. | Giấy phép hết hạn vào cuối tháng Sáu.
+extension | /ɪkˈstenʃn/ | n | sự gia hạn | We requested a three-month extension. | Chúng tôi đã xin gia hạn ba tháng.
+penalty | /ˈpenəlti/ | n | khoản phạt | Late delivery carries a penalty of five percent. | Giao hàng chậm chịu khoản phạt năm phần trăm.
+dispute | /dɪˈspjuːt/ | n | tranh chấp | The dispute was settled out of court. | Tranh chấp đã được giải quyết ngoài toà.
+settle | /ˈsetl/ | v | dàn xếp/ thanh toán | They settled the claim within a month. | Họ đã dàn xếp xong khiếu nại trong vòng một tháng.
+confidential | /ˌkɑːnfɪˈdenʃl/ | adj | mật/ bảo mật | Treat all pricing data as confidential. | Hãy coi mọi dữ liệu giá là thông tin mật.
+# ── Bổ sung: đàm phán và bán hàng ──────────────────────────────────────────
+counterpart | /ˈkaʊntərpɑːrt/ | n | người đồng cấp | She met her counterpart from the Seoul office. | Cô ấy đã gặp người đồng cấp từ văn phòng Seoul.
+concession | /kənˈseʃn/ | n | sự nhượng bộ | We made one concession on the delivery date. | Chúng tôi đã nhượng bộ một điểm về ngày giao hàng.
+leverage | /ˈlevərɪdʒ/ | n | lợi thế đàm phán | Volume gives us leverage on price. | Sản lượng cho chúng tôi lợi thế đàm phán về giá.
+margin | /ˈmɑːrdʒɪn/ | n | biên lợi nhuận | The margin on this line is very thin. | Biên lợi nhuận của dòng hàng này rất mỏng.
+target | /ˈtɑːrɡɪt/ | n | chỉ tiêu | The team missed its quarterly target. | Nhóm đã không đạt chỉ tiêu quý.
+quota | /ˈkwoʊtə/ | n | hạn ngạch/ định mức | Each region has its own sales quota. | Mỗi khu vực có định mức doanh số riêng.
+retail | /ˈriːteɪl/ | n | bán lẻ | Retail accounts for most of our income. | Bán lẻ chiếm phần lớn thu nhập của chúng tôi.
+wholesale | /ˈhoʊlseɪl/ | n | bán buôn | Wholesale prices are listed separately. | Giá bán buôn được niêm yết riêng.
+distributor | /dɪˈstrɪbjətər/ | n | nhà phân phối | We appointed a distributor in Thailand. | Chúng tôi đã chỉ định một nhà phân phối ở Thái Lan.
+# ── Bổ sung: vận hành và dự án ─────────────────────────────────────────────
+procedure | /prəˈsiːdʒər/ | n | quy trình | Follow the standard procedure for returns. | Hãy làm theo quy trình chuẩn cho hàng trả lại.
+protocol | /ˈproʊtəkɔːl/ | n | quy tắc/ nghi thức | The lab has a strict safety protocol. | Phòng thí nghiệm có quy tắc an toàn nghiêm ngặt.
+workflow | /ˈwɜːrkfloʊ/ | n | luồng công việc | The new workflow cut approval time in half. | Luồng công việc mới đã giảm một nửa thời gian phê duyệt.
+milestone | /ˈmaɪlstoʊn/ | n | mốc quan trọng | We reached the first milestone ahead of time. | Chúng tôi đã đạt mốc đầu tiên sớm hơn dự kiến.
+resource | /ˈriːsɔːrs/ | n | nguồn lực | We lack the resources for a second shift. | Chúng tôi thiếu nguồn lực cho ca thứ hai.
+capacity | /kəˈpæsəti/ | n | công suất/ sức chứa | The plant is running at full capacity. | Nhà máy đang chạy hết công suất.
+downtime | /ˈdaʊntaɪm/ | n | thời gian ngừng máy | Downtime cost us two days of output. | Thời gian ngừng máy khiến chúng tôi mất hai ngày sản lượng.
+bottleneck | /ˈbɑːtlnek/ | n | điểm nghẽn | Packing is the bottleneck in this line. | Đóng gói là điểm nghẽn của dây chuyền này.
+efficiency | /ɪˈfɪʃnsi/ | n | hiệu suất | Efficiency improved after the layout change. | Hiệu suất đã tăng sau khi đổi cách bố trí.
+defect | /ˈdiːfekt/ | n | khuyết tật/ lỗi sản phẩm | Any defect must be logged immediately. | Mọi lỗi sản phẩm đều phải được ghi nhận ngay.
+recall | /rɪˈkɔːl/ | n | đợt thu hồi | The recall affected two thousand units. | Đợt thu hồi ảnh hưởng tới hai nghìn sản phẩm.
+compliance officer | /kəmˈplaɪəns ˈɔːfɪsər/ | phr | cán bộ tuân thủ | The compliance officer reviews every contract. | Cán bộ tuân thủ rà soát từng hợp đồng.
+# ── Bổ sung: tiếp thị và truyền thông ──────────────────────────────────────
+campaign | /kæmˈpeɪn/ | n | chiến dịch | The campaign ran for six weeks. | Chiến dịch đã chạy trong sáu tuần.
+brand | /brænd/ | n | thương hiệu | The brand is well known in Asia. | Thương hiệu này rất nổi tiếng ở châu Á.
+survey | /ˈsɜːrveɪ/ | n | cuộc khảo sát | The survey covered five hundred customers. | Cuộc khảo sát bao phủ năm trăm khách hàng.
+feedback | /ˈfiːdbæk/ | n | phản hồi | Customer feedback shaped the new design. | Phản hồi của khách hàng đã định hình thiết kế mới.
+launch | /lɔːntʃ/ | v | ra mắt | They will launch the product in October. | Họ sẽ ra mắt sản phẩm vào tháng Mười.
+subscribe | /səbˈskraɪb/ | v | đăng ký (dài hạn) | Over a thousand readers subscribe monthly. | Hơn một nghìn độc giả đăng ký hằng tháng.
+advertise | /ˈædvərtaɪz/ | v | quảng cáo | The firm advertises mainly online. | Công ty quảng cáo chủ yếu trên mạng.
+sponsor | /ˈspɑːnsər/ | v | tài trợ | A local bank sponsored the trade fair. | Một ngân hàng địa phương đã tài trợ hội chợ thương mại.
+# ── Bổ sung: động từ trình độ trung cao ────────────────────────────────────
+assign | /əˈsaɪn/ | v | phân công | She assigned the audit to two juniors. | Cô ấy đã phân công cuộc kiểm toán cho hai nhân viên trẻ.
+authorize | /ˈɔːθəraɪz/ | v | cho phép/ uỷ quyền | Only the director can authorize this payment. | Chỉ giám đốc mới có quyền cho phép khoản chi này.
+coordinate | /koʊˈɔːrdɪneɪt/ | v | điều phối | He coordinates the work of three teams. | Anh ấy điều phối công việc của ba nhóm.
+facilitate | /fəˈsɪlɪteɪt/ | v | tạo điều kiện | The new software facilitates remote work. | Phần mềm mới tạo điều kiện cho làm việc từ xa.
+generate | /ˈdʒenəreɪt/ | v | tạo ra | The branch generates half our profit. | Chi nhánh tạo ra một nửa lợi nhuận của chúng tôi.
+monitor | /ˈmɑːnɪtər/ | v | theo dõi/ giám sát | Sensors monitor the temperature all night. | Cảm biến theo dõi nhiệt độ suốt đêm.
+negotiate a deal | /nɪˈɡoʊʃieɪt ə diːl/ | phr | đàm phán một thương vụ | They negotiated a deal worth ten million. | Họ đã đàm phán một thương vụ trị giá mười triệu.
+optimize | /ˈɑːptɪmaɪz/ | v | tối ưu hoá | We optimized the route to save fuel. | Chúng tôi đã tối ưu hoá lộ trình để tiết kiệm nhiên liệu.
+prioritize | /praɪˈɔːrətaɪz/ | v | ưu tiên | Please prioritize the export orders. | Vui lòng ưu tiên các đơn hàng xuất khẩu.
+resolve | /rɪˈzɑːlv/ | v | giải quyết | The team resolved the issue in one day. | Nhóm đã giải quyết vấn đề trong một ngày.
+retain | /rɪˈteɪn/ | v | giữ lại | We retain records for seven years. | Chúng tôi giữ lại hồ sơ trong bảy năm.
+verify | /ˈverɪfaɪ/ | v | xác minh | Please verify the account details first. | Vui lòng xác minh thông tin tài khoản trước.
+waive a fee | /weɪv ə fiː/ | phr | miễn một khoản phí | The bank agreed to waive a fee for us. | Ngân hàng đã đồng ý miễn một khoản phí cho chúng tôi.
+# ── Bổ sung: tính từ và trạng từ ───────────────────────────────────────────
+competitive | /kəmˈpetətɪv/ | adj | cạnh tranh | Our prices remain competitive in this market. | Giá của chúng tôi vẫn cạnh tranh ở thị trường này.
+consistent | /kənˈsɪstənt/ | adj | nhất quán | Quality has been consistent all year. | Chất lượng đã nhất quán suốt cả năm.
+crucial | /ˈkruːʃl/ | adj | then chốt | Timing is crucial in this negotiation. | Thời điểm là yếu tố then chốt trong cuộc đàm phán này.
+eligible | /ˈelɪdʒəbl/ | adj | đủ điều kiện | Only full-time staff are eligible for the bonus. | Chỉ nhân viên toàn thời gian mới đủ điều kiện nhận thưởng.
+inevitable | /ɪnˈevɪtəbl/ | adj | không thể tránh khỏi | Some delay was inevitable after the storm. | Chậm trễ ít nhiều là không thể tránh khỏi sau cơn bão.
+comprehensive review | /ˌkɑːmprɪˈhensɪv rɪˈvjuː/ | phr | cuộc rà soát toàn diện | The board ordered a comprehensive review of costs. | Hội đồng đã yêu cầu một cuộc rà soát toàn diện về chi phí.
+thorough | /ˈθɜːroʊ/ | adj | kỹ lưỡng | The inspection was thorough and well documented. | Cuộc kiểm tra rất kỹ lưỡng và được ghi chép đầy đủ.
+gradually | /ˈɡrædʒuəli/ | adv | dần dần | Demand recovered gradually over six months. | Nhu cầu hồi phục dần trong sáu tháng.
+significantly | /sɪɡˈnɪfɪkəntli/ | adv | đáng kể | Costs fell significantly after the merger. | Chi phí đã giảm đáng kể sau khi sáp nhập.
+respectively | /rɪˈspektɪvli/ | adv | theo thứ tự đó | Sales rose eight and twelve percent respectively. | Doanh số tăng lần lượt tám và mười hai phần trăm.
+# ── Bổ sung: cụm từ và giới từ ─────────────────────────────────────────────
+on behalf of the company | /ɑːn bɪˈhæf əv ðə ˈkʌmpəni/ | phr | thay mặt công ty | She signed on behalf of the company. | Cô ấy đã ký thay mặt công ty.
+in the meantime | /ɪn ðə ˈmiːntaɪm/ | phr | trong lúc chờ đợi | In the meantime, please use the old form. | Trong lúc chờ đợi, vui lòng dùng mẫu cũ.
+as a result of | /əz ə rɪˈzʌlt əv/ | phr | do kết quả của | As a result of the delay, we lost the order. | Do kết quả của sự chậm trễ, chúng tôi mất đơn hàng.
+with the exception of | /wɪð ði ɪkˈsepʃn əv/ | phr | ngoại trừ | All branches closed with the exception of Hanoi. | Mọi chi nhánh đều đóng cửa ngoại trừ Hà Nội.
+prior to | /ˈpraɪər tuː/ | prep | trước khi | Prior to the audit, we reorganised the files. | Trước khi kiểm toán, chúng tôi đã sắp xếp lại hồ sơ.
+in terms of | /ɪn tɜːrmz əv/ | phr | xét về mặt | In terms of cost, the second option wins. | Xét về mặt chi phí, phương án thứ hai thắng.
+follow up | /ˈfɑːloʊ ʌp/ | phr | theo dõi tiếp | I will follow up with the supplier tomorrow. | Tôi sẽ theo dõi tiếp với nhà cung cấp vào ngày mai.
+back up | /bæk ʌp/ | phr | sao lưu/ hỗ trợ | Please back up the files before the update. | Vui lòng sao lưu các tệp trước khi cập nhật.
+turn down | /tɜːrn daʊn/ | phr | từ chối | They turned down our first offer. | Họ đã từ chối lời chào giá đầu tiên của chúng tôi.
+bring up | /brɪŋ ʌp/ | phr | nêu ra (vấn đề) | She will bring up the issue at the meeting. | Cô ấy sẽ nêu vấn đề đó ra tại cuộc họp.

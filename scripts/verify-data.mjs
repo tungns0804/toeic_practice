@@ -104,6 +104,16 @@ function checkVocabulary() {
 
   const bands = ['tu-vung-band-1', 'tu-vung-band-2', 'tu-vung-band-3', 'tu-vung-band-4', 'tu-vung-band-5'];
 
+  /**
+   * Từ đã gặp ở band nào — để bắt một từ bị xếp vào HAI band.
+   *
+   * `parseVocabulary` chỉ chống trùng trong phạm vi MỘT file, nên nó không thấy
+   * được trường hợp này. Mà đây lại là lỗi thật: band là một thang bậc, một từ
+   * nằm ở hai bậc thì người học gặp lại đúng từ đó ở band cao hơn và tưởng mình
+   * đang học từ mới, còn câu hỏi thì bị hỏi hai lần trong hai phiên khác nhau.
+   */
+  const wordBand = new Map();
+
   for (const band of bands) {
     const path = join(ROOT, 'data-source', band, 'vocabulary.txt');
     const { words, errors: parseErrors } = parseVocabulary(readFileSync(path, 'utf8'));
@@ -113,6 +123,14 @@ function checkVocabulary() {
     const noCloze = [];
 
     for (const word of words) {
+      const key = word.word.toLowerCase();
+      const seenIn = wordBand.get(key);
+      if (seenIn) {
+        fail(`[${band}] "${word.word}" đã có ở ${seenIn} — một từ chỉ thuộc về một band`);
+      } else {
+        wordBand.set(key, band);
+      }
+
       if (!word.example) {
         missingExample++;
         continue;
