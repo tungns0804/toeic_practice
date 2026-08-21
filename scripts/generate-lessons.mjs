@@ -281,8 +281,11 @@ function main() {
     }
   }
 
+  // KHÔNG ghi dấu thời gian vào đây. File này được commit, nên một trường
+  // `generatedAt` sẽ làm cây git bẩn sau MỖI lần build — kể cả khi không có nội
+  // dung nào đổi — và mọi commit về sau đều kèm một dòng diff vô nghĩa. Muốn biết
+  // dữ liệu sinh lúc nào thì lịch sử git của chính file này đã trả lời rồi.
   const index = {
-    generatedAt: new Date().toISOString(),
     lessons: built.map(({ lesson }) => indexEntryOf(lesson)),
   };
 

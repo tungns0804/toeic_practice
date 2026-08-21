@@ -1,0 +1,67 @@
+# Build và đưa trang lên GitHub Pages mỗi khi nhánh main đổi.
+#
+# Trước khi workflow này chạy được lần đầu, phải bật Pages trong repo:
+#   Settings → Pages → Build and deployment → Source: "GitHub Actions"
+# Không bật thì bước deploy sẽ báo lỗi "Pages site not found".
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Cho phép bấm chạy tay từ tab Actions, tiện khi muốn deploy lại mà không sửa gì.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  # Bắt buộc: actions/deploy-pages xác thực với Pages bằng OIDC token.
+  id-token: write
+
+# Hai lần push liền nhau thì chỉ giữ lần sau. Không huỷ lần đang chạy dở
+# (`cancel-in-progress: false`) vì huỷ giữa chừng một lượt deploy có thể để lại
+# site ở trạng thái nửa vời.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Node 22: `npm run verify:data` chạy file .ts trực tiếp bằng
+          # --experimental-strip-types, cờ này chưa có ở Node 20.
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # Chặn ngay tại đây nếu dữ liệu hỏng: thà build đỏ còn hơn đẩy lên một trang
+      # thiếu bản dịch hoặc có câu hỏi hỏng.
+      - name: Kiểm tra dữ liệu và bảng thông điệp
+        run: npm run verify
+
+      - name: Build
+        # Site nằm ở https://<user>.github.io/<repo>/ nên base href phải là /<repo>/.
+        # Lấy tên repo từ context thay vì viết cứng: đổi tên repo hay fork sang tên
+        # khác thì vẫn đúng.
+        env:
+          BASE_HREF: /${{ github.event.repository.name }}/
+        run: npm run build:pages
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/toeic-practice/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

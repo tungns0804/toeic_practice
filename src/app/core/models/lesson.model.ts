@@ -197,7 +197,7 @@ export interface LessonSummary {
 
 /**
  * Một dòng của file `public/lessons/index.json` do `npm run generate` sinh ra.
- * File đó là một object `{ generatedAt, lessons: LessonIndexEntry[] }`.
+ * File đó là một object `{ lessons: LessonIndexEntry[] }`.
  */
 export interface LessonIndexEntry {
   id: string;

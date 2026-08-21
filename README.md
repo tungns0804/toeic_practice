@@ -31,6 +31,7 @@ Lệnh khác:
 
 ```bash
 npm run build       # sinh dữ liệu + build bản production vào dist/
+npm run build:pages # build bản dành cho GitHub Pages (xem mục Triển khai)
 npm run generate    # chỉ sinh lại public/lessons/*.json từ data-source/
 npm run verify      # kiểm tra bảng thông điệp, dữ liệu bài tập và dữ liệu nguồn
 ```
@@ -235,7 +236,46 @@ Ba tầng, đều là những thứ TypeScript không diễn đạt được:
 
 ---
 
-## Ghi chú triển khai
+## Triển khai lên GitHub Pages
+
+Đã có sẵn workflow `.github/workflows/deploy-pages.yml`: mỗi lần đẩy lên `main`
+là nó tự kiểm tra dữ liệu, build và publish. **Cần bật Pages một lần duy nhất**
+trước khi workflow chạy được:
+
+> Settings → Pages → Build and deployment → **Source: GitHub Actions**
+
+Sau đó site nằm ở `https://<user>.github.io/<repo>/`.
+
+### Ba thứ Pages đòi hỏi mà bản build thường không có
+
+`npm run build:pages` lo cả ba (xem `scripts/build-pages.mjs`):
+
+| Vấn đề | Cách xử lý |
+| --- | --- |
+| Site nằm ở thư mục con `/<repo>/`, không phải gốc tên miền | Build với `--base-href /<repo>/`. Tên repo được suy từ remote `origin` nên fork sang tên khác vẫn đúng; ghi đè bằng `BASE_HREF` hoặc tham số dòng lệnh. |
+| Pages là host tĩnh, mở thẳng `/<repo>/tenses/thi-hien-tai` sẽ ra trang lỗi | Chép `index.html` thành `404.html`. Pages phục vụ file này cho mọi đường dẫn không khớp, nên router của Angular nhận đúng URL và vẽ đúng trang. Giữ được URL sạch, không phải chuyển sang định tuyến bằng dấu `#`. |
+| Pages chạy Jekyll, mà Jekyll bỏ qua file/thư mục bắt đầu bằng `_` | Tạo file rỗng `.nojekyll`. |
+
+Deep link vì thế trả về **mã 404 kèm nội dung app** — đúng như thiết kế, không
+phải lỗi. Trình duyệt vẫn chạy JS trong trang đó bình thường.
+
+Toàn bộ đã được kiểm tra bằng một server mô phỏng đúng hành vi của Pages (phục vụ
+ở thư mục con + trả 404.html cho đường dẫn lạ): cả 8 trang đều vẽ đủ nội dung qua
+deep link, không lỗi console, không tài nguyên hỏng.
+
+### Deploy tay, không qua Actions
+
+```bash
+npm run build:pages
+# rồi đẩy nguyên thư mục dist/toeic-practice/browser lên nhánh gh-pages
+```
+
+Lưu ý khi chạy trên **Git Bash / MSYS ở Windows**: đặt biến kiểu
+`BASE_HREF=/abc/ npm run build:pages` sẽ bị shell đổi `/abc/` thành một đường dẫn
+Windows. Cứ để script tự suy từ remote (mặc định) là xong; nếu bắt buộc phải chỉ
+định thì thêm `MSYS_NO_PATHCONV=1`.
+
+### Ghi chú khác
 
 `public/lessons/*.json` là file **sinh ra** nhưng vẫn được commit: nhờ vậy chỉ cần
 `ng build` (hoặc copy thẳng thư mục `public/`) là chạy được, không bắt buộc chạy
