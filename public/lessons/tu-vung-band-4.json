@@ -1,0 +1,372 @@
+{
+  "id": "tu-vung-band-4",
+  "name": "Band 4 · 750–860",
+  "description": "Từ vựng báo cáo tài chính, pháp lý và quản trị. Xuất hiện dày ở Part 7 với các bài đọc dài.",
+  "kind": "vocabulary",
+  "itemCount": 40,
+  "words": [
+    {
+      "id": "w-1kb9moo",
+      "word": "depreciation",
+      "ipa": "/dɪˌpriːʃiˈeɪʃn/",
+      "pos": "noun",
+      "meaning": "khấu hao",
+      "example": "Depreciation on the machinery is calculated annually.",
+      "exampleVi": "Khấu hao máy móc được tính hằng năm."
+    },
+    {
+      "id": "w-1qxv8cs",
+      "word": "amortize",
+      "ipa": "/ˈæmərtaɪz/",
+      "pos": "verb",
+      "meaning": "phân bổ dần/ khấu trừ dần",
+      "example": "The licence fee is amortized over five years.",
+      "exampleVi": "Phí bản quyền được phân bổ dần trong năm năm."
+    },
+    {
+      "id": "w-1unprkj",
+      "word": "liquidity",
+      "ipa": "/lɪˈkwɪdəti/",
+      "pos": "noun",
+      "meaning": "tính thanh khoản",
+      "example": "The company maintains strong liquidity.",
+      "exampleVi": "Công ty duy trì tính thanh khoản tốt."
+    },
+    {
+      "id": "w-11o96o6",
+      "word": "solvency",
+      "ipa": "/ˈsɑːlvənsi/",
+      "pos": "noun",
+      "meaning": "khả năng trả nợ",
+      "example": "The auditors questioned the firm's solvency.",
+      "exampleVi": "Các kiểm toán viên đặt câu hỏi về khả năng trả nợ của công ty."
+    },
+    {
+      "id": "w-128adiy",
+      "word": "dividend",
+      "ipa": "/ˈdɪvɪdend/",
+      "pos": "noun",
+      "meaning": "cổ tức",
+      "example": "The board declared a higher dividend this year.",
+      "exampleVi": "Hội đồng quản trị công bố mức cổ tức cao hơn năm nay."
+    },
+    {
+      "id": "w-s3pbty",
+      "word": "shareholder",
+      "ipa": "/ˈʃerhoʊldər/",
+      "pos": "noun",
+      "meaning": "cổ đông",
+      "example": "Shareholders approved the plan at the annual meeting.",
+      "exampleVi": "Các cổ đông đã thông qua kế hoạch tại đại hội thường niên."
+    },
+    {
+      "id": "w-1w319rc",
+      "word": "audit",
+      "ipa": "/ˈɔːdɪt/",
+      "pos": "noun",
+      "meaning": "cuộc kiểm toán",
+      "example": "The annual audit begins next Monday.",
+      "exampleVi": "Cuộc kiểm toán thường niên bắt đầu vào thứ Hai tới."
+    },
+    {
+      "id": "w-ijq5zs",
+      "word": "disclosure",
+      "ipa": "/dɪsˈkloʊʒər/",
+      "pos": "noun",
+      "meaning": "việc công bố thông tin",
+      "example": "Full disclosure of related-party deals is required.",
+      "exampleVi": "Việc công bố đầy đủ các giao dịch với bên liên quan là bắt buộc."
+    },
+    {
+      "id": "w-v2w5l0",
+      "word": "discrepancy",
+      "ipa": "/dɪsˈkrepənsi/",
+      "pos": "noun",
+      "meaning": "sự sai lệch/ chênh lệch",
+      "example": "An accountant found a discrepancy in the figures.",
+      "exampleVi": "Một kế toán viên đã phát hiện sai lệch trong các con số."
+    },
+    {
+      "id": "w-7d11yv",
+      "word": "reconcile",
+      "ipa": "/ˈrekənsaɪl/",
+      "pos": "verb",
+      "meaning": "đối chiếu/ khớp sổ",
+      "example": "We reconcile the bank statement every month.",
+      "exampleVi": "Chúng tôi đối chiếu sao kê ngân hàng hằng tháng."
+    },
+    {
+      "id": "w-66uie5",
+      "word": "remittance",
+      "ipa": "/rɪˈmɪtns/",
+      "pos": "noun",
+      "meaning": "khoản chuyển tiền",
+      "example": "The remittance was credited on the same day.",
+      "exampleVi": "Khoản chuyển tiền đã được ghi có ngay trong ngày."
+    },
+    {
+      "id": "w-agi415",
+      "word": "arrears",
+      "ipa": "/əˈrɪrz/",
+      "pos": "noun",
+      "meaning": "khoản nợ quá hạn",
+      "example": "Two invoices are still in arrears.",
+      "exampleVi": "Hai hoá đơn vẫn còn quá hạn chưa trả."
+    },
+    {
+      "id": "w-1qary8e",
+      "word": "indemnity",
+      "ipa": "/ɪnˈdemnəti/",
+      "pos": "noun",
+      "meaning": "khoản bồi thường/ sự bồi hoàn",
+      "example": "The contract includes an indemnity clause.",
+      "exampleVi": "Hợp đồng có một điều khoản bồi thường."
+    },
+    {
+      "id": "w-laueqm",
+      "word": "arbitration",
+      "ipa": "/ˌɑːrbɪˈtreɪʃn/",
+      "pos": "noun",
+      "meaning": "trọng tài (giải quyết tranh chấp)",
+      "example": "Any dispute goes to arbitration in Singapore.",
+      "exampleVi": "Mọi tranh chấp sẽ được giải quyết bằng trọng tài tại Singapore."
+    },
+    {
+      "id": "w-968hwo",
+      "word": "jurisdiction",
+      "ipa": "/ˌdʒʊrɪsˈdɪkʃn/",
+      "pos": "noun",
+      "meaning": "thẩm quyền xét xử/ phạm vi quyền hạn",
+      "example": "The case falls under local jurisdiction.",
+      "exampleVi": "Vụ việc thuộc thẩm quyền xét xử của toà địa phương."
+    },
+    {
+      "id": "w-1x4kopk",
+      "word": "breach",
+      "ipa": "/briːtʃ/",
+      "pos": "noun",
+      "meaning": "sự vi phạm",
+      "example": "Late payment is a breach of contract.",
+      "exampleVi": "Chậm thanh toán là hành vi vi phạm hợp đồng."
+    },
+    {
+      "id": "w-1gewnmh",
+      "word": "waive",
+      "ipa": "/weɪv/",
+      "pos": "verb",
+      "meaning": "miễn/ từ bỏ (quyền)",
+      "example": "The bank waived the transfer fee.",
+      "exampleVi": "Ngân hàng đã miễn phí chuyển khoản."
+    },
+    {
+      "id": "w-1v0eu1q",
+      "word": "stipulate",
+      "ipa": "/ˈstɪpjuleɪt/",
+      "pos": "verb",
+      "meaning": "quy định rõ",
+      "example": "The agreement stipulates a thirty-day notice period.",
+      "exampleVi": "Thoả thuận quy định rõ thời hạn báo trước ba mươi ngày."
+    },
+    {
+      "id": "w-g9t27n",
+      "word": "mitigate",
+      "ipa": "/ˈmɪtɪɡeɪt/",
+      "pos": "verb",
+      "meaning": "giảm nhẹ/ hạn chế",
+      "example": "The plan aims to mitigate currency risk.",
+      "exampleVi": "Kế hoạch nhằm giảm nhẹ rủi ro tỷ giá."
+    },
+    {
+      "id": "w-ya1aj6",
+      "word": "consolidate",
+      "ipa": "/kənˈsɑːlɪdeɪt/",
+      "pos": "verb",
+      "meaning": "hợp nhất/ củng cố",
+      "example": "The group consolidated its three warehouses into one.",
+      "exampleVi": "Tập đoàn đã hợp nhất ba nhà kho thành một."
+    },
+    {
+      "id": "w-8a509a",
+      "word": "diversify",
+      "ipa": "/daɪˈvɜːrsɪfaɪ/",
+      "pos": "verb",
+      "meaning": "đa dạng hoá",
+      "example": "They diversified into renewable energy.",
+      "exampleVi": "Họ đã đa dạng hoá sang lĩnh vực năng lượng tái tạo."
+    },
+    {
+      "id": "w-1ci25p1",
+      "word": "scrutinize",
+      "ipa": "/ˈskruːtənaɪz/",
+      "pos": "verb",
+      "meaning": "soi xét kỹ",
+      "example": "Regulators scrutinized every transaction.",
+      "exampleVi": "Cơ quan quản lý đã soi xét kỹ từng giao dịch."
+    },
+    {
+      "id": "w-esmh2i",
+      "word": "delegate",
+      "ipa": "/ˈdelɪɡeɪt/",
+      "pos": "verb",
+      "meaning": "uỷ quyền/ giao việc",
+      "example": "A good manager delegates routine tasks.",
+      "exampleVi": "Một quản lý giỏi biết giao lại các việc lặp lại."
+    },
+    {
+      "id": "w-1dt9fki",
+      "word": "oversee",
+      "ipa": "/ˌoʊvərˈsiː/",
+      "pos": "verb",
+      "meaning": "giám sát/ trông coi",
+      "example": "She oversees operations in four countries.",
+      "exampleVi": "Cô ấy giám sát hoạt động ở bốn quốc gia."
+    },
+    {
+      "id": "w-1713jf2",
+      "word": "undertake",
+      "ipa": "/ˌʌndərˈteɪk/",
+      "pos": "verb",
+      "meaning": "đảm nhận/ cam kết thực hiện",
+      "example": "The firm will undertake a full review of its suppliers.",
+      "exampleVi": "Công ty sẽ đảm nhận việc rà soát toàn bộ nhà cung cấp."
+    },
+    {
+      "id": "w-ltk2h8",
+      "word": "incur",
+      "ipa": "/ɪnˈkɜːr/",
+      "pos": "verb",
+      "meaning": "phải chịu/ gánh (chi phí, nợ)",
+      "example": "Late cancellation will incur a fee.",
+      "exampleVi": "Huỷ muộn sẽ phải chịu phí."
+    },
+    {
+      "id": "w-5rlz2i",
+      "word": "offset",
+      "ipa": "/ˈɔːfset/",
+      "pos": "verb",
+      "meaning": "bù lại/ cân bằng",
+      "example": "Higher volumes offset the lower margin.",
+      "exampleVi": "Sản lượng cao hơn đã bù lại biên lợi nhuận thấp hơn."
+    },
+    {
+      "id": "w-hbkaun",
+      "word": "attribute",
+      "ipa": "/əˈtrɪbjuːt/",
+      "pos": "verb",
+      "meaning": "quy cho/ cho là do",
+      "example": "Analysts attribute the growth to new markets.",
+      "exampleVi": "Các nhà phân tích quy sự tăng trưởng cho các thị trường mới."
+    },
+    {
+      "id": "w-11k61l3",
+      "word": "comprehensive",
+      "ipa": "/ˌkɑːmprɪˈhensɪv/",
+      "pos": "adjective",
+      "meaning": "toàn diện",
+      "example": "The report gives a comprehensive overview.",
+      "exampleVi": "Báo cáo đưa ra một cái nhìn toàn diện."
+    },
+    {
+      "id": "w-gdt1yz",
+      "word": "preliminary",
+      "ipa": "/prɪˈlɪməneri/",
+      "pos": "adjective",
+      "meaning": "sơ bộ/ ban đầu",
+      "example": "Preliminary results are due on Friday.",
+      "exampleVi": "Kết quả sơ bộ sẽ có vào thứ Sáu."
+    },
+    {
+      "id": "w-1i2cydj",
+      "word": "unprecedented",
+      "ipa": "/ʌnˈpresɪdentɪd/",
+      "pos": "adjective",
+      "meaning": "chưa từng có",
+      "example": "Demand reached an unprecedented level.",
+      "exampleVi": "Nhu cầu đã đạt mức chưa từng có."
+    },
+    {
+      "id": "w-1bh6huw",
+      "word": "viable",
+      "ipa": "/ˈvaɪəbl/",
+      "pos": "adjective",
+      "meaning": "khả thi/ đứng vững được",
+      "example": "The branch is no longer commercially viable.",
+      "exampleVi": "Chi nhánh không còn đứng vững được về mặt thương mại."
+    },
+    {
+      "id": "w-1pqb9p",
+      "word": "stringent",
+      "ipa": "/ˈstrɪndʒənt/",
+      "pos": "adjective",
+      "meaning": "nghiêm ngặt",
+      "example": "The industry follows stringent safety standards.",
+      "exampleVi": "Ngành này tuân theo các tiêu chuẩn an toàn nghiêm ngặt."
+    },
+    {
+      "id": "w-12e8vbo",
+      "word": "lucrative",
+      "ipa": "/ˈluːkrətɪv/",
+      "pos": "adjective",
+      "meaning": "sinh lời cao/ béo bở",
+      "example": "They won a lucrative government contract.",
+      "exampleVi": "Họ đã giành được một hợp đồng chính phủ sinh lời cao."
+    },
+    {
+      "id": "w-1lm5h5m",
+      "word": "redundant",
+      "ipa": "/rɪˈdʌndənt/",
+      "pos": "adjective",
+      "meaning": "dư thừa/ bị cắt giảm biên chế",
+      "example": "Two roles became redundant after the merger.",
+      "exampleVi": "Hai vị trí trở nên dư thừa sau khi sáp nhập."
+    },
+    {
+      "id": "w-xdi834",
+      "word": "contingent",
+      "ipa": "/kənˈtɪndʒənt/",
+      "pos": "adjective",
+      "meaning": "phụ thuộc vào/ tuỳ theo",
+      "example": "The bonus is contingent on annual results.",
+      "exampleVi": "Khoản thưởng phụ thuộc vào kết quả cả năm."
+    },
+    {
+      "id": "w-wm8c2m",
+      "word": "in the event of",
+      "ipa": "/ɪn ði ɪˈvent əv/",
+      "pos": "phrase",
+      "meaning": "trong trường hợp",
+      "example": "In the event of delay, notify the client at once.",
+      "exampleVi": "Trong trường hợp chậm trễ, hãy báo khách hàng ngay."
+    },
+    {
+      "id": "w-8e9ulp",
+      "word": "with regard to",
+      "ipa": "/wɪð rɪˈɡɑːrd tuː/",
+      "pos": "phrase",
+      "meaning": "về vấn đề/ liên quan tới",
+      "example": "With regard to your query, the item is in stock.",
+      "exampleVi": "Về câu hỏi của bạn, món hàng vẫn còn hàng."
+    },
+    {
+      "id": "w-gn9d9j",
+      "word": "in compliance with",
+      "ipa": "/ɪn kəmˈplaɪəns wɪð/",
+      "pos": "phrase",
+      "meaning": "tuân thủ theo đúng",
+      "example": "The plant operates in compliance with national law.",
+      "exampleVi": "Nhà máy vận hành tuân thủ theo đúng luật quốc gia."
+    },
+    {
+      "id": "w-1rwk62e",
+      "word": "pursuant to",
+      "ipa": "/pərˈsuːənt tuː/",
+      "pos": "phrase",
+      "meaning": "chiểu theo/ theo đúng",
+      "example": "Pursuant to clause 8, either party may withdraw.",
+      "exampleVi": "Chiểu theo điều 8, bên nào cũng có thể rút lui."
+    }
+  ],
+  "tensePoints": [],
+  "bandFrom": 750,
+  "bandTo": 860
+}

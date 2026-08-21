@@ -1,0 +1,295 @@
+@if (notFound()) {
+  <div class="container page">
+    <div class="empty-state">
+      <span class="empty-state-icon" aria-hidden="true">🔍</span>
+      <p class="empty-state-title">{{ t('exercise.notFound') }}</p>
+      <p class="empty-state-text"><app-t key="error.notFoundHint" block /></p>
+      <a routerLink="/exercise" class="btn"><app-t key="app.nav.exercise" /></a>
+    </div>
+  </div>
+} @else if (info(); as data) {
+  <div class="container page">
+    <div class="stack stack-xl">
+      <header class="page-head">
+        <a routerLink="/exercise" class="small back-link">← {{ t('exercise.listTitle') }}</a>
+        <h1><app-t [key]="data.nameKey" /></h1>
+        <p><app-t [key]="data.descKey" block /></p>
+      </header>
+
+      <!-- ── Thiết lập luyện tập ──────────────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body stack stack-lg">
+          <div class="section-head">
+            <h2>{{ t('setup.title') }}</h2>
+            <span class="spacer"></span>
+            @if (totalFavoriteCount() > 0) {
+              <button type="button" class="btn btn-sm btn-ghost" (click)="clearFavorites()">
+                {{ t('favorite.clear') }}
+              </button>
+            }
+          </div>
+
+          <div class="field">
+            <span class="label"><app-t key="setup.mode" /></span>
+            <div class="options-grid">
+              @for (item of modes; track item.id) {
+                <button
+                  type="button"
+                  class="option option-stacked"
+                  [class.is-active]="mode() === item.id"
+                  (click)="setMode(item.id)"
+                >
+                  <span class="option-title"><app-t [key]="item.labelKey" /></span>
+                  <span class="option-example"><app-t [key]="item.exampleKey" block /></span>
+                </button>
+              }
+            </div>
+          </div>
+
+          <div class="setup-row">
+            <!-- Dạng câu -->
+            <div class="field">
+              <span class="label"><app-t key="exercise.kindFilter" /></span>
+              <div class="chip-row">
+                @for (kind of kinds; track kind) {
+                  <button
+                    type="button"
+                    class="chip"
+                    [class.is-active]="isKindSelected(kind)"
+                    (click)="toggleKind(kind)"
+                  >
+                    <app-t [key]="kindLabelKey[kind]" />
+                    <span class="chip-count tnum">{{ kindCounts()[kind] }}</span>
+                  </button>
+                }
+              </div>
+            </div>
+
+            <!-- Phạm vi ★ -->
+            <div class="field">
+              <span class="label"><app-t key="setup.scope" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="scope() === 'all'"
+                  (click)="setScope('all')"
+                >
+                  {{ t('scope.all.count', { count: kindSentences().length }) }}
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="scope() === 'favorite'"
+                  [disabled]="favoriteCount() === 0"
+                  (click)="setScope('favorite')"
+                >
+                  {{ t('scope.favorite.count', { count: favoriteCount() }) }}
+                </button>
+              </div>
+            </div>
+
+            <!-- Số câu -->
+            <div class="field">
+              <span class="label"><app-t key="setup.limit" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="questionLimit() === null"
+                  (click)="setQuestionLimit(null)"
+                >
+                  <app-t key="setup.limit.all" />
+                </button>
+                @for (limit of limitChoices(); track limit) {
+                  <button
+                    type="button"
+                    class="chip tnum"
+                    [class.is-active]="questionLimit() === limit"
+                    (click)="setQuestionLimit(limit)"
+                  >
+                    {{ limit }}
+                  </button>
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label"><app-t key="setup.options" /></span>
+            <div class="options-grid">
+              <label class="checkbox">
+                <input type="checkbox" [checked]="shuffleQuestions()" (change)="toggleShuffle($event)" />
+                <span><app-t key="setup.shuffle" block /></span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" [checked]="showHint()" (change)="toggleShowHint($event)" />
+                <span><app-t key="setup.showHint" block /></span>
+              </label>
+            </div>
+            <p class="hint"><app-t key="exercise.typingOnly" block /></p>
+          </div>
+
+          <div class="row setup-start">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              [disabled]="!canStart()"
+              (click)="start()"
+            >
+              {{ t('setup.start') }}
+            </button>
+            @if (canStart()) {
+              <span class="muted small tnum">
+                {{ t('setup.plan', { count: plannedQuestionCount() }) }}
+              </span>
+            } @else {
+              <span class="muted small"><app-t key="setup.empty" /></span>
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Công thức bị động theo thì ───────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body stack">
+          <div class="section-head">
+            <h2>{{ t('exercise.formula.title') }}</h2>
+          </div>
+          <div class="notice">
+            <span><app-t key="exercise.formula.note" block /></span>
+          </div>
+          <div class="scroll-x">
+            <table class="table formula-table">
+              <thead>
+                <tr>
+                  <th scope="col"><app-t key="exercise.col.tense" /></th>
+                  <th scope="col"><app-t key="exercise.col.active" /></th>
+                  <th scope="col"><app-t key="exercise.col.passive" /></th>
+                  <th scope="col"><app-t key="tense.examples" /></th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (formula of formulas; track formula.id) {
+                  <tr>
+                    <td class="col-tense">{{ localizedText(formula.name) }}</td>
+                    <td><code class="formula">{{ formula.active }}</code></td>
+                    <td><code class="formula formula-passive">{{ formula.passive }}</code></td>
+                    <td class="en col-formula-example">{{ formula.example }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Bảng tra cứu câu ─────────────────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body stack">
+          <div class="section-head">
+            <h2>{{ t('exercise.reference') }}</h2>
+          </div>
+
+          <div class="table-toolbar">
+            <div class="search">
+              <span class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="9" cy="9" r="6" />
+                  <path d="M13.5 13.5 L17 17" stroke-linecap="round" />
+                </svg>
+              </span>
+              <input
+                type="search"
+                class="input"
+                [value]="search()"
+                (input)="onSearch($event)"
+                [placeholder]="t('exercise.searchPlaceholder')"
+                [attr.aria-label]="t('common.search')"
+              />
+              @if (search()) {
+                <button
+                  type="button"
+                  class="search-clear"
+                  (click)="clearSearch()"
+                  [attr.aria-label]="t('common.clear')"
+                >
+                  ✕
+                </button>
+              }
+            </div>
+
+            <label class="checkbox toolbar-check" [class.is-disabled]="favoriteCount() === 0">
+              <input
+                type="checkbox"
+                [checked]="onlyFavorites()"
+                [disabled]="favoriteCount() === 0"
+                (change)="toggleOnlyFavorites($event)"
+              />
+              <span><app-t key="vocab.onlyFavorites" /></span>
+            </label>
+
+            <span class="muted small tnum">
+              {{
+                t('exercise.showing', {
+                  shown: filteredSentences().length,
+                  total: kindSentences().length
+                })
+              }}
+            </span>
+          </div>
+
+          @if (filteredSentences().length === 0) {
+            <div class="empty-state">
+              <span class="empty-state-icon" aria-hidden="true">🗒</span>
+              <p class="empty-state-title">{{ t('vocab.noMatch') }}</p>
+              <p class="empty-state-text"><app-t key="vocab.noMatchHint" block /></p>
+            </div>
+          } @else {
+            <ul class="sentence-list">
+              @for (sentence of filteredSentences(); track sentence.id) {
+                <li class="sentence" [class.is-starred]="isFavorite(sentence.id)">
+                  <button
+                    type="button"
+                    class="star-btn"
+                    [class.is-on]="isFavorite(sentence.id)"
+                    (click)="toggleFavorite(sentence.id)"
+                    [attr.aria-pressed]="isFavorite(sentence.id)"
+                    [attr.aria-label]="t('favorite.star')"
+                    [title]="t('favorite.starTitle')"
+                  >
+                    {{ isFavorite(sentence.id) ? '★' : '☆' }}
+                  </button>
+
+                  <div class="sentence-body">
+                    <div class="sentence-line">
+                      <span class="sentence-tag"><app-t key="exercise.col.active" /></span>
+                      <span class="en">{{ sentence.active }}</span>
+                    </div>
+                    <div class="sentence-line">
+                      <span class="sentence-tag is-passive">
+                        <app-t key="exercise.col.passive" />
+                      </span>
+                      <span class="en sentence-passive">{{ sentence.passive }}</span>
+                    </div>
+                    <p class="sentence-vi muted small">{{ sentence.vietnamese }}</p>
+                    @if (sentence.note) {
+                      <p class="sentence-note small">{{ localizedText(sentence.note) }}</p>
+                    }
+                  </div>
+
+                  <div class="sentence-meta">
+                    <span class="badge">{{ formulaName(sentence) }}</span>
+                    <span class="badge badge-accent">
+                      <app-t [key]="kindLabelKey[sentence.kind]" />
+                    </span>
+                  </div>
+                </li>
+              }
+            </ul>
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+}

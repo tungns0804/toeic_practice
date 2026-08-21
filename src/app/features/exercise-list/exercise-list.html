@@ -1,0 +1,27 @@
+<div class="container page">
+  <div class="stack stack-xl">
+    <header class="page-head">
+      <h1>{{ t('exercise.listTitle') }}</h1>
+      <p><app-t key="exercise.listLead" block /></p>
+    </header>
+
+    <div class="exercise-grid">
+      @for (exercise of exercises; track exercise.id) {
+        <a [routerLink]="['/exercise', exercise.id]" class="card exercise-card">
+          <div class="card-body stack stack-sm">
+            <div class="row">
+              <span class="badge badge-accent tnum">
+                {{ t(exercise.unitKey, { count: countOf(exercise.id) }) }}
+              </span>
+              @if (favoriteCount(exercise.id) > 0) {
+                <span class="badge badge-warning tnum">★ {{ favoriteCount(exercise.id) }}</span>
+              }
+            </div>
+            <h2><app-t [key]="exercise.nameKey" /></h2>
+            <p class="muted small"><app-t [key]="exercise.descKey" block /></p>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</div>

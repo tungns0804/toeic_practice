@@ -1,0 +1,55 @@
+<div class="container page">
+  <div class="stack stack-xl">
+    <header class="page-head">
+      <h1>{{ t('tense.listTitle') }}</h1>
+      <p><app-t key="tense.listLead" block /></p>
+    </header>
+
+    @if (status() === 'error') {
+      <div class="notice notice-error">
+        <span>{{ errorKey() ? t(errorKey()!) : '' }}</span>
+        <button type="button" class="btn btn-sm" (click)="retry()">{{ t('common.retry') }}</button>
+      </div>
+    } @else if (status() === 'loading' || status() === 'idle') {
+      <!-- Ba khối xám đúng hình dạng thẻ sắp hiện: trang không giật một nhịp khi
+           dữ liệu về, và không ai tưởng trang bị hỏng. -->
+      <div class="tense-grid">
+        @for (i of [1, 2, 3]; track i) {
+          <div class="card">
+            <div class="card-body stack">
+              <div class="skeleton" style="height: 22px; width: 62%"></div>
+              <div class="skeleton" style="height: 14px"></div>
+              <div class="skeleton" style="height: 14px; width: 84%"></div>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="tense-grid">
+        @for (group of groups(); track group.id) {
+          <a [routerLink]="['/tenses', group.id]" class="card tense-card">
+            <div class="card-body stack stack-sm">
+              <div class="row">
+                <span class="badge badge-accent tnum">
+                  {{ t('tense.groupCount', { count: group.itemCount }) }}
+                </span>
+                @if (group.exampleCount) {
+                  <span class="badge tnum">
+                    {{ t('tense.exampleCount', { count: group.exampleCount }) }}
+                  </span>
+                }
+                @if (favoriteCount(group.id) > 0) {
+                  <span class="badge badge-warning tnum">
+                    ★ {{ favoriteCount(group.id) }}
+                  </span>
+                }
+              </div>
+              <h2>{{ group.name }}</h2>
+              <p class="muted small">{{ group.description }}</p>
+            </div>
+          </a>
+        }
+      </div>
+    }
+  </div>
+</div>

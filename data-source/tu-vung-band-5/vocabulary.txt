@@ -1,0 +1,43 @@
+# TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA CÂU VÍ DỤ
+# Band 5 (860–990): từ học thuật, trang trọng và các cụm hay bị bẫy.
+
+meticulous | /məˈtɪkjələs/ | adj | tỉ mỉ/ kỹ lưỡng | She keeps meticulous records of every transaction. | Cô ấy giữ sổ sách tỉ mỉ cho từng giao dịch.
+prudent | /ˈpruːdnt/ | adj | thận trọng/ khôn ngoan | It would be prudent to delay the expansion. | Hoãn việc mở rộng lại là điều thận trọng.
+ambiguous | /æmˈbɪɡjuəs/ | adj | mơ hồ/ nước đôi | The wording of the clause is ambiguous. | Cách diễn đạt của điều khoản này khá mơ hồ.
+inherent | /ɪnˈhɪrənt/ | adj | vốn có/ cố hữu | Every investment carries an inherent risk. | Mọi khoản đầu tư đều có rủi ro cố hữu.
+imperative | /ɪmˈperətɪv/ | adj | cấp thiết/ bắt buộc phải | It is imperative that all forms be signed. | Việc mọi biểu mẫu được ký là điều bắt buộc.
+exemplary | /ɪɡˈzempləri/ | adj | mẫu mực/ đáng noi theo | His service record is exemplary. | Quá trình công tác của anh ấy thật mẫu mực.
+compelling | /kəmˈpelɪŋ/ | adj | thuyết phục/ hấp dẫn | The proposal makes a compelling case for change. | Bản đề xuất đưa ra lập luận thuyết phục cho sự thay đổi.
+robust | /roʊˈbʌst/ | adj | vững chắc/ mạnh mẽ | The system has robust security controls. | Hệ thống có các biện pháp bảo mật vững chắc.
+obsolete | /ˌɑːbsəˈliːt/ | adj | lỗi thời/ không còn dùng | The old software is now obsolete. | Phần mềm cũ giờ đã lỗi thời.
+detrimental | /ˌdetrɪˈmentl/ | adj | có hại/ bất lợi | Constant delays are detrimental to our reputation. | Việc chậm trễ liên tục gây hại cho uy tín của chúng tôi.
+alleviate | /əˈliːvieɪt/ | v | làm dịu/ giảm bớt | The new hires should alleviate the workload. | Những người mới tuyển sẽ giúp giảm bớt khối lượng công việc.
+substantiate | /səbˈstænʃieɪt/ | v | chứng minh/ đưa bằng chứng | You must substantiate every expense claim. | Bạn phải chứng minh cho từng khoản chi được kê khai.
+reiterate | /riˈɪtəreɪt/ | v | nhắc lại/ nhấn mạnh lại | Let me reiterate the main points of the plan. | Cho phép tôi nhắc lại các điểm chính của kế hoạch.
+ascertain | /ˌæsərˈteɪn/ | v | xác định/ tìm ra chắc chắn | We could not ascertain the cause of the fault. | Chúng tôi không xác định được nguyên nhân của sự cố.
+expedite | /ˈekspədaɪt/ | v | đẩy nhanh/ xúc tiến | Paying extra will expedite the shipment. | Trả thêm phí sẽ đẩy nhanh việc gửi hàng.
+warrant | /ˈwɔːrənt/ | v | biện minh cho/ đáng để | The evidence does not warrant further action. | Bằng chứng không đủ để biện minh cho hành động tiếp theo.
+supersede | /ˌsuːpərˈsiːd/ | v | thay thế cho (cái cũ) | This version supersedes all earlier editions. | Bản này thay thế cho mọi ấn bản trước đó.
+culminate | /ˈkʌlmɪneɪt/ | v | lên tới đỉnh điểm/ kết thúc bằng | The campaign culminated in a record quarter. | Chiến dịch đã đạt đỉnh điểm với một quý kỷ lục.
+contravene | /ˌkɑːntrəˈviːn/ | v | vi phạm/ trái với | The practice contravenes company policy. | Việc làm này trái với chính sách công ty.
+deteriorate | /dɪˈtɪriəreɪt/ | v | xấu đi/ suy giảm | Service quality deteriorated after the merger. | Chất lượng dịch vụ đã xấu đi sau khi sáp nhập.
+consensus | /kənˈsensəs/ | n | sự đồng thuận | The committee reached a consensus after two hours. | Hội đồng đã đạt được sự đồng thuận sau hai tiếng.
+discretion | /dɪˈskreʃn/ | n | quyền tự quyết/ sự kín đáo | Refunds are given at the manager's discretion. | Việc hoàn tiền tuỳ theo quyền tự quyết của quản lý.
+prerequisite | /ˌpriːˈrekwəzɪt/ | n | điều kiện tiên quyết | A degree is a prerequisite for this role. | Bằng đại học là điều kiện tiên quyết cho vị trí này.
+contingency | /kənˈtɪndʒənsi/ | n | phương án dự phòng/ tình huống bất ngờ | We set aside funds for any contingency. | Chúng tôi để riêng một khoản cho các tình huống bất ngờ.
+incentive | /ɪnˈsentɪv/ | n | ưu đãi/ động lực khuyến khích | The bonus scheme is a strong incentive. | Chương trình thưởng là một động lực mạnh mẽ.
+turnover | /ˈtɜːrnoʊvər/ | n | doanh thu/ tỷ lệ thay đổi nhân sự | Staff turnover fell after the pay rise. | Tỷ lệ nghỉ việc giảm sau đợt tăng lương.
+setback | /ˈsetbæk/ | n | trở ngại/ bước lùi | The recall was a serious setback for the brand. | Đợt thu hồi là một bước lùi nghiêm trọng cho thương hiệu.
+scope | /skoʊp/ | n | phạm vi | The scope of the project was reduced. | Phạm vi của dự án đã bị thu hẹp.
+premise | /ˈpremɪs/ | n | tiền đề/ cơ sở lập luận | The plan rests on a false premise. | Kế hoạch dựa trên một tiền đề sai.
+threshold | /ˈθreʃhoʊld/ | n | ngưỡng/ mức giới hạn | Orders above this threshold get free shipping. | Đơn hàng trên ngưỡng này được miễn phí vận chuyển.
+notwithstanding | /ˌnɑːtwɪθˈstændɪŋ/ | prep | mặc dù/ bất chấp | Notwithstanding the delay, the event was a success. | Mặc dù bị chậm trễ, sự kiện vẫn thành công.
+albeit | /ɔːlˈbiːɪt/ | conj | mặc dù/ dẫu rằng | Sales grew, albeit more slowly than expected. | Doanh số vẫn tăng, dẫu chậm hơn dự kiến.
+whereas | /werˈæz/ | conj | trong khi/ ngược lại | Exports rose, whereas domestic sales fell. | Xuất khẩu tăng, trong khi doanh số nội địa giảm.
+provided that | /prəˈvaɪdɪd ðæt/ | phr | miễn là/ với điều kiện là | You may leave early provided that your work is done. | Bạn có thể về sớm miễn là đã xong việc.
+in lieu of | /ɪn ˈluː əv/ | phr | thay cho/ thay vì | Staff took extra days off in lieu of payment. | Nhân viên nhận thêm ngày nghỉ thay cho tiền.
+at the expense of | /ət ði ɪkˈspens əv/ | phr | phải đánh đổi bằng | Speed came at the expense of accuracy. | Tốc độ có được phải đánh đổi bằng độ chính xác.
+by virtue of | /baɪ ˈvɜːrtʃuː əv/ | phr | nhờ vào/ do bởi | She holds the seat by virtue of her seniority. | Cô ấy giữ ghế đó nhờ vào thâm niên của mình.
+in conjunction with | /ɪn kənˈdʒʌŋkʃn wɪð/ | phr | kết hợp cùng với | The fair is held in conjunction with a trade summit. | Hội chợ được tổ chức kết hợp cùng một hội nghị thương mại.
+be attributed to | /bi əˈtrɪbjuːtɪd tuː/ | phr | được cho là do | The rise can be attributed to lower costs. | Mức tăng này có thể được cho là do chi phí giảm.
+take precedence over | /teɪk ˈpresɪdəns ˈoʊvər/ | phr | được ưu tiên hơn | Safety takes precedence over speed. | An toàn được ưu tiên hơn tốc độ.

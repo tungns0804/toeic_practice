@@ -1,0 +1,372 @@
+{
+  "id": "tu-vung-band-5",
+  "name": "Band 5 · 860–990",
+  "description": "Từ vựng học thuật và trang trọng, cùng các cụm từ cố định hay bị bẫy. Nhóm từ quyết định chặng cuối lên 990.",
+  "kind": "vocabulary",
+  "itemCount": 40,
+  "words": [
+    {
+      "id": "w-xv3yq1",
+      "word": "meticulous",
+      "ipa": "/məˈtɪkjələs/",
+      "pos": "adjective",
+      "meaning": "tỉ mỉ/ kỹ lưỡng",
+      "example": "She keeps meticulous records of every transaction.",
+      "exampleVi": "Cô ấy giữ sổ sách tỉ mỉ cho từng giao dịch."
+    },
+    {
+      "id": "w-sm54yr",
+      "word": "prudent",
+      "ipa": "/ˈpruːdnt/",
+      "pos": "adjective",
+      "meaning": "thận trọng/ khôn ngoan",
+      "example": "It would be prudent to delay the expansion.",
+      "exampleVi": "Hoãn việc mở rộng lại là điều thận trọng."
+    },
+    {
+      "id": "w-lcqihj",
+      "word": "ambiguous",
+      "ipa": "/æmˈbɪɡjuəs/",
+      "pos": "adjective",
+      "meaning": "mơ hồ/ nước đôi",
+      "example": "The wording of the clause is ambiguous.",
+      "exampleVi": "Cách diễn đạt của điều khoản này khá mơ hồ."
+    },
+    {
+      "id": "w-14p0wga",
+      "word": "inherent",
+      "ipa": "/ɪnˈhɪrənt/",
+      "pos": "adjective",
+      "meaning": "vốn có/ cố hữu",
+      "example": "Every investment carries an inherent risk.",
+      "exampleVi": "Mọi khoản đầu tư đều có rủi ro cố hữu."
+    },
+    {
+      "id": "w-jwef1n",
+      "word": "imperative",
+      "ipa": "/ɪmˈperətɪv/",
+      "pos": "adjective",
+      "meaning": "cấp thiết/ bắt buộc phải",
+      "example": "It is imperative that all forms be signed.",
+      "exampleVi": "Việc mọi biểu mẫu được ký là điều bắt buộc."
+    },
+    {
+      "id": "w-ap417c",
+      "word": "exemplary",
+      "ipa": "/ɪɡˈzempləri/",
+      "pos": "adjective",
+      "meaning": "mẫu mực/ đáng noi theo",
+      "example": "His service record is exemplary.",
+      "exampleVi": "Quá trình công tác của anh ấy thật mẫu mực."
+    },
+    {
+      "id": "w-23qs77",
+      "word": "compelling",
+      "ipa": "/kəmˈpelɪŋ/",
+      "pos": "adjective",
+      "meaning": "thuyết phục/ hấp dẫn",
+      "example": "The proposal makes a compelling case for change.",
+      "exampleVi": "Bản đề xuất đưa ra lập luận thuyết phục cho sự thay đổi."
+    },
+    {
+      "id": "w-12yrde4",
+      "word": "robust",
+      "ipa": "/roʊˈbʌst/",
+      "pos": "adjective",
+      "meaning": "vững chắc/ mạnh mẽ",
+      "example": "The system has robust security controls.",
+      "exampleVi": "Hệ thống có các biện pháp bảo mật vững chắc."
+    },
+    {
+      "id": "w-3yftnq",
+      "word": "obsolete",
+      "ipa": "/ˌɑːbsəˈliːt/",
+      "pos": "adjective",
+      "meaning": "lỗi thời/ không còn dùng",
+      "example": "The old software is now obsolete.",
+      "exampleVi": "Phần mềm cũ giờ đã lỗi thời."
+    },
+    {
+      "id": "w-1fxdiqq",
+      "word": "detrimental",
+      "ipa": "/ˌdetrɪˈmentl/",
+      "pos": "adjective",
+      "meaning": "có hại/ bất lợi",
+      "example": "Constant delays are detrimental to our reputation.",
+      "exampleVi": "Việc chậm trễ liên tục gây hại cho uy tín của chúng tôi."
+    },
+    {
+      "id": "w-basieu",
+      "word": "alleviate",
+      "ipa": "/əˈliːvieɪt/",
+      "pos": "verb",
+      "meaning": "làm dịu/ giảm bớt",
+      "example": "The new hires should alleviate the workload.",
+      "exampleVi": "Những người mới tuyển sẽ giúp giảm bớt khối lượng công việc."
+    },
+    {
+      "id": "w-1scc1ui",
+      "word": "substantiate",
+      "ipa": "/səbˈstænʃieɪt/",
+      "pos": "verb",
+      "meaning": "chứng minh/ đưa bằng chứng",
+      "example": "You must substantiate every expense claim.",
+      "exampleVi": "Bạn phải chứng minh cho từng khoản chi được kê khai."
+    },
+    {
+      "id": "w-rtnyju",
+      "word": "reiterate",
+      "ipa": "/riˈɪtəreɪt/",
+      "pos": "verb",
+      "meaning": "nhắc lại/ nhấn mạnh lại",
+      "example": "Let me reiterate the main points of the plan.",
+      "exampleVi": "Cho phép tôi nhắc lại các điểm chính của kế hoạch."
+    },
+    {
+      "id": "w-1o2qy4h",
+      "word": "ascertain",
+      "ipa": "/ˌæsərˈteɪn/",
+      "pos": "verb",
+      "meaning": "xác định/ tìm ra chắc chắn",
+      "example": "We could not ascertain the cause of the fault.",
+      "exampleVi": "Chúng tôi không xác định được nguyên nhân của sự cố."
+    },
+    {
+      "id": "w-nvk01n",
+      "word": "expedite",
+      "ipa": "/ˈekspədaɪt/",
+      "pos": "verb",
+      "meaning": "đẩy nhanh/ xúc tiến",
+      "example": "Paying extra will expedite the shipment.",
+      "exampleVi": "Trả thêm phí sẽ đẩy nhanh việc gửi hàng."
+    },
+    {
+      "id": "w-1wf565i",
+      "word": "warrant",
+      "ipa": "/ˈwɔːrənt/",
+      "pos": "verb",
+      "meaning": "biện minh cho/ đáng để",
+      "example": "The evidence does not warrant further action.",
+      "exampleVi": "Bằng chứng không đủ để biện minh cho hành động tiếp theo."
+    },
+    {
+      "id": "w-13smld7",
+      "word": "supersede",
+      "ipa": "/ˌsuːpərˈsiːd/",
+      "pos": "verb",
+      "meaning": "thay thế cho (cái cũ)",
+      "example": "This version supersedes all earlier editions.",
+      "exampleVi": "Bản này thay thế cho mọi ấn bản trước đó."
+    },
+    {
+      "id": "w-aksy73",
+      "word": "culminate",
+      "ipa": "/ˈkʌlmɪneɪt/",
+      "pos": "verb",
+      "meaning": "lên tới đỉnh điểm/ kết thúc bằng",
+      "example": "The campaign culminated in a record quarter.",
+      "exampleVi": "Chiến dịch đã đạt đỉnh điểm với một quý kỷ lục."
+    },
+    {
+      "id": "w-11fa3hc",
+      "word": "contravene",
+      "ipa": "/ˌkɑːntrəˈviːn/",
+      "pos": "verb",
+      "meaning": "vi phạm/ trái với",
+      "example": "The practice contravenes company policy.",
+      "exampleVi": "Việc làm này trái với chính sách công ty."
+    },
+    {
+      "id": "w-1n3s02b",
+      "word": "deteriorate",
+      "ipa": "/dɪˈtɪriəreɪt/",
+      "pos": "verb",
+      "meaning": "xấu đi/ suy giảm",
+      "example": "Service quality deteriorated after the merger.",
+      "exampleVi": "Chất lượng dịch vụ đã xấu đi sau khi sáp nhập."
+    },
+    {
+      "id": "w-opfrt8",
+      "word": "consensus",
+      "ipa": "/kənˈsensəs/",
+      "pos": "noun",
+      "meaning": "sự đồng thuận",
+      "example": "The committee reached a consensus after two hours.",
+      "exampleVi": "Hội đồng đã đạt được sự đồng thuận sau hai tiếng."
+    },
+    {
+      "id": "w-1fr3h4f",
+      "word": "discretion",
+      "ipa": "/dɪˈskreʃn/",
+      "pos": "noun",
+      "meaning": "quyền tự quyết/ sự kín đáo",
+      "example": "Refunds are given at the manager's discretion.",
+      "exampleVi": "Việc hoàn tiền tuỳ theo quyền tự quyết của quản lý."
+    },
+    {
+      "id": "w-12t2pir",
+      "word": "prerequisite",
+      "ipa": "/ˌpriːˈrekwəzɪt/",
+      "pos": "noun",
+      "meaning": "điều kiện tiên quyết",
+      "example": "A degree is a prerequisite for this role.",
+      "exampleVi": "Bằng đại học là điều kiện tiên quyết cho vị trí này."
+    },
+    {
+      "id": "w-u1nud0",
+      "word": "contingency",
+      "ipa": "/kənˈtɪndʒənsi/",
+      "pos": "noun",
+      "meaning": "phương án dự phòng/ tình huống bất ngờ",
+      "example": "We set aside funds for any contingency.",
+      "exampleVi": "Chúng tôi để riêng một khoản cho các tình huống bất ngờ."
+    },
+    {
+      "id": "w-1hqqsua",
+      "word": "incentive",
+      "ipa": "/ɪnˈsentɪv/",
+      "pos": "noun",
+      "meaning": "ưu đãi/ động lực khuyến khích",
+      "example": "The bonus scheme is a strong incentive.",
+      "exampleVi": "Chương trình thưởng là một động lực mạnh mẽ."
+    },
+    {
+      "id": "w-j4wpjs",
+      "word": "turnover",
+      "ipa": "/ˈtɜːrnoʊvər/",
+      "pos": "noun",
+      "meaning": "doanh thu/ tỷ lệ thay đổi nhân sự",
+      "example": "Staff turnover fell after the pay rise.",
+      "exampleVi": "Tỷ lệ nghỉ việc giảm sau đợt tăng lương."
+    },
+    {
+      "id": "w-aixklo",
+      "word": "setback",
+      "ipa": "/ˈsetbæk/",
+      "pos": "noun",
+      "meaning": "trở ngại/ bước lùi",
+      "example": "The recall was a serious setback for the brand.",
+      "exampleVi": "Đợt thu hồi là một bước lùi nghiêm trọng cho thương hiệu."
+    },
+    {
+      "id": "w-1grj6qz",
+      "word": "scope",
+      "ipa": "/skoʊp/",
+      "pos": "noun",
+      "meaning": "phạm vi",
+      "example": "The scope of the project was reduced.",
+      "exampleVi": "Phạm vi của dự án đã bị thu hẹp."
+    },
+    {
+      "id": "w-vofne4",
+      "word": "premise",
+      "ipa": "/ˈpremɪs/",
+      "pos": "noun",
+      "meaning": "tiền đề/ cơ sở lập luận",
+      "example": "The plan rests on a false premise.",
+      "exampleVi": "Kế hoạch dựa trên một tiền đề sai."
+    },
+    {
+      "id": "w-kbfri0",
+      "word": "threshold",
+      "ipa": "/ˈθreʃhoʊld/",
+      "pos": "noun",
+      "meaning": "ngưỡng/ mức giới hạn",
+      "example": "Orders above this threshold get free shipping.",
+      "exampleVi": "Đơn hàng trên ngưỡng này được miễn phí vận chuyển."
+    },
+    {
+      "id": "w-y1td2e",
+      "word": "notwithstanding",
+      "ipa": "/ˌnɑːtwɪθˈstændɪŋ/",
+      "pos": "preposition",
+      "meaning": "mặc dù/ bất chấp",
+      "example": "Notwithstanding the delay, the event was a success.",
+      "exampleVi": "Mặc dù bị chậm trễ, sự kiện vẫn thành công."
+    },
+    {
+      "id": "w-d8ahkc",
+      "word": "albeit",
+      "ipa": "/ɔːlˈbiːɪt/",
+      "pos": "conjunction",
+      "meaning": "mặc dù/ dẫu rằng",
+      "example": "Sales grew, albeit more slowly than expected.",
+      "exampleVi": "Doanh số vẫn tăng, dẫu chậm hơn dự kiến."
+    },
+    {
+      "id": "w-seytw8",
+      "word": "whereas",
+      "ipa": "/werˈæz/",
+      "pos": "conjunction",
+      "meaning": "trong khi/ ngược lại",
+      "example": "Exports rose, whereas domestic sales fell.",
+      "exampleVi": "Xuất khẩu tăng, trong khi doanh số nội địa giảm."
+    },
+    {
+      "id": "w-106d2bv",
+      "word": "provided that",
+      "ipa": "/prəˈvaɪdɪd ðæt/",
+      "pos": "phrase",
+      "meaning": "miễn là/ với điều kiện là",
+      "example": "You may leave early provided that your work is done.",
+      "exampleVi": "Bạn có thể về sớm miễn là đã xong việc."
+    },
+    {
+      "id": "w-1wuan04",
+      "word": "in lieu of",
+      "ipa": "/ɪn ˈluː əv/",
+      "pos": "phrase",
+      "meaning": "thay cho/ thay vì",
+      "example": "Staff took extra days off in lieu of payment.",
+      "exampleVi": "Nhân viên nhận thêm ngày nghỉ thay cho tiền."
+    },
+    {
+      "id": "w-1d9zu1o",
+      "word": "at the expense of",
+      "ipa": "/ət ði ɪkˈspens əv/",
+      "pos": "phrase",
+      "meaning": "phải đánh đổi bằng",
+      "example": "Speed came at the expense of accuracy.",
+      "exampleVi": "Tốc độ có được phải đánh đổi bằng độ chính xác."
+    },
+    {
+      "id": "w-1ggfj9e",
+      "word": "by virtue of",
+      "ipa": "/baɪ ˈvɜːrtʃuː əv/",
+      "pos": "phrase",
+      "meaning": "nhờ vào/ do bởi",
+      "example": "She holds the seat by virtue of her seniority.",
+      "exampleVi": "Cô ấy giữ ghế đó nhờ vào thâm niên của mình."
+    },
+    {
+      "id": "w-6mmh12",
+      "word": "in conjunction with",
+      "ipa": "/ɪn kənˈdʒʌŋkʃn wɪð/",
+      "pos": "phrase",
+      "meaning": "kết hợp cùng với",
+      "example": "The fair is held in conjunction with a trade summit.",
+      "exampleVi": "Hội chợ được tổ chức kết hợp cùng một hội nghị thương mại."
+    },
+    {
+      "id": "w-11v2sbx",
+      "word": "be attributed to",
+      "ipa": "/bi əˈtrɪbjuːtɪd tuː/",
+      "pos": "phrase",
+      "meaning": "được cho là do",
+      "example": "The rise can be attributed to lower costs.",
+      "exampleVi": "Mức tăng này có thể được cho là do chi phí giảm."
+    },
+    {
+      "id": "w-1dvevio",
+      "word": "take precedence over",
+      "ipa": "/teɪk ˈpresɪdəns ˈoʊvər/",
+      "pos": "phrase",
+      "meaning": "được ưu tiên hơn",
+      "example": "Safety takes precedence over speed.",
+      "exampleVi": "An toàn được ưu tiên hơn tốc độ."
+    }
+  ],
+  "tensePoints": [],
+  "bandFrom": 860,
+  "bandTo": 990
+}

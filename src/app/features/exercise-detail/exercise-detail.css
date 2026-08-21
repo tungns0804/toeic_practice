@@ -1,0 +1,173 @@
+/* Số đếm nhỏ trong nút chọn dạng câu ("Cơ bản 18"). */
+.chip-count {
+  margin-left: 5px;
+  opacity: 0.75;
+  font-weight: 600;
+}
+
+/* --- Thanh công cụ của bảng --- */
+
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.table-toolbar .search {
+  flex: 1 1 260px;
+}
+
+.toolbar-check {
+  flex-shrink: 0;
+  padding: 7px 12px;
+}
+
+/* --- Bảng công thức -------------------------------------------------------- */
+
+.formula-table {
+  min-width: 760px;
+}
+
+.col-tense {
+  width: 20%;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Vế bị động là thứ người học tới đây để xem — tô màu nhấn để mắt bắt được ngay
+   khi lướt qua mười dòng công thức. */
+.formula-passive {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.col-formula-example {
+  width: 34%;
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+}
+
+/* --- Danh sách câu ---------------------------------------------------------
+   Không dùng <table>: mỗi mục có tới bốn dòng chữ (chủ động, bị động, nghĩa, ghi
+   chú) nên nhồi vào ô bảng thì các cột cao thấp so le và không đọc theo dòng được
+   nữa. Danh sách thẻ giữ được nhóm bốn dòng đó dính vào nhau. */
+
+.sentence-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sentence {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-subtle);
+  transition: border-color var(--dur) var(--ease);
+}
+
+.sentence:hover {
+  border-color: var(--border-strong);
+}
+
+.sentence.is-starred {
+  border-left: 3px solid var(--star);
+}
+
+.sentence .star-btn {
+  flex-shrink: 0;
+  margin-top: -2px;
+}
+
+.sentence-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.sentence-line {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  line-height: 1.5;
+}
+
+/* Nhãn "Chủ động" / "Bị động" bề rộng cố định: hai câu bên phải thẳng cột thì mắt
+   so sánh được chúng theo chiều dọc, mà so sánh chính là việc của bài tập này. */
+.sentence-tag {
+  flex-shrink: 0;
+  width: 74px;
+  font-size: var(--fs-2xs);
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.sentence-tag.is-passive {
+  color: var(--accent);
+}
+
+.sentence-passive {
+  font-weight: 600;
+}
+
+.sentence-vi {
+  margin-top: 4px;
+  padding-left: calc(74px + var(--sp-2));
+}
+
+.sentence-note {
+  margin-top: 4px;
+  padding-left: calc(74px + var(--sp-2));
+  color: var(--warning);
+}
+
+.sentence-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .sentence-meta {
+    flex-direction: row;
+    align-items: center;
+    /* Xuống hàng riêng: cột bên phải ở khổ hẹp chỉ còn vài chục pixel và hai badge
+       sẽ bị bóp thành nhiều dòng chữ vụn. */
+    flex: 1 0 100%;
+    order: 3;
+    padding-left: calc(30px + var(--sp-3));
+  }
+
+  .sentence {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  /* Nhãn chuyển lên thành một dòng riêng: giữ cột 74px ở khổ này thì câu tiếng
+     Anh chỉ còn hơn trăm pixel và vỡ thành sáu bảy dòng. */
+  .sentence-line {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sentence-tag {
+    width: auto;
+  }
+
+  .sentence-vi,
+  .sentence-note {
+    padding-left: 0;
+  }
+}

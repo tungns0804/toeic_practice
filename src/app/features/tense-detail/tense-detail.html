@@ -1,0 +1,317 @@
+@if (loading()) {
+  <div class="container page">
+    <div class="stack stack-lg">
+      <div class="skeleton" style="height: 34px; width: 46%"></div>
+      <div class="skeleton" style="height: 180px"></div>
+      <div class="skeleton" style="height: 300px"></div>
+    </div>
+  </div>
+} @else if (notFound()) {
+  <div class="container page">
+    <div class="empty-state">
+      <span class="empty-state-icon" aria-hidden="true">🔍</span>
+      <p class="empty-state-title">{{ t('tense.notFound') }}</p>
+      <p class="empty-state-text"><app-t key="error.notFoundHint" block /></p>
+      <a routerLink="/tenses" class="btn"><app-t key="app.nav.tense" /></a>
+    </div>
+  </div>
+} @else if (lesson(); as data) {
+  <div class="container page">
+    <div class="stack stack-xl">
+      <header class="page-head">
+        <a routerLink="/tenses" class="small back-link">← {{ t('tense.listTitle') }}</a>
+        <h1>{{ data.name }}</h1>
+        <p>{{ data.description }}</p>
+      </header>
+
+      <!-- ── Thiết lập luyện tập ──────────────────────────────────────────── -->
+      <section class="card setup">
+        <div class="card-body stack stack-lg">
+          <div class="section-head">
+            <h2>{{ t('setup.title') }}</h2>
+            <span class="spacer"></span>
+            @if (totalFavoriteCount() > 0) {
+              <button type="button" class="btn btn-sm btn-ghost" (click)="clearFavorites()">
+                {{ t('favorite.clear') }}
+              </button>
+            }
+          </div>
+
+          <!-- Dạng câu hỏi -->
+          <div class="field">
+            <span class="label"><app-t key="setup.mode" /></span>
+            <div class="options-grid">
+              @for (item of modes; track item.id) {
+                <button
+                  type="button"
+                  class="option option-stacked"
+                  [class.is-active]="mode() === item.id"
+                  (click)="setMode(item.id)"
+                >
+                  <span class="option-title"><app-t [key]="item.labelKey" /></span>
+                  <span class="option-example"><app-t [key]="item.exampleKey" block /></span>
+                </button>
+              }
+            </div>
+          </div>
+
+          <div class="setup-row">
+            <!-- Phạm vi thì -->
+            <div class="field">
+              <span class="label"><app-t key="tense.toc" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="onlyPointId() === null"
+                  (click)="setOnlyPoint(null)"
+                >
+                  <app-t key="common.all" />
+                </button>
+                @for (point of points(); track point.id) {
+                  <button
+                    type="button"
+                    class="chip"
+                    [class.is-active]="onlyPointId() === point.id"
+                    (click)="setOnlyPoint(point.id)"
+                  >
+                    {{ pointName(point) }}
+                  </button>
+                }
+              </div>
+            </div>
+
+            <!-- Cách trả lời -->
+            <div class="field">
+              <span class="label"><app-t key="setup.answerMode" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="answerMode() === 'typing'"
+                  (click)="setAnswerMode('typing')"
+                >
+                  <app-t key="setup.answerMode.typing" />
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="answerMode() === 'choice'"
+                  [disabled]="!supportsChoice()"
+                  [title]="supportsChoice() ? '' : t('exercise.typingOnly')"
+                  (click)="setAnswerMode('choice')"
+                >
+                  <app-t key="setup.answerMode.choice" />
+                </button>
+              </div>
+              @if (!supportsChoice()) {
+                <p class="hint"><app-t key="exercise.typingOnly" block /></p>
+              }
+            </div>
+
+            <!-- Phạm vi ★ -->
+            <div class="field">
+              <span class="label"><app-t key="setup.scope" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="scope() === 'all'"
+                  (click)="setScope('all')"
+                >
+                  {{ t('scope.all.count', { count: scopedExamplesCount() }) }}
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="scope() === 'favorite'"
+                  [disabled]="favoriteCount() === 0"
+                  (click)="setScope('favorite')"
+                >
+                  {{ t('scope.favorite.count', { count: favoriteCount() }) }}
+                </button>
+              </div>
+            </div>
+
+            <!-- Số câu -->
+            <div class="field">
+              <span class="label"><app-t key="setup.limit" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="questionLimit() === null"
+                  (click)="setQuestionLimit(null)"
+                >
+                  <app-t key="setup.limit.all" />
+                </button>
+                @for (limit of limitChoices(); track limit) {
+                  <button
+                    type="button"
+                    class="chip tnum"
+                    [class.is-active]="questionLimit() === limit"
+                    (click)="setQuestionLimit(limit)"
+                  >
+                    {{ limit }}
+                  </button>
+                }
+              </div>
+            </div>
+          </div>
+
+          <!-- Tuỳ chọn -->
+          <div class="field">
+            <span class="label"><app-t key="setup.options" /></span>
+            <div class="options-grid">
+              <label class="checkbox">
+                <input type="checkbox" [checked]="shuffleQuestions()" (change)="toggleShuffle($event)" />
+                <span><app-t key="setup.shuffle" block /></span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" [checked]="showHint()" (change)="toggleShowHint($event)" />
+                <span><app-t key="setup.showHint" block /></span>
+              </label>
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  [checked]="ignoreDiacritics()"
+                  (change)="toggleIgnoreDiacritics($event)"
+                />
+                <span>
+                  <app-t key="setup.ignoreDiacritics" block />
+                  <span class="hint"><app-t key="setup.ignoreDiacritics.hint" block /></span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="row setup-start">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              [disabled]="!canStart()"
+              (click)="start()"
+            >
+              {{ t('setup.start') }}
+            </button>
+            @if (canStart()) {
+              <span class="muted small tnum">
+                {{ t('setup.plan', { count: plannedQuestionCount() }) }}
+              </span>
+            } @else {
+              <span class="muted small"><app-t key="setup.empty" /></span>
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Lý thuyết từng thì ───────────────────────────────────────────── -->
+      @for (point of points(); track point.id) {
+        <section class="card tense-point" [id]="point.id">
+          <div class="card-body stack stack-lg">
+            <div class="section-head">
+              <h2>{{ pointName(point) }}</h2>
+              <span class="badge">{{ point.name.en }}</span>
+              <span class="spacer"></span>
+              <button type="button" class="btn btn-sm" (click)="startPoint(point)">
+                {{ t('tense.practiceThis') }}
+              </button>
+            </div>
+
+            @if (pointSummary(point)) {
+              <p class="point-summary">{{ pointSummary(point) }}</p>
+            }
+
+            <!-- Công thức -->
+            <div class="formula-grid">
+              <div class="formula-cell">
+                <span class="label"><app-t key="tense.affirmative" /></span>
+                <code class="formula">{{ point.affirmative }}</code>
+              </div>
+              <div class="formula-cell">
+                <span class="label"><app-t key="tense.negative" /></span>
+                <code class="formula">{{ point.negative }}</code>
+              </div>
+              <div class="formula-cell">
+                <span class="label"><app-t key="tense.question" /></span>
+                <code class="formula">{{ point.question }}</code>
+              </div>
+            </div>
+
+            <!-- Cách dùng -->
+            @if (point.usages.length > 0) {
+              <div class="field">
+                <span class="label"><app-t key="tense.usage" /></span>
+                <ul class="bullet-list">
+                  @for (usage of point.usages; track $index) {
+                    <li>{{ localizedText(usage) }}</li>
+                  }
+                </ul>
+              </div>
+            }
+
+            <!-- Dấu hiệu nhận biết -->
+            @if (point.signals.length > 0) {
+              <div class="field">
+                <span class="label"><app-t key="tense.signals" /></span>
+                <div class="chip-row">
+                  @for (signal of point.signals; track signal) {
+                    <span class="signal en">{{ signal }}</span>
+                  }
+                </div>
+              </div>
+            }
+
+            <!-- Lưu ý -->
+            @if (point.notes.length > 0) {
+              <div class="field">
+                <span class="label"><app-t key="tense.notes" /></span>
+                <ul class="bullet-list note-list">
+                  @for (note of point.notes; track $index) {
+                    <li>{{ localizedText(note) }}</li>
+                  }
+                </ul>
+              </div>
+            }
+
+            <!-- Câu ví dụ -->
+            <div class="field">
+              <span class="label"><app-t key="tense.examples" /></span>
+              <ul class="example-list">
+                @for (example of point.examples; track example.id) {
+                  <li class="example">
+                    <button
+                      type="button"
+                      class="star-btn"
+                      [class.is-on]="isFavorite(example.id)"
+                      (click)="toggleFavorite(example.id)"
+                      [attr.aria-pressed]="isFavorite(example.id)"
+                      [attr.aria-label]="t('favorite.star')"
+                      [title]="t('favorite.starTitle')"
+                    >
+                      {{ isFavorite(example.id) ? '★' : '☆' }}
+                    </button>
+                    <div class="example-text">
+                      <p class="example-en en">{{ example.english }}</p>
+                      <p class="example-vi muted small">{{ example.vietnamese }}</p>
+                      @if (example.note) {
+                        <p class="example-note small">{{ example.note }}</p>
+                      }
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-ghost example-practice"
+                      (click)="startSingle(example)"
+                    >
+                      {{ t('tense.practiceLine') }}
+                    </button>
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        </section>
+      }
+    </div>
+  </div>
+}

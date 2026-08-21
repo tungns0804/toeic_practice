@@ -1,0 +1,51 @@
+# Định dạng mỗi dòng, ngăn nhau bằng dấu | :
+#   TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA CÂU VÍ DỤ
+#
+# TỪ LOẠI viết tắt: n (danh từ), v (động từ), adj (tính từ), adv (trạng từ),
+#                   phr (cụm từ), prep (giới từ), conj (liên từ).
+#
+# CÂU VÍ DỤ nên CHỨA chính từ đó (kể cả ở dạng đã chia) — dạng luyện "điền từ"
+# khoét chỗ dựa vào điều này, từ nào không đạt sẽ bị bỏ qua ở dạng đó.
+#
+# Band 1 (300–450): từ nền tảng của môi trường công sở.
+
+appointment | /əˈpɔɪntmənt/ | n | cuộc hẹn/ lịch hẹn | I have an appointment with the dentist at three. | Tôi có hẹn với nha sĩ lúc ba giờ.
+schedule | /ˈskedʒuːl/ | n | lịch trình/ thời gian biểu | The new schedule is posted on the notice board. | Lịch trình mới được dán trên bảng thông báo.
+customer | /ˈkʌstəmər/ | n | khách hàng | A customer called about a damaged item. | Một khách hàng đã gọi tới về một món hàng bị hỏng.
+order | /ˈɔːrdər/ | n | đơn hàng/ đơn đặt hàng | We received a large order from Japan. | Chúng tôi nhận được một đơn hàng lớn từ Nhật Bản.
+deliver | /dɪˈlɪvər/ | v | giao hàng/ chuyển phát | The courier delivers packages before noon. | Nhân viên chuyển phát giao các kiện hàng trước buổi trưa.
+delivery | /dɪˈlɪvəri/ | n | việc giao hàng/ chuyến giao | Free delivery is available for orders over fifty dollars. | Miễn phí giao hàng cho đơn từ năm mươi đô la trở lên.
+invoice | /ˈɪnvɔɪs/ | n | hoá đơn | Please attach the invoice to the email. | Vui lòng đính kèm hoá đơn vào email.
+receipt | /rɪˈsiːt/ | n | biên lai/ hoá đơn thanh toán | Keep your receipt if you want to return the item. | Hãy giữ biên lai nếu bạn muốn trả lại món hàng.
+employee | /ɪmˈplɔɪiː/ | n | nhân viên/ người lao động | Every employee must wear an ID badge. | Mọi nhân viên đều phải đeo thẻ nhân viên.
+manager | /ˈmænɪdʒər/ | n | quản lý/ giám đốc | The manager approved my request for leave. | Quản lý đã duyệt đơn xin nghỉ của tôi.
+department | /dɪˈpɑːrtmənt/ | n | phòng/ bộ phận | She works in the accounting department. | Cô ấy làm ở phòng kế toán.
+meeting | /ˈmiːtɪŋ/ | n | cuộc họp | The meeting will start at nine sharp. | Cuộc họp sẽ bắt đầu đúng chín giờ.
+attend | /əˈtend/ | v | tham dự/ dự | About thirty people attended the workshop. | Khoảng ba mươi người đã dự buổi hội thảo.
+apply | /əˈplaɪ/ | v | nộp đơn/ ứng tuyển/ áp dụng | She applied for the sales position last week. | Cô ấy đã nộp đơn ứng tuyển vị trí kinh doanh tuần trước.
+application | /ˌæplɪˈkeɪʃn/ | n | đơn xin/ hồ sơ ứng tuyển | Send your application before the closing date. | Hãy gửi hồ sơ ứng tuyển trước ngày hết hạn.
+available | /əˈveɪləbl/ | adj | có sẵn/ rảnh/ còn trống | The meeting room is available after lunch. | Phòng họp còn trống sau bữa trưa.
+purchase | /ˈpɜːrtʃəs/ | v | mua/ mua sắm | The company purchased ten new computers. | Công ty đã mua mười chiếc máy tính mới.
+price | /praɪs/ | n | giá/ giá cả | The price includes tax and shipping. | Giá đã bao gồm thuế và phí vận chuyển.
+discount | /ˈdɪskaʊnt/ | n | chiết khấu/ giảm giá | Members get a ten percent discount. | Thành viên được giảm giá mười phần trăm.
+payment | /ˈpeɪmənt/ | n | khoản thanh toán/ việc trả tiền | Your payment has not arrived yet. | Khoản thanh toán của bạn vẫn chưa tới.
+office | /ˈɔːfɪs/ | n | văn phòng | The head office is located downtown. | Trụ sở chính nằm ở trung tâm thành phố.
+equipment | /ɪˈkwɪpmənt/ | n | thiết bị/ trang thiết bị | All the kitchen equipment is cleaned daily. | Toàn bộ thiết bị nhà bếp được vệ sinh hằng ngày.
+repair | /rɪˈper/ | v | sửa chữa | A technician repaired the copier this morning. | Một kỹ thuật viên đã sửa máy photocopy sáng nay.
+report | /rɪˈpɔːrt/ | n | báo cáo | The annual report will be published in March. | Báo cáo thường niên sẽ được công bố vào tháng Ba.
+contract | /ˈkɑːntrækt/ | n | hợp đồng | Both sides signed the contract yesterday. | Hai bên đã ký hợp đồng vào hôm qua.
+sign | /saɪn/ | v | ký/ ký tên | Please sign at the bottom of the form. | Vui lòng ký ở cuối tờ đơn.
+form | /fɔːrm/ | n | tờ khai/ biểu mẫu | Fill in the form and hand it to reception. | Điền vào tờ khai rồi đưa cho lễ tân.
+company | /ˈkʌmpəni/ | n | công ty | The company was founded in 1998. | Công ty được thành lập vào năm 1998.
+product | /ˈprɑːdʌkt/ | n | sản phẩm | Their newest product sells very well. | Sản phẩm mới nhất của họ bán rất chạy.
+service | /ˈsɜːrvɪs/ | n | dịch vụ | The hotel is known for excellent service. | Khách sạn nổi tiếng vì dịch vụ tuyệt vời.
+staff | /stæf/ | n | đội ngũ nhân viên | The staff are trained every six months. | Đội ngũ nhân viên được đào tạo sáu tháng một lần.
+supply | /səˈplaɪ/ | v | cung cấp | A local farm supplies all our vegetables. | Một trang trại địa phương cung cấp toàn bộ rau cho chúng tôi.
+request | /rɪˈkwest/ | n | yêu cầu/ đề nghị | Your request for extra leave was approved. | Yêu cầu xin nghỉ thêm của bạn đã được duyệt.
+confirm | /kənˈfɜːrm/ | v | xác nhận | Please confirm your booking by Friday. | Vui lòng xác nhận đặt chỗ trước thứ Sáu.
+cancel | /ˈkænsl/ | v | huỷ/ huỷ bỏ | They cancelled the afternoon session. | Họ đã huỷ phiên làm việc buổi chiều.
+arrive | /əˈraɪv/ | v | tới/ đến nơi | The shipment arrived two days late. | Lô hàng đã tới muộn hai ngày.
+package | /ˈpækɪdʒ/ | n | kiện hàng/ gói hàng | A package was left at the reception desk. | Một kiện hàng đã được để lại ở quầy lễ tân.
+customer service | /ˈkʌstəmər ˈsɜːrvɪs/ | phr | bộ phận chăm sóc khách hàng | Call customer service if the item is faulty. | Hãy gọi bộ phận chăm sóc khách hàng nếu món hàng bị lỗi.
+train | /treɪn/ | v | đào tạo/ huấn luyện | We train new employees for two weeks. | Chúng tôi đào tạo nhân viên mới trong hai tuần.
+notice | /ˈnoʊtɪs/ | n | thông báo | A notice about the closure is on the door. | Thông báo về việc đóng cửa được dán trên cửa.

@@ -1,0 +1,71 @@
+/* Thanh công cụ của bảng: ô tìm kiếm co giãn, hai phần còn lại giữ nguyên. */
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.table-toolbar .search {
+  flex: 1 1 260px;
+}
+
+.toolbar-check {
+  flex-shrink: 0;
+  padding: 7px 12px;
+}
+
+/* --- Bảng từ vựng ----------------------------------------------------------
+   Bề rộng cột đặt theo nội dung thật: cột từ và cột phiên âm gần như cố định,
+   còn cột nghĩa và cột ví dụ chia nhau phần còn lại. Không đặt thì trình duyệt
+   chia đều sáu cột, và cột ★ rộng bằng cột câu ví dụ. */
+
+.word-table {
+  min-width: 860px;
+}
+
+.col-star {
+  width: 40px;
+  padding-right: 0;
+}
+
+.col-word {
+  width: 15%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.col-ipa {
+  width: 15%;
+  font-size: var(--fs-xs);
+  white-space: nowrap;
+}
+
+.col-pos {
+  width: 74px;
+}
+
+.col-meaning {
+  width: 25%;
+}
+
+/* Không đặt display:flex lên chính <td>: làm thế là gỡ ô ra khỏi bố cục bảng và
+   các cột thôi không thẳng hàng nữa. Cho hai đoạn chữ bên trong thành khối là đủ
+   để chúng xuống dòng. */
+.col-example > span {
+  display: block;
+}
+
+.example-en {
+  line-height: 1.45;
+}
+
+.example-vi {
+  font-size: var(--fs-xs);
+}
+
+/* Dòng đã đánh dấu ★ có vạch màu bên trái: lọc "chỉ hiện mục ★" xong thì không
+   cần, nhưng khi xem cả bảng thì nó cho biết ngay từ nào đang nằm trong nhóm ôn. */
+.word-table tbody tr.is-starred td:first-child {
+  box-shadow: inset 3px 0 0 var(--star);
+}

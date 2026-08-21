@@ -1,0 +1,372 @@
+{
+  "id": "tu-vung-band-3",
+  "name": "Band 3 · 600–750",
+  "description": "Từ vựng hợp đồng, đàm phán và vận hành. Đây là mốc phân loại giữa người đọc hiểu được và người chỉ đoán được.",
+  "kind": "vocabulary",
+  "itemCount": 40,
+  "words": [
+    {
+      "id": "w-15bryb7",
+      "word": "negotiate",
+      "ipa": "/nɪˈɡoʊʃieɪt/",
+      "pos": "verb",
+      "meaning": "đàm phán/ thương lượng",
+      "example": "The two firms are negotiating a long-term contract.",
+      "exampleVi": "Hai công ty đang đàm phán một hợp đồng dài hạn."
+    },
+    {
+      "id": "w-ixs14",
+      "word": "clause",
+      "ipa": "/klɔːz/",
+      "pos": "noun",
+      "meaning": "điều khoản",
+      "example": "Read the cancellation clause carefully.",
+      "exampleVi": "Hãy đọc kỹ điều khoản huỷ hợp đồng."
+    },
+    {
+      "id": "w-10cs6qo",
+      "word": "amend",
+      "ipa": "/əˈmend/",
+      "pos": "verb",
+      "meaning": "sửa đổi/ tu chính",
+      "example": "The agreement was amended twice before signing.",
+      "exampleVi": "Thoả thuận đã được sửa đổi hai lần trước khi ký."
+    },
+    {
+      "id": "w-7jvlxt",
+      "word": "comply",
+      "ipa": "/kəmˈplaɪ/",
+      "pos": "verb",
+      "meaning": "tuân thủ",
+      "example": "All suppliers must comply with our safety rules.",
+      "exampleVi": "Mọi nhà cung cấp đều phải tuân thủ quy tắc an toàn của chúng tôi."
+    },
+    {
+      "id": "w-4ch44q",
+      "word": "compliance",
+      "ipa": "/kəmˈplaɪəns/",
+      "pos": "noun",
+      "meaning": "sự tuân thủ",
+      "example": "The audit checks compliance with local law.",
+      "exampleVi": "Cuộc kiểm toán rà soát việc tuân thủ luật địa phương."
+    },
+    {
+      "id": "w-13kt4bt",
+      "word": "obligation",
+      "ipa": "/ˌɑːblɪˈɡeɪʃn/",
+      "pos": "noun",
+      "meaning": "nghĩa vụ",
+      "example": "Each party has an obligation to give notice.",
+      "exampleVi": "Mỗi bên có nghĩa vụ báo trước."
+    },
+    {
+      "id": "w-1nh8nr8",
+      "word": "liability",
+      "ipa": "/ˌlaɪəˈbɪləti/",
+      "pos": "noun",
+      "meaning": "trách nhiệm pháp lý/ khoản nợ",
+      "example": "The contract limits our liability to the purchase price.",
+      "exampleVi": "Hợp đồng giới hạn trách nhiệm của chúng tôi ở mức giá mua."
+    },
+    {
+      "id": "w-kvgse8",
+      "word": "provision",
+      "ipa": "/prəˈvɪʒn/",
+      "pos": "noun",
+      "meaning": "điều khoản/ việc cung cấp",
+      "example": "A special provision covers late delivery.",
+      "exampleVi": "Một điều khoản riêng quy định về việc giao hàng chậm."
+    },
+    {
+      "id": "w-8o5zd0",
+      "word": "terminate",
+      "ipa": "/ˈtɜːrmɪneɪt/",
+      "pos": "verb",
+      "meaning": "chấm dứt/ kết thúc",
+      "example": "Either side may terminate the agreement with thirty days' notice.",
+      "exampleVi": "Bên nào cũng có thể chấm dứt thoả thuận sau khi báo trước ba mươi ngày."
+    },
+    {
+      "id": "w-1vt8vse",
+      "word": "renew",
+      "ipa": "/rɪˈnuː/",
+      "pos": "verb",
+      "meaning": "gia hạn/ làm mới",
+      "example": "We renewed the lease for another two years.",
+      "exampleVi": "Chúng tôi đã gia hạn hợp đồng thuê thêm hai năm."
+    },
+    {
+      "id": "w-1tvhm93",
+      "word": "tender",
+      "ipa": "/ˈtendər/",
+      "pos": "noun",
+      "meaning": "hồ sơ dự thầu/ gói thầu",
+      "example": "Five companies submitted a tender for the project.",
+      "exampleVi": "Năm công ty đã nộp hồ sơ dự thầu cho dự án."
+    },
+    {
+      "id": "w-mf0d1c",
+      "word": "bid",
+      "ipa": "/bɪd/",
+      "pos": "noun",
+      "meaning": "lượt bỏ thầu/ giá thầu",
+      "example": "Their bid was the lowest of the three.",
+      "exampleVi": "Giá thầu của họ thấp nhất trong ba bên."
+    },
+    {
+      "id": "w-kl2dvz",
+      "word": "merger",
+      "ipa": "/ˈmɜːrdʒər/",
+      "pos": "noun",
+      "meaning": "vụ sáp nhập",
+      "example": "The merger was announced at a press conference.",
+      "exampleVi": "Vụ sáp nhập được công bố tại một buổi họp báo."
+    },
+    {
+      "id": "w-9nh64k",
+      "word": "acquisition",
+      "ipa": "/ˌækwɪˈzɪʃn/",
+      "pos": "noun",
+      "meaning": "việc mua lại/ thâu tóm",
+      "example": "The acquisition doubled the company's market share.",
+      "exampleVi": "Việc mua lại đã giúp công ty tăng gấp đôi thị phần."
+    },
+    {
+      "id": "w-17bzrdf",
+      "word": "stakeholder",
+      "ipa": "/ˈsteɪkhoʊldər/",
+      "pos": "noun",
+      "meaning": "bên liên quan",
+      "example": "Every stakeholder was consulted before the change.",
+      "exampleVi": "Mọi bên liên quan đều được hỏi ý kiến trước khi thay đổi."
+    },
+    {
+      "id": "w-1f0lk0o",
+      "word": "subsidiary",
+      "ipa": "/səbˈsɪdieri/",
+      "pos": "noun",
+      "meaning": "công ty con",
+      "example": "Their Asian subsidiary reported record sales.",
+      "exampleVi": "Công ty con ở châu Á báo cáo doanh số kỷ lục."
+    },
+    {
+      "id": "w-m4g4qi",
+      "word": "outsource",
+      "ipa": "/ˈaʊtsɔːrs/",
+      "pos": "verb",
+      "meaning": "thuê ngoài",
+      "example": "We outsource our payroll to a specialist firm.",
+      "exampleVi": "Chúng tôi thuê ngoài việc tính lương cho một công ty chuyên trách."
+    },
+    {
+      "id": "w-n28aeu",
+      "word": "implement",
+      "ipa": "/ˈɪmplɪment/",
+      "pos": "verb",
+      "meaning": "triển khai/ thực hiện",
+      "example": "The new policy will be implemented in July.",
+      "exampleVi": "Chính sách mới sẽ được triển khai vào tháng Bảy."
+    },
+    {
+      "id": "w-sgttxj",
+      "word": "streamline",
+      "ipa": "/ˈstriːmlaɪn/",
+      "pos": "verb",
+      "meaning": "tinh gọn/ đơn giản hoá",
+      "example": "We streamlined the approval process last year.",
+      "exampleVi": "Chúng tôi đã tinh gọn quy trình phê duyệt vào năm ngoái."
+    },
+    {
+      "id": "w-9b719e",
+      "word": "allocate",
+      "ipa": "/ˈæləkeɪt/",
+      "pos": "verb",
+      "meaning": "phân bổ",
+      "example": "The board allocated extra funds to research.",
+      "exampleVi": "Hội đồng đã phân bổ thêm kinh phí cho nghiên cứu."
+    },
+    {
+      "id": "w-s4yrio",
+      "word": "forecast",
+      "ipa": "/ˈfɔːrkæst/",
+      "pos": "noun",
+      "meaning": "dự báo",
+      "example": "The sales forecast for next year looks strong.",
+      "exampleVi": "Dự báo doanh số năm tới trông rất khả quan."
+    },
+    {
+      "id": "w-10v4w58",
+      "word": "fluctuate",
+      "ipa": "/ˈflʌktʃueɪt/",
+      "pos": "verb",
+      "meaning": "dao động/ biến động",
+      "example": "Raw material prices fluctuate every month.",
+      "exampleVi": "Giá nguyên liệu thô biến động hằng tháng."
+    },
+    {
+      "id": "w-10y5h77",
+      "word": "substantial",
+      "ipa": "/səbˈstænʃl/",
+      "pos": "adjective",
+      "meaning": "đáng kể/ lớn",
+      "example": "The project needs a substantial investment.",
+      "exampleVi": "Dự án cần một khoản đầu tư đáng kể."
+    },
+    {
+      "id": "w-auyojk",
+      "word": "significant",
+      "ipa": "/sɪɡˈnɪfɪkənt/",
+      "pos": "adjective",
+      "meaning": "đáng kể/ quan trọng",
+      "example": "There was a significant drop in complaints.",
+      "exampleVi": "Số lượng khiếu nại đã giảm đáng kể."
+    },
+    {
+      "id": "w-1emchl0",
+      "word": "feasible",
+      "ipa": "/ˈfiːzəbl/",
+      "pos": "adjective",
+      "meaning": "khả thi",
+      "example": "The plan is feasible but expensive.",
+      "exampleVi": "Kế hoạch khả thi nhưng tốn kém."
+    },
+    {
+      "id": "w-v0i2t4",
+      "word": "mandatory",
+      "ipa": "/ˈmændətɔːri/",
+      "pos": "adjective",
+      "meaning": "bắt buộc",
+      "example": "Safety training is mandatory for all staff.",
+      "exampleVi": "Đào tạo an toàn là bắt buộc với mọi nhân viên."
+    },
+    {
+      "id": "w-aalvk9",
+      "word": "tentative",
+      "ipa": "/ˈtentətɪv/",
+      "pos": "adjective",
+      "meaning": "tạm thời/ chưa chắc chắn",
+      "example": "We agreed on a tentative date for the visit.",
+      "exampleVi": "Chúng tôi đã thống nhất một ngày tạm thời cho chuyến thăm."
+    },
+    {
+      "id": "w-ero889",
+      "word": "prospective",
+      "ipa": "/prəˈspektɪv/",
+      "pos": "adjective",
+      "meaning": "tiềm năng/ sắp tới",
+      "example": "A prospective client is visiting on Thursday.",
+      "exampleVi": "Một khách hàng tiềm năng sẽ tới thăm vào thứ Năm."
+    },
+    {
+      "id": "w-z5pu9k",
+      "word": "subsequent",
+      "ipa": "/ˈsʌbsɪkwənt/",
+      "pos": "adjective",
+      "meaning": "tiếp theo/ sau đó",
+      "example": "Subsequent meetings were held online.",
+      "exampleVi": "Các cuộc họp sau đó đều được tổ chức trực tuyến."
+    },
+    {
+      "id": "w-w5mc8o",
+      "word": "accordingly",
+      "ipa": "/əˈkɔːrdɪŋli/",
+      "pos": "adverb",
+      "meaning": "theo đó/ tương ứng",
+      "example": "Demand fell, and we adjusted production accordingly.",
+      "exampleVi": "Nhu cầu giảm, và chúng tôi điều chỉnh sản xuất tương ứng."
+    },
+    {
+      "id": "w-ap0fvl",
+      "word": "nevertheless",
+      "ipa": "/ˌnevərðəˈles/",
+      "pos": "adverb",
+      "meaning": "tuy nhiên/ dù vậy",
+      "example": "Costs rose; nevertheless, profits held steady.",
+      "exampleVi": "Chi phí tăng; tuy nhiên lợi nhuận vẫn giữ vững."
+    },
+    {
+      "id": "w-1n08oxi",
+      "word": "regarding",
+      "ipa": "/rɪˈɡɑːrdɪŋ/",
+      "pos": "preposition",
+      "meaning": "về/ liên quan tới",
+      "example": "I am writing regarding your recent order.",
+      "exampleVi": "Tôi viết thư về đơn hàng gần đây của bạn."
+    },
+    {
+      "id": "w-h39sz7",
+      "word": "in accordance with",
+      "ipa": "/ɪn əˈkɔːrdns wɪð/",
+      "pos": "phrase",
+      "meaning": "theo đúng/ phù hợp với",
+      "example": "The goods were packed in accordance with the standard.",
+      "exampleVi": "Hàng hoá được đóng gói theo đúng tiêu chuẩn."
+    },
+    {
+      "id": "w-l5j6to",
+      "word": "subject to",
+      "ipa": "/ˈsʌbdʒɪkt tuː/",
+      "pos": "phrase",
+      "meaning": "phụ thuộc vào/ chịu sự chi phối của",
+      "example": "The offer is subject to approval by the board.",
+      "exampleVi": "Đề nghị này phụ thuộc vào việc hội đồng phê duyệt."
+    },
+    {
+      "id": "w-fdzo1b",
+      "word": "take effect",
+      "ipa": "/teɪk ɪˈfekt/",
+      "pos": "phrase",
+      "meaning": "có hiệu lực",
+      "example": "The new rates take effect on the first of April.",
+      "exampleVi": "Biểu giá mới có hiệu lực từ ngày một tháng Tư."
+    },
+    {
+      "id": "w-i2mfx0",
+      "word": "carry out",
+      "ipa": "/ˈkæri aʊt/",
+      "pos": "phrase",
+      "meaning": "tiến hành/ thực hiện",
+      "example": "The survey will be carried out in June.",
+      "exampleVi": "Cuộc khảo sát sẽ được tiến hành vào tháng Sáu."
+    },
+    {
+      "id": "w-y61eik",
+      "word": "look into",
+      "ipa": "/lʊk ˈɪntuː/",
+      "pos": "phrase",
+      "meaning": "xem xét/ điều tra",
+      "example": "We will look into your complaint at once.",
+      "exampleVi": "Chúng tôi sẽ xem xét khiếu nại của bạn ngay."
+    },
+    {
+      "id": "w-2otjqj",
+      "word": "account for",
+      "ipa": "/əˈkaʊnt fɔːr/",
+      "pos": "phrase",
+      "meaning": "chiếm/ giải thích cho",
+      "example": "Exports account for half of our revenue.",
+      "exampleVi": "Xuất khẩu chiếm một nửa doanh thu của chúng tôi."
+    },
+    {
+      "id": "w-1lp2bu3",
+      "word": "comply with",
+      "ipa": "/kəmˈplaɪ wɪð/",
+      "pos": "phrase",
+      "meaning": "tuân thủ theo",
+      "example": "All products comply with EU standards.",
+      "exampleVi": "Mọi sản phẩm đều tuân thủ tiêu chuẩn châu Âu."
+    },
+    {
+      "id": "w-1xnp04v",
+      "word": "be responsible for",
+      "ipa": "/bi rɪˈspɑːnsəbl fɔːr/",
+      "pos": "phrase",
+      "meaning": "chịu trách nhiệm về",
+      "example": "Each team leader must be responsible for their own budget.",
+      "exampleVi": "Mỗi trưởng nhóm phải chịu trách nhiệm về ngân sách của mình."
+    }
+  ],
+  "tensePoints": [],
+  "bandFrom": 600,
+  "bandTo": 750
+}

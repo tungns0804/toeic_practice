@@ -1,0 +1,99 @@
+/* Ba thẻ tự xuống hàng theo bề rộng thật, không khai báo số cột theo từng ngưỡng
+   màn hình: khổ máy nào cũng có, mà ngưỡng thì luôn đoán thiếu một cái. */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--sp-4);
+}
+
+.home-card {
+  display: block;
+  color: inherit;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.home-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Thẻ là một khối cao bằng nhau trong cùng hàng, và dòng chân luôn nằm sát đáy
+   dù phần mô tả dài ngắn khác nhau — nhờ .spacer đặt trước nó trong template. */
+.home-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 220px;
+}
+
+.home-card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.home-card h2 {
+  font-size: var(--fs-lg);
+}
+
+.home-card-foot {
+  margin-top: var(--sp-2);
+}
+
+.home-card-open {
+  font-size: var(--fs-sm);
+  font-weight: 620;
+  color: var(--accent);
+}
+
+/* --- Mục đã đánh dấu ★ ----------------------------------------------------- */
+
+.favorite-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.favorite-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 550;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+
+.favorite-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.favorite-count {
+  color: var(--star);
+  font-weight: 700;
+}
+
+/* --- Hướng dẫn dùng --- */
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin: 0;
+  padding-left: 1.3em;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+.tips li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}

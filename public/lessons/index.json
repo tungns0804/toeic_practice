@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-08-21T07:58:30.112Z",
+  "lessons": [
+    {
+      "id": "thi-hien-tai",
+      "name": "Nhóm thì hiện tại",
+      "description": "Hiện tại đơn, hiện tại tiếp diễn, hiện tại hoàn thành và hiện tại hoàn thành tiếp diễn.",
+      "kind": "tense",
+      "itemCount": 4,
+      "file": "thi-hien-tai.json",
+      "exampleCount": 24
+    },
+    {
+      "id": "thi-qua-khu",
+      "name": "Nhóm thì quá khứ",
+      "description": "Quá khứ đơn, quá khứ tiếp diễn, quá khứ hoàn thành và quá khứ hoàn thành tiếp diễn.",
+      "kind": "tense",
+      "itemCount": 4,
+      "file": "thi-qua-khu.json",
+      "exampleCount": 24
+    },
+    {
+      "id": "thi-tuong-lai",
+      "name": "Nhóm thì tương lai",
+      "description": "Tương lai đơn, tương lai tiếp diễn, tương lai hoàn thành và tương lai hoàn thành tiếp diễn.",
+      "kind": "tense",
+      "itemCount": 4,
+      "file": "thi-tuong-lai.json",
+      "exampleCount": 24
+    },
+    {
+      "id": "tu-vung-band-1",
+      "name": "Band 1 · 300–450",
+      "description": "Từ nền tảng của môi trường công sở: lịch hẹn, đơn hàng, khách hàng, giao nhận. Gặp ở mọi phần của bài thi.",
+      "kind": "vocabulary",
+      "itemCount": 40,
+      "file": "tu-vung-band-1.json",
+      "bandFrom": 300,
+      "bandTo": 450
+    },
+    {
+      "id": "tu-vung-band-2",
+      "name": "Band 2 · 450–600",
+      "description": "Từ vựng của công việc hằng ngày: tuyển dụng, hậu cần, tài chính cơ bản. Trọng tâm của Part 5 và Part 7.",
+      "kind": "vocabulary",
+      "itemCount": 40,
+      "file": "tu-vung-band-2.json",
+      "bandFrom": 450,
+      "bandTo": 600
+    },
+    {
+      "id": "tu-vung-band-3",
+      "name": "Band 3 · 600–750",
+      "description": "Từ vựng hợp đồng, đàm phán và vận hành. Đây là mốc phân loại giữa người đọc hiểu được và người chỉ đoán được.",
+      "kind": "vocabulary",
+      "itemCount": 40,
+      "file": "tu-vung-band-3.json",
+      "bandFrom": 600,
+      "bandTo": 750
+    },
+    {
+      "id": "tu-vung-band-4",
+      "name": "Band 4 · 750–860",
+      "description": "Từ vựng báo cáo tài chính, pháp lý và quản trị. Xuất hiện dày ở Part 7 với các bài đọc dài.",
+      "kind": "vocabulary",
+      "itemCount": 40,
+      "file": "tu-vung-band-4.json",
+      "bandFrom": 750,
+      "bandTo": 860
+    },
+    {
+      "id": "tu-vung-band-5",
+      "name": "Band 5 · 860–990",
+      "description": "Từ vựng học thuật và trang trọng, cùng các cụm từ cố định hay bị bẫy. Nhóm từ quyết định chặng cuối lên 990.",
+      "kind": "vocabulary",
+      "itemCount": 40,
+      "file": "tu-vung-band-5.json",
+      "bandFrom": 860,
+      "bandTo": 990
+    }
+  ]
+}

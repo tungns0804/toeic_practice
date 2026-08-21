@@ -1,0 +1,146 @@
+#!/usr/bin/env node
+/**
+ * Kiểm tra các ràng buộc mà TypeScript không diễn đạt được.
+ *
+ * Kiểu dữ liệu bảo đảm "có trường `formulaId` kiểu string"; nó không bảo đảm được
+ * "chuỗi đó trỏ tới một dòng công thức có thật", cũng không bảo đảm "câu đánh dấu
+ * `reversible` thì thực sự dựng lại được câu chủ động". Những thứ đó chỉ sai lúc
+ * chạy, giữa một phiên luyện, dưới dạng một câu hỏi vô nghĩa — nên phải bắt ở đây.
+ *
+ * Chạy: npm run verify:data
+ */
+
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import { PASSIVE_FORMULAS, PASSIVE_SENTENCES } from '../src/app/core/exercises/passive-sentences.ts';
+import { findClozeSpan } from '../src/app/core/practice/cloze.ts';
+import { parseVocabulary } from './lesson-core.mjs';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(HERE, '..');
+
+const USE_COLOR = process.stdout.isTTY === true && !process.env['NO_COLOR'];
+const ESC = String.fromCharCode(27);
+const ansi = (code) => (USE_COLOR ? `${ESC}[${code}m` : '');
+const c = { reset: ansi(0), bold: ansi(1), dim: ansi(2), red: ansi(31), green: ansi(32), yellow: ansi(33) };
+
+const log = (msg = '') => process.stdout.write(`${msg}\n`);
+
+let errors = 0;
+let warnings = 0;
+
+function fail(msg) {
+  log(`${c.red}[LOI] ${msg}${c.reset}`);
+  errors++;
+  process.exitCode = 1;
+}
+
+function warn(msg) {
+  log(`${c.yellow}[CANH BAO] ${msg}${c.reset}`);
+  warnings++;
+}
+
+// ── Bài tập thể bị động ────────────────────────────────────────────────────
+
+function checkPassive() {
+  log(`${c.bold}Bài tập thể bị động${c.reset}`);
+
+  const formulaIds = new Set(PASSIVE_FORMULAS.map((item) => item.id));
+  const seen = new Set();
+
+  for (const sentence of PASSIVE_SENTENCES) {
+    const at = `câu "${sentence.id}"`;
+
+    if (seen.has(sentence.id)) fail(`${at}: id bị trùng`);
+    seen.add(sentence.id);
+
+    if (!formulaIds.has(sentence.formulaId)) {
+      fail(`${at}: formulaId "${sentence.formulaId}" không có trong PASSIVE_FORMULAS`);
+    }
+    if (!sentence.active || !sentence.passive || !sentence.vietnamese) {
+      fail(`${at}: thiếu active / passive / vietnamese`);
+    }
+    if (sentence.active === sentence.passive) {
+      fail(`${at}: câu chủ động và bị động giống hệt nhau`);
+    }
+
+    // Câu bị động phải thực sự có dạng bị động: một dạng của "be" (hoặc "been")
+    // đứng trước phân từ. Kiểm tra thô nhưng đủ bắt lỗi chép nhầm cột.
+    if (!/\b(is|are|was|were|be|been|being)\b/i.test(sentence.passive)) {
+      fail(`${at}: câu bị động không chứa dạng nào của "be"`);
+    }
+
+    // Đảo ngược về chủ động thì phải biết ai là chủ thể — dấu hiệu là cụm "by ...".
+    if (sentence.reversible && !/\bby\b/i.test(sentence.passive)) {
+      fail(`${at}: đánh dấu reversible nhưng câu bị động không có cụm "by ..."`);
+    }
+
+    for (const field of ['active', 'passive']) {
+      const value = sentence[field];
+      if (value && !/[.?!]$/.test(value.trim())) {
+        warn(`${at}: câu ${field} không kết thúc bằng dấu câu`);
+      }
+    }
+  }
+
+  const reversible = PASSIVE_SENTENCES.filter((item) => item.reversible).length;
+  log(
+    `  ${c.green}OK${c.reset} ${PASSIVE_SENTENCES.length} câu, ` +
+      `${reversible} câu đảo ngược được, ${PASSIVE_FORMULAS.length} dòng công thức`,
+  );
+  log();
+}
+
+// ── Từ vựng ────────────────────────────────────────────────────────────────
+
+/**
+ * Dạng luyện "điền từ" chỉ dùng được với từ mà câu ví dụ có chứa chính từ đó.
+ * Từ không đạt sẽ lặng lẽ biến mất khỏi dạng đó, nên phải đếm ra ở đây.
+ */
+function checkVocabulary() {
+  log(`${c.bold}Từ vựng${c.reset}`);
+
+  const bands = ['tu-vung-band-1', 'tu-vung-band-2', 'tu-vung-band-3', 'tu-vung-band-4', 'tu-vung-band-5'];
+
+  for (const band of bands) {
+    const path = join(ROOT, 'data-source', band, 'vocabulary.txt');
+    const { words, errors: parseErrors } = parseVocabulary(readFileSync(path, 'utf8'));
+    for (const error of parseErrors) fail(`[${band}] ${error}`);
+
+    let missingExample = 0;
+    const noCloze = [];
+
+    for (const word of words) {
+      if (!word.example) {
+        missingExample++;
+        continue;
+      }
+      if (!word.exampleVi) warn(`[${band}] "${word.word}": câu ví dụ chưa có bản dịch tiếng Việt`);
+      if (!findClozeSpan(word.example, word.word)) noCloze.push(word.word);
+    }
+
+    if (missingExample > 0) warn(`[${band}] ${missingExample} từ chưa có câu ví dụ`);
+    if (noCloze.length > 0) {
+      warn(
+        `[${band}] ${noCloze.length}/${words.length} từ không dùng được ở dạng "điền từ" ` +
+          `(câu ví dụ không chứa từ): ${noCloze.join(', ')}`,
+      );
+    }
+
+    const usable = words.length - noCloze.length - missingExample;
+    log(`  ${c.green}OK${c.reset} ${band}: ${words.length} từ, ${usable} từ dùng được cho "điền từ"`);
+  }
+  log();
+}
+
+checkPassive();
+checkVocabulary();
+
+log();
+if (errors === 0) {
+  log(`${c.green}OK: dữ liệu hợp lệ${c.reset}${warnings > 0 ? ` ${c.yellow}(${warnings} cảnh báo)${c.reset}` : ''}`);
+} else {
+  log(`${c.red}CO ${errors} LOI o tren${c.reset}`);
+}

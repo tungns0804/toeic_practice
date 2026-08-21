@@ -1,0 +1,240 @@
+/* --- Khối điểm số ---------------------------------------------------------- */
+
+.score-body {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+  padding: var(--sp-6);
+}
+
+/* Vòng tròn điểm. Ba tông màu theo mức đúng — xem `scoreTone` trong result.ts. */
+.score-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  flex-shrink: 0;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  background: var(--bg-subtle);
+}
+
+.score-main[data-tone='great'] {
+  border-color: var(--success);
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.score-main[data-tone='ok'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.score-main[data-tone='low'] {
+  border-color: var(--warning);
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.score-value {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-percent {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.score-fraction {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.score-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.score-meta h1 {
+  font-size: var(--fs-xl);
+}
+
+/* --- Bốn con số tóm tắt --- */
+
+.stat-row {
+  display: flex;
+  gap: var(--sp-5);
+  flex-wrap: wrap;
+  margin-top: var(--sp-2);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.stat-value {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat-great {
+  color: var(--success);
+}
+
+.stat-bad {
+  color: var(--danger);
+}
+
+.stat-label {
+  font-size: var(--fs-2xs);
+  font-weight: 620;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.config-recap {
+  margin-top: var(--sp-2);
+  gap: 5px;
+}
+
+/* --- Danh sách kết quả ----------------------------------------------------- */
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  /* Vạch màu bên trái thay cho tô nền cả dòng: đúng/sai nhận ra được khi lướt,
+     mà nền vẫn đủ trung tính để đọc chữ trên đó. */
+  border-left-width: 3px;
+  border-radius: var(--radius);
+  background: var(--bg-subtle);
+}
+
+.result-item.is-correct {
+  border-left-color: var(--success);
+}
+
+.result-item.is-wrong {
+  border-left-color: var(--danger);
+}
+
+.result-item .star-btn {
+  flex-shrink: 0;
+  margin-top: -1px;
+}
+
+.result-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-label {
+  display: block;
+  font-size: var(--fs-2xs);
+  font-weight: 620;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.result-prompt {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* Câu dài không cần cỡ chữ của một từ đơn — giữ nguyên thì mười mấy từ sẽ chiếm
+   ba dòng và đè bẹp phần đáp án bên dưới. */
+.result-prompt.is-sentence {
+  font-size: var(--fs-md);
+  font-weight: 500;
+}
+
+.result-answer {
+  margin-top: 2px;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.result-answer strong {
+  color: var(--text);
+}
+
+.result-attempts {
+  margin-top: 1px;
+  color: var(--danger);
+  overflow-wrap: anywhere;
+}
+
+.result-mark {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  /* Đúng nhưng phải thử lại: dấu ✓ nhạt đi, để nhìn cột dấu là thấy ngay câu nào
+     thực sự chắc và câu nào chỉ vừa đủ qua. */
+  opacity: 0.5;
+}
+
+.result-mark.is-perfect {
+  opacity: 1;
+}
+
+.result-item.is-correct .result-mark {
+  color: var(--success);
+}
+
+.result-item.is-wrong .result-mark {
+  color: var(--danger);
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .score-body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--sp-4);
+    padding: var(--sp-5);
+  }
+
+  .score-main {
+    align-self: center;
+    width: 128px;
+    height: 128px;
+  }
+
+  .score-value {
+    font-size: 2.2rem;
+  }
+
+  .stat-row {
+    gap: var(--sp-4);
+  }
+}

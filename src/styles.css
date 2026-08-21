@@ -1,0 +1,1064 @@
+/* ============================================================================
+   Design system dùng chung cho toàn ứng dụng.
+
+   Mỗi màu khai báo MỘT lần bằng light-dark(giá trị sáng, giá trị tối). Hàm này
+   chọn giá trị theo thuộc tính `color-scheme` đang có hiệu lực, nên muốn đổi tông
+   chỉ cần đổi color-scheme — không phải viết lại cả bảng màu lần thứ hai.
+
+   - Không có data-theme  -> color-scheme: light dark -> đi theo cài đặt hệ điều hành.
+   - data-theme="light"   -> ép sáng.
+   - data-theme="dark"    -> ép tối.
+
+   Thuộc tính data-theme do ThemeStore (src/app/core/services/theme-store.ts) đặt
+   trên thẻ <html>, và được khôi phục sớm bởi đoạn script nhỏ trong index.html để
+   trang không bị chớp sai màu lúc mới mở.
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  /* --- Nền: bốn bậc, từ nền trang ra tới ô lõm sâu nhất -------------------- */
+  --bg: light-dark(#f2f6f6, #0d1416);
+  --bg-elevated: light-dark(#ffffff, #161f21);
+  --bg-subtle: light-dark(#eaf0f0, #1e2a2c);
+  --bg-inset: light-dark(#dde7e7, #273638);
+
+  /* --- Chữ ---------------------------------------------------------------
+     Ba bậc, và cả ba đều phải ĐỌC ĐƯỢC: bậc nhạt nhất vẫn giữ trên ngưỡng
+     4.5:1 của WCAG AA, vì nó lại đang dùng cho đúng loại chữ nhỏ nhất trong
+     app — nhãn cột, chú thích, dòng đếm số kết quả. */
+  --text: light-dark(#0f1e20, #eaf1f1);
+  --text-muted: light-dark(#4e6165, #a3b4b6);
+  --text-faint: light-dark(#67797d, #849698);
+
+  --border: light-dark(#dbe5e5, #273436);
+  --border-strong: light-dark(#bccbcb, #3c4e51);
+
+  --accent: light-dark(#0f766e, #5eddcd);
+  --accent-hover: light-dark(#0c605a, #8aebde);
+  --accent-soft: light-dark(#dcf3f0, #10312e);
+  --accent-text: light-dark(#ffffff, #06201d);
+  /* Vòng sáng quanh phần tử đang focus hoặc đang được chọn. Màu trong suốt nên
+     chồng lên nền nào cũng hợp, không phải khai báo lại theo từng chỗ đặt. */
+  --accent-ring: light-dark(rgb(15 118 110 / 16%), rgb(94 221 205 / 22%));
+
+  --success: light-dark(#15803d, #6ee7a0);
+  --success-soft: light-dark(#dcfce7, #102c1c);
+  --success-border: light-dark(#86efac, #2f6b45);
+
+  --danger: light-dark(#be123c, #ff9aae);
+  --danger-soft: light-dark(#ffe4e9, #341219);
+  --danger-border: light-dark(#fda4af, #7d2a41);
+
+  --warning: light-dark(#b45309, #fcd34d);
+  --warning-soft: light-dark(#fef3c7, #33260a);
+  --warning-border: light-dark(#fcd34d, #7a5a15);
+
+  --star: light-dark(#d97706, #fbbf24);
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px light-dark(rgb(12 34 32 / 6%), rgb(0 0 0 / 30%));
+  --shadow: 0 4px 16px light-dark(rgb(12 34 32 / 8%), rgb(0 0 0 / 35%));
+  --shadow-lg: 0 12px 32px light-dark(rgb(12 34 32 / 12%), rgb(0 0 0 / 45%));
+
+  /* --- Thang cỡ chữ ------------------------------------------------------
+     Sáu bậc cách nhau đủ xa để nhìn là biết cái nào quan trọng hơn. Đặt cỡ chữ
+     theo cảm tính (0.94rem, 0.92rem, 0.86rem…) thì mắt không phân biệt nổi hai
+     bậc cách nhau 0.02rem: chúng không tạo ra thứ bậc, chỉ tạo ra sự lộn xộn. */
+  --fs-2xs: 0.72rem;
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.88rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.13rem;
+  --fs-xl: 1.3rem;
+  --fs-2xl: 1.6rem;
+
+  /* --- Nhịp khoảng cách ---------------------------------------------------
+     Bội số của 4px. Dùng token thay cho số lẻ tuỳ hứng thì các khối cách nhau
+     đều tay, trang có nhịp chứ không phải mỗi chỗ một kiểu. */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+
+  /* --- Chuyển động --------------------------------------------------------
+     Một đường cong duy nhất cho cả app: nhanh lúc đầu, chậm dần lúc kết, giống
+     cách vật thật dừng lại. Mắt thấy "mượt" chứ không thấy "có hiệu ứng". */
+  --ease: cubic-bezier(0.2, 0.8, 0.3, 1);
+  --dur: 0.18s;
+
+  --font-ui: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  /* Câu tiếng Anh dùng font có chân: trong một trang trộn hai thứ tiếng, khác
+     kiểu chữ là cách phân biệt nhanh nhất "đây là ngữ liệu cần đọc kỹ" với "đây
+     là chữ của giao diện" — nhanh hơn cả màu, vì không tốn một bậc màu nào. */
+  --font-en: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+  --font-mono: 'Cascadia Code', Consolas, 'SF Mono', Menlo, monospace;
+
+  --max-width: 1080px;
+
+  /* Chiều cao header dính. Khai báo thành biến vì ba chỗ cần đúng con số này:
+     scroll-padding-top của cả trang, mục lục dính trong trang lý thuyết, và thanh
+     tiến độ dính lúc luyện tập. Header cao lên ở khổ điện thoại (xuống hai hàng)
+     nên biến cũng đổi theo, ở cuối file. */
+  --header-h: 62px;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+/* --- Reset ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  /* Header dính che mất phần đầu của khối vừa cuộn tới (mục lục, liên kết neo).
+     Chừa sẵn đúng chiều cao header cộng một chút thở. */
+  scroll-padding-top: calc(var(--header-h) + var(--sp-4));
+}
+
+/* Cuộn mượt khi bấm mục lục — nhưng chỉ khi người dùng không yêu cầu giảm chuyển
+   động. Khối @media ở cuối file không tắt được thuộc tính này, vì nó không phải
+   transition cũng không phải animation. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  /* 100dvh chứ không phải 100vh: trên điện thoại, 100vh tính cả phần thanh địa chỉ
+     của trình duyệt nên trang luôn cao hơn khung nhìn thật, sinh ra một khoảng cuộn
+     dọc vô nghĩa. dvh co lại theo thanh địa chỉ. */
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  /* 1.6 thay vì 1.5: app trộn chữ Việt có dấu (dấu thanh nằm cao, dấu nặng nằm
+     thấp) với câu tiếng Anh dài, hai dòng liền nhau dễ chạm nhau. */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  font-weight: 650;
+  text-wrap: balance;
+  /* Cỡ chữ càng lớn thì khoảng cách giữa các chữ trông càng thưa — siết lại một
+     chút để tiêu đề nhìn liền khối. */
+  letter-spacing: -0.011em;
+}
+
+h1 {
+  font-size: var(--fs-2xl);
+}
+h2 {
+  font-size: var(--fs-xl);
+}
+h3 {
+  font-size: var(--fs-lg);
+}
+
+/* Không để dòng cuối của đoạn văn trơ lại đúng một từ. */
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- Layout --------------------------------------------------------------- */
+
+/* Lề ngang dùng max(...env(safe-area-inset...)): trên điện thoại có tai thỏ, ở chế
+   độ ngang phần bo góc và thanh gạt ăn vào hai bên màn hình, chữ sát lề sẽ bị che. */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: max(20px, env(safe-area-inset-left)) max(20px, env(safe-area-inset-right));
+}
+
+.page {
+  padding-block: var(--sp-7) calc(64px + env(safe-area-inset-bottom));
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+/* Ba bậc giãn cách cho .stack, thay cho các style="gap: 22px" rải rác trong
+   template: cùng một ý đồ thì nên gọi cùng một tên. */
+.stack-sm {
+  gap: var(--sp-2);
+}
+
+.stack-lg {
+  gap: var(--sp-5);
+}
+
+.stack-xl {
+  gap: var(--sp-6);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* --- Đầu trang ------------------------------------------------------------
+   Tiêu đề + câu mô tả của mỗi màn hình. Bề rộng dòng chữ có giới hạn: quá 70–75
+   ký tự thì mắt khó bắt được đầu dòng tiếp theo. */
+
+.page-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 64ch;
+}
+
+/* Tiêu đề co giãn theo bề rộng màn hình thay vì nhảy bậc ở đúng một ngưỡng. */
+.page-head h1 {
+  font-size: clamp(1.5rem, 1.18rem + 1.4vw, 2rem);
+}
+
+.page-head p {
+  color: var(--text-muted);
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* --- Card ----------------------------------------------------------------- */
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-body {
+  padding: var(--sp-5);
+}
+
+/* --- Button --------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 9px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 550;
+  white-space: nowrap;
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), transform 0.06s var(--ease);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--bg-subtle);
+  border-color: var(--text-faint);
+  text-decoration: none;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+  /* Bóng cùng màu nút và rất nhạt: đủ để nút chính nổi lên khỏi mặt thẻ, không
+     biến nó thành một khối đổ bóng nặng nề. */
+  box-shadow: 0 1px 2px var(--accent-ring), 0 4px 12px var(--accent-ring);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--accent-text);
+  box-shadow: 0 2px 4px var(--accent-ring), 0 8px 20px var(--accent-ring);
+}
+
+.btn-primary:active:not(:disabled) {
+  box-shadow: 0 1px 2px var(--accent-ring);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-muted);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: var(--bg-subtle);
+  border-color: transparent;
+  color: var(--text);
+}
+
+.btn-danger {
+  color: var(--danger);
+  border-color: var(--danger-border);
+  background: transparent;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+}
+
+.btn-lg {
+  padding: 13px 26px;
+  font-size: 1.02rem;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: var(--fs-sm);
+}
+
+/* --- Form ----------------------------------------------------------------- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: var(--fs-xs);
+  font-weight: 620;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hint {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.textarea {
+  min-height: 96px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+
+.checkbox:hover {
+  border-color: var(--border-strong);
+}
+
+/* Đã tích thì cả khung đổi màu theo, không chỉ mỗi dấu tích 16px. Trang thiết lập
+   có nhiều ô kiểu này xếp cạnh nhau — liếc một cái phải biết ngay đang bật những
+   gì, không phải soi từng ô vuông nhỏ. */
+.checkbox:has(input:checked) {
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+  background: var(--accent-soft);
+}
+
+.checkbox input {
+  margin-top: 4px;
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.checkbox.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Ô đang bị khoá thì không tô màu "đang bật", kể cả khi input vẫn còn checked —
+   trạng thái checked lúc đó không có tác dụng gì nên không được hứa hẹn gì. */
+.checkbox.is-disabled:has(input:checked) {
+  border-color: var(--border);
+  background: var(--bg-subtle);
+}
+
+/* --- Ô tìm kiếm -----------------------------------------------------------
+   Ô nhập có kính lúp bên trái và nút xoá bên phải. */
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  color: var(--text-faint);
+  /* Bấm vào kính lúp thì con trỏ vẫn phải nhảy vào ô nhập nằm dưới nó. */
+  pointer-events: none;
+}
+
+/* SVG không khai báo width/height thì trình duyệt cho nó kích thước mặc định
+   300×150px — cao gấp tám lần chỗ đã chừa. Ép nó vừa đúng ô chứa. */
+.search-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.search .input {
+  padding-left: 38px;
+  padding-right: 40px;
+}
+
+/* Trình duyệt WebKit tự thêm dấu X riêng cho input[type=search]; bỏ đi để không
+   có hai nút xoá nằm cạnh nhau. */
+.search .input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-clear {
+  position: absolute;
+  right: 7px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-faint);
+  font-size: 1rem;
+  line-height: 1;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+.search-clear:hover {
+  background: var(--bg-inset);
+  color: var(--text);
+}
+
+/* --- Nhóm nút chọn -------------------------------------------------------- */
+
+.options {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  text-align: left;
+  font-weight: 500;
+  width: 100%;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--border-strong);
+  background: var(--bg-inset);
+}
+
+.option.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 620;
+  /* Viền 1px một mình chưa đủ nổi giữa một lưới sáu bảy nút; thêm vòng sáng mỏng
+     cùng màu thì mục đang chọn bật hẳn lên mà không phải tô đậm cả khối. */
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.option:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Lưới nút chọn tự xuống hàng theo bề rộng, không cần khai báo số cột theo từng
+   ngưỡng màn hình. */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--sp-2);
+}
+
+/* Nút chọn hai dòng: tên dạng câu hỏi ở trên, ví dụ minh hoạ ở dưới. Dùng ở cả ba
+   khung thiết lập, nên để ở đây thay vì chép lại vào ba file CSS component. */
+.option-stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.option-title {
+  font-weight: 620;
+}
+
+.option-example {
+  font-size: var(--fs-xs);
+  font-weight: 450;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* Nút đang chọn đổi màu chữ chính; dòng ví dụ phải nhạt hơn một bậc so với nó,
+   nếu không hai dòng trông ngang hàng nhau và mất luôn thứ bậc. */
+.option.is-active .option-example {
+  color: color-mix(in srgb, var(--accent) 78%, var(--text-muted));
+}
+
+/* --- Chip (nút chọn nhỏ, xếp thành hàng) ---------------------------------- */
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-weight: 550;
+  white-space: nowrap;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.chip:hover:not(:disabled) {
+  border-color: var(--border-strong);
+  background: var(--bg-inset);
+  color: var(--text);
+}
+
+.chip.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.chip:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- Khung thiết lập luyện tập -------------------------------------------- */
+
+/* Bốn nhóm lựa chọn nhỏ (phạm vi, cách trả lời, số câu…) tự xếp thành 1–2 cột
+   theo bề rộng còn lại. */
+.setup-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--sp-4);
+}
+
+.setup-start {
+  padding-top: var(--sp-2);
+  border-top: 1px solid var(--border);
+}
+
+/* Liên kết quay lại đặt ngay trên tiêu đề trang chi tiết. */
+.back-link {
+  color: var(--text-muted);
+  font-weight: 550;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+/* --- Danh sách gạch đầu dòng ---------------------------------------------- */
+
+.bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.bullet-list li::marker {
+  color: var(--accent);
+}
+
+/* --- Badge ---------------------------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  background: var(--bg-inset);
+  color: var(--text-muted);
+  white-space: nowrap;
+  /* Chữ số cùng bề rộng: badge đếm số không co giãn khi con số đổi. */
+  font-variant-numeric: tabular-nums;
+}
+
+.badge-accent {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.badge-success {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.badge-danger {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.badge-warning {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+/* --- Chữ tiếng Anh --------------------------------------------------------
+   Ngữ liệu tiếng Anh (câu ví dụ, từ vựng, công thức) dùng font có chân để tách
+   khỏi chữ của giao diện. Xem ghi chú ở --font-en. */
+
+.en {
+  font-family: var(--font-en);
+}
+
+/* Công thức ngữ pháp: chữ đều bề rộng để "S + have/has + V3" xếp thẳng cột giữa
+   các thì khi đặt cạnh nhau. */
+.formula {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  letter-spacing: -0.01em;
+}
+
+/* --- Thông báo ------------------------------------------------------------ */
+
+.notice {
+  display: flex;
+  gap: var(--sp-3);
+  padding: 14px 16px;
+  /* Vạch dày bên trái thay cho viền đều bốn cạnh: liếc qua là phân biệt được lỗi
+     / cảnh báo / thành công mà chưa cần đọc chữ. */
+  border: 1px solid var(--border);
+  border-left-width: 3px;
+  border-radius: var(--radius);
+  background: var(--bg-subtle);
+  font-size: 0.92rem;
+}
+
+.notice-error {
+  border-color: var(--danger-border);
+  border-left-color: var(--danger);
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.notice-warning {
+  border-color: var(--warning-border);
+  border-left-color: var(--warning);
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.notice-success {
+  border-color: var(--success-border);
+  border-left-color: var(--success);
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+/* --- Khung rỗng -----------------------------------------------------------
+   Dùng khi tìm/lọc không ra kết quả. Một dòng chữ "không có gì" trơ trọi giữa
+   khoảng trắng dễ bị hiểu là trang hỏng; khung viền đứt cho thấy đây đúng là chỗ
+   lẽ ra có nội dung, chỉ là đang trống. */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--sp-8) var(--sp-5);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--bg-subtle) 55%, transparent);
+  text-align: center;
+}
+
+.empty-state-icon {
+  font-size: 1.7rem;
+  line-height: 1;
+  opacity: 0.55;
+}
+
+.empty-state-title {
+  font-weight: 620;
+}
+
+.empty-state-text {
+  max-width: 46ch;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* --- Khung chờ (skeleton) -------------------------------------------------
+   Hiện trong lúc đang tải, thay cho một dòng chữ "Đang tải…". Các khối xám đúng
+   hình dạng nội dung sắp hiện cho biết trang sắp có gì, và bố cục không giật một
+   nhịp khi dữ liệu về. */
+
+.skeleton {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--bg-subtle) 25%,
+    var(--bg-inset) 37%,
+    var(--bg-subtle) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  from {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+
+/* --- Nút sao (★) ---------------------------------------------------------- */
+
+.star-btn {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-faint);
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease),
+    transform 0.1s var(--ease);
+}
+
+.star-btn:hover {
+  background: var(--bg-inset);
+  color: var(--star);
+}
+
+.star-btn.is-on {
+  color: var(--star);
+}
+
+.star-btn:active {
+  transform: scale(0.9);
+}
+
+/* --- Bảng ----------------------------------------------------------------- */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.table th,
+.table td {
+  padding: 9px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.table th {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 1;
+  background: var(--bg-elevated);
+  font-size: var(--fs-xs);
+  font-weight: 620;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Tiện ích ------------------------------------------------------------- */
+
+.muted {
+  color: var(--text-muted);
+}
+
+.faint {
+  color: var(--text-faint);
+}
+
+.small {
+  font-size: var(--fs-sm);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Cắt đoạn văn sau hai dòng kèm dấu "…". Dùng cho mô tả trong thẻ: mô tả dài ngắn
+   khác nhau làm các thẻ trong cùng một hàng cao thấp so le. */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.scroll-x {
+  overflow-x: auto;
+  /* Cuộn ngang không được "lây" ra ngoài: thiếu dòng này thì trên điện thoại, vuốt
+     ngang tới cuối bảng sẽ làm cả trang trượt theo hoặc kích hoạt cử chỉ back. */
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 7px;
+  border: 1px solid var(--border-strong);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--bg-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding-inline: max(14px, env(safe-area-inset-left)) max(14px, env(safe-area-inset-right));
+  }
+
+  .card-body {
+    padding: var(--sp-4);
+  }
+
+  .page {
+    padding-block: var(--sp-5) calc(72px + env(safe-area-inset-bottom));
+  }
+
+  /* Đúng 16px, không phải 0.95rem: Safari trên iOS tự phóng to cả trang khi con trỏ
+     nhảy vào ô nhập có chữ NHỎ HƠN 16px, và không thu lại sau khi gõ xong. Đặt đủ
+     16px là cách duy nhất tắt được hành vi đó mà không phải chặn zoom của người dùng. */
+  .input,
+  .textarea,
+  .select {
+    font-size: 16px;
+  }
+}
+
+/* Dưới 520px header xuống hai hàng (xem app.css) nên chỗ chừa cho nó phải cao lên
+   theo, nếu không khối vừa cuộn tới sẽ bị header che mất dòng đầu. */
+@media (max-width: 520px) {
+  :root {
+    --header-h: 92px;
+  }
+}
+
+/* --- Thiết bị chạm ---------------------------------------------------------
+   Phân biệt bằng (hover: none) chứ không bằng bề rộng: máy tính cửa sổ hẹp vẫn có
+   chuột nên vẫn cần hiệu ứng hover, còn tablet rộng thì vẫn cần vùng bấm to. */
+
+@media (hover: none) {
+  /* 44px là ngưỡng vùng bấm tối thiểu để ngón tay không bấm trượt. */
+  .btn:not(.btn-sm),
+  .option {
+    min-height: 44px;
+  }
+
+  .btn-sm {
+    min-height: 36px;
+  }
+
+  .search-clear,
+  .star-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

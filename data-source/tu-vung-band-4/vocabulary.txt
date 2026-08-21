@@ -1,0 +1,43 @@
+# TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA CÂU VÍ DỤ
+# Band 4 (750–860): báo cáo tài chính, pháp lý và quản trị.
+
+depreciation | /dɪˌpriːʃiˈeɪʃn/ | n | khấu hao | Depreciation on the machinery is calculated annually. | Khấu hao máy móc được tính hằng năm.
+amortize | /ˈæmərtaɪz/ | v | phân bổ dần/ khấu trừ dần | The licence fee is amortized over five years. | Phí bản quyền được phân bổ dần trong năm năm.
+liquidity | /lɪˈkwɪdəti/ | n | tính thanh khoản | The company maintains strong liquidity. | Công ty duy trì tính thanh khoản tốt.
+solvency | /ˈsɑːlvənsi/ | n | khả năng trả nợ | The auditors questioned the firm's solvency. | Các kiểm toán viên đặt câu hỏi về khả năng trả nợ của công ty.
+dividend | /ˈdɪvɪdend/ | n | cổ tức | The board declared a higher dividend this year. | Hội đồng quản trị công bố mức cổ tức cao hơn năm nay.
+shareholder | /ˈʃerhoʊldər/ | n | cổ đông | Shareholders approved the plan at the annual meeting. | Các cổ đông đã thông qua kế hoạch tại đại hội thường niên.
+audit | /ˈɔːdɪt/ | n | cuộc kiểm toán | The annual audit begins next Monday. | Cuộc kiểm toán thường niên bắt đầu vào thứ Hai tới.
+disclosure | /dɪsˈkloʊʒər/ | n | việc công bố thông tin | Full disclosure of related-party deals is required. | Việc công bố đầy đủ các giao dịch với bên liên quan là bắt buộc.
+discrepancy | /dɪsˈkrepənsi/ | n | sự sai lệch/ chênh lệch | An accountant found a discrepancy in the figures. | Một kế toán viên đã phát hiện sai lệch trong các con số.
+reconcile | /ˈrekənsaɪl/ | v | đối chiếu/ khớp sổ | We reconcile the bank statement every month. | Chúng tôi đối chiếu sao kê ngân hàng hằng tháng.
+remittance | /rɪˈmɪtns/ | n | khoản chuyển tiền | The remittance was credited on the same day. | Khoản chuyển tiền đã được ghi có ngay trong ngày.
+arrears | /əˈrɪrz/ | n | khoản nợ quá hạn | Two invoices are still in arrears. | Hai hoá đơn vẫn còn quá hạn chưa trả.
+indemnity | /ɪnˈdemnəti/ | n | khoản bồi thường/ sự bồi hoàn | The contract includes an indemnity clause. | Hợp đồng có một điều khoản bồi thường.
+arbitration | /ˌɑːrbɪˈtreɪʃn/ | n | trọng tài (giải quyết tranh chấp) | Any dispute goes to arbitration in Singapore. | Mọi tranh chấp sẽ được giải quyết bằng trọng tài tại Singapore.
+jurisdiction | /ˌdʒʊrɪsˈdɪkʃn/ | n | thẩm quyền xét xử/ phạm vi quyền hạn | The case falls under local jurisdiction. | Vụ việc thuộc thẩm quyền xét xử của toà địa phương.
+breach | /briːtʃ/ | n | sự vi phạm | Late payment is a breach of contract. | Chậm thanh toán là hành vi vi phạm hợp đồng.
+waive | /weɪv/ | v | miễn/ từ bỏ (quyền) | The bank waived the transfer fee. | Ngân hàng đã miễn phí chuyển khoản.
+stipulate | /ˈstɪpjuleɪt/ | v | quy định rõ | The agreement stipulates a thirty-day notice period. | Thoả thuận quy định rõ thời hạn báo trước ba mươi ngày.
+mitigate | /ˈmɪtɪɡeɪt/ | v | giảm nhẹ/ hạn chế | The plan aims to mitigate currency risk. | Kế hoạch nhằm giảm nhẹ rủi ro tỷ giá.
+consolidate | /kənˈsɑːlɪdeɪt/ | v | hợp nhất/ củng cố | The group consolidated its three warehouses into one. | Tập đoàn đã hợp nhất ba nhà kho thành một.
+diversify | /daɪˈvɜːrsɪfaɪ/ | v | đa dạng hoá | They diversified into renewable energy. | Họ đã đa dạng hoá sang lĩnh vực năng lượng tái tạo.
+scrutinize | /ˈskruːtənaɪz/ | v | soi xét kỹ | Regulators scrutinized every transaction. | Cơ quan quản lý đã soi xét kỹ từng giao dịch.
+delegate | /ˈdelɪɡeɪt/ | v | uỷ quyền/ giao việc | A good manager delegates routine tasks. | Một quản lý giỏi biết giao lại các việc lặp lại.
+oversee | /ˌoʊvərˈsiː/ | v | giám sát/ trông coi | She oversees operations in four countries. | Cô ấy giám sát hoạt động ở bốn quốc gia.
+undertake | /ˌʌndərˈteɪk/ | v | đảm nhận/ cam kết thực hiện | The firm will undertake a full review of its suppliers. | Công ty sẽ đảm nhận việc rà soát toàn bộ nhà cung cấp.
+incur | /ɪnˈkɜːr/ | v | phải chịu/ gánh (chi phí, nợ) | Late cancellation will incur a fee. | Huỷ muộn sẽ phải chịu phí.
+offset | /ˈɔːfset/ | v | bù lại/ cân bằng | Higher volumes offset the lower margin. | Sản lượng cao hơn đã bù lại biên lợi nhuận thấp hơn.
+attribute | /əˈtrɪbjuːt/ | v | quy cho/ cho là do | Analysts attribute the growth to new markets. | Các nhà phân tích quy sự tăng trưởng cho các thị trường mới.
+comprehensive | /ˌkɑːmprɪˈhensɪv/ | adj | toàn diện | The report gives a comprehensive overview. | Báo cáo đưa ra một cái nhìn toàn diện.
+preliminary | /prɪˈlɪməneri/ | adj | sơ bộ/ ban đầu | Preliminary results are due on Friday. | Kết quả sơ bộ sẽ có vào thứ Sáu.
+unprecedented | /ʌnˈpresɪdentɪd/ | adj | chưa từng có | Demand reached an unprecedented level. | Nhu cầu đã đạt mức chưa từng có.
+viable | /ˈvaɪəbl/ | adj | khả thi/ đứng vững được | The branch is no longer commercially viable. | Chi nhánh không còn đứng vững được về mặt thương mại.
+stringent | /ˈstrɪndʒənt/ | adj | nghiêm ngặt | The industry follows stringent safety standards. | Ngành này tuân theo các tiêu chuẩn an toàn nghiêm ngặt.
+lucrative | /ˈluːkrətɪv/ | adj | sinh lời cao/ béo bở | They won a lucrative government contract. | Họ đã giành được một hợp đồng chính phủ sinh lời cao.
+redundant | /rɪˈdʌndənt/ | adj | dư thừa/ bị cắt giảm biên chế | Two roles became redundant after the merger. | Hai vị trí trở nên dư thừa sau khi sáp nhập.
+contingent | /kənˈtɪndʒənt/ | adj | phụ thuộc vào/ tuỳ theo | The bonus is contingent on annual results. | Khoản thưởng phụ thuộc vào kết quả cả năm.
+in the event of | /ɪn ði ɪˈvent əv/ | phr | trong trường hợp | In the event of delay, notify the client at once. | Trong trường hợp chậm trễ, hãy báo khách hàng ngay.
+with regard to | /wɪð rɪˈɡɑːrd tuː/ | phr | về vấn đề/ liên quan tới | With regard to your query, the item is in stock. | Về câu hỏi của bạn, món hàng vẫn còn hàng.
+in compliance with | /ɪn kəmˈplaɪəns wɪð/ | phr | tuân thủ theo đúng | The plant operates in compliance with national law. | Nhà máy vận hành tuân thủ theo đúng luật quốc gia.
+pursuant to | /pərˈsuːənt tuː/ | phr | chiểu theo/ theo đúng | Pursuant to clause 8, either party may withdraw. | Chiểu theo điều 8, bên nào cũng có thể rút lui.

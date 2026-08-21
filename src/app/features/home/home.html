@@ -1,0 +1,105 @@
+<div class="container page">
+  <div class="stack stack-xl">
+    <header class="page-head">
+      <h1>{{ t('home.title') }}</h1>
+      <p><app-t key="home.lead" block /></p>
+    </header>
+
+    @if (status() === 'error') {
+      <div class="notice notice-error">
+        <span>{{ errorKey() ? t(errorKey()!) : '' }}</span>
+        <button type="button" class="btn btn-sm" (click)="retry()">{{ t('common.retry') }}</button>
+      </div>
+    }
+
+    <!-- ── Ba khu nội dung ──────────────────────────────────────────────── -->
+    <section class="home-grid">
+      <a routerLink="/tenses" class="card home-card">
+        <div class="card-body stack stack-sm">
+          <span class="home-card-icon" aria-hidden="true">⏱</span>
+          <h2>{{ t('home.card.tense.title') }}</h2>
+          <p class="muted small"><app-t key="home.card.tense.desc" block /></p>
+          <span class="spacer"></span>
+          <div class="row home-card-foot">
+            <span class="badge badge-accent tnum">
+              {{ t('home.stat.tenses', { count: tenseCount() }) }}
+            </span>
+            <span class="spacer"></span>
+            <span class="home-card-open"><app-t key="home.card.open" /></span>
+          </div>
+        </div>
+      </a>
+
+      <a routerLink="/vocabulary" class="card home-card">
+        <div class="card-body stack stack-sm">
+          <span class="home-card-icon" aria-hidden="true">📚</span>
+          <h2>{{ t('home.card.vocabulary.title') }}</h2>
+          <p class="muted small"><app-t key="home.card.vocabulary.desc" block /></p>
+          <span class="spacer"></span>
+          <div class="row home-card-foot">
+            <span class="badge badge-accent tnum">
+              {{ t('home.stat.words', { count: wordCount() }) }}
+            </span>
+            <span class="spacer"></span>
+            <span class="home-card-open"><app-t key="home.card.open" /></span>
+          </div>
+        </div>
+      </a>
+
+      <a routerLink="/exercise" class="card home-card">
+        <div class="card-body stack stack-sm">
+          <span class="home-card-icon" aria-hidden="true">🎯</span>
+          <h2>{{ t('home.card.exercise.title') }}</h2>
+          <p class="muted small"><app-t key="home.card.exercise.desc" block /></p>
+          <span class="spacer"></span>
+          <div class="row home-card-foot">
+            <span class="badge badge-accent tnum">
+              {{ t('home.stat.sentences', { count: sentenceCount }) }}
+            </span>
+            <span class="spacer"></span>
+            <span class="home-card-open"><app-t key="home.card.open" /></span>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ── Mục đã đánh dấu ★ ────────────────────────────────────────────── -->
+    <section class="card">
+      <div class="card-body stack">
+        <div class="section-head">
+          <h2>{{ t('home.favorites.title') }}</h2>
+          @if (totalFavorites() > 0) {
+            <span class="badge badge-warning tnum">
+              ★ {{ t('home.favorites.count', { count: totalFavorites() }) }}
+            </span>
+          }
+        </div>
+
+        @if (favoriteSections().length === 0) {
+          <p class="muted small"><app-t key="home.favorites.empty" block /></p>
+        } @else {
+          <div class="favorite-row">
+            @for (section of favoriteSections(); track section.id) {
+              <a [routerLink]="section.link" class="favorite-chip">
+                <span class="favorite-name">{{ section.name }}</span>
+                <span class="favorite-count tnum">★ {{ section.count }}</span>
+              </a>
+            }
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- ── Hướng dẫn dùng ───────────────────────────────────────────────── -->
+    <section class="card">
+      <div class="card-body stack">
+        <h2>{{ t('home.tips.title') }}</h2>
+        <ol class="tips">
+          <li><app-t key="home.tips.1" block /></li>
+          <li><app-t key="home.tips.2" block /></li>
+          <li><app-t key="home.tips.3" block /></li>
+        </ol>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,200 @@
+@if (summary(); as data) {
+  <div class="container page">
+    <div class="stack stack-lg">
+      <!-- ── Điểm số ──────────────────────────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body score-body">
+          <div class="score-main" [attr.data-tone]="scoreTone()">
+            <span class="score-value tnum">
+              {{ accuracy() }}<span class="score-percent">%</span>
+            </span>
+            <span class="score-fraction tnum">
+              <app-t
+                key="result.fraction"
+                [params]="{ correct: data.correctCount, total: data.total }"
+              />
+            </span>
+          </div>
+
+          <div class="score-meta">
+            <h1>{{ t('result.title') }}</h1>
+            <p class="muted">{{ data.lessonName }}</p>
+
+            <div class="stat-row">
+              <div class="stat">
+                <span class="stat-value stat-great tnum">{{ data.perfectCount }}</span>
+                <span class="stat-label"><app-t key="result.perfect" block /></span>
+              </div>
+              <div class="stat">
+                <span class="stat-value tnum">{{ retriedResults().length }}</span>
+                <span class="stat-label"><app-t key="result.retried" block /></span>
+              </div>
+              <div class="stat">
+                <span class="stat-value stat-bad tnum">{{ data.wrongCount }}</span>
+                <span class="stat-label"><app-t key="result.wrong" block /></span>
+              </div>
+              <div class="stat">
+                <span class="stat-value tnum">{{ durationText() }}</span>
+                <span class="stat-label"><app-t key="result.duration" block /></span>
+              </div>
+            </div>
+
+            <div class="row small muted config-recap">
+              @for (key of configBadgeKeys(); track $index) {
+                <span class="badge"><app-t [key]="key" /></span>
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Hành động ────────────────────────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body stack">
+          <div class="row">
+            @if (wrongResults().length > 0) {
+              <button type="button" class="btn btn-primary" (click)="retryWrong()">
+                <app-t key="result.retryWrong" [params]="{ count: wrongResults().length }" />
+              </button>
+              <button
+                type="button"
+                class="btn"
+                [disabled]="unmarkedWrongIds().length === 0"
+                (click)="markWrongAsFavorite()"
+              >
+                <app-t key="result.markWrong" />
+              </button>
+            }
+            <button type="button" class="btn" (click)="retryAll()">
+              <app-t key="result.retryAll" />
+            </button>
+            <span class="spacer"></span>
+            <button type="button" class="btn btn-ghost" (click)="backToSection()">
+              <app-t key="result.backToSection" />
+            </button>
+            <button type="button" class="btn btn-ghost" (click)="backHome()">
+              <app-t key="result.home" />
+            </button>
+          </div>
+
+          @if (favoritesJustAdded() > 0) {
+            <div class="notice notice-success">
+              {{ t('result.markedNotice', { count: favoritesJustAdded() }) }}
+            </div>
+          } @else if (wrongResults().length > 0 && unmarkedWrongIds().length === 0) {
+            <div class="notice notice-success">{{ t('result.allMarked') }}</div>
+          }
+
+          @if (data.wrongCount === 0) {
+            <div class="notice notice-success">
+              {{ t('result.flawless', { count: data.total }) }}
+            </div>
+          }
+        </div>
+      </section>
+
+      <!-- ── Chi tiết từng câu ────────────────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body stack">
+          <div class="row">
+            <h2>{{ t('result.details') }}</h2>
+            <span class="spacer"></span>
+            <div class="chip-row">
+              <button
+                type="button"
+                class="chip"
+                [class.is-active]="filter() === 'all'"
+                (click)="setFilter('all')"
+              >
+                <app-t key="result.filter.all" [params]="{ count: data.total }" />
+              </button>
+              <button
+                type="button"
+                class="chip"
+                [class.is-active]="filter() === 'wrong'"
+                [disabled]="wrongResults().length === 0"
+                (click)="setFilter('wrong')"
+              >
+                <app-t key="result.filter.wrong" [params]="{ count: wrongResults().length }" />
+              </button>
+              <button
+                type="button"
+                class="chip"
+                [class.is-active]="filter() === 'retried'"
+                [disabled]="retriedResults().length === 0"
+                (click)="setFilter('retried')"
+              >
+                <app-t key="result.filter.retried" [params]="{ count: retriedResults().length }" />
+              </button>
+            </div>
+          </div>
+
+          @if (visibleResults().length === 0) {
+            <div class="empty-state">
+              <span class="empty-state-icon" aria-hidden="true">🗒</span>
+              <p class="empty-state-title">{{ t('result.empty') }}</p>
+            </div>
+          } @else {
+            <ul class="result-list">
+              @for (item of visibleResults(); track $index) {
+                <li
+                  class="result-item"
+                  [class.is-correct]="item.isCorrect"
+                  [class.is-wrong]="!item.isCorrect"
+                >
+                  <button
+                    type="button"
+                    class="star-btn"
+                    [class.is-on]="isFavorite(item.question.subject.id)"
+                    (click)="toggleFavorite(item.question.subject.id)"
+                    [attr.aria-pressed]="isFavorite(item.question.subject.id)"
+                    [attr.aria-label]="t('favorite.star')"
+                    [title]="t('favorite.starTitle')"
+                  >
+                    {{ isFavorite(item.question.subject.id) ? '★' : '☆' }}
+                  </button>
+
+                  <div class="result-body">
+                    <span class="result-label"><app-t [key]="item.question.labelKey" /></span>
+                    <p
+                      class="result-prompt"
+                      [class.en]="item.question.promptIsEnglish"
+                      [class.is-sentence]="item.question.isSentence"
+                    >
+                      {{ item.question.prompt }}
+                    </p>
+                    <p class="result-answer">
+                      {{ t('practice.answer') }}
+                      <strong [class.en]="item.question.answerIsEnglish">
+                        {{ correctAnswerText(item) }}
+                      </strong>
+                    </p>
+                    @if (!item.isCorrect || item.wrongAttempts > 0) {
+                      <p class="result-attempts small">
+                        {{ t('result.yourAnswers') }}
+                        <span [class.en]="item.question.answerIsEnglish">
+                          {{ item.attempts.length > 0 ? attemptsText(item) : t('result.noAnswer') }}
+                        </span>
+                      </p>
+                    }
+                  </div>
+
+                  <!-- Đúng-ngay-lần-đầu và đúng-sau-khi-thử-lại phân biệt bằng độ
+                       đậm của dấu ✓ (xem .is-perfect), không bằng ký tự khác —
+                       cùng một kết quả thì nên là cùng một biểu tượng. -->
+                  <span
+                    class="result-mark"
+                    [class.is-perfect]="item.isPerfect"
+                    [attr.aria-label]="item.isCorrect ? t('practice.correct') : t('practice.wrong')"
+                  >
+                    {{ item.isCorrect ? '✓' : '✕' }}
+                  </span>
+                </li>
+              }
+            </ul>
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+}

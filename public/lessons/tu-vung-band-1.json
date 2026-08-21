@@ -1,0 +1,372 @@
+{
+  "id": "tu-vung-band-1",
+  "name": "Band 1 · 300–450",
+  "description": "Từ nền tảng của môi trường công sở: lịch hẹn, đơn hàng, khách hàng, giao nhận. Gặp ở mọi phần của bài thi.",
+  "kind": "vocabulary",
+  "itemCount": 40,
+  "words": [
+    {
+      "id": "w-10bq9fe",
+      "word": "appointment",
+      "ipa": "/əˈpɔɪntmənt/",
+      "pos": "noun",
+      "meaning": "cuộc hẹn/ lịch hẹn",
+      "example": "I have an appointment with the dentist at three.",
+      "exampleVi": "Tôi có hẹn với nha sĩ lúc ba giờ."
+    },
+    {
+      "id": "w-1b7lhos",
+      "word": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "pos": "noun",
+      "meaning": "lịch trình/ thời gian biểu",
+      "example": "The new schedule is posted on the notice board.",
+      "exampleVi": "Lịch trình mới được dán trên bảng thông báo."
+    },
+    {
+      "id": "w-19pjtp5",
+      "word": "customer",
+      "ipa": "/ˈkʌstəmər/",
+      "pos": "noun",
+      "meaning": "khách hàng",
+      "example": "A customer called about a damaged item.",
+      "exampleVi": "Một khách hàng đã gọi tới về một món hàng bị hỏng."
+    },
+    {
+      "id": "w-vyf79z",
+      "word": "order",
+      "ipa": "/ˈɔːrdər/",
+      "pos": "noun",
+      "meaning": "đơn hàng/ đơn đặt hàng",
+      "example": "We received a large order from Japan.",
+      "exampleVi": "Chúng tôi nhận được một đơn hàng lớn từ Nhật Bản."
+    },
+    {
+      "id": "w-1i0vbpq",
+      "word": "deliver",
+      "ipa": "/dɪˈlɪvər/",
+      "pos": "verb",
+      "meaning": "giao hàng/ chuyển phát",
+      "example": "The courier delivers packages before noon.",
+      "exampleVi": "Nhân viên chuyển phát giao các kiện hàng trước buổi trưa."
+    },
+    {
+      "id": "w-1xavxp1",
+      "word": "delivery",
+      "ipa": "/dɪˈlɪvəri/",
+      "pos": "noun",
+      "meaning": "việc giao hàng/ chuyến giao",
+      "example": "Free delivery is available for orders over fifty dollars.",
+      "exampleVi": "Miễn phí giao hàng cho đơn từ năm mươi đô la trở lên."
+    },
+    {
+      "id": "w-p4m9e8",
+      "word": "invoice",
+      "ipa": "/ˈɪnvɔɪs/",
+      "pos": "noun",
+      "meaning": "hoá đơn",
+      "example": "Please attach the invoice to the email.",
+      "exampleVi": "Vui lòng đính kèm hoá đơn vào email."
+    },
+    {
+      "id": "w-1t6d1dv",
+      "word": "receipt",
+      "ipa": "/rɪˈsiːt/",
+      "pos": "noun",
+      "meaning": "biên lai/ hoá đơn thanh toán",
+      "example": "Keep your receipt if you want to return the item.",
+      "exampleVi": "Hãy giữ biên lai nếu bạn muốn trả lại món hàng."
+    },
+    {
+      "id": "w-5gxg69",
+      "word": "employee",
+      "ipa": "/ɪmˈplɔɪiː/",
+      "pos": "noun",
+      "meaning": "nhân viên/ người lao động",
+      "example": "Every employee must wear an ID badge.",
+      "exampleVi": "Mọi nhân viên đều phải đeo thẻ nhân viên."
+    },
+    {
+      "id": "w-ge93gs",
+      "word": "manager",
+      "ipa": "/ˈmænɪdʒər/",
+      "pos": "noun",
+      "meaning": "quản lý/ giám đốc",
+      "example": "The manager approved my request for leave.",
+      "exampleVi": "Quản lý đã duyệt đơn xin nghỉ của tôi."
+    },
+    {
+      "id": "w-1li2jif",
+      "word": "department",
+      "ipa": "/dɪˈpɑːrtmənt/",
+      "pos": "noun",
+      "meaning": "phòng/ bộ phận",
+      "example": "She works in the accounting department.",
+      "exampleVi": "Cô ấy làm ở phòng kế toán."
+    },
+    {
+      "id": "w-3raptm",
+      "word": "meeting",
+      "ipa": "/ˈmiːtɪŋ/",
+      "pos": "noun",
+      "meaning": "cuộc họp",
+      "example": "The meeting will start at nine sharp.",
+      "exampleVi": "Cuộc họp sẽ bắt đầu đúng chín giờ."
+    },
+    {
+      "id": "w-1b9k1hl",
+      "word": "attend",
+      "ipa": "/əˈtend/",
+      "pos": "verb",
+      "meaning": "tham dự/ dự",
+      "example": "About thirty people attended the workshop.",
+      "exampleVi": "Khoảng ba mươi người đã dự buổi hội thảo."
+    },
+    {
+      "id": "w-a6xv7f",
+      "word": "apply",
+      "ipa": "/əˈplaɪ/",
+      "pos": "verb",
+      "meaning": "nộp đơn/ ứng tuyển/ áp dụng",
+      "example": "She applied for the sales position last week.",
+      "exampleVi": "Cô ấy đã nộp đơn ứng tuyển vị trí kinh doanh tuần trước."
+    },
+    {
+      "id": "w-8og18l",
+      "word": "application",
+      "ipa": "/ˌæplɪˈkeɪʃn/",
+      "pos": "noun",
+      "meaning": "đơn xin/ hồ sơ ứng tuyển",
+      "example": "Send your application before the closing date.",
+      "exampleVi": "Hãy gửi hồ sơ ứng tuyển trước ngày hết hạn."
+    },
+    {
+      "id": "w-skramw",
+      "word": "available",
+      "ipa": "/əˈveɪləbl/",
+      "pos": "adjective",
+      "meaning": "có sẵn/ rảnh/ còn trống",
+      "example": "The meeting room is available after lunch.",
+      "exampleVi": "Phòng họp còn trống sau bữa trưa."
+    },
+    {
+      "id": "w-15knhb6",
+      "word": "purchase",
+      "ipa": "/ˈpɜːrtʃəs/",
+      "pos": "verb",
+      "meaning": "mua/ mua sắm",
+      "example": "The company purchased ten new computers.",
+      "exampleVi": "Công ty đã mua mười chiếc máy tính mới."
+    },
+    {
+      "id": "w-34jfhm",
+      "word": "price",
+      "ipa": "/praɪs/",
+      "pos": "noun",
+      "meaning": "giá/ giá cả",
+      "example": "The price includes tax and shipping.",
+      "exampleVi": "Giá đã bao gồm thuế và phí vận chuyển."
+    },
+    {
+      "id": "w-54q6ou",
+      "word": "discount",
+      "ipa": "/ˈdɪskaʊnt/",
+      "pos": "noun",
+      "meaning": "chiết khấu/ giảm giá",
+      "example": "Members get a ten percent discount.",
+      "exampleVi": "Thành viên được giảm giá mười phần trăm."
+    },
+    {
+      "id": "w-1dub241",
+      "word": "payment",
+      "ipa": "/ˈpeɪmənt/",
+      "pos": "noun",
+      "meaning": "khoản thanh toán/ việc trả tiền",
+      "example": "Your payment has not arrived yet.",
+      "exampleVi": "Khoản thanh toán của bạn vẫn chưa tới."
+    },
+    {
+      "id": "w-1bbnghd",
+      "word": "office",
+      "ipa": "/ˈɔːfɪs/",
+      "pos": "noun",
+      "meaning": "văn phòng",
+      "example": "The head office is located downtown.",
+      "exampleVi": "Trụ sở chính nằm ở trung tâm thành phố."
+    },
+    {
+      "id": "w-1la4po7",
+      "word": "equipment",
+      "ipa": "/ɪˈkwɪpmənt/",
+      "pos": "noun",
+      "meaning": "thiết bị/ trang thiết bị",
+      "example": "All the kitchen equipment is cleaned daily.",
+      "exampleVi": "Toàn bộ thiết bị nhà bếp được vệ sinh hằng ngày."
+    },
+    {
+      "id": "w-bgqlkk",
+      "word": "repair",
+      "ipa": "/rɪˈper/",
+      "pos": "verb",
+      "meaning": "sửa chữa",
+      "example": "A technician repaired the copier this morning.",
+      "exampleVi": "Một kỹ thuật viên đã sửa máy photocopy sáng nay."
+    },
+    {
+      "id": "w-750t7v",
+      "word": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "pos": "noun",
+      "meaning": "báo cáo",
+      "example": "The annual report will be published in March.",
+      "exampleVi": "Báo cáo thường niên sẽ được công bố vào tháng Ba."
+    },
+    {
+      "id": "w-br7fnn",
+      "word": "contract",
+      "ipa": "/ˈkɑːntrækt/",
+      "pos": "noun",
+      "meaning": "hợp đồng",
+      "example": "Both sides signed the contract yesterday.",
+      "exampleVi": "Hai bên đã ký hợp đồng vào hôm qua."
+    },
+    {
+      "id": "w-3j7yxw",
+      "word": "sign",
+      "ipa": "/saɪn/",
+      "pos": "verb",
+      "meaning": "ký/ ký tên",
+      "example": "Please sign at the bottom of the form.",
+      "exampleVi": "Vui lòng ký ở cuối tờ đơn."
+    },
+    {
+      "id": "w-huqptz",
+      "word": "form",
+      "ipa": "/fɔːrm/",
+      "pos": "noun",
+      "meaning": "tờ khai/ biểu mẫu",
+      "example": "Fill in the form and hand it to reception.",
+      "exampleVi": "Điền vào tờ khai rồi đưa cho lễ tân."
+    },
+    {
+      "id": "w-1b9xwos",
+      "word": "company",
+      "ipa": "/ˈkʌmpəni/",
+      "pos": "noun",
+      "meaning": "công ty",
+      "example": "The company was founded in 1998.",
+      "exampleVi": "Công ty được thành lập vào năm 1998."
+    },
+    {
+      "id": "w-1rm8iek",
+      "word": "product",
+      "ipa": "/ˈprɑːdʌkt/",
+      "pos": "noun",
+      "meaning": "sản phẩm",
+      "example": "Their newest product sells very well.",
+      "exampleVi": "Sản phẩm mới nhất của họ bán rất chạy."
+    },
+    {
+      "id": "w-o3rjhg",
+      "word": "service",
+      "ipa": "/ˈsɜːrvɪs/",
+      "pos": "noun",
+      "meaning": "dịch vụ",
+      "example": "The hotel is known for excellent service.",
+      "exampleVi": "Khách sạn nổi tiếng vì dịch vụ tuyệt vời."
+    },
+    {
+      "id": "w-sogb81",
+      "word": "staff",
+      "ipa": "/stæf/",
+      "pos": "noun",
+      "meaning": "đội ngũ nhân viên",
+      "example": "The staff are trained every six months.",
+      "exampleVi": "Đội ngũ nhân viên được đào tạo sáu tháng một lần."
+    },
+    {
+      "id": "w-15i427i",
+      "word": "supply",
+      "ipa": "/səˈplaɪ/",
+      "pos": "verb",
+      "meaning": "cung cấp",
+      "example": "A local farm supplies all our vegetables.",
+      "exampleVi": "Một trang trại địa phương cung cấp toàn bộ rau cho chúng tôi."
+    },
+    {
+      "id": "w-hdxo6q",
+      "word": "request",
+      "ipa": "/rɪˈkwest/",
+      "pos": "noun",
+      "meaning": "yêu cầu/ đề nghị",
+      "example": "Your request for extra leave was approved.",
+      "exampleVi": "Yêu cầu xin nghỉ thêm của bạn đã được duyệt."
+    },
+    {
+      "id": "w-vba1qn",
+      "word": "confirm",
+      "ipa": "/kənˈfɜːrm/",
+      "pos": "verb",
+      "meaning": "xác nhận",
+      "example": "Please confirm your booking by Friday.",
+      "exampleVi": "Vui lòng xác nhận đặt chỗ trước thứ Sáu."
+    },
+    {
+      "id": "w-1s8xln",
+      "word": "cancel",
+      "ipa": "/ˈkænsl/",
+      "pos": "verb",
+      "meaning": "huỷ/ huỷ bỏ",
+      "example": "They cancelled the afternoon session.",
+      "exampleVi": "Họ đã huỷ phiên làm việc buổi chiều."
+    },
+    {
+      "id": "w-1efzzvi",
+      "word": "arrive",
+      "ipa": "/əˈraɪv/",
+      "pos": "verb",
+      "meaning": "tới/ đến nơi",
+      "example": "The shipment arrived two days late.",
+      "exampleVi": "Lô hàng đã tới muộn hai ngày."
+    },
+    {
+      "id": "w-14ao8or",
+      "word": "package",
+      "ipa": "/ˈpækɪdʒ/",
+      "pos": "noun",
+      "meaning": "kiện hàng/ gói hàng",
+      "example": "A package was left at the reception desk.",
+      "exampleVi": "Một kiện hàng đã được để lại ở quầy lễ tân."
+    },
+    {
+      "id": "w-1eisxum",
+      "word": "customer service",
+      "ipa": "/ˈkʌstəmər ˈsɜːrvɪs/",
+      "pos": "phrase",
+      "meaning": "bộ phận chăm sóc khách hàng",
+      "example": "Call customer service if the item is faulty.",
+      "exampleVi": "Hãy gọi bộ phận chăm sóc khách hàng nếu món hàng bị lỗi."
+    },
+    {
+      "id": "w-xdz9m1",
+      "word": "train",
+      "ipa": "/treɪn/",
+      "pos": "verb",
+      "meaning": "đào tạo/ huấn luyện",
+      "example": "We train new employees for two weeks.",
+      "exampleVi": "Chúng tôi đào tạo nhân viên mới trong hai tuần."
+    },
+    {
+      "id": "w-16a21f5",
+      "word": "notice",
+      "ipa": "/ˈnoʊtɪs/",
+      "pos": "noun",
+      "meaning": "thông báo",
+      "example": "A notice about the closure is on the door.",
+      "exampleVi": "Thông báo về việc đóng cửa được dán trên cửa."
+    }
+  ],
+  "tensePoints": [],
+  "bandFrom": 300,
+  "bandTo": 450
+}

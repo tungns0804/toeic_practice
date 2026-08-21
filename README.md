@@ -1,0 +1,233 @@
+# Luyện thi TOEIC 990
+
+Web app luyện thi TOEIC, chạy hoàn toàn ở trình duyệt, không cần máy chủ và không
+cần tài khoản. Ba khu nội dung độc lập:
+
+| Khu | Đường dẫn | Nội dung |
+| --- | --- | --- |
+| **Các thì** | `/tenses` | 12 thì tiếng Anh chia thành 3 nhóm, mỗi thì có công thức, cách dùng, dấu hiệu nhận biết, lỗi hay gặp và 6 câu ví dụ. |
+| **Từ vựng** | `/vocabulary` | 200 từ chia theo 5 band điểm TOEIC (300–450 … 860–990), mỗi từ có phiên âm, từ loại, nghĩa và câu ví dụ. |
+| **Bài tập** | `/exercise` | Bài tập chuyên đề. Hiện có **thể bị động**: 60 câu qua 10 công thức thì, kèm các dạng đặc biệt. |
+
+Cả ba khu dùng chung một bộ máy luyện tập: chọn chiều hỏi → làm bài → xem kết quả
+→ đánh dấu ★ những mục chưa nhớ để lần sau luyện riêng nhóm đó.
+
+Giao diện có **tiếng Việt và tiếng Anh** (đổi ngay không cần tải lại trang), và
+**tông sáng / tối / theo hệ điều hành**.
+
+---
+
+## Chạy thử
+
+```bash
+npm install
+npm start           # sinh dữ liệu rồi chạy dev server tại http://localhost:4200
+```
+
+Lệnh khác:
+
+```bash
+npm run build       # sinh dữ liệu + build bản production vào dist/
+npm run generate    # chỉ sinh lại public/lessons/*.json từ data-source/
+npm run verify      # kiểm tra bảng thông điệp, dữ liệu bài tập và dữ liệu nguồn
+```
+
+`npm start` và `npm run build` đều tự chạy `npm run generate` trước, nên không có
+chuyện quên sinh lại dữ liệu sau khi sửa `data-source/`.
+
+---
+
+## Các chiều luyện tập
+
+**Từ vựng** (`/vocabulary/:band`)
+
+- Anh → Việt, Việt → Anh: trắc nghiệm hoặc gõ đáp án.
+- Điền từ: hiện câu ví dụ đã khoét mất chính từ đang học.
+
+**Các thì** (`/tenses/:group`)
+
+- Dịch Việt → Anh và Anh → Việt (chỉ gõ đáp án).
+- Nhận diện thì: cho câu, chọn tên thì.
+- Chia động từ: cho câu có chỗ trống và động từ nguyên thể trong ngoặc.
+
+Luyện được cả nhóm, riêng một thì, hoặc riêng một câu (nút "Luyện câu này" ngay
+trên từng câu ví dụ).
+
+**Thể bị động** (`/exercise/the-bi-dong`)
+
+- Chủ động → Bị động, Bị động → Chủ động, Dịch Việt → câu bị động, và chiều trộn.
+- Lọc theo dạng câu: cơ bản, động từ khuyết thiếu, hai tân ngữ, cụm động từ, lược
+  bỏ "by".
+
+Bài này **chỉ có chế độ gõ đáp án**: bốn câu dài để chọn thì đọc lướt là ra đáp án
+mà chưa cần biết đổi câu.
+
+---
+
+## Cách chấm bài
+
+Ở chế độ gõ đáp án, phép so khớp bỏ qua chữ hoa/thường và dấu câu, đồng thời hiểu
+viết tắt của tiếng Anh — nhưng chỉ hiểu đúng chỗ nên hiểu:
+
+- `she's worked` = `she has worked` ✓
+- `she is worked` ≠ `she has worked` ✗ (nhầm hoàn thành với bị động, vẫn bị bắt)
+- `don't` = `do not`, `won't` = `will not`, `can't` = `cannot` = `can not`
+- `last years accounts` = `last year's accounts` (thiếu dấu nháy sở hữu vẫn tính đúng)
+
+Với đáp án tiếng Việt, có tuỳ chọn bỏ qua dấu thanh khi chấm. Nhiều nghĩa tương
+đương ngăn nhau bằng `/` hoặc `;`, và gõ đúng một nghĩa là đủ.
+
+Chi tiết: [`src/app/core/utils/answer-check.ts`](src/app/core/utils/answer-check.ts).
+
+---
+
+## Kiến trúc
+
+Angular 20, standalone component, signal, `ChangeDetectionStrategy.OnPush`, không
+dùng thư viện ngoài nào ngoài Angular.
+
+```
+src/app/
+├── core/
+│   ├── i18n/           messages.ts (toàn bộ chữ, hai ngôn ngữ), LanguageStore, <app-t>
+│   ├── models/         lesson.model.ts (nội dung), practice.model.ts (phiên luyện)
+│   ├── exercises/      bài tập chuyên đề — dữ liệu nằm thẳng trong mã nguồn
+│   ├── practice/       dựng câu hỏi cho từng khu (vocabulary / tense / passive)
+│   ├── services/       LessonStore, PracticeSessionStore, FavoriteStore, ThemeStore
+│   ├── guards/         chặn vào /practice và /result khi không có phiên
+│   └── utils/          chấm bài, khoét từ, trộn ngẫu nhiên, tìm kiếm
+└── features/           mỗi màn hình một thư mục (.ts + .html + .css)
+```
+
+Vài quyết định đáng nhớ:
+
+- **Chỉ `core/practice/` biết từng khu khác nhau ra sao.** Ba khu dựng câu hỏi
+  theo cách riêng nhưng đều trả về `PracticeQuestion`, nên màn hình luyện tập và
+  màn hình kết quả dùng chung được cho cả ba mà không rẽ nhánh theo loại.
+- **Dịch lúc chạy, không dùng i18n biên dịch.** Đổi ngôn ngữ phải có hiệu lực
+  ngay, và cả ứng dụng chỉ cần một bản build. Component `<app-t>` vẽ mọi bản dịch
+  chồng lên nhau trong một ô grid nên đổi ngôn ngữ thì chữ đổi còn khung đứng yên.
+- **Không lưu lịch sử luyện tập.** Mỗi lần luyện là một lần mới; tải lại trang
+  giữa chừng là mất phiên (route guard đưa về trang chủ). Thứ duy nhất được lưu
+  giữa các phiên là danh sách ★.
+- **Id sinh từ nội dung, không đánh số.** Id của từ băm từ chính mặt chữ của từ,
+  id của câu ví dụ băm từ chính câu tiếng Anh. Sửa nghĩa hay sửa bản dịch thì id
+  giữ nguyên và dấu ★ không mất; chèn thêm một dòng vào giữa file cũng không làm
+  lệch id của các dòng phía sau.
+- **Bảng màu khai một lần.** Mỗi màu viết bằng `light-dark(sáng, tối)` trong
+  `src/styles.css`; đổi tông chỉ là đổi `color-scheme`.
+
+---
+
+## Thêm nội dung
+
+Mỗi thư mục con của `data-source/` là một mục. Loại nội dung được quyết định bởi
+**tên file dữ liệu**, không phải bởi phần mở rộng hay nội dung bên trong — đặt sai
+tên là báo lỗi ngay chứ không đoán.
+
+### Từ vựng — `vocabulary.txt`
+
+```
+data-source/tu-vung-band-6/
+├── meta.json
+└── vocabulary.txt
+```
+
+`meta.json`:
+
+```json
+{
+  "name": "Band 6 · 990+",
+  "description": "Mô tả ngắn hiện trên thẻ.",
+  "order": 206,
+  "bandFrom": 900,
+  "bandTo": 990
+}
+```
+
+`vocabulary.txt` — mỗi dòng một từ, các cột ngăn nhau bằng `|`:
+
+```
+TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA CÂU VÍ DỤ
+```
+
+Từ loại viết tắt: `n`, `v`, `adj`, `adv`, `phr`, `prep`, `conj`. Dòng trống và
+dòng bắt đầu bằng `#` bị bỏ qua.
+
+Dùng `|` chứ không dùng dấu phẩy vì nghĩa tiếng Việt và câu ví dụ đều đầy dấu
+phẩy. Câu ví dụ **nên chứa chính từ đó** (kể cả ở dạng đã chia) — dạng luyện
+"điền từ" khoét chỗ dựa vào điều này, và `npm run verify` sẽ cảnh báo từ nào chưa
+đạt.
+
+### Các thì — `tenses.json`
+
+```json
+{
+  "points": [
+    {
+      "id": "present-simple",
+      "name": { "vi": "Hiện tại đơn", "en": "Present Simple" },
+      "summary": { "vi": "…", "en": "…" },
+      "affirmative": "S + V(s/es) + O",
+      "negative": "S + do/does + not + V + O",
+      "question": "Do/Does + S + V + O?",
+      "usages": [{ "vi": "…", "en": "…" }],
+      "signals": ["always", "every day"],
+      "notes": [{ "vi": "…", "en": "…" }],
+      "examples": [
+        {
+          "english": "The office opens at eight every weekday.",
+          "vietnamese": "Văn phòng mở cửa lúc tám giờ vào các ngày trong tuần.",
+          "verb": "open",
+          "conjugated": "opens",
+          "note": "Ghi chú ngắn, có thể để rỗng."
+        }
+      ]
+    }
+  ]
+}
+```
+
+`verb` và `conjugated` phục vụ dạng luyện "chia động từ": `conjugated` phải xuất
+hiện **nguyên văn** trong `english`, và trình sinh dữ liệu kiểm tra điều đó. Để
+rỗng cả hai thì câu đó chỉ bị bỏ qua ở dạng ấy, các dạng khác vẫn dùng bình thường.
+
+Id của từng câu ví dụ **không viết tay** — trình sinh dữ liệu băm từ chính câu
+tiếng Anh, nên không bao giờ có hai câu trùng id.
+
+### Bài tập chuyên đề
+
+Dữ liệu nằm trong `src/app/core/exercises/` chứ không nằm trong `data-source/`:
+mỗi câu cần bốn trường khớp nhau (chủ động, bị động, nghĩa, nhóm công thức), thứ
+mà một file `.txt` phẳng không kiểm tra nổi còn TypeScript thì có.
+
+Thêm bài tập mới: thêm id vào `ExerciseId`, thêm một mục vào `EXERCISES`, viết
+hàm dựng câu hỏi trong `core/practice/`, và khai số mục trong `exercise-list.ts`.
+
+---
+
+## Kiểm tra
+
+```bash
+npm run verify
+```
+
+Ba tầng, đều là những thứ TypeScript không diễn đạt được:
+
+| Lệnh | Bắt lỗi gì |
+| --- | --- |
+| `verify:i18n` | Khoá thiếu bản dịch một ngôn ngữ; tham số `{ten}` có ở bản này mà thiếu ở bản kia; khoá dùng trong template mà chưa khai; khoá khai rồi mà không nơi nào dùng. |
+| `verify:data` | Câu bị động trỏ tới công thức không tồn tại; câu đánh dấu đảo ngược được nhưng lại không có "by …"; từ vựng có câu ví dụ không chứa chính từ đó. |
+| `generate:check` | Chạy toàn bộ trình sinh dữ liệu nhưng không ghi file — dùng cho CI. |
+
+---
+
+## Ghi chú triển khai
+
+`public/lessons/*.json` là file **sinh ra** nhưng vẫn được commit: nhờ vậy chỉ cần
+`ng build` (hoặc copy thẳng thư mục `public/`) là chạy được, không bắt buộc chạy
+trình sinh dữ liệu trên máy triển khai.
+
+App định tuyến bằng History API khi chạy qua web server, và tự chuyển sang định
+tuyến bằng dấu `#` khi trang được mở trực tiếp từ ổ đĩa (`file://`) — nơi mà
+`pushState` không dùng được.

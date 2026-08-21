@@ -1,0 +1,372 @@
+{
+  "id": "tu-vung-band-2",
+  "name": "Band 2 · 450–600",
+  "description": "Từ vựng của công việc hằng ngày: tuyển dụng, hậu cần, tài chính cơ bản. Trọng tâm của Part 5 và Part 7.",
+  "kind": "vocabulary",
+  "itemCount": 40,
+  "words": [
+    {
+      "id": "w-1u4c5r5",
+      "word": "recruit",
+      "ipa": "/rɪˈkruːt/",
+      "pos": "verb",
+      "meaning": "tuyển dụng",
+      "example": "The firm is recruiting three engineers this quarter.",
+      "exampleVi": "Công ty đang tuyển ba kỹ sư trong quý này."
+    },
+    {
+      "id": "w-xbdsuy",
+      "word": "candidate",
+      "ipa": "/ˈkændɪdət/",
+      "pos": "noun",
+      "meaning": "ứng viên",
+      "example": "Only two candidates were invited to the second interview.",
+      "exampleVi": "Chỉ hai ứng viên được mời tới vòng phỏng vấn thứ hai."
+    },
+    {
+      "id": "w-194l2ka",
+      "word": "qualification",
+      "ipa": "/ˌkwɑːlɪfɪˈkeɪʃn/",
+      "pos": "noun",
+      "meaning": "bằng cấp/ trình độ chuyên môn",
+      "example": "The job requires a qualification in accounting.",
+      "exampleVi": "Công việc này đòi hỏi bằng cấp về kế toán."
+    },
+    {
+      "id": "w-14rskrt",
+      "word": "experience",
+      "ipa": "/ɪkˈspɪriəns/",
+      "pos": "noun",
+      "meaning": "kinh nghiệm",
+      "example": "She has ten years of experience in logistics.",
+      "exampleVi": "Cô ấy có mười năm kinh nghiệm trong ngành hậu cần."
+    },
+    {
+      "id": "w-1976xvf",
+      "word": "promote",
+      "ipa": "/prəˈmoʊt/",
+      "pos": "verb",
+      "meaning": "thăng chức/ quảng bá",
+      "example": "He was promoted to regional manager.",
+      "exampleVi": "Anh ấy được thăng chức lên quản lý khu vực."
+    },
+    {
+      "id": "w-1jnvbj5",
+      "word": "resign",
+      "ipa": "/rɪˈzaɪn/",
+      "pos": "verb",
+      "meaning": "từ chức/ xin nghỉ việc",
+      "example": "The finance director resigned without notice.",
+      "exampleVi": "Giám đốc tài chính đã từ chức mà không báo trước."
+    },
+    {
+      "id": "w-q5c5dv",
+      "word": "salary",
+      "ipa": "/ˈsæləri/",
+      "pos": "noun",
+      "meaning": "lương/ tiền lương",
+      "example": "The salary is negotiable depending on experience.",
+      "exampleVi": "Mức lương có thể thương lượng tuỳ theo kinh nghiệm."
+    },
+    {
+      "id": "w-ktcd50",
+      "word": "benefit",
+      "ipa": "/ˈbenɪfɪt/",
+      "pos": "noun",
+      "meaning": "phúc lợi/ lợi ích",
+      "example": "Health insurance is one of the main benefits.",
+      "exampleVi": "Bảo hiểm y tế là một trong những phúc lợi chính."
+    },
+    {
+      "id": "w-nb43t3",
+      "word": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "noun",
+      "meaning": "ca làm việc",
+      "example": "The night shift starts at ten.",
+      "exampleVi": "Ca đêm bắt đầu lúc mười giờ."
+    },
+    {
+      "id": "w-12gfvb2",
+      "word": "overtime",
+      "ipa": "/ˈoʊvərtaɪm/",
+      "pos": "noun",
+      "meaning": "giờ làm thêm",
+      "example": "Staff are paid extra for overtime.",
+      "exampleVi": "Nhân viên được trả thêm cho giờ làm thêm."
+    },
+    {
+      "id": "w-vyxulz",
+      "word": "supervisor",
+      "ipa": "/ˈsuːpərvaɪzər/",
+      "pos": "noun",
+      "meaning": "người giám sát/ tổ trưởng",
+      "example": "Report any problem to your supervisor.",
+      "exampleVi": "Hãy báo mọi vấn đề cho người giám sát của bạn."
+    },
+    {
+      "id": "w-spa3vo",
+      "word": "warehouse",
+      "ipa": "/ˈwerhaʊs/",
+      "pos": "noun",
+      "meaning": "nhà kho",
+      "example": "The goods are stored in a warehouse near the port.",
+      "exampleVi": "Hàng hoá được lưu trong một nhà kho gần cảng."
+    },
+    {
+      "id": "w-1y724vz",
+      "word": "inventory",
+      "ipa": "/ˈɪnvəntɔːri/",
+      "pos": "noun",
+      "meaning": "hàng tồn kho/ kiểm kê",
+      "example": "We count the inventory at the end of each month.",
+      "exampleVi": "Chúng tôi kiểm kê hàng tồn vào cuối mỗi tháng."
+    },
+    {
+      "id": "w-1tkjkjn",
+      "word": "shipment",
+      "ipa": "/ˈʃɪpmənt/",
+      "pos": "noun",
+      "meaning": "lô hàng/ chuyến hàng",
+      "example": "The shipment cleared customs yesterday.",
+      "exampleVi": "Lô hàng đã thông quan hôm qua."
+    },
+    {
+      "id": "w-1e923ux",
+      "word": "supplier",
+      "ipa": "/səˈplaɪər/",
+      "pos": "noun",
+      "meaning": "nhà cung cấp",
+      "example": "We changed supplier after the price rise.",
+      "exampleVi": "Chúng tôi đổi nhà cung cấp sau khi giá tăng."
+    },
+    {
+      "id": "w-m4tdxp",
+      "word": "warranty",
+      "ipa": "/ˈwɔːrənti/",
+      "pos": "noun",
+      "meaning": "bảo hành",
+      "example": "The laptop comes with a two-year warranty.",
+      "exampleVi": "Chiếc máy tính xách tay có bảo hành hai năm."
+    },
+    {
+      "id": "w-e4ltgf",
+      "word": "refund",
+      "ipa": "/ˈriːfʌnd/",
+      "pos": "noun",
+      "meaning": "khoản hoàn tiền",
+      "example": "You may request a refund within thirty days.",
+      "exampleVi": "Bạn có thể yêu cầu hoàn tiền trong vòng ba mươi ngày."
+    },
+    {
+      "id": "w-g0n05k",
+      "word": "budget",
+      "ipa": "/ˈbʌdʒɪt/",
+      "pos": "noun",
+      "meaning": "ngân sách",
+      "example": "The marketing budget was cut this year.",
+      "exampleVi": "Ngân sách tiếp thị năm nay bị cắt giảm."
+    },
+    {
+      "id": "w-1nxbkrr",
+      "word": "expense",
+      "ipa": "/ɪkˈspens/",
+      "pos": "noun",
+      "meaning": "chi phí",
+      "example": "Travel expenses must be approved in advance.",
+      "exampleVi": "Chi phí đi lại phải được duyệt trước."
+    },
+    {
+      "id": "w-1lj9cpn",
+      "word": "revenue",
+      "ipa": "/ˈrevənuː/",
+      "pos": "noun",
+      "meaning": "doanh thu",
+      "example": "Revenue rose by twelve percent last quarter.",
+      "exampleVi": "Doanh thu đã tăng mười hai phần trăm trong quý trước."
+    },
+    {
+      "id": "w-1eeg0g7",
+      "word": "profit",
+      "ipa": "/ˈprɑːfɪt/",
+      "pos": "noun",
+      "meaning": "lợi nhuận",
+      "example": "The branch made a small profit in its first year.",
+      "exampleVi": "Chi nhánh đã có chút lợi nhuận trong năm đầu tiên."
+    },
+    {
+      "id": "w-16un03b",
+      "word": "estimate",
+      "ipa": "/ˈestɪmət/",
+      "pos": "noun",
+      "meaning": "ước tính/ báo giá sơ bộ",
+      "example": "The builder gave us a written estimate.",
+      "exampleVi": "Nhà thầu đã đưa cho chúng tôi bản báo giá sơ bộ."
+    },
+    {
+      "id": "w-jrjir9",
+      "word": "deadline",
+      "ipa": "/ˈdedlaɪn/",
+      "pos": "noun",
+      "meaning": "hạn chót",
+      "example": "We must meet the deadline for the tender.",
+      "exampleVi": "Chúng tôi phải kịp hạn chót nộp thầu."
+    },
+    {
+      "id": "w-1baz809",
+      "word": "extend",
+      "ipa": "/ɪkˈstend/",
+      "pos": "verb",
+      "meaning": "gia hạn/ kéo dài",
+      "example": "Management extended the deadline by a week.",
+      "exampleVi": "Ban lãnh đạo đã gia hạn thêm một tuần."
+    },
+    {
+      "id": "w-14ut9gf",
+      "word": "postpone",
+      "ipa": "/poʊˈspoʊn/",
+      "pos": "verb",
+      "meaning": "hoãn/ dời lại",
+      "example": "The launch was postponed until September.",
+      "exampleVi": "Buổi ra mắt bị hoãn tới tháng Chín."
+    },
+    {
+      "id": "w-1pm9rb",
+      "word": "arrange",
+      "ipa": "/əˈreɪndʒ/",
+      "pos": "verb",
+      "meaning": "sắp xếp/ thu xếp",
+      "example": "I will arrange a car to pick you up.",
+      "exampleVi": "Tôi sẽ sắp xếp một chiếc xe tới đón bạn."
+    },
+    {
+      "id": "w-ih3hhg",
+      "word": "attach",
+      "ipa": "/əˈtætʃ/",
+      "pos": "verb",
+      "meaning": "đính kèm",
+      "example": "Please attach the signed copy to your reply.",
+      "exampleVi": "Vui lòng đính kèm bản đã ký vào email trả lời."
+    },
+    {
+      "id": "w-18igu2k",
+      "word": "notify",
+      "ipa": "/ˈnoʊtɪfaɪ/",
+      "pos": "verb",
+      "meaning": "thông báo cho",
+      "example": "We will notify you as soon as the item is back in stock.",
+      "exampleVi": "Chúng tôi sẽ thông báo cho bạn ngay khi hàng có lại."
+    },
+    {
+      "id": "w-13nnqp8",
+      "word": "receipt of",
+      "ipa": "/rɪˈsiːt əv/",
+      "pos": "phrase",
+      "meaning": "việc nhận được (thư, hàng)",
+      "example": "Please acknowledge receipt of this letter.",
+      "exampleVi": "Vui lòng xác nhận đã nhận được thư này."
+    },
+    {
+      "id": "w-1tqnssg",
+      "word": "maintenance",
+      "ipa": "/ˈmeɪntənəns/",
+      "pos": "noun",
+      "meaning": "việc bảo trì",
+      "example": "The lift is closed for maintenance.",
+      "exampleVi": "Thang máy đóng để bảo trì."
+    },
+    {
+      "id": "w-m6w48o",
+      "word": "facility",
+      "ipa": "/fəˈsɪləti/",
+      "pos": "noun",
+      "meaning": "cơ sở vật chất/ tiện ích",
+      "example": "The new facility opens next spring.",
+      "exampleVi": "Cơ sở mới sẽ mở cửa vào mùa xuân tới."
+    },
+    {
+      "id": "w-lzeodw",
+      "word": "efficient",
+      "ipa": "/ɪˈfɪʃnt/",
+      "pos": "adjective",
+      "meaning": "hiệu quả/ năng suất",
+      "example": "The new layout is far more efficient.",
+      "exampleVi": "Cách bố trí mới hiệu quả hơn nhiều."
+    },
+    {
+      "id": "w-oy5dk3",
+      "word": "reliable",
+      "ipa": "/rɪˈlaɪəbl/",
+      "pos": "adjective",
+      "meaning": "đáng tin cậy",
+      "example": "They are a reliable partner for long-term projects.",
+      "exampleVi": "Họ là đối tác đáng tin cậy cho các dự án dài hạn."
+    },
+    {
+      "id": "w-gagvss",
+      "word": "temporary",
+      "ipa": "/ˈtempəreri/",
+      "pos": "adjective",
+      "meaning": "tạm thời",
+      "example": "This is a temporary solution until the part arrives.",
+      "exampleVi": "Đây là giải pháp tạm thời cho tới khi linh kiện tới."
+    },
+    {
+      "id": "w-1jwq6xo",
+      "word": "additional",
+      "ipa": "/əˈdɪʃənl/",
+      "pos": "adjective",
+      "meaning": "bổ sung/ thêm",
+      "example": "An additional fee applies to express delivery.",
+      "exampleVi": "Có phụ phí bổ sung cho dịch vụ giao nhanh."
+    },
+    {
+      "id": "w-1fktika",
+      "word": "approximately",
+      "ipa": "/əˈprɑːksɪmətli/",
+      "pos": "adverb",
+      "meaning": "khoảng chừng/ xấp xỉ",
+      "example": "The repair will take approximately two hours.",
+      "exampleVi": "Việc sửa chữa sẽ mất khoảng hai tiếng."
+    },
+    {
+      "id": "w-1muvgh",
+      "word": "immediately",
+      "ipa": "/ɪˈmiːdiətli/",
+      "pos": "adverb",
+      "meaning": "ngay lập tức",
+      "example": "Report any accident immediately.",
+      "exampleVi": "Hãy báo cáo mọi tai nạn ngay lập tức."
+    },
+    {
+      "id": "w-234kzo",
+      "word": "in advance",
+      "ipa": "/ɪn ədˈvæns/",
+      "pos": "phrase",
+      "meaning": "trước/ trước thời hạn",
+      "example": "Payment must be made in advance.",
+      "exampleVi": "Phải thanh toán trước."
+    },
+    {
+      "id": "w-z2pgbd",
+      "word": "on behalf of",
+      "ipa": "/ɑːn bɪˈhæf əv/",
+      "pos": "phrase",
+      "meaning": "thay mặt cho",
+      "example": "I am writing on behalf of the sales team.",
+      "exampleVi": "Tôi viết thư này thay mặt cho đội kinh doanh."
+    },
+    {
+      "id": "w-1je30wa",
+      "word": "due to",
+      "ipa": "/ˈduː tuː/",
+      "pos": "phrase",
+      "meaning": "do/ bởi vì",
+      "example": "The flight was delayed due to bad weather.",
+      "exampleVi": "Chuyến bay bị hoãn do thời tiết xấu."
+    }
+  ],
+  "tensePoints": [],
+  "bandFrom": 450,
+  "bandTo": 600
+}

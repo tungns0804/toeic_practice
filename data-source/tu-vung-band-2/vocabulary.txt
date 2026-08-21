@@ -1,0 +1,43 @@
+# TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA CÂU VÍ DỤ
+# Band 2 (450–600): công việc hằng ngày — tuyển dụng, hậu cần, tài chính cơ bản.
+
+recruit | /rɪˈkruːt/ | v | tuyển dụng | The firm is recruiting three engineers this quarter. | Công ty đang tuyển ba kỹ sư trong quý này.
+candidate | /ˈkændɪdət/ | n | ứng viên | Only two candidates were invited to the second interview. | Chỉ hai ứng viên được mời tới vòng phỏng vấn thứ hai.
+qualification | /ˌkwɑːlɪfɪˈkeɪʃn/ | n | bằng cấp/ trình độ chuyên môn | The job requires a qualification in accounting. | Công việc này đòi hỏi bằng cấp về kế toán.
+experience | /ɪkˈspɪriəns/ | n | kinh nghiệm | She has ten years of experience in logistics. | Cô ấy có mười năm kinh nghiệm trong ngành hậu cần.
+promote | /prəˈmoʊt/ | v | thăng chức/ quảng bá | He was promoted to regional manager. | Anh ấy được thăng chức lên quản lý khu vực.
+resign | /rɪˈzaɪn/ | v | từ chức/ xin nghỉ việc | The finance director resigned without notice. | Giám đốc tài chính đã từ chức mà không báo trước.
+salary | /ˈsæləri/ | n | lương/ tiền lương | The salary is negotiable depending on experience. | Mức lương có thể thương lượng tuỳ theo kinh nghiệm.
+benefit | /ˈbenɪfɪt/ | n | phúc lợi/ lợi ích | Health insurance is one of the main benefits. | Bảo hiểm y tế là một trong những phúc lợi chính.
+shift | /ʃɪft/ | n | ca làm việc | The night shift starts at ten. | Ca đêm bắt đầu lúc mười giờ.
+overtime | /ˈoʊvərtaɪm/ | n | giờ làm thêm | Staff are paid extra for overtime. | Nhân viên được trả thêm cho giờ làm thêm.
+supervisor | /ˈsuːpərvaɪzər/ | n | người giám sát/ tổ trưởng | Report any problem to your supervisor. | Hãy báo mọi vấn đề cho người giám sát của bạn.
+warehouse | /ˈwerhaʊs/ | n | nhà kho | The goods are stored in a warehouse near the port. | Hàng hoá được lưu trong một nhà kho gần cảng.
+inventory | /ˈɪnvəntɔːri/ | n | hàng tồn kho/ kiểm kê | We count the inventory at the end of each month. | Chúng tôi kiểm kê hàng tồn vào cuối mỗi tháng.
+shipment | /ˈʃɪpmənt/ | n | lô hàng/ chuyến hàng | The shipment cleared customs yesterday. | Lô hàng đã thông quan hôm qua.
+supplier | /səˈplaɪər/ | n | nhà cung cấp | We changed supplier after the price rise. | Chúng tôi đổi nhà cung cấp sau khi giá tăng.
+warranty | /ˈwɔːrənti/ | n | bảo hành | The laptop comes with a two-year warranty. | Chiếc máy tính xách tay có bảo hành hai năm.
+refund | /ˈriːfʌnd/ | n | khoản hoàn tiền | You may request a refund within thirty days. | Bạn có thể yêu cầu hoàn tiền trong vòng ba mươi ngày.
+budget | /ˈbʌdʒɪt/ | n | ngân sách | The marketing budget was cut this year. | Ngân sách tiếp thị năm nay bị cắt giảm.
+expense | /ɪkˈspens/ | n | chi phí | Travel expenses must be approved in advance. | Chi phí đi lại phải được duyệt trước.
+revenue | /ˈrevənuː/ | n | doanh thu | Revenue rose by twelve percent last quarter. | Doanh thu đã tăng mười hai phần trăm trong quý trước.
+profit | /ˈprɑːfɪt/ | n | lợi nhuận | The branch made a small profit in its first year. | Chi nhánh đã có chút lợi nhuận trong năm đầu tiên.
+estimate | /ˈestɪmət/ | n | ước tính/ báo giá sơ bộ | The builder gave us a written estimate. | Nhà thầu đã đưa cho chúng tôi bản báo giá sơ bộ.
+deadline | /ˈdedlaɪn/ | n | hạn chót | We must meet the deadline for the tender. | Chúng tôi phải kịp hạn chót nộp thầu.
+extend | /ɪkˈstend/ | v | gia hạn/ kéo dài | Management extended the deadline by a week. | Ban lãnh đạo đã gia hạn thêm một tuần.
+postpone | /poʊˈspoʊn/ | v | hoãn/ dời lại | The launch was postponed until September. | Buổi ra mắt bị hoãn tới tháng Chín.
+arrange | /əˈreɪndʒ/ | v | sắp xếp/ thu xếp | I will arrange a car to pick you up. | Tôi sẽ sắp xếp một chiếc xe tới đón bạn.
+attach | /əˈtætʃ/ | v | đính kèm | Please attach the signed copy to your reply. | Vui lòng đính kèm bản đã ký vào email trả lời.
+notify | /ˈnoʊtɪfaɪ/ | v | thông báo cho | We will notify you as soon as the item is back in stock. | Chúng tôi sẽ thông báo cho bạn ngay khi hàng có lại.
+receipt of | /rɪˈsiːt əv/ | phr | việc nhận được (thư, hàng) | Please acknowledge receipt of this letter. | Vui lòng xác nhận đã nhận được thư này.
+maintenance | /ˈmeɪntənəns/ | n | việc bảo trì | The lift is closed for maintenance. | Thang máy đóng để bảo trì.
+facility | /fəˈsɪləti/ | n | cơ sở vật chất/ tiện ích | The new facility opens next spring. | Cơ sở mới sẽ mở cửa vào mùa xuân tới.
+efficient | /ɪˈfɪʃnt/ | adj | hiệu quả/ năng suất | The new layout is far more efficient. | Cách bố trí mới hiệu quả hơn nhiều.
+reliable | /rɪˈlaɪəbl/ | adj | đáng tin cậy | They are a reliable partner for long-term projects. | Họ là đối tác đáng tin cậy cho các dự án dài hạn.
+temporary | /ˈtempəreri/ | adj | tạm thời | This is a temporary solution until the part arrives. | Đây là giải pháp tạm thời cho tới khi linh kiện tới.
+additional | /əˈdɪʃənl/ | adj | bổ sung/ thêm | An additional fee applies to express delivery. | Có phụ phí bổ sung cho dịch vụ giao nhanh.
+approximately | /əˈprɑːksɪmətli/ | adv | khoảng chừng/ xấp xỉ | The repair will take approximately two hours. | Việc sửa chữa sẽ mất khoảng hai tiếng.
+immediately | /ɪˈmiːdiətli/ | adv | ngay lập tức | Report any accident immediately. | Hãy báo cáo mọi tai nạn ngay lập tức.
+in advance | /ɪn ədˈvæns/ | phr | trước/ trước thời hạn | Payment must be made in advance. | Phải thanh toán trước.
+on behalf of | /ɑːn bɪˈhæf əv/ | phr | thay mặt cho | I am writing on behalf of the sales team. | Tôi viết thư này thay mặt cho đội kinh doanh.
+due to | /ˈduː tuː/ | phr | do/ bởi vì | The flight was delayed due to bad weather. | Chuyến bay bị hoãn do thời tiết xấu.

@@ -1,0 +1,43 @@
+# TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA CÂU VÍ DỤ
+# Band 3 (600–750): hợp đồng, đàm phán và vận hành.
+
+negotiate | /nɪˈɡoʊʃieɪt/ | v | đàm phán/ thương lượng | The two firms are negotiating a long-term contract. | Hai công ty đang đàm phán một hợp đồng dài hạn.
+clause | /klɔːz/ | n | điều khoản | Read the cancellation clause carefully. | Hãy đọc kỹ điều khoản huỷ hợp đồng.
+amend | /əˈmend/ | v | sửa đổi/ tu chính | The agreement was amended twice before signing. | Thoả thuận đã được sửa đổi hai lần trước khi ký.
+comply | /kəmˈplaɪ/ | v | tuân thủ | All suppliers must comply with our safety rules. | Mọi nhà cung cấp đều phải tuân thủ quy tắc an toàn của chúng tôi.
+compliance | /kəmˈplaɪəns/ | n | sự tuân thủ | The audit checks compliance with local law. | Cuộc kiểm toán rà soát việc tuân thủ luật địa phương.
+obligation | /ˌɑːblɪˈɡeɪʃn/ | n | nghĩa vụ | Each party has an obligation to give notice. | Mỗi bên có nghĩa vụ báo trước.
+liability | /ˌlaɪəˈbɪləti/ | n | trách nhiệm pháp lý/ khoản nợ | The contract limits our liability to the purchase price. | Hợp đồng giới hạn trách nhiệm của chúng tôi ở mức giá mua.
+provision | /prəˈvɪʒn/ | n | điều khoản/ việc cung cấp | A special provision covers late delivery. | Một điều khoản riêng quy định về việc giao hàng chậm.
+terminate | /ˈtɜːrmɪneɪt/ | v | chấm dứt/ kết thúc | Either side may terminate the agreement with thirty days' notice. | Bên nào cũng có thể chấm dứt thoả thuận sau khi báo trước ba mươi ngày.
+renew | /rɪˈnuː/ | v | gia hạn/ làm mới | We renewed the lease for another two years. | Chúng tôi đã gia hạn hợp đồng thuê thêm hai năm.
+tender | /ˈtendər/ | n | hồ sơ dự thầu/ gói thầu | Five companies submitted a tender for the project. | Năm công ty đã nộp hồ sơ dự thầu cho dự án.
+bid | /bɪd/ | n | lượt bỏ thầu/ giá thầu | Their bid was the lowest of the three. | Giá thầu của họ thấp nhất trong ba bên.
+merger | /ˈmɜːrdʒər/ | n | vụ sáp nhập | The merger was announced at a press conference. | Vụ sáp nhập được công bố tại một buổi họp báo.
+acquisition | /ˌækwɪˈzɪʃn/ | n | việc mua lại/ thâu tóm | The acquisition doubled the company's market share. | Việc mua lại đã giúp công ty tăng gấp đôi thị phần.
+stakeholder | /ˈsteɪkhoʊldər/ | n | bên liên quan | Every stakeholder was consulted before the change. | Mọi bên liên quan đều được hỏi ý kiến trước khi thay đổi.
+subsidiary | /səbˈsɪdieri/ | n | công ty con | Their Asian subsidiary reported record sales. | Công ty con ở châu Á báo cáo doanh số kỷ lục.
+outsource | /ˈaʊtsɔːrs/ | v | thuê ngoài | We outsource our payroll to a specialist firm. | Chúng tôi thuê ngoài việc tính lương cho một công ty chuyên trách.
+implement | /ˈɪmplɪment/ | v | triển khai/ thực hiện | The new policy will be implemented in July. | Chính sách mới sẽ được triển khai vào tháng Bảy.
+streamline | /ˈstriːmlaɪn/ | v | tinh gọn/ đơn giản hoá | We streamlined the approval process last year. | Chúng tôi đã tinh gọn quy trình phê duyệt vào năm ngoái.
+allocate | /ˈæləkeɪt/ | v | phân bổ | The board allocated extra funds to research. | Hội đồng đã phân bổ thêm kinh phí cho nghiên cứu.
+forecast | /ˈfɔːrkæst/ | n | dự báo | The sales forecast for next year looks strong. | Dự báo doanh số năm tới trông rất khả quan.
+fluctuate | /ˈflʌktʃueɪt/ | v | dao động/ biến động | Raw material prices fluctuate every month. | Giá nguyên liệu thô biến động hằng tháng.
+substantial | /səbˈstænʃl/ | adj | đáng kể/ lớn | The project needs a substantial investment. | Dự án cần một khoản đầu tư đáng kể.
+significant | /sɪɡˈnɪfɪkənt/ | adj | đáng kể/ quan trọng | There was a significant drop in complaints. | Số lượng khiếu nại đã giảm đáng kể.
+feasible | /ˈfiːzəbl/ | adj | khả thi | The plan is feasible but expensive. | Kế hoạch khả thi nhưng tốn kém.
+mandatory | /ˈmændətɔːri/ | adj | bắt buộc | Safety training is mandatory for all staff. | Đào tạo an toàn là bắt buộc với mọi nhân viên.
+tentative | /ˈtentətɪv/ | adj | tạm thời/ chưa chắc chắn | We agreed on a tentative date for the visit. | Chúng tôi đã thống nhất một ngày tạm thời cho chuyến thăm.
+prospective | /prəˈspektɪv/ | adj | tiềm năng/ sắp tới | A prospective client is visiting on Thursday. | Một khách hàng tiềm năng sẽ tới thăm vào thứ Năm.
+subsequent | /ˈsʌbsɪkwənt/ | adj | tiếp theo/ sau đó | Subsequent meetings were held online. | Các cuộc họp sau đó đều được tổ chức trực tuyến.
+accordingly | /əˈkɔːrdɪŋli/ | adv | theo đó/ tương ứng | Demand fell, and we adjusted production accordingly. | Nhu cầu giảm, và chúng tôi điều chỉnh sản xuất tương ứng.
+nevertheless | /ˌnevərðəˈles/ | adv | tuy nhiên/ dù vậy | Costs rose; nevertheless, profits held steady. | Chi phí tăng; tuy nhiên lợi nhuận vẫn giữ vững.
+regarding | /rɪˈɡɑːrdɪŋ/ | prep | về/ liên quan tới | I am writing regarding your recent order. | Tôi viết thư về đơn hàng gần đây của bạn.
+in accordance with | /ɪn əˈkɔːrdns wɪð/ | phr | theo đúng/ phù hợp với | The goods were packed in accordance with the standard. | Hàng hoá được đóng gói theo đúng tiêu chuẩn.
+subject to | /ˈsʌbdʒɪkt tuː/ | phr | phụ thuộc vào/ chịu sự chi phối của | The offer is subject to approval by the board. | Đề nghị này phụ thuộc vào việc hội đồng phê duyệt.
+take effect | /teɪk ɪˈfekt/ | phr | có hiệu lực | The new rates take effect on the first of April. | Biểu giá mới có hiệu lực từ ngày một tháng Tư.
+carry out | /ˈkæri aʊt/ | phr | tiến hành/ thực hiện | The survey will be carried out in June. | Cuộc khảo sát sẽ được tiến hành vào tháng Sáu.
+look into | /lʊk ˈɪntuː/ | phr | xem xét/ điều tra | We will look into your complaint at once. | Chúng tôi sẽ xem xét khiếu nại của bạn ngay.
+account for | /əˈkaʊnt fɔːr/ | phr | chiếm/ giải thích cho | Exports account for half of our revenue. | Xuất khẩu chiếm một nửa doanh thu của chúng tôi.
+comply with | /kəmˈplaɪ wɪð/ | phr | tuân thủ theo | All products comply with EU standards. | Mọi sản phẩm đều tuân thủ tiêu chuẩn châu Âu.
+be responsible for | /bi rɪˈspɑːnsəbl fɔːr/ | phr | chịu trách nhiệm về | Each team leader must be responsible for their own budget. | Mỗi trưởng nhóm phải chịu trách nhiệm về ngân sách của mình.

@@ -1,0 +1,149 @@
+/* Khối lý thuyết của một thì. `scroll-margin-top` chứ không phải padding: đây là
+   đích của liên kết neo, mà header dính sẽ che mất dòng đầu nếu không chừa chỗ. */
+.tense-point {
+  scroll-margin-top: calc(var(--header-h) + var(--sp-4));
+}
+
+.point-summary {
+  max-width: 70ch;
+  color: var(--text-muted);
+}
+
+/* --- Công thức -------------------------------------------------------------
+   Ba ô khẳng định / phủ định / nghi vấn. Cùng một minmax cho cả ba nên chúng
+   luôn rộng bằng nhau, và công thức dài nhất quyết định bề rộng — không có ô nào
+   bị bóp lại làm công thức xuống dòng giữa chừng. */
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--sp-2);
+}
+
+.formula-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+}
+
+.formula-cell code {
+  /* Công thức dài ("S + am/is/are going to be + V3") phải được phép xuống dòng
+     thay vì đẩy rộng cả lưới rồi làm trang cuộn ngang. */
+  overflow-wrap: anywhere;
+  color: var(--text);
+}
+
+/* --- Dấu hiệu nhận biết --- */
+
+.signal {
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg-elevated);
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+
+/* --- Lưu ý ----------------------------------------------------------------
+   Nền vàng nhạt: các lưu ý ở đây đều là lỗi hay bị trừ điểm, phải nhìn thấy được
+   khi lướt qua trang chứ không lẫn vào phần cách dùng ngay bên trên. */
+
+.note-list {
+  padding: 10px 12px 10px 2em;
+  border: 1px solid var(--warning-border);
+  border-left-width: 3px;
+  border-radius: var(--radius-sm);
+  background: var(--warning-soft);
+  color: var(--text);
+}
+
+.note-list li::marker {
+  color: var(--warning);
+}
+
+/* --- Câu ví dụ ------------------------------------------------------------- */
+
+.example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.example {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--dur) var(--ease);
+}
+
+.example:hover {
+  background: var(--bg-subtle);
+}
+
+.example .star-btn {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.example-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.example-en {
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.example-vi {
+  margin-top: 1px;
+}
+
+.example-note {
+  margin-top: 3px;
+  color: var(--warning);
+}
+
+/* Nút luyện của từng câu chỉ hiện khi con trỏ đi qua dòng đó: mười hai câu mà
+   dòng nào cũng có một nút thì mắt không còn bám được vào chính câu tiếng Anh.
+
+   Vẫn giữ trong DOM và vẫn hiện khi nhận focus, nên người dùng bàn phím Tab tới
+   là thấy — ẩn bằng opacity chứ không bằng display:none chính là vì thế. */
+.example-practice {
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.example:hover .example-practice,
+.example-practice:focus-visible {
+  opacity: 1;
+}
+
+/* Máy cảm ứng không có trạng thái hover, nên nút phải hiện sẵn — nếu không thì
+   trên điện thoại nó không bao giờ xuất hiện. */
+@media (hover: none) {
+  .example-practice {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .example {
+    flex-wrap: wrap;
+  }
+
+  .example-practice {
+    margin-left: auto;
+  }
+}

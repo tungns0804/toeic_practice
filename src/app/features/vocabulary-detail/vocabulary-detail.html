@@ -1,0 +1,278 @@
+@if (loading()) {
+  <div class="container page">
+    <div class="stack stack-lg">
+      <div class="skeleton" style="height: 34px; width: 40%"></div>
+      <div class="skeleton" style="height: 200px"></div>
+      <div class="skeleton" style="height: 340px"></div>
+    </div>
+  </div>
+} @else if (notFound()) {
+  <div class="container page">
+    <div class="empty-state">
+      <span class="empty-state-icon" aria-hidden="true">🔍</span>
+      <p class="empty-state-title">{{ t('vocab.notFound') }}</p>
+      <p class="empty-state-text"><app-t key="error.notFoundHint" block /></p>
+      <a routerLink="/vocabulary" class="btn"><app-t key="app.nav.vocabulary" /></a>
+    </div>
+  </div>
+} @else if (lesson(); as data) {
+  <div class="container page">
+    <div class="stack stack-xl">
+      <header class="page-head">
+        <a routerLink="/vocabulary" class="small back-link">← {{ t('vocab.listTitle') }}</a>
+        <h1>{{ data.name }}</h1>
+        <p>{{ data.description }}</p>
+      </header>
+
+      <!-- ── Thiết lập luyện tập ──────────────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body stack stack-lg">
+          <div class="section-head">
+            <h2>{{ t('setup.title') }}</h2>
+            <span class="spacer"></span>
+            @if (favoriteCount() > 0) {
+              <button type="button" class="btn btn-sm btn-ghost" (click)="clearFavorites()">
+                {{ t('favorite.clear') }}
+              </button>
+            }
+          </div>
+
+          <div class="field">
+            <span class="label"><app-t key="setup.direction" /></span>
+            <div class="options-grid">
+              @for (item of directions; track item.id) {
+                <button
+                  type="button"
+                  class="option"
+                  [class.is-active]="direction() === item.id"
+                  (click)="setDirection(item.id)"
+                >
+                  <app-t [key]="item.labelKey" />
+                </button>
+              }
+            </div>
+          </div>
+
+          <div class="setup-row">
+            <div class="field">
+              <span class="label"><app-t key="setup.answerMode" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="answerMode() === 'choice'"
+                  (click)="setAnswerMode('choice')"
+                >
+                  <app-t key="setup.answerMode.choice" />
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="answerMode() === 'typing'"
+                  (click)="setAnswerMode('typing')"
+                >
+                  <app-t key="setup.answerMode.typing" />
+                </button>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="label"><app-t key="setup.scope" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="scope() === 'all'"
+                  (click)="setScope('all')"
+                >
+                  {{ t('scope.all.count', { count: words().length }) }}
+                </button>
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="scope() === 'favorite'"
+                  [disabled]="favoriteCount() === 0"
+                  (click)="setScope('favorite')"
+                >
+                  {{ t('scope.favorite.count', { count: favoriteCount() }) }}
+                </button>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="label"><app-t key="setup.limit" /></span>
+              <div class="chip-row">
+                <button
+                  type="button"
+                  class="chip"
+                  [class.is-active]="questionLimit() === null"
+                  (click)="setQuestionLimit(null)"
+                >
+                  <app-t key="setup.limit.all" />
+                </button>
+                @for (limit of limitChoices(); track limit) {
+                  <button
+                    type="button"
+                    class="chip tnum"
+                    [class.is-active]="questionLimit() === limit"
+                    (click)="setQuestionLimit(limit)"
+                  >
+                    {{ limit }}
+                  </button>
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label"><app-t key="setup.options" /></span>
+            <div class="options-grid">
+              <label class="checkbox">
+                <input type="checkbox" [checked]="shuffleQuestions()" (change)="toggleShuffle($event)" />
+                <span><app-t key="setup.shuffle" block /></span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" [checked]="showHint()" (change)="toggleShowHint($event)" />
+                <span><app-t key="setup.showHint" block /></span>
+              </label>
+              <label class="checkbox" [class.is-disabled]="currentDirection().answerIsEnglish">
+                <input
+                  type="checkbox"
+                  [checked]="ignoreDiacritics()"
+                  [disabled]="currentDirection().answerIsEnglish"
+                  (change)="toggleIgnoreDiacritics($event)"
+                />
+                <span>
+                  <app-t key="setup.ignoreDiacritics" block />
+                  <span class="hint"><app-t key="setup.ignoreDiacritics.hint" block /></span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="row setup-start">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              [disabled]="!canStart()"
+              (click)="start()"
+            >
+              {{ t('setup.start') }}
+            </button>
+            @if (canStart()) {
+              <span class="muted small tnum">
+                {{ t('setup.plan', { count: plannedQuestionCount() }) }}
+              </span>
+            } @else {
+              <span class="muted small"><app-t key="setup.empty" /></span>
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Bảng tra cứu ─────────────────────────────────────────────────── -->
+      <section class="card">
+        <div class="card-body stack">
+          <div class="table-toolbar">
+            <div class="search">
+              <span class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="9" cy="9" r="6" />
+                  <path d="M13.5 13.5 L17 17" stroke-linecap="round" />
+                </svg>
+              </span>
+              <input
+                type="search"
+                class="input"
+                [value]="search()"
+                (input)="onSearch($event)"
+                [placeholder]="t('vocab.searchPlaceholder')"
+                [attr.aria-label]="t('common.search')"
+              />
+              @if (search()) {
+                <button
+                  type="button"
+                  class="search-clear"
+                  (click)="clearSearch()"
+                  [attr.aria-label]="t('common.clear')"
+                >
+                  ✕
+                </button>
+              }
+            </div>
+
+            <label class="checkbox toolbar-check" [class.is-disabled]="favoriteCount() === 0">
+              <input
+                type="checkbox"
+                [checked]="onlyFavorites()"
+                [disabled]="favoriteCount() === 0"
+                (change)="toggleOnlyFavorites($event)"
+              />
+              <span><app-t key="vocab.onlyFavorites" /></span>
+            </label>
+
+            <span class="muted small tnum">
+              {{ t('vocab.showing', { shown: filteredWords().length, total: words().length }) }}
+            </span>
+          </div>
+
+          @if (filteredWords().length === 0) {
+            <div class="empty-state">
+              <span class="empty-state-icon" aria-hidden="true">🗒</span>
+              <p class="empty-state-title">{{ t('vocab.noMatch') }}</p>
+              <p class="empty-state-text"><app-t key="vocab.noMatchHint" block /></p>
+            </div>
+          } @else {
+            <div class="scroll-x">
+              <table class="table word-table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-star"><span class="sr-only">★</span></th>
+                    <th scope="col"><app-t key="vocab.col.word" /></th>
+                    <th scope="col"><app-t key="vocab.col.ipa" /></th>
+                    <th scope="col"><app-t key="vocab.col.pos" /></th>
+                    <th scope="col"><app-t key="vocab.col.meaning" /></th>
+                    <th scope="col"><app-t key="vocab.col.example" /></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (word of filteredWords(); track word.id) {
+                    <tr [class.is-starred]="isFavorite(word.id)">
+                      <td class="col-star">
+                        <button
+                          type="button"
+                          class="star-btn"
+                          [class.is-on]="isFavorite(word.id)"
+                          (click)="toggleFavorite(word.id)"
+                          [attr.aria-pressed]="isFavorite(word.id)"
+                          [attr.aria-label]="t('favorite.star')"
+                          [title]="t('favorite.starTitle')"
+                        >
+                          {{ isFavorite(word.id) ? '★' : '☆' }}
+                        </button>
+                      </td>
+                      <td class="col-word en">{{ word.word }}</td>
+                      <td class="col-ipa faint">{{ word.ipa }}</td>
+                      <td class="col-pos">
+                        <span class="badge"><app-t [key]="posShortKey[word.pos]" /></span>
+                      </td>
+                      <td class="col-meaning">{{ word.meaning }}</td>
+                      <td class="col-example">
+                        @if (word.example) {
+                          <span class="en example-en">{{ word.example }}</span>
+                          @if (word.exampleVi) {
+                            <span class="example-vi muted">{{ word.exampleVi }}</span>
+                          }
+                        }
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+}

@@ -1,0 +1,54 @@
+<div class="container page">
+  <div class="stack stack-xl">
+    <header class="page-head">
+      <h1>{{ t('vocab.listTitle') }}</h1>
+      <p><app-t key="vocab.listLead" block /></p>
+    </header>
+
+    @if (status() === 'error') {
+      <div class="notice notice-error">
+        <span>{{ errorKey() ? t(errorKey()!) : '' }}</span>
+        <button type="button" class="btn btn-sm" (click)="retry()">{{ t('common.retry') }}</button>
+      </div>
+    } @else if (status() === 'loading' || status() === 'idle') {
+      <div class="band-list">
+        @for (i of [1, 2, 3, 4, 5]; track i) {
+          <div class="card">
+            <div class="card-body stack stack-sm">
+              <div class="skeleton" style="height: 20px; width: 40%"></div>
+              <div class="skeleton" style="height: 14px"></div>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="band-list">
+        @for (band of bands(); track band.id) {
+          <a [routerLink]="['/vocabulary', band.id]" class="card band-card">
+            <div class="card-body band-body">
+              <!-- Khoảng điểm nằm trong một ô riêng bên trái: năm band xếp dọc thì
+                   con số phải thẳng cột để so sánh được, không lẫn vào tên band. -->
+              <div class="band-score" aria-hidden="true">
+                <span class="band-score-from tnum">{{ band.bandFrom }}</span>
+                <span class="band-score-sep">–</span>
+                <span class="band-score-to tnum">{{ band.bandTo }}</span>
+              </div>
+              <div class="band-main">
+                <h2>{{ band.name }}</h2>
+                <p class="muted small">{{ band.description }}</p>
+              </div>
+              <div class="band-meta">
+                <span class="badge badge-accent tnum">
+                  {{ t('vocab.wordCount', { count: band.itemCount }) }}
+                </span>
+                @if (favoriteCount(band.id) > 0) {
+                  <span class="badge badge-warning tnum">★ {{ favoriteCount(band.id) }}</span>
+                }
+              </div>
+            </div>
+          </a>
+        }
+      </div>
+    }
+  </div>
+</div>

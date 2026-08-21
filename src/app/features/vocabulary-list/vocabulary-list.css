@@ -1,0 +1,89 @@
+/* Năm band xếp DỌC chứ không thành lưới: chúng là một thang bậc từ thấp lên cao,
+   mà lưới nhiều cột thì mắt đọc theo hàng ngang và thứ tự đó biến mất. */
+.band-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.band-card {
+  display: block;
+  color: inherit;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.band-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.band-body {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+}
+
+/* Ô điểm bên trái, bề rộng cố định để năm thẻ thẳng cột với nhau. */
+.band-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 76px;
+  padding: 6px 0;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+}
+
+.band-score-from {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.band-score-sep {
+  font-size: var(--fs-2xs);
+  opacity: 0.7;
+}
+
+.band-score-to {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.band-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.band-main h2 {
+  font-size: var(--fs-lg);
+}
+
+.band-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .band-body {
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+  }
+
+  .band-meta {
+    flex-direction: row;
+    align-items: center;
+    /* Xuống hàng riêng, chiếm trọn bề ngang: ở khổ hẹp thì cột bên phải chỉ còn
+       vài chục pixel và badge sẽ bị bóp thành hai dòng chữ. */
+    flex: 1 0 100%;
+  }
+}
