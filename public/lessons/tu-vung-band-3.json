@@ -303,7 +303,7 @@
       "id": "w-h39sz7",
       "word": "in accordance with",
       "ipa": "/ɪn əˈkɔːrdns wɪð/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "theo đúng/ phù hợp với",
       "example": "The goods were packed in accordance with the standard.",
       "exampleVi": "Hàng hoá được đóng gói theo đúng tiêu chuẩn."
@@ -312,7 +312,7 @@
       "id": "w-l5j6to",
       "word": "subject to",
       "ipa": "/ˈsʌbdʒɪkt tuː/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "phụ thuộc vào/ chịu sự chi phối của",
       "example": "The offer is subject to approval by the board.",
       "exampleVi": "Đề nghị này phụ thuộc vào việc hội đồng phê duyệt."
@@ -321,7 +321,7 @@
       "id": "w-fdzo1b",
       "word": "take effect",
       "ipa": "/teɪk ɪˈfekt/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "có hiệu lực",
       "example": "The new rates take effect on the first of April.",
       "exampleVi": "Biểu giá mới có hiệu lực từ ngày một tháng Tư."
@@ -330,7 +330,7 @@
       "id": "w-i2mfx0",
       "word": "carry out",
       "ipa": "/ˈkæri aʊt/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "tiến hành/ thực hiện",
       "example": "The survey will be carried out in June.",
       "exampleVi": "Cuộc khảo sát sẽ được tiến hành vào tháng Sáu."
@@ -339,7 +339,7 @@
       "id": "w-y61eik",
       "word": "look into",
       "ipa": "/lʊk ˈɪntuː/",
-      "pos": "phrase",
+      "pos": "verbPrep",
       "meaning": "xem xét/ điều tra",
       "example": "We will look into your complaint at once.",
       "exampleVi": "Chúng tôi sẽ xem xét khiếu nại của bạn ngay."
@@ -348,7 +348,7 @@
       "id": "w-2otjqj",
       "word": "account for",
       "ipa": "/əˈkaʊnt fɔːr/",
-      "pos": "phrase",
+      "pos": "verbPrep",
       "meaning": "chiếm/ giải thích cho",
       "example": "Exports account for half of our revenue.",
       "exampleVi": "Xuất khẩu chiếm một nửa doanh thu của chúng tôi."
@@ -357,7 +357,7 @@
       "id": "w-1lp2bu3",
       "word": "comply with",
       "ipa": "/kəmˈplaɪ wɪð/",
-      "pos": "phrase",
+      "pos": "verbPrep",
       "meaning": "tuân thủ theo",
       "example": "All products comply with EU standards.",
       "exampleVi": "Mọi sản phẩm đều tuân thủ tiêu chuẩn châu Âu."
@@ -366,7 +366,7 @@
       "id": "w-1xnp04v",
       "word": "be responsible for",
       "ipa": "/bi rɪˈspɑːnsəbl fɔːr/",
-      "pos": "phrase",
+      "pos": "verbPrep",
       "meaning": "chịu trách nhiệm về",
       "example": "Each team leader must be responsible for their own budget.",
       "exampleVi": "Mỗi trưởng nhóm phải chịu trách nhiệm về ngân sách của mình."
@@ -654,7 +654,7 @@
       "id": "w-e26q9w",
       "word": "compliance officer",
       "ipa": "/kəmˈplaɪəns ˈɔːfɪsər/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "cán bộ tuân thủ",
       "example": "The compliance officer reviews every contract.",
       "exampleVi": "Cán bộ tuân thủ rà soát từng hợp đồng."
@@ -789,7 +789,7 @@
       "id": "w-1x0660e",
       "word": "negotiate a deal",
       "ipa": "/nɪˈɡoʊʃieɪt ə diːl/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "đàm phán một thương vụ",
       "example": "They negotiated a deal worth ten million.",
       "exampleVi": "Họ đã đàm phán một thương vụ trị giá mười triệu."
@@ -843,7 +843,7 @@
       "id": "w-1hs5xeq",
       "word": "waive a fee",
       "ipa": "/weɪv ə fiː/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "miễn một khoản phí",
       "example": "The bank agreed to waive a fee for us.",
       "exampleVi": "Ngân hàng đã đồng ý miễn một khoản phí cho chúng tôi."
@@ -897,7 +897,7 @@
       "id": "w-1e4gv7l",
       "word": "comprehensive review",
       "ipa": "/ˌkɑːmprɪˈhensɪv rɪˈvjuː/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "cuộc rà soát toàn diện",
       "example": "The board ordered a comprehensive review of costs.",
       "exampleVi": "Hội đồng đã yêu cầu một cuộc rà soát toàn diện về chi phí."
@@ -942,7 +942,7 @@
       "id": "w-1d3tan5",
       "word": "on behalf of the company",
       "ipa": "/ɑːn bɪˈhæf əv ðə ˈkʌmpəni/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "thay mặt công ty",
       "example": "She signed on behalf of the company.",
       "exampleVi": "Cô ấy đã ký thay mặt công ty."
@@ -951,7 +951,7 @@
       "id": "w-nfc1pb",
       "word": "in the meantime",
       "ipa": "/ɪn ðə ˈmiːntaɪm/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "trong lúc chờ đợi",
       "example": "In the meantime, please use the old form.",
       "exampleVi": "Trong lúc chờ đợi, vui lòng dùng mẫu cũ."
@@ -960,7 +960,7 @@
       "id": "w-1ihjy6o",
       "word": "as a result of",
       "ipa": "/əz ə rɪˈzʌlt əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "do kết quả của",
       "example": "As a result of the delay, we lost the order.",
       "exampleVi": "Do kết quả của sự chậm trễ, chúng tôi mất đơn hàng."
@@ -969,7 +969,7 @@
       "id": "w-1u100r0",
       "word": "with the exception of",
       "ipa": "/wɪð ði ɪkˈsepʃn əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "ngoại trừ",
       "example": "All branches closed with the exception of Hanoi.",
       "exampleVi": "Mọi chi nhánh đều đóng cửa ngoại trừ Hà Nội."
@@ -978,7 +978,7 @@
       "id": "w-w7du5w",
       "word": "prior to",
       "ipa": "/ˈpraɪər tuː/",
-      "pos": "preposition",
+      "pos": "prepPhrase",
       "meaning": "trước khi",
       "example": "Prior to the audit, we reorganised the files.",
       "exampleVi": "Trước khi kiểm toán, chúng tôi đã sắp xếp lại hồ sơ."
@@ -987,7 +987,7 @@
       "id": "w-1fw78r2",
       "word": "in terms of",
       "ipa": "/ɪn tɜːrmz əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "xét về mặt",
       "example": "In terms of cost, the second option wins.",
       "exampleVi": "Xét về mặt chi phí, phương án thứ hai thắng."
@@ -996,7 +996,7 @@
       "id": "w-5a1ptp",
       "word": "follow up",
       "ipa": "/ˈfɑːloʊ ʌp/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "theo dõi tiếp",
       "example": "I will follow up with the supplier tomorrow.",
       "exampleVi": "Tôi sẽ theo dõi tiếp với nhà cung cấp vào ngày mai."
@@ -1005,7 +1005,7 @@
       "id": "w-jjk8ij",
       "word": "back up",
       "ipa": "/bæk ʌp/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "sao lưu/ hỗ trợ",
       "example": "Please back up the files before the update.",
       "exampleVi": "Vui lòng sao lưu các tệp trước khi cập nhật."
@@ -1014,7 +1014,7 @@
       "id": "w-98byuu",
       "word": "turn down",
       "ipa": "/tɜːrn daʊn/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "từ chối",
       "example": "They turned down our first offer.",
       "exampleVi": "Họ đã từ chối lời chào giá đầu tiên của chúng tôi."
@@ -1023,7 +1023,7 @@
       "id": "w-10ygyt0",
       "word": "bring up",
       "ipa": "/brɪŋ ʌp/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "nêu ra (vấn đề)",
       "example": "She will bring up the issue at the meeting.",
       "exampleVi": "Cô ấy sẽ nêu vấn đề đó ra tại cuộc họp."

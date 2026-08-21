@@ -16,12 +16,23 @@ const POS_ALIASES = {
   adjective: 'adjective',
   adv: 'adverb',
   adverb: 'adverb',
-  phr: 'phrase',
-  phrase: 'phrase',
   prep: 'preposition',
   preposition: 'preposition',
   conj: 'conjunction',
   conjunction: 'conjunction',
+  // Năm loại nhiều từ. Mã cũ `phr` CỐ Ý không còn được chấp nhận: nó từng gộp cả
+  // năm loại này làm một, và để nó sống tiếp thì mọi mục thêm mới sau này lại
+  // trôi về cái rọ chung đó. Bỏ hẳn thì file nào còn `phr` sẽ báo lỗi ngay.
+  pv: 'phrasalVerb',
+  'phrasal-verb': 'phrasalVerb',
+  vp: 'verbPrep',
+  'verb-prep': 'verbPrep',
+  pp: 'prepPhrase',
+  'prep-phrase': 'prepPhrase',
+  cn: 'compoundNoun',
+  'compound-noun': 'compoundNoun',
+  coll: 'collocation',
+  collocation: 'collocation',
 };
 
 export const POS_CODES = Object.keys(POS_ALIASES);

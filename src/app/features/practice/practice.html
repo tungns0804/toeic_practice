@@ -27,7 +27,13 @@
       </div>
     </header>
 
-    <!-- ── Câu hỏi ──────────────────────────────────────────────────────── -->
+    <!-- ── Câu hỏi ──────────────────────────────────────────────────────────
+         Bọc trong @for một phần tử thay vì để trần: hiệu ứng CSS chỉ chạy khi
+         phần tử được DỰNG MỚI, mà @if bên ngoài vẫn đúng suốt cả phiên nên
+         Angular sẽ tái dùng đúng thẻ này từ câu 1 tới câu cuối. Khoá theo số thứ
+         tự câu khiến mỗi câu là một phần tử mới, và hiệu ứng chạy lại đúng một
+         lần cho mỗi câu. -->
+    @for (card of [q]; track index()) {
     <section class="card question-card">
       <div class="card-body">
         <div class="question-top">
@@ -54,6 +60,7 @@
         }
       </div>
     </section>
+    }
 
     <!-- ── Vùng trả lời ─────────────────────────────────────────────────── -->
     <div #answerArea class="answer-area">

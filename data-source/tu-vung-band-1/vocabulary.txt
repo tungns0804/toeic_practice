@@ -46,7 +46,7 @@ confirm | /kənˈfɜːrm/ | v | xác nhận | Please confirm your booking by Fri
 cancel | /ˈkænsl/ | v | huỷ/ huỷ bỏ | They cancelled the afternoon session. | Họ đã huỷ phiên làm việc buổi chiều.
 arrive | /əˈraɪv/ | v | tới/ đến nơi | The shipment arrived two days late. | Lô hàng đã tới muộn hai ngày.
 package | /ˈpækɪdʒ/ | n | kiện hàng/ gói hàng | A package was left at the reception desk. | Một kiện hàng đã được để lại ở quầy lễ tân.
-customer service | /ˈkʌstəmər ˈsɜːrvɪs/ | phr | bộ phận chăm sóc khách hàng | Call customer service if the item is faulty. | Hãy gọi bộ phận chăm sóc khách hàng nếu món hàng bị lỗi.
+customer service | /ˈkʌstəmər ˈsɜːrvɪs/ | cn | bộ phận chăm sóc khách hàng | Call customer service if the item is faulty. | Hãy gọi bộ phận chăm sóc khách hàng nếu món hàng bị lỗi.
 train | /treɪn/ | v | đào tạo/ huấn luyện | We train new employees for two weeks. | Chúng tôi đào tạo nhân viên mới trong hai tuần.
 notice | /ˈnoʊtɪs/ | n | thông báo | A notice about the closure is on the door. | Thông báo về việc đóng cửa được dán trên cửa.
 
@@ -83,7 +83,7 @@ expensive | /ɪkˈspensɪv/ | adj | đắt/ tốn kém | This model is more expe
 flight | /flaɪt/ | n | chuyến bay | Our flight leaves at seven in the morning. | Chuyến bay của chúng tôi khởi hành lúc bảy giờ sáng.
 airport | /ˈerpɔːrt/ | n | sân bay | A shuttle bus runs to the airport every hour. | Có xe buýt chạy tới sân bay mỗi giờ.
 luggage | /ˈlʌɡɪdʒ/ | n | hành lý | Leave your luggage at the front desk. | Hãy để hành lý của bạn ở quầy lễ tân.
-boarding pass | /ˈbɔːrdɪŋ pæs/ | phr | thẻ lên máy bay | Show your boarding pass at the gate. | Xuất trình thẻ lên máy bay ở cửa ra.
+boarding pass | /ˈbɔːrdɪŋ pæs/ | cn | thẻ lên máy bay | Show your boarding pass at the gate. | Xuất trình thẻ lên máy bay ở cửa ra.
 depart | /dɪˈpɑːrt/ | v | khởi hành | The train departs from platform three. | Tàu khởi hành từ sân ga số ba.
 delay | /dɪˈleɪ/ | n | sự chậm trễ | The delay was caused by heavy rain. | Sự chậm trễ là do mưa lớn.
 reserve | /rɪˈzɜːrv/ | v | đặt chỗ trước | I reserved a table for four people. | Tôi đã đặt bàn cho bốn người.
@@ -122,15 +122,15 @@ already | /ɔːlˈredi/ | adv | rồi/ đã | The package has already arrived. |
 instead | /ɪnˈsted/ | adv | thay vào đó | The store was closed, so we ordered online instead. | Cửa hàng đã đóng nên thay vào đó chúng tôi đặt trực tuyến.
 nearly | /ˈnɪrli/ | adv | gần như | The project is nearly finished. | Dự án gần như đã xong.
 # ── Bổ sung: cụm từ hay gặp ────────────────────────────────────────────────
-on time | /ɑːn taɪm/ | phr | đúng giờ | The shipment arrived on time. | Lô hàng đã tới đúng giờ.
-as soon as possible | /əz suːn əz ˈpɑːsəbl/ | phr | càng sớm càng tốt | Please reply as soon as possible. | Vui lòng trả lời càng sớm càng tốt.
-be able to | /bi ˈeɪbl tuː/ | phr | có thể | You will be able to collect your badge tomorrow. | Bạn sẽ có thể lấy thẻ ra vào vào ngày mai.
-look forward to | /lʊk ˈfɔːrwərd tuː/ | phr | mong chờ | I look forward to meeting you next week. | Tôi mong được gặp bạn vào tuần tới.
-take place | /teɪk pleɪs/ | phr | diễn ra | The training will take place in Room B. | Buổi đào tạo sẽ diễn ra ở Phòng B.
-make sure | /meɪk ʃʊr/ | phr | bảo đảm rằng | Make sure the door is locked. | Hãy bảo đảm rằng cửa đã khoá.
-in charge of | /ɪn tʃɑːrdʒ əv/ | phr | phụ trách | She is in charge of the whole floor. | Cô ấy phụ trách cả tầng này.
-according to | /əˈkɔːrdɪŋ tuː/ | phr | theo như | According to the schedule, we finish at five. | Theo như lịch trình, chúng ta xong lúc năm giờ.
-fill out | /fɪl aʊt/ | phr | điền vào (đơn) | Fill out this form and hand it to reception. | Hãy điền vào tờ đơn này rồi đưa cho lễ tân.
-pick up | /pɪk ʌp/ | phr | đón/ lấy | I will pick up the samples on my way back. | Tôi sẽ lấy các mẫu hàng trên đường về.
-turn off | /tɜːrn ɔːf/ | phr | tắt | Please turn off the lights when you leave. | Vui lòng tắt đèn khi bạn về.
-put off | /pʊt ɔːf/ | phr | hoãn lại | They put off the meeting until next week. | Họ đã hoãn cuộc họp tới tuần sau.
+on time | /ɑːn taɪm/ | pp | đúng giờ | The shipment arrived on time. | Lô hàng đã tới đúng giờ.
+as soon as possible | /əz suːn əz ˈpɑːsəbl/ | coll | càng sớm càng tốt | Please reply as soon as possible. | Vui lòng trả lời càng sớm càng tốt.
+be able to | /bi ˈeɪbl tuː/ | coll | có thể | You will be able to collect your badge tomorrow. | Bạn sẽ có thể lấy thẻ ra vào vào ngày mai.
+look forward to | /lʊk ˈfɔːrwərd tuː/ | pv | mong chờ | I look forward to meeting you next week. | Tôi mong được gặp bạn vào tuần tới.
+take place | /teɪk pleɪs/ | coll | diễn ra | The training will take place in Room B. | Buổi đào tạo sẽ diễn ra ở Phòng B.
+make sure | /meɪk ʃʊr/ | coll | bảo đảm rằng | Make sure the door is locked. | Hãy bảo đảm rằng cửa đã khoá.
+in charge of | /ɪn tʃɑːrdʒ əv/ | pp | phụ trách | She is in charge of the whole floor. | Cô ấy phụ trách cả tầng này.
+according to | /əˈkɔːrdɪŋ tuː/ | pp | theo như | According to the schedule, we finish at five. | Theo như lịch trình, chúng ta xong lúc năm giờ.
+fill out | /fɪl aʊt/ | pv | điền vào (đơn) | Fill out this form and hand it to reception. | Hãy điền vào tờ đơn này rồi đưa cho lễ tân.
+pick up | /pɪk ʌp/ | pv | đón/ lấy | I will pick up the samples on my way back. | Tôi sẽ lấy các mẫu hàng trên đường về.
+turn off | /tɜːrn ɔːf/ | pv | tắt | Please turn off the lights when you leave. | Vui lòng tắt đèn khi bạn về.
+put off | /pʊt ɔːf/ | pv | hoãn lại | They put off the meeting until next week. | Họ đã hoãn cuộc họp tới tuần sau.

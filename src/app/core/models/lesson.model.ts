@@ -18,33 +18,81 @@ export function localized(text: LocalizedText, language: Language): string {
 
 // ── Từ vựng ──────────────────────────────────────────────────────────────
 
+/**
+ * Từ loại.
+ *
+ * Năm giá trị cuối là các loại NHIỀU TỪ. Trước đây chúng bị gộp chung vào một
+ * nhãn "phrase" duy nhất — 112 mục, tức một phần năm kho từ vựng, nằm chung một
+ * rọ. Nhãn đó không nói được gì ngoài "đây là nhiều từ", trong khi mỗi loại lại
+ * có ngữ pháp riêng mà người học buộc phải phân biệt:
+ *
+ *  - `phrasalVerb`  động từ + tiểu từ, nghĩa thành ngữ, nhiều cụm TÁCH ĐƯỢC
+ *                   (turn the light off / turn it off).
+ *  - `verbPrep`     động từ + giới từ, luôn dính liền, không tách được
+ *                   (look into the matter, KHÔNG phải look the matter into).
+ *  - `prepPhrase`   cụm giới từ, đóng vai trạng ngữ (in advance, on behalf of).
+ *  - `compoundNoun` danh từ ghép (customer service, board of directors).
+ *  - `collocation`  kết hợp từ cố định, không rơi vào bốn loại trên
+ *                   (make sure, bear in mind, all things considered).
+ */
 export type PartOfSpeech =
   | 'noun'
   | 'verb'
   | 'adjective'
   | 'adverb'
-  | 'phrase'
   | 'preposition'
-  | 'conjunction';
+  | 'conjunction'
+  | 'phrasalVerb'
+  | 'verbPrep'
+  | 'prepPhrase'
+  | 'compoundNoun'
+  | 'collocation';
 
+/** Thứ tự này quyết định thứ tự các nút lọc trên giao diện. */
 export const PARTS_OF_SPEECH: readonly PartOfSpeech[] = [
   'noun',
   'verb',
   'adjective',
   'adverb',
-  'phrase',
   'preposition',
   'conjunction',
+  'phrasalVerb',
+  'verbPrep',
+  'prepPhrase',
+  'compoundNoun',
+  'collocation',
 ];
+
+/**
+ * Các loại NHIỀU TỪ — nhóm mà khu luyện tập riêng nhắm tới.
+ *
+ * Suy ra từ `PARTS_OF_SPEECH` chứ không khai lại thành một danh sách thứ hai:
+ * hai danh sách song song thì sớm muộn cũng lệch nhau.
+ */
+export const MULTIWORD_KINDS: readonly PartOfSpeech[] = [
+  'phrasalVerb',
+  'verbPrep',
+  'prepPhrase',
+  'compoundNoun',
+  'collocation',
+];
+
+export function isMultiword(pos: PartOfSpeech): boolean {
+  return MULTIWORD_KINDS.includes(pos);
+}
 
 export const POS_LABEL_KEY: Record<PartOfSpeech, MessageKey> = {
   noun: 'pos.noun',
   verb: 'pos.verb',
   adjective: 'pos.adjective',
   adverb: 'pos.adverb',
-  phrase: 'pos.phrase',
   preposition: 'pos.preposition',
   conjunction: 'pos.conjunction',
+  phrasalVerb: 'pos.phrasalVerb',
+  verbPrep: 'pos.verbPrep',
+  prepPhrase: 'pos.prepPhrase',
+  compoundNoun: 'pos.compoundNoun',
+  collocation: 'pos.collocation',
 };
 
 export const POS_SHORT_KEY: Record<PartOfSpeech, MessageKey> = {
@@ -52,9 +100,13 @@ export const POS_SHORT_KEY: Record<PartOfSpeech, MessageKey> = {
   verb: 'pos.verb.short',
   adjective: 'pos.adjective.short',
   adverb: 'pos.adverb.short',
-  phrase: 'pos.phrase.short',
   preposition: 'pos.preposition.short',
   conjunction: 'pos.conjunction.short',
+  phrasalVerb: 'pos.phrasalVerb.short',
+  verbPrep: 'pos.verbPrep.short',
+  prepPhrase: 'pos.prepPhrase.short',
+  compoundNoun: 'pos.compoundNoun.short',
+  collocation: 'pos.collocation.short',
 };
 
 /** Một từ vựng. Trùng cấu trúc với phần tử trong `public/lessons/<id>.json`. */

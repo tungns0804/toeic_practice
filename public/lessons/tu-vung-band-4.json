@@ -339,7 +339,7 @@
       "id": "w-wm8c2m",
       "word": "in the event of",
       "ipa": "/ɪn ði ɪˈvent əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "trong trường hợp",
       "example": "In the event of delay, notify the client at once.",
       "exampleVi": "Trong trường hợp chậm trễ, hãy báo khách hàng ngay."
@@ -348,7 +348,7 @@
       "id": "w-8e9ulp",
       "word": "with regard to",
       "ipa": "/wɪð rɪˈɡɑːrd tuː/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "về vấn đề/ liên quan tới",
       "example": "With regard to your query, the item is in stock.",
       "exampleVi": "Về câu hỏi của bạn, món hàng vẫn còn hàng."
@@ -357,7 +357,7 @@
       "id": "w-gn9d9j",
       "word": "in compliance with",
       "ipa": "/ɪn kəmˈplaɪəns wɪð/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "tuân thủ theo đúng",
       "example": "The plant operates in compliance with national law.",
       "exampleVi": "Nhà máy vận hành tuân thủ theo đúng luật quốc gia."
@@ -366,7 +366,7 @@
       "id": "w-1rwk62e",
       "word": "pursuant to",
       "ipa": "/pərˈsuːənt tuː/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "chiểu theo/ theo đúng",
       "example": "Pursuant to clause 8, either party may withdraw.",
       "exampleVi": "Chiểu theo điều 8, bên nào cũng có thể rút lui."
@@ -438,7 +438,7 @@
       "id": "w-lpbol4",
       "word": "offset a loss",
       "ipa": "/ˈɔːfset ə lɔːs/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "bù đắp khoản lỗ",
       "example": "New contracts helped offset a loss in Europe.",
       "exampleVi": "Các hợp đồng mới đã giúp bù đắp khoản lỗ ở châu Âu."
@@ -447,7 +447,7 @@
       "id": "w-18ycdrt",
       "word": "write off",
       "ipa": "/raɪt ɔːf/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "xoá sổ (nợ)",
       "example": "The bank agreed to write off the balance.",
       "exampleVi": "Ngân hàng đã đồng ý xoá sổ khoản dư nợ."
@@ -492,7 +492,7 @@
       "id": "w-13mn4mh",
       "word": "provision of law",
       "ipa": "/prəˈvɪʒn əv lɔː/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "điều khoản luật",
       "example": "This provision of law protects the buyer.",
       "exampleVi": "Điều khoản luật này bảo vệ bên mua."
@@ -564,7 +564,7 @@
       "id": "w-1h1k1w9",
       "word": "null and void",
       "ipa": "/nʌl ənd vɔɪd/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "vô hiệu",
       "example": "Without a signature the contract is null and void.",
       "exampleVi": "Thiếu chữ ký thì hợp đồng là vô hiệu."
@@ -573,7 +573,7 @@
       "id": "w-8fhzpx",
       "word": "board of directors",
       "ipa": "/bɔːrd əv dəˈrektərz/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "hội đồng quản trị",
       "example": "The board of directors meets every quarter.",
       "exampleVi": "Hội đồng quản trị họp mỗi quý."
@@ -690,7 +690,7 @@
       "id": "w-14bfbbu",
       "word": "margin of error",
       "ipa": "/ˈmɑːrdʒɪn əv ˈerər/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "biên độ sai số",
       "example": "The survey has a margin of error of three percent.",
       "exampleVi": "Khảo sát có biên độ sai số ba phần trăm."
@@ -717,7 +717,7 @@
       "id": "w-u0fdg2",
       "word": "allocate funds",
       "ipa": "/ˈæləkeɪt fʌndz/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "phân bổ kinh phí",
       "example": "The council will allocate funds to the project.",
       "exampleVi": "Hội đồng sẽ phân bổ kinh phí cho dự án."
@@ -735,7 +735,7 @@
       "id": "w-xwnmwx",
       "word": "ascertain the cause",
       "ipa": "/ˌæsərˈteɪn ðə kɔːz/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "xác định nguyên nhân",
       "example": "Engineers could not ascertain the cause of the fault.",
       "exampleVi": "Kỹ sư đã không xác định được nguyên nhân của sự cố."
@@ -771,7 +771,7 @@
       "id": "w-jbq21p",
       "word": "implement a policy",
       "ipa": "/ˈɪmplɪment ə ˈpɑːləsi/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "triển khai một chính sách",
       "example": "We will implement a policy on remote work.",
       "exampleVi": "Chúng tôi sẽ triển khai một chính sách về làm việc từ xa."
@@ -780,7 +780,7 @@
       "id": "w-13n19vy",
       "word": "mitigate risk",
       "ipa": "/ˈmɪtɪɡeɪt rɪsk/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "giảm thiểu rủi ro",
       "example": "Hedging helps mitigate risk from currency moves.",
       "exampleVi": "Phòng vệ giá giúp giảm thiểu rủi ro từ biến động tỷ giá."
@@ -789,7 +789,7 @@
       "id": "w-o8e61k",
       "word": "oversee operations",
       "ipa": "/ˌoʊvərˈsiː ˌɑːpəˈreɪʃnz/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "giám sát hoạt động",
       "example": "She was hired to oversee operations in Asia.",
       "exampleVi": "Cô ấy được tuyển để giám sát hoạt động ở châu Á."
@@ -798,7 +798,7 @@
       "id": "w-1ckldc9",
       "word": "streamline the process",
       "ipa": "/ˈstriːmlaɪn ðə ˈprɑːses/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "tinh gọn quy trình",
       "example": "The team will streamline the process this quarter.",
       "exampleVi": "Nhóm sẽ tinh gọn quy trình trong quý này."
@@ -897,7 +897,7 @@
       "id": "w-uzkg0v",
       "word": "subject to approval",
       "ipa": "/ˈsʌbdʒɪkt tuː əˈpruːvl/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "tuỳ thuộc vào việc phê duyệt",
       "example": "The plan is subject to approval by the board.",
       "exampleVi": "Kế hoạch tuỳ thuộc vào việc hội đồng phê duyệt."
@@ -906,7 +906,7 @@
       "id": "w-m6e6pc",
       "word": "on the grounds that",
       "ipa": "/ɑːn ðə ɡraʊndz ðæt/",
-      "pos": "phrase",
+      "pos": "conjunction",
       "meaning": "với lý do rằng",
       "example": "They refused on the grounds that the deadline had passed.",
       "exampleVi": "Họ từ chối với lý do rằng hạn chót đã qua."
@@ -915,7 +915,7 @@
       "id": "w-1mkhyr3",
       "word": "in the absence of",
       "ipa": "/ɪn ði ˈæbsəns əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "khi không có",
       "example": "In the absence of the director, I will sign.",
       "exampleVi": "Khi không có giám đốc, tôi sẽ ký."
@@ -924,7 +924,7 @@
       "id": "w-s1kpuy",
       "word": "for the purpose of",
       "ipa": "/fɔːr ðə ˈpɜːrpəs əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "nhằm mục đích",
       "example": "The data is kept for the purpose of auditing.",
       "exampleVi": "Dữ liệu được lưu nhằm mục đích kiểm toán."
@@ -933,7 +933,7 @@
       "id": "w-1hd7ttp",
       "word": "with immediate effect",
       "ipa": "/wɪð ɪˈmiːdiət ɪˈfekt/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "có hiệu lực ngay",
       "example": "The rule applies with immediate effect.",
       "exampleVi": "Quy định áp dụng có hiệu lực ngay."
@@ -942,7 +942,7 @@
       "id": "w-cz8bzk",
       "word": "subject matter",
       "ipa": "/ˈsʌbdʒɪkt ˈmætər/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "nội dung/ đối tượng",
       "example": "The subject matter of the clause is unclear.",
       "exampleVi": "Nội dung của điều khoản này chưa rõ."
@@ -951,7 +951,7 @@
       "id": "w-1629sw6",
       "word": "give rise to",
       "ipa": "/ɡɪv raɪz tuː/",
-      "pos": "phrase",
+      "pos": "verbPrep",
       "meaning": "làm phát sinh",
       "example": "The change may give rise to extra costs.",
       "exampleVi": "Thay đổi này có thể làm phát sinh chi phí thêm."
@@ -960,7 +960,7 @@
       "id": "w-ps8t70",
       "word": "phase out",
       "ipa": "/feɪz aʊt/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "loại bỏ dần",
       "example": "We will phase out the older models.",
       "exampleVi": "Chúng tôi sẽ loại bỏ dần các mẫu cũ."
@@ -969,7 +969,7 @@
       "id": "w-10rnisj",
       "word": "account for the difference",
       "ipa": "/əˈkaʊnt fɔːr ðə ˈdɪfrəns/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "giải thích cho khoản chênh lệch",
       "example": "Currency moves account for the difference.",
       "exampleVi": "Biến động tỷ giá giải thích cho khoản chênh lệch."

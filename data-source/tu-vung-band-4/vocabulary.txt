@@ -37,10 +37,10 @@ stringent | /ˈstrɪndʒənt/ | adj | nghiêm ngặt | The industry follows stri
 lucrative | /ˈluːkrətɪv/ | adj | sinh lời cao/ béo bở | They won a lucrative government contract. | Họ đã giành được một hợp đồng chính phủ sinh lời cao.
 redundant | /rɪˈdʌndənt/ | adj | dư thừa/ bị cắt giảm biên chế | Two roles became redundant after the merger. | Hai vị trí trở nên dư thừa sau khi sáp nhập.
 contingent | /kənˈtɪndʒənt/ | adj | phụ thuộc vào/ tuỳ theo | The bonus is contingent on annual results. | Khoản thưởng phụ thuộc vào kết quả cả năm.
-in the event of | /ɪn ði ɪˈvent əv/ | phr | trong trường hợp | In the event of delay, notify the client at once. | Trong trường hợp chậm trễ, hãy báo khách hàng ngay.
-with regard to | /wɪð rɪˈɡɑːrd tuː/ | phr | về vấn đề/ liên quan tới | With regard to your query, the item is in stock. | Về câu hỏi của bạn, món hàng vẫn còn hàng.
-in compliance with | /ɪn kəmˈplaɪəns wɪð/ | phr | tuân thủ theo đúng | The plant operates in compliance with national law. | Nhà máy vận hành tuân thủ theo đúng luật quốc gia.
-pursuant to | /pərˈsuːənt tuː/ | phr | chiểu theo/ theo đúng | Pursuant to clause 8, either party may withdraw. | Chiểu theo điều 8, bên nào cũng có thể rút lui.
+in the event of | /ɪn ði ɪˈvent əv/ | pp | trong trường hợp | In the event of delay, notify the client at once. | Trong trường hợp chậm trễ, hãy báo khách hàng ngay.
+with regard to | /wɪð rɪˈɡɑːrd tuː/ | pp | về vấn đề/ liên quan tới | With regard to your query, the item is in stock. | Về câu hỏi của bạn, món hàng vẫn còn hàng.
+in compliance with | /ɪn kəmˈplaɪəns wɪð/ | pp | tuân thủ theo đúng | The plant operates in compliance with national law. | Nhà máy vận hành tuân thủ theo đúng luật quốc gia.
+pursuant to | /pərˈsuːənt tuː/ | pp | chiểu theo/ theo đúng | Pursuant to clause 8, either party may withdraw. | Chiểu theo điều 8, bên nào cũng có thể rút lui.
 
 # ── Bổ sung: báo cáo tài chính ─────────────────────────────────────────────
 asset | /ˈæset/ | n | tài sản | The building is our largest asset. | Toà nhà là tài sản lớn nhất của chúng tôi.
@@ -50,14 +50,14 @@ expenditure | /ɪkˈspendɪtʃər/ | n | khoản chi | Capital expenditure was f
 overhead | /ˈoʊvərhed/ | n | chi phí chung | Moving offices cut our overhead sharply. | Chuyển văn phòng đã cắt mạnh chi phí chung.
 allowance | /əˈlaʊəns/ | n | khoản trợ cấp/ dự phòng | A travel allowance is paid every month. | Khoản trợ cấp đi lại được trả hằng tháng.
 accrue | /əˈkruː/ | v | dồn tích/ cộng dồn | Interest accrues from the invoice date. | Lãi được cộng dồn kể từ ngày ghi hoá đơn.
-offset a loss | /ˈɔːfset ə lɔːs/ | phr | bù đắp khoản lỗ | New contracts helped offset a loss in Europe. | Các hợp đồng mới đã giúp bù đắp khoản lỗ ở châu Âu.
-write off | /raɪt ɔːf/ | phr | xoá sổ (nợ) | The bank agreed to write off the balance. | Ngân hàng đã đồng ý xoá sổ khoản dư nợ.
+offset a loss | /ˈɔːfset ə lɔːs/ | coll | bù đắp khoản lỗ | New contracts helped offset a loss in Europe. | Các hợp đồng mới đã giúp bù đắp khoản lỗ ở châu Âu.
+write off | /raɪt ɔːf/ | pv | xoá sổ (nợ) | The bank agreed to write off the balance. | Ngân hàng đã đồng ý xoá sổ khoản dư nợ.
 projection | /prəˈdʒekʃn/ | n | dự phóng | The projection assumes stable fuel prices. | Bản dự phóng giả định giá nhiên liệu ổn định.
 valuation | /ˌvæljuˈeɪʃn/ | n | định giá | An independent valuation was commissioned. | Một cuộc định giá độc lập đã được đặt hàng.
 # ── Bổ sung: pháp lý và tuân thủ ───────────────────────────────────────────
 statute | /ˈstætʃuːt/ | n | đạo luật | The statute took effect in January. | Đạo luật có hiệu lực từ tháng Giêng.
 regulation | /ˌreɡjuˈleɪʃn/ | n | quy định | New safety regulations apply from May. | Các quy định an toàn mới áp dụng từ tháng Năm.
-provision of law | /prəˈvɪʒn əv lɔː/ | phr | điều khoản luật | This provision of law protects the buyer. | Điều khoản luật này bảo vệ bên mua.
+provision of law | /prəˈvɪʒn əv lɔː/ | cn | điều khoản luật | This provision of law protects the buyer. | Điều khoản luật này bảo vệ bên mua.
 litigation | /ˌlɪtɪˈɡeɪʃn/ | n | việc kiện tụng | Litigation would cost more than settling. | Kiện tụng sẽ tốn kém hơn là dàn xếp.
 plaintiff | /ˈpleɪntɪf/ | n | nguyên đơn | The plaintiff withdrew the claim. | Nguyên đơn đã rút đơn kiện.
 defendant | /dɪˈfendənt/ | n | bị đơn | The defendant denied all charges. | Bị đơn đã phủ nhận mọi cáo buộc.
@@ -65,9 +65,9 @@ testimony | /ˈtestɪmoʊni/ | n | lời khai | Her testimony changed the outcom
 allegation | /ˌæləˈɡeɪʃn/ | n | cáo buộc | The allegation was found to be baseless. | Cáo buộc đó được xác định là vô căn cứ.
 verdict | /ˈvɜːrdɪkt/ | n | phán quyết | The verdict favoured the smaller firm. | Phán quyết nghiêng về công ty nhỏ hơn.
 liable | /ˈlaɪəbl/ | adj | phải chịu trách nhiệm | The carrier is liable for damage in transit. | Đơn vị vận chuyển phải chịu trách nhiệm về hư hỏng trên đường.
-null and void | /nʌl ənd vɔɪd/ | phr | vô hiệu | Without a signature the contract is null and void. | Thiếu chữ ký thì hợp đồng là vô hiệu.
+null and void | /nʌl ənd vɔɪd/ | coll | vô hiệu | Without a signature the contract is null and void. | Thiếu chữ ký thì hợp đồng là vô hiệu.
 # ── Bổ sung: quản trị doanh nghiệp ─────────────────────────────────────────
-board of directors | /bɔːrd əv dəˈrektərz/ | phr | hội đồng quản trị | The board of directors meets every quarter. | Hội đồng quản trị họp mỗi quý.
+board of directors | /bɔːrd əv dəˈrektərz/ | cn | hội đồng quản trị | The board of directors meets every quarter. | Hội đồng quản trị họp mỗi quý.
 executive | /ɪɡˈzekjətɪv/ | n | lãnh đạo cấp cao | A senior executive will chair the session. | Một lãnh đạo cấp cao sẽ chủ trì phiên họp.
 mandate | /ˈmændeɪt/ | n | sự uỷ nhiệm/ nhiệm vụ | The committee has a clear mandate. | Uỷ ban có một nhiệm vụ rõ ràng.
 governance | /ˈɡʌvərnəns/ | n | quản trị (điều hành) | Good governance reassured investors. | Quản trị tốt đã trấn an các nhà đầu tư.
@@ -81,20 +81,20 @@ benchmark | /ˈbentʃmɑːrk/ | n | chuẩn đối sánh | We use the industry b
 metric | /ˈmetrɪk/ | n | chỉ số đo lường | Every metric improved except returns. | Mọi chỉ số đều tốt lên trừ tỷ lệ hàng trả lại.
 variance | /ˈveriəns/ | n | mức chênh lệch | The variance between plan and actual was small. | Mức chênh lệch giữa kế hoạch và thực tế là nhỏ.
 correlation | /ˌkɔːrəˈleɪʃn/ | n | mối tương quan | There is a clear correlation between price and volume. | Có mối tương quan rõ giữa giá và sản lượng.
-margin of error | /ˈmɑːrdʒɪn əv ˈerər/ | phr | biên độ sai số | The survey has a margin of error of three percent. | Khảo sát có biên độ sai số ba phần trăm.
+margin of error | /ˈmɑːrdʒɪn əv ˈerər/ | cn | biên độ sai số | The survey has a margin of error of three percent. | Khảo sát có biên độ sai số ba phần trăm.
 aggregate | /ˈæɡrɪɡət/ | adj | tổng gộp | Aggregate demand fell in the second half. | Tổng cầu đã giảm trong nửa cuối năm.
 cumulative | /ˈkjuːmjələtɪv/ | adj | luỹ kế | Cumulative losses reached four million. | Lỗ luỹ kế đã lên tới bốn triệu.
 # ── Bổ sung: động từ trang trọng ───────────────────────────────────────────
-allocate funds | /ˈæləkeɪt fʌndz/ | phr | phân bổ kinh phí | The council will allocate funds to the project. | Hội đồng sẽ phân bổ kinh phí cho dự án.
+allocate funds | /ˈæləkeɪt fʌndz/ | coll | phân bổ kinh phí | The council will allocate funds to the project. | Hội đồng sẽ phân bổ kinh phí cho dự án.
 anticipate | /ænˈtɪsɪpeɪt/ | v | dự liệu trước | We anticipate stronger demand in autumn. | Chúng tôi dự liệu nhu cầu mạnh hơn vào mùa thu.
-ascertain the cause | /ˌæsərˈteɪn ðə kɔːz/ | phr | xác định nguyên nhân | Engineers could not ascertain the cause of the fault. | Kỹ sư đã không xác định được nguyên nhân của sự cố.
+ascertain the cause | /ˌæsərˈteɪn ðə kɔːz/ | coll | xác định nguyên nhân | Engineers could not ascertain the cause of the fault. | Kỹ sư đã không xác định được nguyên nhân của sự cố.
 comprise | /kəmˈpraɪz/ | v | bao gồm/ gồm có | The group comprises eleven subsidiaries. | Tập đoàn gồm mười một công ty con.
 constitute | /ˈkɑːnstɪtuːt/ | v | cấu thành | Late payment constitutes a breach of contract. | Chậm thanh toán cấu thành hành vi vi phạm hợp đồng.
 designate | /ˈdezɪɡneɪt/ | v | chỉ định | The area was designated a safety zone. | Khu vực này đã được chỉ định là vùng an toàn.
-implement a policy | /ˈɪmplɪment ə ˈpɑːləsi/ | phr | triển khai một chính sách | We will implement a policy on remote work. | Chúng tôi sẽ triển khai một chính sách về làm việc từ xa.
-mitigate risk | /ˈmɪtɪɡeɪt rɪsk/ | phr | giảm thiểu rủi ro | Hedging helps mitigate risk from currency moves. | Phòng vệ giá giúp giảm thiểu rủi ro từ biến động tỷ giá.
-oversee operations | /ˌoʊvərˈsiː ˌɑːpəˈreɪʃnz/ | phr | giám sát hoạt động | She was hired to oversee operations in Asia. | Cô ấy được tuyển để giám sát hoạt động ở châu Á.
-streamline the process | /ˈstriːmlaɪn ðə ˈprɑːses/ | phr | tinh gọn quy trình | The team will streamline the process this quarter. | Nhóm sẽ tinh gọn quy trình trong quý này.
+implement a policy | /ˈɪmplɪment ə ˈpɑːləsi/ | coll | triển khai một chính sách | We will implement a policy on remote work. | Chúng tôi sẽ triển khai một chính sách về làm việc từ xa.
+mitigate risk | /ˈmɪtɪɡeɪt rɪsk/ | coll | giảm thiểu rủi ro | Hedging helps mitigate risk from currency moves. | Phòng vệ giá giúp giảm thiểu rủi ro từ biến động tỷ giá.
+oversee operations | /ˌoʊvərˈsiː ˌɑːpəˈreɪʃnz/ | coll | giám sát hoạt động | She was hired to oversee operations in Asia. | Cô ấy được tuyển để giám sát hoạt động ở châu Á.
+streamline the process | /ˈstriːmlaɪn ðə ˈprɑːses/ | coll | tinh gọn quy trình | The team will streamline the process this quarter. | Nhóm sẽ tinh gọn quy trình trong quý này.
 undergo | /ˌʌndərˈɡoʊ/ | v | trải qua | All staff undergo annual safety training. | Mọi nhân viên đều trải qua đào tạo an toàn hằng năm.
 # ── Bổ sung: tính từ trang trọng ───────────────────────────────────────────
 adverse | /ædˈvɜːrs/ | adj | bất lợi | Adverse weather delayed the whole schedule. | Thời tiết bất lợi đã làm chậm cả lịch trình.
@@ -107,12 +107,12 @@ provisional | /prəˈvɪʒənl/ | adj | tạm thời/ tạm tính | These are pr
 sustainable | /səˈsteɪnəbl/ | adj | bền vững | Growth at this rate is not sustainable. | Tăng trưởng ở tốc độ này là không bền vững.
 volatile | /ˈvɑːlətl/ | adj | biến động mạnh | Raw material prices remain volatile. | Giá nguyên liệu thô vẫn biến động mạnh.
 # ── Bổ sung: cụm trang trọng ───────────────────────────────────────────────
-subject to approval | /ˈsʌbdʒɪkt tuː əˈpruːvl/ | phr | tuỳ thuộc vào việc phê duyệt | The plan is subject to approval by the board. | Kế hoạch tuỳ thuộc vào việc hội đồng phê duyệt.
-on the grounds that | /ɑːn ðə ɡraʊndz ðæt/ | phr | với lý do rằng | They refused on the grounds that the deadline had passed. | Họ từ chối với lý do rằng hạn chót đã qua.
-in the absence of | /ɪn ði ˈæbsəns əv/ | phr | khi không có | In the absence of the director, I will sign. | Khi không có giám đốc, tôi sẽ ký.
-for the purpose of | /fɔːr ðə ˈpɜːrpəs əv/ | phr | nhằm mục đích | The data is kept for the purpose of auditing. | Dữ liệu được lưu nhằm mục đích kiểm toán.
-with immediate effect | /wɪð ɪˈmiːdiət ɪˈfekt/ | phr | có hiệu lực ngay | The rule applies with immediate effect. | Quy định áp dụng có hiệu lực ngay.
-subject matter | /ˈsʌbdʒɪkt ˈmætər/ | phr | nội dung/ đối tượng | The subject matter of the clause is unclear. | Nội dung của điều khoản này chưa rõ.
-give rise to | /ɡɪv raɪz tuː/ | phr | làm phát sinh | The change may give rise to extra costs. | Thay đổi này có thể làm phát sinh chi phí thêm.
-phase out | /feɪz aʊt/ | phr | loại bỏ dần | We will phase out the older models. | Chúng tôi sẽ loại bỏ dần các mẫu cũ.
-account for the difference | /əˈkaʊnt fɔːr ðə ˈdɪfrəns/ | phr | giải thích cho khoản chênh lệch | Currency moves account for the difference. | Biến động tỷ giá giải thích cho khoản chênh lệch.
+subject to approval | /ˈsʌbdʒɪkt tuː əˈpruːvl/ | pp | tuỳ thuộc vào việc phê duyệt | The plan is subject to approval by the board. | Kế hoạch tuỳ thuộc vào việc hội đồng phê duyệt.
+on the grounds that | /ɑːn ðə ɡraʊndz ðæt/ | conj | với lý do rằng | They refused on the grounds that the deadline had passed. | Họ từ chối với lý do rằng hạn chót đã qua.
+in the absence of | /ɪn ði ˈæbsəns əv/ | pp | khi không có | In the absence of the director, I will sign. | Khi không có giám đốc, tôi sẽ ký.
+for the purpose of | /fɔːr ðə ˈpɜːrpəs əv/ | pp | nhằm mục đích | The data is kept for the purpose of auditing. | Dữ liệu được lưu nhằm mục đích kiểm toán.
+with immediate effect | /wɪð ɪˈmiːdiət ɪˈfekt/ | pp | có hiệu lực ngay | The rule applies with immediate effect. | Quy định áp dụng có hiệu lực ngay.
+subject matter | /ˈsʌbdʒɪkt ˈmætər/ | cn | nội dung/ đối tượng | The subject matter of the clause is unclear. | Nội dung của điều khoản này chưa rõ.
+give rise to | /ɡɪv raɪz tuː/ | vp | làm phát sinh | The change may give rise to extra costs. | Thay đổi này có thể làm phát sinh chi phí thêm.
+phase out | /feɪz aʊt/ | pv | loại bỏ dần | We will phase out the older models. | Chúng tôi sẽ loại bỏ dần các mẫu cũ.
+account for the difference | /əˈkaʊnt fɔːr ðə ˈdɪfrəns/ | coll | giải thích cho khoản chênh lệch | Currency moves account for the difference. | Biến động tỷ giá giải thích cho khoản chênh lệch.

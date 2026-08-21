@@ -348,7 +348,7 @@
       "id": "w-1eisxum",
       "word": "customer service",
       "ipa": "/ˈkʌstəmər ˈsɜːrvɪs/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "bộ phận chăm sóc khách hàng",
       "example": "Call customer service if the item is faulty.",
       "exampleVi": "Hãy gọi bộ phận chăm sóc khách hàng nếu món hàng bị lỗi."
@@ -645,7 +645,7 @@
       "id": "w-a19jyy",
       "word": "boarding pass",
       "ipa": "/ˈbɔːrdɪŋ pæs/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "thẻ lên máy bay",
       "example": "Show your boarding pass at the gate.",
       "exampleVi": "Xuất trình thẻ lên máy bay ở cửa ra."
@@ -969,7 +969,7 @@
       "id": "w-1elanop",
       "word": "on time",
       "ipa": "/ɑːn taɪm/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "đúng giờ",
       "example": "The shipment arrived on time.",
       "exampleVi": "Lô hàng đã tới đúng giờ."
@@ -978,7 +978,7 @@
       "id": "w-1f9vx0b",
       "word": "as soon as possible",
       "ipa": "/əz suːn əz ˈpɑːsəbl/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "càng sớm càng tốt",
       "example": "Please reply as soon as possible.",
       "exampleVi": "Vui lòng trả lời càng sớm càng tốt."
@@ -987,7 +987,7 @@
       "id": "w-xntwkx",
       "word": "be able to",
       "ipa": "/bi ˈeɪbl tuː/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "có thể",
       "example": "You will be able to collect your badge tomorrow.",
       "exampleVi": "Bạn sẽ có thể lấy thẻ ra vào vào ngày mai."
@@ -996,7 +996,7 @@
       "id": "w-1x84g0s",
       "word": "look forward to",
       "ipa": "/lʊk ˈfɔːrwərd tuː/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "mong chờ",
       "example": "I look forward to meeting you next week.",
       "exampleVi": "Tôi mong được gặp bạn vào tuần tới."
@@ -1005,7 +1005,7 @@
       "id": "w-13dn65p",
       "word": "take place",
       "ipa": "/teɪk pleɪs/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "diễn ra",
       "example": "The training will take place in Room B.",
       "exampleVi": "Buổi đào tạo sẽ diễn ra ở Phòng B."
@@ -1014,7 +1014,7 @@
       "id": "w-f9wplk",
       "word": "make sure",
       "ipa": "/meɪk ʃʊr/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "bảo đảm rằng",
       "example": "Make sure the door is locked.",
       "exampleVi": "Hãy bảo đảm rằng cửa đã khoá."
@@ -1023,7 +1023,7 @@
       "id": "w-1pf752n",
       "word": "in charge of",
       "ipa": "/ɪn tʃɑːrdʒ əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "phụ trách",
       "example": "She is in charge of the whole floor.",
       "exampleVi": "Cô ấy phụ trách cả tầng này."
@@ -1032,7 +1032,7 @@
       "id": "w-1u1x21w",
       "word": "according to",
       "ipa": "/əˈkɔːrdɪŋ tuː/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "theo như",
       "example": "According to the schedule, we finish at five.",
       "exampleVi": "Theo như lịch trình, chúng ta xong lúc năm giờ."
@@ -1041,7 +1041,7 @@
       "id": "w-174vo2k",
       "word": "fill out",
       "ipa": "/fɪl aʊt/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "điền vào (đơn)",
       "example": "Fill out this form and hand it to reception.",
       "exampleVi": "Hãy điền vào tờ đơn này rồi đưa cho lễ tân."
@@ -1050,7 +1050,7 @@
       "id": "w-1fk1u6t",
       "word": "pick up",
       "ipa": "/pɪk ʌp/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "đón/ lấy",
       "example": "I will pick up the samples on my way back.",
       "exampleVi": "Tôi sẽ lấy các mẫu hàng trên đường về."
@@ -1059,7 +1059,7 @@
       "id": "w-sltxgr",
       "word": "turn off",
       "ipa": "/tɜːrn ɔːf/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "tắt",
       "example": "Please turn off the lights when you leave.",
       "exampleVi": "Vui lòng tắt đèn khi bạn về."
@@ -1068,7 +1068,7 @@
       "id": "w-bvaimf",
       "word": "put off",
       "ipa": "/pʊt ɔːf/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "hoãn lại",
       "example": "They put off the meeting until next week.",
       "exampleVi": "Họ đã hoãn cuộc họp tới tuần sau."

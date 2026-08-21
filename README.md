@@ -47,6 +47,8 @@ chuyện quên sinh lại dữ liệu sau khi sửa `data-source/`.
 
 - Anh → Việt, Việt → Anh: trắc nghiệm hoặc gõ đáp án.
 - Điền từ: hiện câu ví dụ đã khoét mất chính từ đang học.
+- **Lọc theo từ loại**: luyện riêng danh từ, động từ… hoặc riêng từng nhóm trong
+  năm nhóm cụm nhiều từ. Nút "Chỉ cụm nhiều từ" gộp cả năm nhóm trong một lần bấm.
 
 **Các thì** (`/tenses/:group`)
 
@@ -129,6 +131,12 @@ Vài quyết định đáng nhớ:
 - **Khung thiết lập mặc định thu gọn.** Phần lớn người học bấm thẳng "Bắt đầu
   luyện" với thiết lập mặc định, nên thứ hiện ra trước phải là nút đó cùng một
   dòng tóm tắt — không phải sáu nhóm tuỳ chọn chiếm trọn màn hình đầu tiên.
+- **Chuyển động phải trả lời một câu hỏi.** Mỗi hiệu ứng trong `styles.css` gắn
+  với đúng một câu hỏi của người dùng: "trang vừa đổi phải không", "có gì mới
+  xuất hiện", "tôi đúng hay sai". Mọi thời lượng dưới 320ms, vì đây là app làm
+  liên tiếp năm sáu chục câu một lượt — quá ngưỡng đó thì chuyển động thôi không
+  còn là phản hồi mà thành thứ phải ngồi chờ. Cả khối bị tắt bởi
+  `prefers-reduced-motion: reduce`.
 
 ---
 
@@ -171,8 +179,25 @@ dịch, nhưng `npm run verify` sẽ báo lỗi cho tới khi bổ sung đủ ha
 TỪ | PHIÊN ÂM | TỪ LOẠI | NGHĨA TIẾNG VIỆT | CÂU VÍ DỤ | NGHĨA CÂU VÍ DỤ
 ```
 
-Từ loại viết tắt: `n`, `v`, `adj`, `adv`, `phr`, `prep`, `conj`. Dòng trống và
-dòng bắt đầu bằng `#` bị bỏ qua.
+Từ loại viết tắt — dòng trống và dòng bắt đầu bằng `#` bị bỏ qua:
+
+| Mã | Từ loại | | Mã | Từ loại |
+| --- | --- | --- | --- | --- |
+| `n` | danh từ | | `pv` | cụm động từ (*phrasal verb*) |
+| `v` | động từ | | `vp` | động từ + giới từ |
+| `adj` | tính từ | | `pp` | cụm giới từ |
+| `adv` | trạng từ | | `cn` | danh từ ghép |
+| `prep` | giới từ | | `coll` | kết hợp từ |
+| `conj` | liên từ | | | |
+
+Năm mã bên phải là các loại NHIỀU TỪ. Trước đây chúng dùng chung một mã `phr`
+duy nhất — 112 mục, một phần năm kho từ vựng, nằm chung một rọ mà nhãn thì không
+nói được gì ngoài "đây là nhiều từ". Mã `phr` nay **không còn được chấp nhận**:
+để nó sống tiếp thì mọi mục thêm mới lại trôi về cái rọ chung đó.
+
+Phân biệt `pv` với `vp` bằng phép thử tách: cụm động từ nhiều cụm **tách được**
+(*turn the light off*, *turn it off*), còn động từ + giới từ thì **luôn dính liền**
+(*look into the matter*, không phải *look the matter into*).
 
 Một từ chỉ được thuộc về **một** band. `npm run verify` kiểm cả trong từng file
 lẫn giữa các file: band là một thang bậc, một từ nằm ở hai bậc thì người học gặp

@@ -732,6 +732,25 @@ a:hover {
   font-weight: 600;
 }
 
+/* Chip gộp nhóm ("Chỉ cụm nhiều từ"): đậm hơn các chip thường một bậc vì nó bật
+   tắt cả năm chip bên dưới cùng lúc. */
+.chip-strong {
+  font-weight: 650;
+  border-style: dashed;
+}
+
+/* Năm nhóm cụm nhiều từ dùng chung một vạch màu bên trái, để mắt tách được chúng
+   khỏi các từ loại đơn (danh từ, động từ…) nằm cùng hàng. */
+.chip.is-multiword {
+  border-left: 3px solid color-mix(in srgb, var(--accent) 55%, var(--border));
+}
+
+/* Hàng nhãn có thêm nút phụ ở bên phải. */
+.label-row {
+  gap: var(--sp-2);
+  margin-bottom: 2px;
+}
+
 .chip.is-active {
   border-color: var(--accent);
   background: var(--accent-soft);
@@ -1043,6 +1062,174 @@ a:hover {
 .table tbody tr:last-child td {
   border-bottom: none;
 }
+
+/* --- Chuyển động ----------------------------------------------------------
+   Nguyên tắc: mỗi hiệu ứng phải TRẢ LỜI một câu hỏi của người dùng, chứ không
+   để cho đẹp. Cụ thể là ba câu:
+
+     "Trang vừa đổi phải không?"   -> .page trượt lên khi vào
+     "Có gì mới xuất hiện?"        -> thẻ trong danh sách hiện lần lượt
+     "Tôi trả lời đúng hay sai?"   -> khối phản hồi bật lên
+
+   Mọi thời lượng đều dưới 320ms. Quá ngưỡng đó thì chuyển động thôi không còn
+   là phản hồi nữa mà thành thứ phải NGỒI CHỜ — và app này là app luyện tập, có
+   người làm liên tiếp năm sáu chục câu một lượt.
+
+   Toàn bộ khối này bị vô hiệu hoá bởi @media (prefers-reduced-motion: reduce)
+   ở cuối file, nên người tắt hiệu ứng chuyển động không nhận gì cả. */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Vào trang mới. Đặt trên .page nên tự chạy lại mỗi lần điều hướng, vì router
+   dựng lại component chứ không tái dùng. */
+.page {
+  animation: rise-in 0.26s var(--ease) both;
+}
+
+/* Thẻ trong danh sách hiện lần lượt chứ không bụp ra cùng lúc: mắt bắt được
+   rằng đây là một DÃY mục, và độ trễ tăng dần cho biết thứ tự đọc.
+
+   Chỉ trễ tới thẻ thứ tám. Sau đó dừng hẳn, nếu không thẻ thứ ba mươi sẽ phải
+   đợi gần một giây — với bảng dài thì đó là chờ đợi thuần tuý. */
+.home-card,
+.tense-card,
+.band-card,
+.exercise-card {
+  animation: pop-in 0.28s var(--ease) both;
+}
+
+.home-card:nth-child(2),
+.tense-card:nth-child(2),
+.band-card:nth-child(2),
+.exercise-card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.home-card:nth-child(3),
+.tense-card:nth-child(3),
+.band-card:nth-child(3),
+.exercise-card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.band-card:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.band-card:nth-child(n + 5) {
+  animation-delay: 0.2s;
+}
+
+/* Thẻ nhấc lên khi rê chuột — đã có sẵn transform, chỉ thêm bóng cho có chiều sâu. */
+.home-card,
+.tense-card,
+.exercise-card,
+.band-card {
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+/* --- Chuyển động trong lúc luyện tập ---
+   Đây là chỗ chuyển động có giá trị nhất: người học vừa bấm xong và cần biết
+   NGAY chuyện gì vừa xảy ra. */
+
+/* Khối phản hồi đúng/sai bật lên từ dưới. */
+.feedback {
+  animation: pop-in 0.24s var(--ease) both;
+}
+
+/* Câu hỏi mới hiện ra. Khoá theo `key` của câu trong template nên mỗi câu là
+   một phần tử mới, và hiệu ứng chạy lại đúng một lần cho mỗi câu. */
+.question-card {
+  animation: rise-in 0.24s var(--ease) both;
+}
+
+/* Bốn lựa chọn trắc nghiệm vào lần lượt, cùng nhịp với thẻ danh sách. */
+.choice {
+  animation: fade-in 0.22s var(--ease) both;
+}
+
+.choice:nth-child(2) {
+  animation-delay: 0.04s;
+}
+.choice:nth-child(3) {
+  animation-delay: 0.08s;
+}
+.choice:nth-child(4) {
+  animation-delay: 0.12s;
+}
+
+/* Vòng tròn điểm ở màn kết quả nảy nhẹ một nhịp: đây là khoảnh khắc duy nhất
+   trong cả phiên đáng được nhấn mạnh. */
+@keyframes score-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+  70% {
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.score-main {
+  animation: score-pop 0.42s var(--ease) both;
+}
+
+/* Từng dòng kết quả hiện dần khi cuộn tới — nhưng chỉ bốn dòng đầu, phần còn
+   lại hiện ngay. Danh sách này có thể dài tới sáu chục dòng. */
+.result-item {
+  animation: rise-in 0.24s var(--ease) both;
+}
+
+.result-item:nth-child(2) {
+  animation-delay: 0.04s;
+}
+.result-item:nth-child(3) {
+  animation-delay: 0.08s;
+}
+.result-item:nth-child(4) {
+  animation-delay: 0.12s;
+}
+
+/* Phần thân khung thiết lập khi mở ra. Không dùng transition trên height vì
+   chiều cao ở đây do nội dung quyết định, mà `height: auto` thì không nội suy
+   được — trượt nhẹ theo trục dọc cho cùng hiệu quả mà không phải đo đạc gì. */
+/* Phần thân khung thiết lập.
+
+   Phải tự dựng lại bố cục cột + khoảng cách: nó là MỘT phần tử con của
+   `.card-body.stack`, nên nếu không khai gì thì cả khối bên trong dính vào nhau
+   và mất hết khoảng cách giữa các nhóm tuỳ chọn. */
+.setup-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  animation: rise-in 0.22s var(--ease) both;
+}
+
+/* Ô nhập đáp án nhận focus: vòng sáng nở ra thay vì bụp một cái. Đã có
+   transition sẵn ở .input, chỉ cần con trỏ tự nhảy vào là thấy. */
 
 /* --- Tiện ích ------------------------------------------------------------- */
 

@@ -34,20 +34,20 @@ threshold | /ˈθreʃhoʊld/ | n | ngưỡng/ mức giới hạn | Orders above 
 notwithstanding | /ˌnɑːtwɪθˈstændɪŋ/ | prep | mặc dù/ bất chấp | Notwithstanding the delay, the event was a success. | Mặc dù bị chậm trễ, sự kiện vẫn thành công.
 albeit | /ɔːlˈbiːɪt/ | conj | mặc dù/ dẫu rằng | Sales grew, albeit more slowly than expected. | Doanh số vẫn tăng, dẫu chậm hơn dự kiến.
 whereas | /werˈæz/ | conj | trong khi/ ngược lại | Exports rose, whereas domestic sales fell. | Xuất khẩu tăng, trong khi doanh số nội địa giảm.
-provided that | /prəˈvaɪdɪd ðæt/ | phr | miễn là/ với điều kiện là | You may leave early provided that your work is done. | Bạn có thể về sớm miễn là đã xong việc.
-in lieu of | /ɪn ˈluː əv/ | phr | thay cho/ thay vì | Staff took extra days off in lieu of payment. | Nhân viên nhận thêm ngày nghỉ thay cho tiền.
-at the expense of | /ət ði ɪkˈspens əv/ | phr | phải đánh đổi bằng | Speed came at the expense of accuracy. | Tốc độ có được phải đánh đổi bằng độ chính xác.
-by virtue of | /baɪ ˈvɜːrtʃuː əv/ | phr | nhờ vào/ do bởi | She holds the seat by virtue of her seniority. | Cô ấy giữ ghế đó nhờ vào thâm niên của mình.
-in conjunction with | /ɪn kənˈdʒʌŋkʃn wɪð/ | phr | kết hợp cùng với | The fair is held in conjunction with a trade summit. | Hội chợ được tổ chức kết hợp cùng một hội nghị thương mại.
-be attributed to | /bi əˈtrɪbjuːtɪd tuː/ | phr | được cho là do | The rise can be attributed to lower costs. | Mức tăng này có thể được cho là do chi phí giảm.
-take precedence over | /teɪk ˈpresɪdəns ˈoʊvər/ | phr | được ưu tiên hơn | Safety takes precedence over speed. | An toàn được ưu tiên hơn tốc độ.
+provided that | /prəˈvaɪdɪd ðæt/ | conj | miễn là/ với điều kiện là | You may leave early provided that your work is done. | Bạn có thể về sớm miễn là đã xong việc.
+in lieu of | /ɪn ˈluː əv/ | pp | thay cho/ thay vì | Staff took extra days off in lieu of payment. | Nhân viên nhận thêm ngày nghỉ thay cho tiền.
+at the expense of | /ət ði ɪkˈspens əv/ | pp | phải đánh đổi bằng | Speed came at the expense of accuracy. | Tốc độ có được phải đánh đổi bằng độ chính xác.
+by virtue of | /baɪ ˈvɜːrtʃuː əv/ | pp | nhờ vào/ do bởi | She holds the seat by virtue of her seniority. | Cô ấy giữ ghế đó nhờ vào thâm niên của mình.
+in conjunction with | /ɪn kənˈdʒʌŋkʃn wɪð/ | pp | kết hợp cùng với | The fair is held in conjunction with a trade summit. | Hội chợ được tổ chức kết hợp cùng một hội nghị thương mại.
+be attributed to | /bi əˈtrɪbjuːtɪd tuː/ | vp | được cho là do | The rise can be attributed to lower costs. | Mức tăng này có thể được cho là do chi phí giảm.
+take precedence over | /teɪk ˈpresɪdəns ˈoʊvər/ | vp | được ưu tiên hơn | Safety takes precedence over speed. | An toàn được ưu tiên hơn tốc độ.
 
 # ── Bổ sung: tính từ sắc thái ──────────────────────────────────────────────
 astute | /əˈstuːt/ | adj | sắc sảo/ khôn ngoan | It was an astute decision to sell early. | Bán sớm là một quyết định sắc sảo.
 tenuous | /ˈtenjuəs/ | adj | mong manh/ yếu ớt | The link between the two events is tenuous. | Mối liên hệ giữa hai sự kiện rất mong manh.
 negligible | /ˈneɡlɪdʒəbl/ | adj | không đáng kể | The difference in cost was negligible. | Chênh lệch chi phí là không đáng kể.
 formidable | /ˈfɔːrmɪdəbl/ | adj | đáng gờm | They face a formidable competitor in Asia. | Họ đối mặt với một đối thủ đáng gờm ở châu Á.
-redundant staff | /rɪˈdʌndənt stæf/ | phr | nhân sự bị cắt giảm | Redundant staff received six months of pay. | Nhân sự bị cắt giảm nhận sáu tháng lương.
+redundant staff | /rɪˈdʌndənt stæf/ | cn | nhân sự bị cắt giảm | Redundant staff received six months of pay. | Nhân sự bị cắt giảm nhận sáu tháng lương.
 pragmatic | /præɡˈmætɪk/ | adj | thực tế/ thực dụng | She took a pragmatic view of the delay. | Cô ấy nhìn nhận sự chậm trễ một cách thực tế.
 arbitrary | /ˈɑːrbɪtreri/ | adj | tuỳ tiện/ độc đoán | The cut-off date seems entirely arbitrary. | Ngày chốt có vẻ hoàn toàn tuỳ tiện.
 coherent | /koʊˈhɪrənt/ | adj | mạch lạc | The report presents a coherent argument. | Bản báo cáo đưa ra một lập luận mạch lạc.
@@ -60,7 +60,7 @@ unanimous | /juˈnænɪməs/ | adj | nhất trí hoàn toàn | The vote was unan
 rationale | /ˌræʃəˈnæl/ | n | lý lẽ căn bản | The rationale for the change was never explained. | Lý lẽ căn bản cho thay đổi này chưa bao giờ được giải thích.
 implication | /ˌɪmplɪˈkeɪʃn/ | n | hàm ý/ hệ quả | The implication is that costs will rise. | Hàm ý ở đây là chi phí sẽ tăng.
 constraint | /kənˈstreɪnt/ | n | ràng buộc/ hạn chế | Budget constraints delayed the second phase. | Ràng buộc ngân sách đã làm chậm giai đoạn hai.
-discrepancy in figures | /dɪsˈkrepənsi ɪn ˈfɪɡjərz/ | phr | chênh lệch số liệu | Auditors found a discrepancy in figures for March. | Kiểm toán viên phát hiện chênh lệch số liệu của tháng Ba.
+discrepancy in figures | /dɪsˈkrepənsi ɪn ˈfɪɡjərz/ | cn | chênh lệch số liệu | Auditors found a discrepancy in figures for March. | Kiểm toán viên phát hiện chênh lệch số liệu của tháng Ba.
 paradigm | /ˈpærədaɪm/ | n | hệ hình/ khuôn mẫu | Remote work changed the paradigm entirely. | Làm việc từ xa đã thay đổi hoàn toàn khuôn mẫu cũ.
 criterion | /kraɪˈtɪriən/ | n | tiêu chí | Price is only one criterion in the decision. | Giá chỉ là một tiêu chí trong quyết định.
 hierarchy | /ˈhaɪərɑːrki/ | n | thứ bậc | The company has a very flat hierarchy. | Công ty có thứ bậc rất phẳng.
@@ -77,38 +77,38 @@ curtail | /kɜːrˈteɪl/ | v | cắt giảm/ rút ngắn | They curtailed trave
 augment | /ɔːɡˈment/ | v | tăng cường/ bổ sung | Extra staff will augment the night shift. | Nhân sự thêm sẽ tăng cường cho ca đêm.
 delineate | /dɪˈlɪnieɪt/ | v | vạch rõ ranh giới | The contract delineates each party's duties. | Hợp đồng vạch rõ nghĩa vụ của từng bên.
 disseminate | /dɪˈsemɪneɪt/ | v | phổ biến rộng | The findings were disseminated to all branches. | Các phát hiện đã được phổ biến tới mọi chi nhánh.
-consolidate operations | /kənˈsɑːlɪdeɪt ˌɑːpəˈreɪʃnz/ | phr | hợp nhất hoạt động | The group will consolidate operations in one site. | Tập đoàn sẽ hợp nhất hoạt động về một địa điểm.
+consolidate operations | /kənˈsɑːlɪdeɪt ˌɑːpəˈreɪʃnz/ | coll | hợp nhất hoạt động | The group will consolidate operations in one site. | Tập đoàn sẽ hợp nhất hoạt động về một địa điểm.
 exacerbate | /ɪɡˈzæsərbeɪt/ | v | làm trầm trọng thêm | The strike exacerbated the shortage. | Cuộc đình công đã làm tình trạng thiếu hụt trầm trọng thêm.
-facilitate access | /fəˈsɪlɪteɪt ˈækses/ | phr | tạo điều kiện tiếp cận | The portal will facilitate access to records. | Cổng thông tin sẽ tạo điều kiện tiếp cận hồ sơ.
+facilitate access | /fəˈsɪlɪteɪt ˈækses/ | coll | tạo điều kiện tiếp cận | The portal will facilitate access to records. | Cổng thông tin sẽ tạo điều kiện tiếp cận hồ sơ.
 preclude | /prɪˈkluːd/ | v | loại trừ/ ngăn không cho | Nothing in this clause precludes a refund. | Không điều nào trong điều khoản này ngăn việc hoàn tiền.
 relinquish | /rɪˈlɪŋkwɪʃ/ | v | từ bỏ (quyền) | He relinquished his seat on the board. | Ông ấy đã từ bỏ ghế trong hội đồng.
 render | /ˈrendər/ | v | khiến trở nên/ cung cấp | The fault rendered the machine unusable. | Sự cố khiến chiếc máy không dùng được.
-stipulate terms | /ˈstɪpjuleɪt tɜːrmz/ | phr | quy định rõ điều khoản | The annex stipulates terms for early exit. | Phụ lục quy định rõ điều khoản rút lui sớm.
-undertake a review | /ˌʌndərˈteɪk ə rɪˈvjuː/ | phr | tiến hành rà soát | The firm will undertake a review of suppliers. | Công ty sẽ tiến hành rà soát nhà cung cấp.
+stipulate terms | /ˈstɪpjuleɪt tɜːrmz/ | coll | quy định rõ điều khoản | The annex stipulates terms for early exit. | Phụ lục quy định rõ điều khoản rút lui sớm.
+undertake a review | /ˌʌndərˈteɪk ə rɪˈvjuː/ | coll | tiến hành rà soát | The firm will undertake a review of suppliers. | Công ty sẽ tiến hành rà soát nhà cung cấp.
 # ── Bổ sung: cụm động từ nâng cao ──────────────────────────────────────────
-carry out an audit | /ˈkæri aʊt ən ˈɔːdɪt/ | phr | tiến hành kiểm toán | External accountants carry out an audit each year. | Kế toán bên ngoài tiến hành kiểm toán hằng năm.
-draw up | /drɔː ʌp/ | phr | soạn thảo | Lawyers will draw up the final version. | Luật sư sẽ soạn thảo bản cuối cùng.
-iron out | /ˈaɪərn aʊt/ | phr | giải quyết ổn thoả | We need to iron out the payment details. | Chúng ta cần giải quyết ổn thoả các chi tiết thanh toán.
-scale back | /skeɪl bæk/ | phr | thu hẹp quy mô | The firm decided to scale back its expansion. | Công ty quyết định thu hẹp quy mô mở rộng.
-step down | /step daʊn/ | phr | từ chức | The chairman will step down in December. | Chủ tịch sẽ từ chức vào tháng Mười Hai.
-weigh up | /weɪ ʌp/ | phr | cân nhắc | The board must weigh up both offers. | Hội đồng phải cân nhắc cả hai lời chào giá.
-fall through | /fɔːl θruː/ | phr | đổ bể | A deal this size can fall through at the last minute. | Một thương vụ cỡ này có thể đổ bể vào phút chót.
-come up with | /kʌm ʌp wɪð/ | phr | nghĩ ra | We need to come up with a cheaper solution. | Chúng ta cần nghĩ ra một giải pháp rẻ hơn.
-put forward | /pʊt ˈfɔːrwərd/ | phr | đưa ra (đề xuất) | They put forward a compromise. | Họ đã đưa ra một phương án dung hoà.
-rule out | /ruːl aʊt/ | phr | loại trừ khả năng | We cannot rule out further delays. | Chúng tôi không thể loại trừ khả năng chậm trễ thêm.
+carry out an audit | /ˈkæri aʊt ən ˈɔːdɪt/ | coll | tiến hành kiểm toán | External accountants carry out an audit each year. | Kế toán bên ngoài tiến hành kiểm toán hằng năm.
+draw up | /drɔː ʌp/ | pv | soạn thảo | Lawyers will draw up the final version. | Luật sư sẽ soạn thảo bản cuối cùng.
+iron out | /ˈaɪərn aʊt/ | pv | giải quyết ổn thoả | We need to iron out the payment details. | Chúng ta cần giải quyết ổn thoả các chi tiết thanh toán.
+scale back | /skeɪl bæk/ | pv | thu hẹp quy mô | The firm decided to scale back its expansion. | Công ty quyết định thu hẹp quy mô mở rộng.
+step down | /step daʊn/ | pv | từ chức | The chairman will step down in December. | Chủ tịch sẽ từ chức vào tháng Mười Hai.
+weigh up | /weɪ ʌp/ | pv | cân nhắc | The board must weigh up both offers. | Hội đồng phải cân nhắc cả hai lời chào giá.
+fall through | /fɔːl θruː/ | pv | đổ bể | A deal this size can fall through at the last minute. | Một thương vụ cỡ này có thể đổ bể vào phút chót.
+come up with | /kʌm ʌp wɪð/ | pv | nghĩ ra | We need to come up with a cheaper solution. | Chúng ta cần nghĩ ra một giải pháp rẻ hơn.
+put forward | /pʊt ˈfɔːrwərd/ | pv | đưa ra (đề xuất) | They put forward a compromise. | Họ đã đưa ra một phương án dung hoà.
+rule out | /ruːl aʊt/ | pv | loại trừ khả năng | We cannot rule out further delays. | Chúng tôi không thể loại trừ khả năng chậm trễ thêm.
 # ── Bổ sung: cụm cố định trang trọng ───────────────────────────────────────
-bear in mind | /ber ɪn maɪnd/ | phr | ghi nhớ rằng | Bear in mind that the office closes early. | Ghi nhớ rằng văn phòng đóng cửa sớm.
-in accordance with policy | /ɪn əˈkɔːrdns wɪð ˈpɑːləsi/ | phr | theo đúng chính sách | Refunds are issued in accordance with policy. | Việc hoàn tiền được thực hiện theo đúng chính sách.
-to the best of our knowledge | /tuː ðə best əv ˈaʊər ˈnɑːlɪdʒ/ | phr | theo hiểu biết tốt nhất của chúng tôi | To the best of our knowledge, the data is complete. | Theo hiểu biết tốt nhất của chúng tôi, dữ liệu là đầy đủ.
-without prejudice to | /wɪˈðaʊt ˈpredʒudɪs tuː/ | phr | không làm phương hại tới | This offer is made without prejudice to our rights. | Đề nghị này không làm phương hại tới quyền của chúng tôi.
-on a case-by-case basis | /ɑːn ə keɪs baɪ keɪs ˈbeɪsɪs/ | phr | xét theo từng trường hợp | Exceptions are granted on a case-by-case basis. | Ngoại lệ được cho phép xét theo từng trường hợp.
-in due course | /ɪn duː kɔːrs/ | phr | vào thời điểm thích hợp | You will be notified in due course. | Bạn sẽ được thông báo vào thời điểm thích hợp.
-subject to change | /ˈsʌbdʒɪkt tuː tʃeɪndʒ/ | phr | có thể thay đổi | All prices are subject to change without notice. | Mọi mức giá đều có thể thay đổi mà không báo trước.
-at short notice | /ət ʃɔːrt ˈnoʊtɪs/ | phr | báo gấp/ gấp gáp | The meeting was arranged at short notice. | Cuộc họp được sắp xếp một cách gấp gáp.
-in light of | /ɪn laɪt əv/ | phr | xét trong bối cảnh | In light of the results, we revised the plan. | Xét trong bối cảnh kết quả đó, chúng tôi đã sửa kế hoạch.
-by no means | /baɪ noʊ miːnz/ | phr | hoàn toàn không | The matter is by no means settled. | Vấn đề hoàn toàn chưa được giải quyết.
-all things considered | /ɔːl θɪŋz kənˈsɪdərd/ | phr | xét mọi mặt | All things considered, the quarter went well. | Xét mọi mặt, quý này diễn ra tốt đẹp.
-with a view to | /wɪð ə vjuː tuː/ | phr | với mục đích | They met with a view to signing a contract. | Họ gặp nhau với mục đích ký hợp đồng.
+bear in mind | /ber ɪn maɪnd/ | coll | ghi nhớ rằng | Bear in mind that the office closes early. | Ghi nhớ rằng văn phòng đóng cửa sớm.
+in accordance with policy | /ɪn əˈkɔːrdns wɪð ˈpɑːləsi/ | pp | theo đúng chính sách | Refunds are issued in accordance with policy. | Việc hoàn tiền được thực hiện theo đúng chính sách.
+to the best of our knowledge | /tuː ðə best əv ˈaʊər ˈnɑːlɪdʒ/ | pp | theo hiểu biết tốt nhất của chúng tôi | To the best of our knowledge, the data is complete. | Theo hiểu biết tốt nhất của chúng tôi, dữ liệu là đầy đủ.
+without prejudice to | /wɪˈðaʊt ˈpredʒudɪs tuː/ | pp | không làm phương hại tới | This offer is made without prejudice to our rights. | Đề nghị này không làm phương hại tới quyền của chúng tôi.
+on a case-by-case basis | /ɑːn ə keɪs baɪ keɪs ˈbeɪsɪs/ | pp | xét theo từng trường hợp | Exceptions are granted on a case-by-case basis. | Ngoại lệ được cho phép xét theo từng trường hợp.
+in due course | /ɪn duː kɔːrs/ | pp | vào thời điểm thích hợp | You will be notified in due course. | Bạn sẽ được thông báo vào thời điểm thích hợp.
+subject to change | /ˈsʌbdʒɪkt tuː tʃeɪndʒ/ | coll | có thể thay đổi | All prices are subject to change without notice. | Mọi mức giá đều có thể thay đổi mà không báo trước.
+at short notice | /ət ʃɔːrt ˈnoʊtɪs/ | pp | báo gấp/ gấp gáp | The meeting was arranged at short notice. | Cuộc họp được sắp xếp một cách gấp gáp.
+in light of | /ɪn laɪt əv/ | pp | xét trong bối cảnh | In light of the results, we revised the plan. | Xét trong bối cảnh kết quả đó, chúng tôi đã sửa kế hoạch.
+by no means | /baɪ noʊ miːnz/ | coll | hoàn toàn không | The matter is by no means settled. | Vấn đề hoàn toàn chưa được giải quyết.
+all things considered | /ɔːl θɪŋz kənˈsɪdərd/ | coll | xét mọi mặt | All things considered, the quarter went well. | Xét mọi mặt, quý này diễn ra tốt đẹp.
+with a view to | /wɪð ə vjuː tuː/ | pp | với mục đích | They met with a view to signing a contract. | Họ gặp nhau với mục đích ký hợp đồng.
 # ── Bổ sung: liên từ và trạng từ nối ───────────────────────────────────────
 consequently | /ˈkɑːnsəkwentli/ | adv | do đó | Demand fell; consequently, we cut production. | Nhu cầu giảm; do đó chúng tôi cắt sản lượng.
 furthermore | /ˈfɜːrðərmɔːr/ | adv | hơn nữa | Furthermore, the warranty covers parts and labour. | Hơn nữa, bảo hành bao gồm cả linh kiện lẫn công.
@@ -116,4 +116,4 @@ otherwise | /ˈʌðərwaɪz/ | adv | nếu không thì | Confirm today; otherwis
 meanwhile | /ˈmiːnwaɪl/ | adv | trong khi đó | Meanwhile, the second team continued testing. | Trong khi đó, nhóm thứ hai tiếp tục kiểm thử.
 hence | /hens/ | adv | vì thế | The part was faulty; hence the recall. | Linh kiện bị lỗi, vì thế mới có đợt thu hồi.
 thereby | /ˌðerˈbaɪ/ | adv | qua đó | We automated the check, thereby saving an hour. | Chúng tôi tự động hoá bước kiểm tra, qua đó tiết kiệm một tiếng.
-insofar as | /ˌɪnsoʊˈfɑːr əz/ | phr | trong chừng mực mà | The rule applies insofar as local law permits. | Quy định áp dụng trong chừng mực luật địa phương cho phép.
+insofar as | /ˌɪnsoʊˈfɑːr əz/ | conj | trong chừng mực mà | The rule applies insofar as local law permits. | Quy định áp dụng trong chừng mực luật địa phương cho phép.

@@ -312,7 +312,7 @@
       "id": "w-106d2bv",
       "word": "provided that",
       "ipa": "/prəˈvaɪdɪd ðæt/",
-      "pos": "phrase",
+      "pos": "conjunction",
       "meaning": "miễn là/ với điều kiện là",
       "example": "You may leave early provided that your work is done.",
       "exampleVi": "Bạn có thể về sớm miễn là đã xong việc."
@@ -321,7 +321,7 @@
       "id": "w-1wuan04",
       "word": "in lieu of",
       "ipa": "/ɪn ˈluː əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "thay cho/ thay vì",
       "example": "Staff took extra days off in lieu of payment.",
       "exampleVi": "Nhân viên nhận thêm ngày nghỉ thay cho tiền."
@@ -330,7 +330,7 @@
       "id": "w-1d9zu1o",
       "word": "at the expense of",
       "ipa": "/ət ði ɪkˈspens əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "phải đánh đổi bằng",
       "example": "Speed came at the expense of accuracy.",
       "exampleVi": "Tốc độ có được phải đánh đổi bằng độ chính xác."
@@ -339,7 +339,7 @@
       "id": "w-1ggfj9e",
       "word": "by virtue of",
       "ipa": "/baɪ ˈvɜːrtʃuː əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "nhờ vào/ do bởi",
       "example": "She holds the seat by virtue of her seniority.",
       "exampleVi": "Cô ấy giữ ghế đó nhờ vào thâm niên của mình."
@@ -348,7 +348,7 @@
       "id": "w-6mmh12",
       "word": "in conjunction with",
       "ipa": "/ɪn kənˈdʒʌŋkʃn wɪð/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "kết hợp cùng với",
       "example": "The fair is held in conjunction with a trade summit.",
       "exampleVi": "Hội chợ được tổ chức kết hợp cùng một hội nghị thương mại."
@@ -357,7 +357,7 @@
       "id": "w-11v2sbx",
       "word": "be attributed to",
       "ipa": "/bi əˈtrɪbjuːtɪd tuː/",
-      "pos": "phrase",
+      "pos": "verbPrep",
       "meaning": "được cho là do",
       "example": "The rise can be attributed to lower costs.",
       "exampleVi": "Mức tăng này có thể được cho là do chi phí giảm."
@@ -366,7 +366,7 @@
       "id": "w-1dvevio",
       "word": "take precedence over",
       "ipa": "/teɪk ˈpresɪdəns ˈoʊvər/",
-      "pos": "phrase",
+      "pos": "verbPrep",
       "meaning": "được ưu tiên hơn",
       "example": "Safety takes precedence over speed.",
       "exampleVi": "An toàn được ưu tiên hơn tốc độ."
@@ -411,7 +411,7 @@
       "id": "w-12p39xw",
       "word": "redundant staff",
       "ipa": "/rɪˈdʌndənt stæf/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "nhân sự bị cắt giảm",
       "example": "Redundant staff received six months of pay.",
       "exampleVi": "Nhân sự bị cắt giảm nhận sáu tháng lương."
@@ -519,7 +519,7 @@
       "id": "w-d8oe56",
       "word": "discrepancy in figures",
       "ipa": "/dɪsˈkrepənsi ɪn ˈfɪɡjərz/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "chênh lệch số liệu",
       "example": "Auditors found a discrepancy in figures for March.",
       "exampleVi": "Kiểm toán viên phát hiện chênh lệch số liệu của tháng Ba."
@@ -663,7 +663,7 @@
       "id": "w-b9b060",
       "word": "consolidate operations",
       "ipa": "/kənˈsɑːlɪdeɪt ˌɑːpəˈreɪʃnz/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "hợp nhất hoạt động",
       "example": "The group will consolidate operations in one site.",
       "exampleVi": "Tập đoàn sẽ hợp nhất hoạt động về một địa điểm."
@@ -681,7 +681,7 @@
       "id": "w-1o9m6yn",
       "word": "facilitate access",
       "ipa": "/fəˈsɪlɪteɪt ˈækses/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "tạo điều kiện tiếp cận",
       "example": "The portal will facilitate access to records.",
       "exampleVi": "Cổng thông tin sẽ tạo điều kiện tiếp cận hồ sơ."
@@ -717,7 +717,7 @@
       "id": "w-hip5o9",
       "word": "stipulate terms",
       "ipa": "/ˈstɪpjuleɪt tɜːrmz/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "quy định rõ điều khoản",
       "example": "The annex stipulates terms for early exit.",
       "exampleVi": "Phụ lục quy định rõ điều khoản rút lui sớm."
@@ -726,7 +726,7 @@
       "id": "w-ho2gvv",
       "word": "undertake a review",
       "ipa": "/ˌʌndərˈteɪk ə rɪˈvjuː/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "tiến hành rà soát",
       "example": "The firm will undertake a review of suppliers.",
       "exampleVi": "Công ty sẽ tiến hành rà soát nhà cung cấp."
@@ -735,7 +735,7 @@
       "id": "w-63656s",
       "word": "carry out an audit",
       "ipa": "/ˈkæri aʊt ən ˈɔːdɪt/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "tiến hành kiểm toán",
       "example": "External accountants carry out an audit each year.",
       "exampleVi": "Kế toán bên ngoài tiến hành kiểm toán hằng năm."
@@ -744,7 +744,7 @@
       "id": "w-17ymzpo",
       "word": "draw up",
       "ipa": "/drɔː ʌp/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "soạn thảo",
       "example": "Lawyers will draw up the final version.",
       "exampleVi": "Luật sư sẽ soạn thảo bản cuối cùng."
@@ -753,7 +753,7 @@
       "id": "w-h08ldn",
       "word": "iron out",
       "ipa": "/ˈaɪərn aʊt/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "giải quyết ổn thoả",
       "example": "We need to iron out the payment details.",
       "exampleVi": "Chúng ta cần giải quyết ổn thoả các chi tiết thanh toán."
@@ -762,7 +762,7 @@
       "id": "w-hgajgs",
       "word": "scale back",
       "ipa": "/skeɪl bæk/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "thu hẹp quy mô",
       "example": "The firm decided to scale back its expansion.",
       "exampleVi": "Công ty quyết định thu hẹp quy mô mở rộng."
@@ -771,7 +771,7 @@
       "id": "w-1796kgd",
       "word": "step down",
       "ipa": "/step daʊn/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "từ chức",
       "example": "The chairman will step down in December.",
       "exampleVi": "Chủ tịch sẽ từ chức vào tháng Mười Hai."
@@ -780,7 +780,7 @@
       "id": "w-1ja6kw",
       "word": "weigh up",
       "ipa": "/weɪ ʌp/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "cân nhắc",
       "example": "The board must weigh up both offers.",
       "exampleVi": "Hội đồng phải cân nhắc cả hai lời chào giá."
@@ -789,7 +789,7 @@
       "id": "w-l09zah",
       "word": "fall through",
       "ipa": "/fɔːl θruː/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "đổ bể",
       "example": "A deal this size can fall through at the last minute.",
       "exampleVi": "Một thương vụ cỡ này có thể đổ bể vào phút chót."
@@ -798,7 +798,7 @@
       "id": "w-7ilz0e",
       "word": "come up with",
       "ipa": "/kʌm ʌp wɪð/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "nghĩ ra",
       "example": "We need to come up with a cheaper solution.",
       "exampleVi": "Chúng ta cần nghĩ ra một giải pháp rẻ hơn."
@@ -807,7 +807,7 @@
       "id": "w-13pm1rb",
       "word": "put forward",
       "ipa": "/pʊt ˈfɔːrwərd/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "đưa ra (đề xuất)",
       "example": "They put forward a compromise.",
       "exampleVi": "Họ đã đưa ra một phương án dung hoà."
@@ -816,7 +816,7 @@
       "id": "w-1q00mf7",
       "word": "rule out",
       "ipa": "/ruːl aʊt/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "loại trừ khả năng",
       "example": "We cannot rule out further delays.",
       "exampleVi": "Chúng tôi không thể loại trừ khả năng chậm trễ thêm."
@@ -825,7 +825,7 @@
       "id": "w-1h7bsq2",
       "word": "bear in mind",
       "ipa": "/ber ɪn maɪnd/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "ghi nhớ rằng",
       "example": "Bear in mind that the office closes early.",
       "exampleVi": "Ghi nhớ rằng văn phòng đóng cửa sớm."
@@ -834,7 +834,7 @@
       "id": "w-1hi77mr",
       "word": "in accordance with policy",
       "ipa": "/ɪn əˈkɔːrdns wɪð ˈpɑːləsi/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "theo đúng chính sách",
       "example": "Refunds are issued in accordance with policy.",
       "exampleVi": "Việc hoàn tiền được thực hiện theo đúng chính sách."
@@ -843,7 +843,7 @@
       "id": "w-1j37gpa",
       "word": "to the best of our knowledge",
       "ipa": "/tuː ðə best əv ˈaʊər ˈnɑːlɪdʒ/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "theo hiểu biết tốt nhất của chúng tôi",
       "example": "To the best of our knowledge, the data is complete.",
       "exampleVi": "Theo hiểu biết tốt nhất của chúng tôi, dữ liệu là đầy đủ."
@@ -852,7 +852,7 @@
       "id": "w-19azklp",
       "word": "without prejudice to",
       "ipa": "/wɪˈðaʊt ˈpredʒudɪs tuː/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "không làm phương hại tới",
       "example": "This offer is made without prejudice to our rights.",
       "exampleVi": "Đề nghị này không làm phương hại tới quyền của chúng tôi."
@@ -861,7 +861,7 @@
       "id": "w-1r0vf5e",
       "word": "on a case-by-case basis",
       "ipa": "/ɑːn ə keɪs baɪ keɪs ˈbeɪsɪs/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "xét theo từng trường hợp",
       "example": "Exceptions are granted on a case-by-case basis.",
       "exampleVi": "Ngoại lệ được cho phép xét theo từng trường hợp."
@@ -870,7 +870,7 @@
       "id": "w-1i5pu19",
       "word": "in due course",
       "ipa": "/ɪn duː kɔːrs/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "vào thời điểm thích hợp",
       "example": "You will be notified in due course.",
       "exampleVi": "Bạn sẽ được thông báo vào thời điểm thích hợp."
@@ -879,7 +879,7 @@
       "id": "w-1d4y8r8",
       "word": "subject to change",
       "ipa": "/ˈsʌbdʒɪkt tuː tʃeɪndʒ/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "có thể thay đổi",
       "example": "All prices are subject to change without notice.",
       "exampleVi": "Mọi mức giá đều có thể thay đổi mà không báo trước."
@@ -888,7 +888,7 @@
       "id": "w-1915m26",
       "word": "at short notice",
       "ipa": "/ət ʃɔːrt ˈnoʊtɪs/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "báo gấp/ gấp gáp",
       "example": "The meeting was arranged at short notice.",
       "exampleVi": "Cuộc họp được sắp xếp một cách gấp gáp."
@@ -897,7 +897,7 @@
       "id": "w-14ogzt7",
       "word": "in light of",
       "ipa": "/ɪn laɪt əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "xét trong bối cảnh",
       "example": "In light of the results, we revised the plan.",
       "exampleVi": "Xét trong bối cảnh kết quả đó, chúng tôi đã sửa kế hoạch."
@@ -906,7 +906,7 @@
       "id": "w-1ipy929",
       "word": "by no means",
       "ipa": "/baɪ noʊ miːnz/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "hoàn toàn không",
       "example": "The matter is by no means settled.",
       "exampleVi": "Vấn đề hoàn toàn chưa được giải quyết."
@@ -915,7 +915,7 @@
       "id": "w-wyr9oh",
       "word": "all things considered",
       "ipa": "/ɔːl θɪŋz kənˈsɪdərd/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "xét mọi mặt",
       "example": "All things considered, the quarter went well.",
       "exampleVi": "Xét mọi mặt, quý này diễn ra tốt đẹp."
@@ -924,7 +924,7 @@
       "id": "w-b7rh3s",
       "word": "with a view to",
       "ipa": "/wɪð ə vjuː tuː/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "với mục đích",
       "example": "They met with a view to signing a contract.",
       "exampleVi": "Họ gặp nhau với mục đích ký hợp đồng."
@@ -987,7 +987,7 @@
       "id": "w-1acgc1z",
       "word": "insofar as",
       "ipa": "/ˌɪnsoʊˈfɑːr əz/",
-      "pos": "phrase",
+      "pos": "conjunction",
       "meaning": "trong chừng mực mà",
       "example": "The rule applies insofar as local law permits.",
       "exampleVi": "Quy định áp dụng trong chừng mực luật địa phương cho phép."

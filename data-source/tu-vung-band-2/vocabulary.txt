@@ -29,7 +29,7 @@ postpone | /poʊˈspoʊn/ | v | hoãn/ dời lại | The launch was postponed un
 arrange | /əˈreɪndʒ/ | v | sắp xếp/ thu xếp | I will arrange a car to pick you up. | Tôi sẽ sắp xếp một chiếc xe tới đón bạn.
 attach | /əˈtætʃ/ | v | đính kèm | Please attach the signed copy to your reply. | Vui lòng đính kèm bản đã ký vào email trả lời.
 notify | /ˈnoʊtɪfaɪ/ | v | thông báo cho | We will notify you as soon as the item is back in stock. | Chúng tôi sẽ thông báo cho bạn ngay khi hàng có lại.
-receipt of | /rɪˈsiːt əv/ | phr | việc nhận được (thư, hàng) | Please acknowledge receipt of this letter. | Vui lòng xác nhận đã nhận được thư này.
+receipt of | /rɪˈsiːt əv/ | coll | việc nhận được (thư, hàng) | Please acknowledge receipt of this letter. | Vui lòng xác nhận đã nhận được thư này.
 maintenance | /ˈmeɪntənəns/ | n | việc bảo trì | The lift is closed for maintenance. | Thang máy đóng để bảo trì.
 facility | /fəˈsɪləti/ | n | cơ sở vật chất/ tiện ích | The new facility opens next spring. | Cơ sở mới sẽ mở cửa vào mùa xuân tới.
 efficient | /ɪˈfɪʃnt/ | adj | hiệu quả/ năng suất | The new layout is far more efficient. | Cách bố trí mới hiệu quả hơn nhiều.
@@ -38,9 +38,9 @@ temporary | /ˈtempəreri/ | adj | tạm thời | This is a temporary solution u
 additional | /əˈdɪʃənl/ | adj | bổ sung/ thêm | An additional fee applies to express delivery. | Có phụ phí bổ sung cho dịch vụ giao nhanh.
 approximately | /əˈprɑːksɪmətli/ | adv | khoảng chừng/ xấp xỉ | The repair will take approximately two hours. | Việc sửa chữa sẽ mất khoảng hai tiếng.
 immediately | /ɪˈmiːdiətli/ | adv | ngay lập tức | Report any accident immediately. | Hãy báo cáo mọi tai nạn ngay lập tức.
-in advance | /ɪn ədˈvæns/ | phr | trước/ trước thời hạn | Payment must be made in advance. | Phải thanh toán trước.
-on behalf of | /ɑːn bɪˈhæf əv/ | phr | thay mặt cho | I am writing on behalf of the sales team. | Tôi viết thư này thay mặt cho đội kinh doanh.
-due to | /ˈduː tuː/ | phr | do/ bởi vì | The flight was delayed due to bad weather. | Chuyến bay bị hoãn do thời tiết xấu.
+in advance | /ɪn ədˈvæns/ | pp | trước/ trước thời hạn | Payment must be made in advance. | Phải thanh toán trước.
+on behalf of | /ɑːn bɪˈhæf əv/ | pp | thay mặt cho | I am writing on behalf of the sales team. | Tôi viết thư này thay mặt cho đội kinh doanh.
+due to | /ˈduː tuː/ | pp | do/ bởi vì | The flight was delayed due to bad weather. | Chuyến bay bị hoãn do thời tiết xấu.
 
 # ── Bổ sung: tuyển dụng và nhân sự ─────────────────────────────────────────
 applicant | /ˈæplɪkənt/ | n | người nộp đơn | Every applicant must submit two references. | Mọi người nộp đơn đều phải nộp hai thư giới thiệu.
@@ -70,14 +70,14 @@ dispatch | /dɪˈspætʃ/ | v | gửi đi/ điều đi | We dispatch orders ever
 track | /træk/ | v | theo dõi (hành trình) | You can track your order on our website. | Bạn có thể theo dõi đơn hàng trên trang web của chúng tôi.
 storage | /ˈstɔːrɪdʒ/ | n | việc lưu kho | Storage costs are charged by the month. | Chi phí lưu kho được tính theo tháng.
 # ── Bổ sung: tài chính cơ bản ──────────────────────────────────────────────
-invoice number | /ˈɪnvɔɪs ˈnʌmbər/ | phr | số hoá đơn | Quote the invoice number in your email. | Hãy ghi rõ số hoá đơn trong email của bạn.
+invoice number | /ˈɪnvɔɪs ˈnʌmbər/ | cn | số hoá đơn | Quote the invoice number in your email. | Hãy ghi rõ số hoá đơn trong email của bạn.
 balance | /ˈbæləns/ | n | số dư | The account balance is updated every night. | Số dư tài khoản được cập nhật mỗi đêm.
 deposit | /dɪˈpɑːzɪt/ | n | tiền đặt cọc | A deposit of ten percent is required. | Cần đặt cọc mười phần trăm.
 installment | /ɪnˈstɔːlmənt/ | n | kỳ trả góp | You may pay in three monthly installments. | Bạn có thể trả góp trong ba kỳ hằng tháng.
-receipt of payment | /rɪˈsiːt əv ˈpeɪmənt/ | phr | việc nhận thanh toán | We will ship upon receipt of payment. | Chúng tôi sẽ gửi hàng ngay khi nhận được thanh toán.
+receipt of payment | /rɪˈsiːt əv ˈpeɪmənt/ | cn | việc nhận thanh toán | We will ship upon receipt of payment. | Chúng tôi sẽ gửi hàng ngay khi nhận được thanh toán.
 overdue | /ˌoʊvərˈduː/ | adj | quá hạn | Two invoices are now overdue. | Hai hoá đơn hiện đã quá hạn.
 fee | /fiː/ | n | khoản phí | A small fee applies to bank transfers. | Có một khoản phí nhỏ cho việc chuyển khoản.
-discount rate | /ˈdɪskaʊnt reɪt/ | phr | mức chiết khấu | We offer a better discount rate for bulk orders. | Chúng tôi có mức chiết khấu tốt hơn cho đơn hàng số lượng lớn.
+discount rate | /ˈdɪskaʊnt reɪt/ | cn | mức chiết khấu | We offer a better discount rate for bulk orders. | Chúng tôi có mức chiết khấu tốt hơn cho đơn hàng số lượng lớn.
 quote | /kwoʊt/ | n | bản báo giá | Could you send us a quote by Thursday? | Bạn gửi cho chúng tôi bản báo giá trước thứ Năm được không?
 # ── Bổ sung: họp hành và trao đổi ──────────────────────────────────────────
 attendee | /ˌætenˈdiː/ | n | người tham dự | Each attendee receives a printed handout. | Mỗi người tham dự nhận một tờ tài liệu in.
@@ -110,12 +110,12 @@ frequently | /ˈfriːkwəntli/ | adv | thường xuyên | The bus runs frequentl
 temporarily | /ˌtempəˈrerəli/ | adv | tạm thời | The service is temporarily unavailable. | Dịch vụ tạm thời không dùng được.
 currently | /ˈkɜːrəntli/ | adv | hiện tại | We are currently reviewing your application. | Chúng tôi hiện đang xem xét hồ sơ của bạn.
 # ── Bổ sung: cụm từ hay gặp ────────────────────────────────────────────────
-in stock | /ɪn stɑːk/ | phr | còn hàng | The item is back in stock today. | Món hàng hôm nay đã có lại trong kho.
-out of order | /aʊt əv ˈɔːrdər/ | phr | hỏng/ không dùng được | The vending machine is out of order. | Máy bán hàng tự động đang hỏng.
-free of charge | /friː əv tʃɑːrdʒ/ | phr | miễn phí | Delivery within the city is free of charge. | Giao hàng trong thành phố là miễn phí.
-in writing | /ɪn ˈraɪtɪŋ/ | phr | bằng văn bản | Please confirm your order in writing. | Vui lòng xác nhận đơn hàng bằng văn bản.
-ahead of schedule | /əˈhed əv ˈskedʒuːl/ | phr | sớm hơn kế hoạch | The work finished ahead of schedule. | Công việc đã xong sớm hơn kế hoạch.
-run out of | /rʌn aʊt əv/ | phr | hết (thứ gì) | Order more tape so we do not run out of it. | Hãy đặt thêm băng dính để chúng ta không bị hết.
-set up | /set ʌp/ | phr | dựng/ thiết lập | They set up the booth before the fair opened. | Họ đã dựng gian hàng trước khi hội chợ mở cửa.
-hand in | /hænd ɪn/ | phr | nộp | Hand in your timesheet before Friday. | Hãy nộp bảng chấm công trước thứ Sáu.
-call off | /kɔːl ɔːf/ | phr | huỷ bỏ | They called off the trip because of the storm. | Họ đã huỷ chuyến đi vì bão.
+in stock | /ɪn stɑːk/ | pp | còn hàng | The item is back in stock today. | Món hàng hôm nay đã có lại trong kho.
+out of order | /aʊt əv ˈɔːrdər/ | pp | hỏng/ không dùng được | The vending machine is out of order. | Máy bán hàng tự động đang hỏng.
+free of charge | /friː əv tʃɑːrdʒ/ | pp | miễn phí | Delivery within the city is free of charge. | Giao hàng trong thành phố là miễn phí.
+in writing | /ɪn ˈraɪtɪŋ/ | pp | bằng văn bản | Please confirm your order in writing. | Vui lòng xác nhận đơn hàng bằng văn bản.
+ahead of schedule | /əˈhed əv ˈskedʒuːl/ | pp | sớm hơn kế hoạch | The work finished ahead of schedule. | Công việc đã xong sớm hơn kế hoạch.
+run out of | /rʌn aʊt əv/ | pv | hết (thứ gì) | Order more tape so we do not run out of it. | Hãy đặt thêm băng dính để chúng ta không bị hết.
+set up | /set ʌp/ | pv | dựng/ thiết lập | They set up the booth before the fair opened. | Họ đã dựng gian hàng trước khi hội chợ mở cửa.
+hand in | /hænd ɪn/ | pv | nộp | Hand in your timesheet before Friday. | Hãy nộp bảng chấm công trước thứ Sáu.
+call off | /kɔːl ɔːf/ | pv | huỷ bỏ | They called off the trip because of the storm. | Họ đã huỷ chuyến đi vì bão.

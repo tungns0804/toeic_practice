@@ -48,6 +48,7 @@
           }
 
           @if (setupOpen()) {
+            <div class="setup-body">
           <div class="field">
             <span class="label"><app-t key="setup.mode" /></span>
             <div class="options-grid">
@@ -149,6 +150,7 @@
             <p class="hint"><app-t key="exercise.typingOnly" block /></p>
           </div>
 
+            </div>
           }
 
           <div class="row setup-start" [class.is-compact]="!setupOpen()">

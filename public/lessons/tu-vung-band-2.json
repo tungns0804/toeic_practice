@@ -267,7 +267,7 @@
       "id": "w-13nnqp8",
       "word": "receipt of",
       "ipa": "/rɪˈsiːt əv/",
-      "pos": "phrase",
+      "pos": "collocation",
       "meaning": "việc nhận được (thư, hàng)",
       "example": "Please acknowledge receipt of this letter.",
       "exampleVi": "Vui lòng xác nhận đã nhận được thư này."
@@ -348,7 +348,7 @@
       "id": "w-234kzo",
       "word": "in advance",
       "ipa": "/ɪn ədˈvæns/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "trước/ trước thời hạn",
       "example": "Payment must be made in advance.",
       "exampleVi": "Phải thanh toán trước."
@@ -357,7 +357,7 @@
       "id": "w-z2pgbd",
       "word": "on behalf of",
       "ipa": "/ɑːn bɪˈhæf əv/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "thay mặt cho",
       "example": "I am writing on behalf of the sales team.",
       "exampleVi": "Tôi viết thư này thay mặt cho đội kinh doanh."
@@ -366,7 +366,7 @@
       "id": "w-1je30wa",
       "word": "due to",
       "ipa": "/ˈduː tuː/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "do/ bởi vì",
       "example": "The flight was delayed due to bad weather.",
       "exampleVi": "Chuyến bay bị hoãn do thời tiết xấu."
@@ -600,7 +600,7 @@
       "id": "w-1fvl2g1",
       "word": "invoice number",
       "ipa": "/ˈɪnvɔɪs ˈnʌmbər/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "số hoá đơn",
       "example": "Quote the invoice number in your email.",
       "exampleVi": "Hãy ghi rõ số hoá đơn trong email của bạn."
@@ -636,7 +636,7 @@
       "id": "w-zsxloq",
       "word": "receipt of payment",
       "ipa": "/rɪˈsiːt əv ˈpeɪmənt/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "việc nhận thanh toán",
       "example": "We will ship upon receipt of payment.",
       "exampleVi": "Chúng tôi sẽ gửi hàng ngay khi nhận được thanh toán."
@@ -663,7 +663,7 @@
       "id": "w-1ylb07c",
       "word": "discount rate",
       "ipa": "/ˈdɪskaʊnt reɪt/",
-      "pos": "phrase",
+      "pos": "compoundNoun",
       "meaning": "mức chiết khấu",
       "example": "We offer a better discount rate for bulk orders.",
       "exampleVi": "Chúng tôi có mức chiết khấu tốt hơn cho đơn hàng số lượng lớn."
@@ -924,7 +924,7 @@
       "id": "w-oysdek",
       "word": "in stock",
       "ipa": "/ɪn stɑːk/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "còn hàng",
       "example": "The item is back in stock today.",
       "exampleVi": "Món hàng hôm nay đã có lại trong kho."
@@ -933,7 +933,7 @@
       "id": "w-161u9bs",
       "word": "out of order",
       "ipa": "/aʊt əv ˈɔːrdər/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "hỏng/ không dùng được",
       "example": "The vending machine is out of order.",
       "exampleVi": "Máy bán hàng tự động đang hỏng."
@@ -942,7 +942,7 @@
       "id": "w-7g9x2g",
       "word": "free of charge",
       "ipa": "/friː əv tʃɑːrdʒ/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "miễn phí",
       "example": "Delivery within the city is free of charge.",
       "exampleVi": "Giao hàng trong thành phố là miễn phí."
@@ -951,7 +951,7 @@
       "id": "w-8gkvem",
       "word": "in writing",
       "ipa": "/ɪn ˈraɪtɪŋ/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "bằng văn bản",
       "example": "Please confirm your order in writing.",
       "exampleVi": "Vui lòng xác nhận đơn hàng bằng văn bản."
@@ -960,7 +960,7 @@
       "id": "w-1tz026o",
       "word": "ahead of schedule",
       "ipa": "/əˈhed əv ˈskedʒuːl/",
-      "pos": "phrase",
+      "pos": "prepPhrase",
       "meaning": "sớm hơn kế hoạch",
       "example": "The work finished ahead of schedule.",
       "exampleVi": "Công việc đã xong sớm hơn kế hoạch."
@@ -969,7 +969,7 @@
       "id": "w-q28tpz",
       "word": "run out of",
       "ipa": "/rʌn aʊt əv/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "hết (thứ gì)",
       "example": "Order more tape so we do not run out of it.",
       "exampleVi": "Hãy đặt thêm băng dính để chúng ta không bị hết."
@@ -978,7 +978,7 @@
       "id": "w-1ydw718",
       "word": "set up",
       "ipa": "/set ʌp/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "dựng/ thiết lập",
       "example": "They set up the booth before the fair opened.",
       "exampleVi": "Họ đã dựng gian hàng trước khi hội chợ mở cửa."
@@ -987,7 +987,7 @@
       "id": "w-yiuedb",
       "word": "hand in",
       "ipa": "/hænd ɪn/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "nộp",
       "example": "Hand in your timesheet before Friday.",
       "exampleVi": "Hãy nộp bảng chấm công trước thứ Sáu."
@@ -996,7 +996,7 @@
       "id": "w-1txprmw",
       "word": "call off",
       "ipa": "/kɔːl ɔːf/",
-      "pos": "phrase",
+      "pos": "phrasalVerb",
       "meaning": "huỷ bỏ",
       "example": "They called off the trip because of the storm.",
       "exampleVi": "Họ đã huỷ chuyến đi vì bão."

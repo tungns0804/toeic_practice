@@ -33,14 +33,14 @@ subsequent | /ˈsʌbsɪkwənt/ | adj | tiếp theo/ sau đó | Subsequent meetin
 accordingly | /əˈkɔːrdɪŋli/ | adv | theo đó/ tương ứng | Demand fell, and we adjusted production accordingly. | Nhu cầu giảm, và chúng tôi điều chỉnh sản xuất tương ứng.
 nevertheless | /ˌnevərðəˈles/ | adv | tuy nhiên/ dù vậy | Costs rose; nevertheless, profits held steady. | Chi phí tăng; tuy nhiên lợi nhuận vẫn giữ vững.
 regarding | /rɪˈɡɑːrdɪŋ/ | prep | về/ liên quan tới | I am writing regarding your recent order. | Tôi viết thư về đơn hàng gần đây của bạn.
-in accordance with | /ɪn əˈkɔːrdns wɪð/ | phr | theo đúng/ phù hợp với | The goods were packed in accordance with the standard. | Hàng hoá được đóng gói theo đúng tiêu chuẩn.
-subject to | /ˈsʌbdʒɪkt tuː/ | phr | phụ thuộc vào/ chịu sự chi phối của | The offer is subject to approval by the board. | Đề nghị này phụ thuộc vào việc hội đồng phê duyệt.
-take effect | /teɪk ɪˈfekt/ | phr | có hiệu lực | The new rates take effect on the first of April. | Biểu giá mới có hiệu lực từ ngày một tháng Tư.
-carry out | /ˈkæri aʊt/ | phr | tiến hành/ thực hiện | The survey will be carried out in June. | Cuộc khảo sát sẽ được tiến hành vào tháng Sáu.
-look into | /lʊk ˈɪntuː/ | phr | xem xét/ điều tra | We will look into your complaint at once. | Chúng tôi sẽ xem xét khiếu nại của bạn ngay.
-account for | /əˈkaʊnt fɔːr/ | phr | chiếm/ giải thích cho | Exports account for half of our revenue. | Xuất khẩu chiếm một nửa doanh thu của chúng tôi.
-comply with | /kəmˈplaɪ wɪð/ | phr | tuân thủ theo | All products comply with EU standards. | Mọi sản phẩm đều tuân thủ tiêu chuẩn châu Âu.
-be responsible for | /bi rɪˈspɑːnsəbl fɔːr/ | phr | chịu trách nhiệm về | Each team leader must be responsible for their own budget. | Mỗi trưởng nhóm phải chịu trách nhiệm về ngân sách của mình.
+in accordance with | /ɪn əˈkɔːrdns wɪð/ | pp | theo đúng/ phù hợp với | The goods were packed in accordance with the standard. | Hàng hoá được đóng gói theo đúng tiêu chuẩn.
+subject to | /ˈsʌbdʒɪkt tuː/ | pp | phụ thuộc vào/ chịu sự chi phối của | The offer is subject to approval by the board. | Đề nghị này phụ thuộc vào việc hội đồng phê duyệt.
+take effect | /teɪk ɪˈfekt/ | coll | có hiệu lực | The new rates take effect on the first of April. | Biểu giá mới có hiệu lực từ ngày một tháng Tư.
+carry out | /ˈkæri aʊt/ | pv | tiến hành/ thực hiện | The survey will be carried out in June. | Cuộc khảo sát sẽ được tiến hành vào tháng Sáu.
+look into | /lʊk ˈɪntuː/ | vp | xem xét/ điều tra | We will look into your complaint at once. | Chúng tôi sẽ xem xét khiếu nại của bạn ngay.
+account for | /əˈkaʊnt fɔːr/ | vp | chiếm/ giải thích cho | Exports account for half of our revenue. | Xuất khẩu chiếm một nửa doanh thu của chúng tôi.
+comply with | /kəmˈplaɪ wɪð/ | vp | tuân thủ theo | All products comply with EU standards. | Mọi sản phẩm đều tuân thủ tiêu chuẩn châu Âu.
+be responsible for | /bi rɪˈspɑːnsəbl fɔːr/ | vp | chịu trách nhiệm về | Each team leader must be responsible for their own budget. | Mỗi trưởng nhóm phải chịu trách nhiệm về ngân sách của mình.
 
 # ── Bổ sung: hợp đồng và pháp lý thương mại ────────────────────────────────
 agreement | /əˈɡriːmənt/ | n | thoả thuận | Both parties signed the agreement in Tokyo. | Hai bên đã ký thoả thuận tại Tokyo.
@@ -76,7 +76,7 @@ bottleneck | /ˈbɑːtlnek/ | n | điểm nghẽn | Packing is the bottleneck in
 efficiency | /ɪˈfɪʃnsi/ | n | hiệu suất | Efficiency improved after the layout change. | Hiệu suất đã tăng sau khi đổi cách bố trí.
 defect | /ˈdiːfekt/ | n | khuyết tật/ lỗi sản phẩm | Any defect must be logged immediately. | Mọi lỗi sản phẩm đều phải được ghi nhận ngay.
 recall | /rɪˈkɔːl/ | n | đợt thu hồi | The recall affected two thousand units. | Đợt thu hồi ảnh hưởng tới hai nghìn sản phẩm.
-compliance officer | /kəmˈplaɪəns ˈɔːfɪsər/ | phr | cán bộ tuân thủ | The compliance officer reviews every contract. | Cán bộ tuân thủ rà soát từng hợp đồng.
+compliance officer | /kəmˈplaɪəns ˈɔːfɪsər/ | cn | cán bộ tuân thủ | The compliance officer reviews every contract. | Cán bộ tuân thủ rà soát từng hợp đồng.
 # ── Bổ sung: tiếp thị và truyền thông ──────────────────────────────────────
 campaign | /kæmˈpeɪn/ | n | chiến dịch | The campaign ran for six weeks. | Chiến dịch đã chạy trong sáu tuần.
 brand | /brænd/ | n | thương hiệu | The brand is well known in Asia. | Thương hiệu này rất nổi tiếng ở châu Á.
@@ -93,32 +93,32 @@ coordinate | /koʊˈɔːrdɪneɪt/ | v | điều phối | He coordinates the wor
 facilitate | /fəˈsɪlɪteɪt/ | v | tạo điều kiện | The new software facilitates remote work. | Phần mềm mới tạo điều kiện cho làm việc từ xa.
 generate | /ˈdʒenəreɪt/ | v | tạo ra | The branch generates half our profit. | Chi nhánh tạo ra một nửa lợi nhuận của chúng tôi.
 monitor | /ˈmɑːnɪtər/ | v | theo dõi/ giám sát | Sensors monitor the temperature all night. | Cảm biến theo dõi nhiệt độ suốt đêm.
-negotiate a deal | /nɪˈɡoʊʃieɪt ə diːl/ | phr | đàm phán một thương vụ | They negotiated a deal worth ten million. | Họ đã đàm phán một thương vụ trị giá mười triệu.
+negotiate a deal | /nɪˈɡoʊʃieɪt ə diːl/ | coll | đàm phán một thương vụ | They negotiated a deal worth ten million. | Họ đã đàm phán một thương vụ trị giá mười triệu.
 optimize | /ˈɑːptɪmaɪz/ | v | tối ưu hoá | We optimized the route to save fuel. | Chúng tôi đã tối ưu hoá lộ trình để tiết kiệm nhiên liệu.
 prioritize | /praɪˈɔːrətaɪz/ | v | ưu tiên | Please prioritize the export orders. | Vui lòng ưu tiên các đơn hàng xuất khẩu.
 resolve | /rɪˈzɑːlv/ | v | giải quyết | The team resolved the issue in one day. | Nhóm đã giải quyết vấn đề trong một ngày.
 retain | /rɪˈteɪn/ | v | giữ lại | We retain records for seven years. | Chúng tôi giữ lại hồ sơ trong bảy năm.
 verify | /ˈverɪfaɪ/ | v | xác minh | Please verify the account details first. | Vui lòng xác minh thông tin tài khoản trước.
-waive a fee | /weɪv ə fiː/ | phr | miễn một khoản phí | The bank agreed to waive a fee for us. | Ngân hàng đã đồng ý miễn một khoản phí cho chúng tôi.
+waive a fee | /weɪv ə fiː/ | coll | miễn một khoản phí | The bank agreed to waive a fee for us. | Ngân hàng đã đồng ý miễn một khoản phí cho chúng tôi.
 # ── Bổ sung: tính từ và trạng từ ───────────────────────────────────────────
 competitive | /kəmˈpetətɪv/ | adj | cạnh tranh | Our prices remain competitive in this market. | Giá của chúng tôi vẫn cạnh tranh ở thị trường này.
 consistent | /kənˈsɪstənt/ | adj | nhất quán | Quality has been consistent all year. | Chất lượng đã nhất quán suốt cả năm.
 crucial | /ˈkruːʃl/ | adj | then chốt | Timing is crucial in this negotiation. | Thời điểm là yếu tố then chốt trong cuộc đàm phán này.
 eligible | /ˈelɪdʒəbl/ | adj | đủ điều kiện | Only full-time staff are eligible for the bonus. | Chỉ nhân viên toàn thời gian mới đủ điều kiện nhận thưởng.
 inevitable | /ɪnˈevɪtəbl/ | adj | không thể tránh khỏi | Some delay was inevitable after the storm. | Chậm trễ ít nhiều là không thể tránh khỏi sau cơn bão.
-comprehensive review | /ˌkɑːmprɪˈhensɪv rɪˈvjuː/ | phr | cuộc rà soát toàn diện | The board ordered a comprehensive review of costs. | Hội đồng đã yêu cầu một cuộc rà soát toàn diện về chi phí.
+comprehensive review | /ˌkɑːmprɪˈhensɪv rɪˈvjuː/ | cn | cuộc rà soát toàn diện | The board ordered a comprehensive review of costs. | Hội đồng đã yêu cầu một cuộc rà soát toàn diện về chi phí.
 thorough | /ˈθɜːroʊ/ | adj | kỹ lưỡng | The inspection was thorough and well documented. | Cuộc kiểm tra rất kỹ lưỡng và được ghi chép đầy đủ.
 gradually | /ˈɡrædʒuəli/ | adv | dần dần | Demand recovered gradually over six months. | Nhu cầu hồi phục dần trong sáu tháng.
 significantly | /sɪɡˈnɪfɪkəntli/ | adv | đáng kể | Costs fell significantly after the merger. | Chi phí đã giảm đáng kể sau khi sáp nhập.
 respectively | /rɪˈspektɪvli/ | adv | theo thứ tự đó | Sales rose eight and twelve percent respectively. | Doanh số tăng lần lượt tám và mười hai phần trăm.
 # ── Bổ sung: cụm từ và giới từ ─────────────────────────────────────────────
-on behalf of the company | /ɑːn bɪˈhæf əv ðə ˈkʌmpəni/ | phr | thay mặt công ty | She signed on behalf of the company. | Cô ấy đã ký thay mặt công ty.
-in the meantime | /ɪn ðə ˈmiːntaɪm/ | phr | trong lúc chờ đợi | In the meantime, please use the old form. | Trong lúc chờ đợi, vui lòng dùng mẫu cũ.
-as a result of | /əz ə rɪˈzʌlt əv/ | phr | do kết quả của | As a result of the delay, we lost the order. | Do kết quả của sự chậm trễ, chúng tôi mất đơn hàng.
-with the exception of | /wɪð ði ɪkˈsepʃn əv/ | phr | ngoại trừ | All branches closed with the exception of Hanoi. | Mọi chi nhánh đều đóng cửa ngoại trừ Hà Nội.
-prior to | /ˈpraɪər tuː/ | prep | trước khi | Prior to the audit, we reorganised the files. | Trước khi kiểm toán, chúng tôi đã sắp xếp lại hồ sơ.
-in terms of | /ɪn tɜːrmz əv/ | phr | xét về mặt | In terms of cost, the second option wins. | Xét về mặt chi phí, phương án thứ hai thắng.
-follow up | /ˈfɑːloʊ ʌp/ | phr | theo dõi tiếp | I will follow up with the supplier tomorrow. | Tôi sẽ theo dõi tiếp với nhà cung cấp vào ngày mai.
-back up | /bæk ʌp/ | phr | sao lưu/ hỗ trợ | Please back up the files before the update. | Vui lòng sao lưu các tệp trước khi cập nhật.
-turn down | /tɜːrn daʊn/ | phr | từ chối | They turned down our first offer. | Họ đã từ chối lời chào giá đầu tiên của chúng tôi.
-bring up | /brɪŋ ʌp/ | phr | nêu ra (vấn đề) | She will bring up the issue at the meeting. | Cô ấy sẽ nêu vấn đề đó ra tại cuộc họp.
+on behalf of the company | /ɑːn bɪˈhæf əv ðə ˈkʌmpəni/ | pp | thay mặt công ty | She signed on behalf of the company. | Cô ấy đã ký thay mặt công ty.
+in the meantime | /ɪn ðə ˈmiːntaɪm/ | pp | trong lúc chờ đợi | In the meantime, please use the old form. | Trong lúc chờ đợi, vui lòng dùng mẫu cũ.
+as a result of | /əz ə rɪˈzʌlt əv/ | pp | do kết quả của | As a result of the delay, we lost the order. | Do kết quả của sự chậm trễ, chúng tôi mất đơn hàng.
+with the exception of | /wɪð ði ɪkˈsepʃn əv/ | pp | ngoại trừ | All branches closed with the exception of Hanoi. | Mọi chi nhánh đều đóng cửa ngoại trừ Hà Nội.
+prior to | /ˈpraɪər tuː/ | pp | trước khi | Prior to the audit, we reorganised the files. | Trước khi kiểm toán, chúng tôi đã sắp xếp lại hồ sơ.
+in terms of | /ɪn tɜːrmz əv/ | pp | xét về mặt | In terms of cost, the second option wins. | Xét về mặt chi phí, phương án thứ hai thắng.
+follow up | /ˈfɑːloʊ ʌp/ | pv | theo dõi tiếp | I will follow up with the supplier tomorrow. | Tôi sẽ theo dõi tiếp với nhà cung cấp vào ngày mai.
+back up | /bæk ʌp/ | pv | sao lưu/ hỗ trợ | Please back up the files before the update. | Vui lòng sao lưu các tệp trước khi cập nhật.
+turn down | /tɜːrn daʊn/ | pv | từ chối | They turned down our first offer. | Họ đã từ chối lời chào giá đầu tiên của chúng tôi.
+bring up | /brɪŋ ʌp/ | pv | nêu ra (vấn đề) | She will bring up the issue at the meeting. | Cô ấy sẽ nêu vấn đề đó ra tại cuộc họp.

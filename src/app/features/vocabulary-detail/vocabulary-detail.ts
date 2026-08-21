@@ -7,10 +7,12 @@ import { T } from '../../core/i18n/t';
 import {
   Lesson,
   LocalizedText,
+  MULTIWORD_KINDS,
   POS_SHORT_KEY,
   PARTS_OF_SPEECH,
   PartOfSpeech,
   VocabularyWord,
+  isMultiword,
   localized,
 } from '../../core/models/lesson.model';
 import type { MessageKey } from '../../core/i18n/messages';
@@ -76,6 +78,14 @@ export class VocabularyDetail {
   readonly shuffleQuestions = signal(true);
   readonly showHint = signal(false);
   readonly ignoreDiacritics = signal(false);
+  /**
+   * Từ loại được đem ra hỏi. Rỗng = không lọc, hỏi tất cả.
+   *
+   * Tách hẳn khỏi `posFilter` của bảng tra cứu bên dưới: hai thứ trả lời hai câu
+   * hỏi khác nhau ("tôi muốn NHÌN gì" và "tôi muốn LUYỆN gì"), và trộn chung thì
+   * lọc bảng để tra một từ sẽ vô tình thu hẹp luôn cả phiên luyện sắp tới.
+   */
+  readonly practiceKinds = signal<PartOfSpeech[]>([]);
 
   // --- Bộ lọc bảng ---
   readonly search = signal('');
@@ -96,11 +106,52 @@ export class VocabularyDetail {
     () => this.words().filter((word) => this.favoriteIds().has(word.id)).length,
   );
 
-  readonly pool = computed<VocabularyWord[]>(() =>
-    this.scope() === 'favorite'
-      ? this.words().filter((word) => this.favoriteIds().has(word.id))
-      : this.words(),
+  private readonly practiceKindSet = computed(() => new Set(this.practiceKinds()));
+
+  readonly pool = computed<VocabularyWord[]>(() => {
+    const base =
+      this.scope() === 'favorite'
+        ? this.words().filter((word) => this.favoriteIds().has(word.id))
+        : this.words();
+
+    const kinds = this.practiceKindSet();
+    return kinds.size === 0 ? base : base.filter((word) => kinds.has(word.pos));
+  });
+
+  /** Từ loại có mặt trong band này, kèm số lượng — dùng cho các nút lọc. */
+  private readonly kindCounts = computed(() => {
+    const counts = new Map<PartOfSpeech, number>();
+    for (const word of this.words()) counts.set(word.pos, (counts.get(word.pos) ?? 0) + 1);
+    return counts;
+  });
+
+  readonly practiceKindOptions = computed(() =>
+    PARTS_OF_SPEECH.filter((pos) => (this.kindCounts().get(pos) ?? 0) > 0).map((pos) => ({
+      pos,
+      count: this.kindCounts().get(pos) ?? 0,
+      multiword: isMultiword(pos),
+    })),
   );
+
+  /** Năm nhóm cụm nhiều từ có mặt trong band này. */
+  private readonly availableMultiword = computed(() =>
+    MULTIWORD_KINDS.filter((pos) => (this.kindCounts().get(pos) ?? 0) > 0),
+  );
+
+  readonly multiwordCount = computed(() =>
+    this.words().filter((word) => isMultiword(word.pos)).length,
+  );
+
+  /** Nút "Chỉ cụm nhiều từ" đang bật khi và chỉ khi đúng năm nhóm đó được chọn. */
+  readonly multiwordOnly = computed(() => {
+    const selected = this.practiceKindSet();
+    const available = this.availableMultiword();
+    return (
+      selected.size > 0 &&
+      selected.size === available.length &&
+      available.every((pos) => selected.has(pos))
+    );
+  });
 
   /**
    * Số câu hỏi dựng được.
@@ -127,6 +178,11 @@ export class VocabularyDetail {
     this.currentDirection().shortKey,
     this.answerMode() === 'choice' ? 'setup.answerMode.choice' : 'setup.answerMode.typing',
     SCOPE_LABEL_KEY[this.scope()],
+    // Đang lọc từ loại thì phải nói ra ngay ở dòng tóm tắt, nếu không người dùng
+    // mở lại trang sau và không hiểu vì sao chỉ còn 25 câu thay vì 113.
+    ...(this.multiwordOnly()
+      ? (['setup.multiwordOnly'] as MessageKey[])
+      : this.practiceKinds().map((pos) => POS_SHORT_KEY[pos])),
   ]);
 
   readonly limitChoices = computed(() =>
@@ -186,6 +242,7 @@ export class VocabularyDetail {
     this.search.set('');
     this.onlyFavorites.set(false);
     this.posFilter.set(null);
+    this.practiceKinds.set([]);
   }
 
   /** Chữ của một cặp hai ngôn ngữ, theo ngôn ngữ đang chọn. */
@@ -228,6 +285,31 @@ export class VocabularyDetail {
 
   toggleIgnoreDiacritics(event: Event): void {
     this.ignoreDiacritics.set((event.target as HTMLInputElement).checked);
+  }
+
+  isPracticeKind(pos: PartOfSpeech): boolean {
+    return this.practiceKindSet().has(pos);
+  }
+
+  togglePracticeKind(pos: PartOfSpeech): void {
+    const current = this.practiceKinds();
+    const next = current.includes(pos)
+      ? current.filter((item) => item !== pos)
+      : [...current, pos];
+    // Giữ đúng thứ tự khai báo để nút không nhảy chỗ theo thứ tự bấm.
+    this.practiceKinds.set(PARTS_OF_SPEECH.filter((item) => next.includes(item)));
+    this.questionLimit.set(null);
+  }
+
+  clearPracticeKinds(): void {
+    this.practiceKinds.set([]);
+    this.questionLimit.set(null);
+  }
+
+  /** Bật/tắt nhanh cả năm nhóm cụm nhiều từ cùng lúc. */
+  toggleMultiwordOnly(): void {
+    this.practiceKinds.set(this.multiwordOnly() ? [] : [...this.availableMultiword()]);
+    this.questionLimit.set(null);
   }
 
   // --- Bộ lọc bảng ---
