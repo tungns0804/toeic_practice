@@ -1,7 +1,13 @@
 {
   "id": "thi-tuong-lai",
-  "name": "Nhóm thì tương lai",
-  "description": "Tương lai đơn, tương lai tiếp diễn, tương lai hoàn thành và tương lai hoàn thành tiếp diễn.",
+  "name": {
+    "vi": "Nhóm thì tương lai",
+    "en": "Future tenses"
+  },
+  "description": {
+    "vi": "Tương lai đơn, tương lai tiếp diễn, tương lai hoàn thành và tương lai hoàn thành tiếp diễn.",
+    "en": "Future Simple, Future Continuous, Future Perfect and Future Perfect Continuous."
+  },
   "kind": "tense",
   "itemCount": 4,
   "words": [],
@@ -67,7 +73,7 @@
           "vietnamese": "Hội đồng sẽ công bố kết quả vào thứ Sáu.",
           "verb": "announce",
           "conjugated": "will announce",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-wvyixf",
@@ -75,7 +81,10 @@
           "vietnamese": "Tôi sẽ gọi cho bạn ngay khi lô hàng tới.",
           "verb": "call",
           "conjugated": "will call",
-          "note": "Mệnh đề \"as soon as\" dùng hiện tại đơn, không dùng will."
+          "note": {
+            "vi": "Mệnh đề \"as soon as\" dùng hiện tại đơn, không dùng will.",
+            "en": "The \"as soon as\" clause takes the present simple, never will."
+          }
         },
         {
           "id": "s-ar4p5f",
@@ -83,7 +92,10 @@
           "vietnamese": "Chúng tôi sẽ không nhận đơn hàng nào sau hạn chót.",
           "verb": "accept",
           "conjugated": "will not accept",
-          "note": "Viết tắt của will not là won't."
+          "note": {
+            "vi": "Viết tắt của will not là won't.",
+            "en": "The contraction of will not is won't."
+          }
         },
         {
           "id": "s-17obqt4",
@@ -91,7 +103,10 @@
           "vietnamese": "Tôi nghĩ chi nhánh mới sẽ khai trương vào tháng Mười.",
           "verb": "open",
           "conjugated": "will open",
-          "note": "Dự đoán dựa trên suy nghĩ."
+          "note": {
+            "vi": "Dự đoán dựa trên suy nghĩ.",
+            "en": "A prediction based on opinion."
+          }
         },
         {
           "id": "s-1k9xzxu",
@@ -99,7 +114,7 @@
           "vietnamese": "Nhà cung cấp có giảm giá cho đơn hàng lớn không?",
           "verb": "reduce",
           "conjugated": "Will the supplier reduce",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-6hbog2",
@@ -107,7 +122,7 @@
           "vietnamese": "Văn phòng chúng tôi sẽ chuyển sang toà nhà mới vào mùa xuân tới.",
           "verb": "move",
           "conjugated": "will move",
-          "note": ""
+          "note": null
         }
       ]
     },
@@ -162,7 +177,7 @@
           "vietnamese": "Mười giờ sáng mai tôi sẽ đang trình bày kế hoạch tiếp thị.",
           "verb": "present",
           "conjugated": "will be presenting",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-rza5ep",
@@ -170,7 +185,7 @@
           "vietnamese": "Giờ này tuần sau chúng tôi sẽ đang dọn vào văn phòng mới.",
           "verb": "move",
           "conjugated": "will be moving",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-1bvfmjh",
@@ -178,7 +193,10 @@
           "vietnamese": "Chiều nay bạn có dùng phòng họp không?",
           "verb": "use",
           "conjugated": "Will you be using",
-          "note": "Cách hỏi lịch của người khác một cách lịch sự."
+          "note": {
+            "vi": "Cách hỏi lịch của người khác một cách lịch sự.",
+            "en": "A polite way of asking about someone else's plans."
+          }
         },
         {
           "id": "s-oh3sp5",
@@ -186,7 +204,7 @@
           "vietnamese": "Nhân viên sẽ làm thêm giờ trong mùa cao điểm.",
           "verb": "work",
           "conjugated": "will be working",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-bhede7",
@@ -194,7 +212,7 @@
           "vietnamese": "Tôi sẽ không dự buổi hội thảo vào thứ Năm tới.",
           "verb": "attend",
           "conjugated": "will not be attending",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-14skx0v",
@@ -202,7 +220,10 @@
           "vietnamese": "Các kỹ thuật viên sẽ đang lắp đặt hệ thống khi bạn tới.",
           "verb": "install",
           "conjugated": "will be installing",
-          "note": "Mệnh đề \"when you arrive\" dùng hiện tại đơn."
+          "note": {
+            "vi": "Mệnh đề \"when you arrive\" dùng hiện tại đơn.",
+            "en": "The \"when you arrive\" clause takes the present simple."
+          }
         }
       ]
     },
@@ -257,7 +278,10 @@
           "vietnamese": "Các kiểm toán viên sẽ hoàn tất cuộc rà soát trước tháng Sáu.",
           "verb": "complete",
           "conjugated": "will have completed",
-          "note": "by + mốc thời gian."
+          "note": {
+            "vi": "by + mốc thời gian.",
+            "en": "by + a point in time."
+          }
         },
         {
           "id": "s-6t3yfv",
@@ -265,7 +289,7 @@
           "vietnamese": "Đến tháng Mười Hai là cô ấy đã làm ở đây được mười năm.",
           "verb": "work",
           "conjugated": "will have worked",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-1ytcie9",
@@ -273,7 +297,10 @@
           "vietnamese": "Đến lúc bạn tới thì chúng tôi đã chuẩn bị xong các mẫu hàng.",
           "verb": "prepare",
           "conjugated": "will have prepared",
-          "note": "\"By the time\" đi với hiện tại đơn ở mệnh đề kia."
+          "note": {
+            "vi": "\"By the time\" đi với hiện tại đơn ở mệnh đề kia.",
+            "en": "\"By the time\" takes the present simple in the other clause."
+          }
         },
         {
           "id": "s-1h1zqre",
@@ -281,7 +308,7 @@
           "vietnamese": "Nhà máy sẽ sản xuất được mười nghìn sản phẩm vào cuối năm.",
           "verb": "produce",
           "conjugated": "will have produced",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-cboci8",
@@ -289,7 +316,7 @@
           "vietnamese": "Họ sẽ không hoàn thành việc cải tạo trước lễ khai trương.",
           "verb": "finish",
           "conjugated": "will not have finished",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-1kc10k7",
@@ -297,7 +324,7 @@
           "vietnamese": "Nhà cung cấp có kịp gửi hàng đi trước thứ Sáu không?",
           "verb": "ship",
           "conjugated": "Will the supplier have shipped",
-          "note": ""
+          "note": null
         }
       ]
     },
@@ -346,7 +373,7 @@
           "vietnamese": "Đến tháng Năm là họ đã xây nhà máy được hai năm.",
           "verb": "build",
           "conjugated": "will have been building",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-105j180",
@@ -354,7 +381,7 @@
           "vietnamese": "Tháng tới là tôi đã làm ở đây được mười năm.",
           "verb": "work",
           "conjugated": "will have been working",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-cuxhss",
@@ -362,7 +389,7 @@
           "vietnamese": "Đến khi kết thúc thử nghiệm là chúng tôi đã kiểm thử phần mềm được sáu tháng.",
           "verb": "test",
           "conjugated": "will have been testing",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-7f278v",
@@ -370,7 +397,7 @@
           "vietnamese": "Đến lúc đó là máy móc đã chạy liên tục suốt một tuần.",
           "verb": "run",
           "conjugated": "will have been running",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-g9awv7",
@@ -378,7 +405,7 @@
           "vietnamese": "Đến kỳ kiểm toán thì cô ấy vẫn chưa quản lý nhóm được bao lâu.",
           "verb": "manage",
           "conjugated": "will not have been managing",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-1ud9k0t",
@@ -386,7 +413,7 @@
           "vietnamese": "Đến lúc chuyến bay cất cánh thì bạn đã chờ được bao lâu?",
           "verb": "wait",
           "conjugated": "will you have been waiting",
-          "note": ""
+          "note": null
         }
       ]
     }

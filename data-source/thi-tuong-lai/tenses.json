@@ -2,7 +2,10 @@
   "points": [
     {
       "id": "future-simple",
-      "name": { "vi": "Tương lai đơn", "en": "Future Simple" },
+      "name": {
+        "vi": "Tương lai đơn",
+        "en": "Future Simple"
+      },
       "summary": {
         "vi": "Quyết định ngay lúc nói, lời hứa, lời đề nghị và dự đoán không có bằng chứng trước mắt.",
         "en": "Decisions made at the moment of speaking, promises, offers and predictions without present evidence."
@@ -56,49 +59,58 @@
           "english": "The committee will announce the results on Friday.",
           "vietnamese": "Hội đồng sẽ công bố kết quả vào thứ Sáu.",
           "verb": "announce",
-          "conjugated": "will announce",
-          "note": ""
+          "conjugated": "will announce"
         },
         {
           "english": "I will call you as soon as the shipment arrives.",
           "vietnamese": "Tôi sẽ gọi cho bạn ngay khi lô hàng tới.",
           "verb": "call",
           "conjugated": "will call",
-          "note": "Mệnh đề \"as soon as\" dùng hiện tại đơn, không dùng will."
+          "note": {
+            "vi": "Mệnh đề \"as soon as\" dùng hiện tại đơn, không dùng will.",
+            "en": "The \"as soon as\" clause takes the present simple, never will."
+          }
         },
         {
           "english": "We will not accept any order after the deadline.",
           "vietnamese": "Chúng tôi sẽ không nhận đơn hàng nào sau hạn chót.",
           "verb": "accept",
           "conjugated": "will not accept",
-          "note": "Viết tắt của will not là won't."
+          "note": {
+            "vi": "Viết tắt của will not là won't.",
+            "en": "The contraction of will not is won't."
+          }
         },
         {
           "english": "I think the new branch will open in October.",
           "vietnamese": "Tôi nghĩ chi nhánh mới sẽ khai trương vào tháng Mười.",
           "verb": "open",
           "conjugated": "will open",
-          "note": "Dự đoán dựa trên suy nghĩ."
+          "note": {
+            "vi": "Dự đoán dựa trên suy nghĩ.",
+            "en": "A prediction based on opinion."
+          }
         },
         {
           "english": "Will the supplier reduce the price for a large order?",
           "vietnamese": "Nhà cung cấp có giảm giá cho đơn hàng lớn không?",
           "verb": "reduce",
-          "conjugated": "Will the supplier reduce",
-          "note": ""
+          "conjugated": "Will the supplier reduce"
         },
         {
           "english": "Our office will move to the new building next spring.",
           "vietnamese": "Văn phòng chúng tôi sẽ chuyển sang toà nhà mới vào mùa xuân tới.",
           "verb": "move",
-          "conjugated": "will move",
-          "note": ""
+          "conjugated": "will move"
         }
       ]
     },
     {
       "id": "future-continuous",
-      "name": { "vi": "Tương lai tiếp diễn", "en": "Future Continuous" },
+      "name": {
+        "vi": "Tương lai tiếp diễn",
+        "en": "Future Continuous"
+      },
       "summary": {
         "vi": "Việc sẽ đang diễn ra tại một thời điểm cụ thể trong tương lai.",
         "en": "An action that will be in progress at a specific point in the future."
@@ -142,49 +154,54 @@
           "english": "At ten tomorrow I will be presenting the marketing plan.",
           "vietnamese": "Mười giờ sáng mai tôi sẽ đang trình bày kế hoạch tiếp thị.",
           "verb": "present",
-          "conjugated": "will be presenting",
-          "note": ""
+          "conjugated": "will be presenting"
         },
         {
           "english": "This time next week we will be moving into the new office.",
           "vietnamese": "Giờ này tuần sau chúng tôi sẽ đang dọn vào văn phòng mới.",
           "verb": "move",
-          "conjugated": "will be moving",
-          "note": ""
+          "conjugated": "will be moving"
         },
         {
           "english": "Will you be using the meeting room this afternoon?",
           "vietnamese": "Chiều nay bạn có dùng phòng họp không?",
           "verb": "use",
           "conjugated": "Will you be using",
-          "note": "Cách hỏi lịch của người khác một cách lịch sự."
+          "note": {
+            "vi": "Cách hỏi lịch của người khác một cách lịch sự.",
+            "en": "A polite way of asking about someone else's plans."
+          }
         },
         {
           "english": "The staff will be working overtime during the busy season.",
           "vietnamese": "Nhân viên sẽ làm thêm giờ trong mùa cao điểm.",
           "verb": "work",
-          "conjugated": "will be working",
-          "note": ""
+          "conjugated": "will be working"
         },
         {
           "english": "I will not be attending the workshop next Thursday.",
           "vietnamese": "Tôi sẽ không dự buổi hội thảo vào thứ Năm tới.",
           "verb": "attend",
-          "conjugated": "will not be attending",
-          "note": ""
+          "conjugated": "will not be attending"
         },
         {
           "english": "The technicians will be installing the system when you arrive.",
           "vietnamese": "Các kỹ thuật viên sẽ đang lắp đặt hệ thống khi bạn tới.",
           "verb": "install",
           "conjugated": "will be installing",
-          "note": "Mệnh đề \"when you arrive\" dùng hiện tại đơn."
+          "note": {
+            "vi": "Mệnh đề \"when you arrive\" dùng hiện tại đơn.",
+            "en": "The \"when you arrive\" clause takes the present simple."
+          }
         }
       ]
     },
     {
       "id": "future-perfect",
-      "name": { "vi": "Tương lai hoàn thành", "en": "Future Perfect" },
+      "name": {
+        "vi": "Tương lai hoàn thành",
+        "en": "Future Perfect"
+      },
       "summary": {
         "vi": "Việc sẽ hoàn tất TRƯỚC một mốc thời gian trong tương lai.",
         "en": "An action that will be finished BEFORE a stated point in the future."
@@ -202,7 +219,13 @@
           "en": "Summing up a stretch of time up to a future point: By December she will have worked here for ten years."
         }
       ],
-      "signals": ["by + thời điểm", "by then", "by the time...", "before next month", "in two years"],
+      "signals": [
+        "by + thời điểm",
+        "by then",
+        "by the time...",
+        "before next month",
+        "in two years"
+      ],
       "notes": [
         {
           "vi": "Dấu hiệu gần như luôn là \"by + mốc thời gian\". \"By June\" nghĩa là chậm nhất tháng Sáu, khác với \"in June\" (trong tháng Sáu).",
@@ -223,48 +246,53 @@
           "vietnamese": "Các kiểm toán viên sẽ hoàn tất cuộc rà soát trước tháng Sáu.",
           "verb": "complete",
           "conjugated": "will have completed",
-          "note": "by + mốc thời gian."
+          "note": {
+            "vi": "by + mốc thời gian.",
+            "en": "by + a point in time."
+          }
         },
         {
           "english": "By December she will have worked here for ten years.",
           "vietnamese": "Đến tháng Mười Hai là cô ấy đã làm ở đây được mười năm.",
           "verb": "work",
-          "conjugated": "will have worked",
-          "note": ""
+          "conjugated": "will have worked"
         },
         {
           "english": "By the time you arrive, we will have prepared the samples.",
           "vietnamese": "Đến lúc bạn tới thì chúng tôi đã chuẩn bị xong các mẫu hàng.",
           "verb": "prepare",
           "conjugated": "will have prepared",
-          "note": "\"By the time\" đi với hiện tại đơn ở mệnh đề kia."
+          "note": {
+            "vi": "\"By the time\" đi với hiện tại đơn ở mệnh đề kia.",
+            "en": "\"By the time\" takes the present simple in the other clause."
+          }
         },
         {
           "english": "The factory will have produced ten thousand units by the end of the year.",
           "vietnamese": "Nhà máy sẽ sản xuất được mười nghìn sản phẩm vào cuối năm.",
           "verb": "produce",
-          "conjugated": "will have produced",
-          "note": ""
+          "conjugated": "will have produced"
         },
         {
           "english": "They will not have finished the renovation before the grand opening.",
           "vietnamese": "Họ sẽ không hoàn thành việc cải tạo trước lễ khai trương.",
           "verb": "finish",
-          "conjugated": "will not have finished",
-          "note": ""
+          "conjugated": "will not have finished"
         },
         {
           "english": "Will the supplier have shipped the goods by Friday?",
           "vietnamese": "Nhà cung cấp có kịp gửi hàng đi trước thứ Sáu không?",
           "verb": "ship",
-          "conjugated": "Will the supplier have shipped",
-          "note": ""
+          "conjugated": "Will the supplier have shipped"
         }
       ]
     },
     {
       "id": "future-perfect-continuous",
-      "name": { "vi": "Tương lai hoàn thành tiếp diễn", "en": "Future Perfect Continuous" },
+      "name": {
+        "vi": "Tương lai hoàn thành tiếp diễn",
+        "en": "Future Perfect Continuous"
+      },
       "summary": {
         "vi": "Quá trình sẽ kéo dài liên tục cho tới một mốc tương lai — nhấn vào tổng thời gian đã trôi qua tại mốc đó.",
         "en": "A process that will have been running continuously up to a future point — the stress is on total duration."
@@ -282,7 +310,11 @@
           "en": "Stressing continuity rather than result: Next month I will have been working here for a decade."
         }
       ],
-      "signals": ["by + thời điểm + for + khoảng thời gian", "by then", "for ... years by..."],
+      "signals": [
+        "by + thời điểm + for + khoảng thời gian",
+        "by then",
+        "for ... years by..."
+      ],
       "notes": [
         {
           "vi": "Đây là thì ít gặp nhất trong 12 thì; TOEIC hầu như chỉ hỏi ở dạng nhận diện. Nhớ đúng thứ tự will have been + V-ing là đủ.",
@@ -298,43 +330,37 @@
           "english": "By May they will have been building the plant for two years.",
           "vietnamese": "Đến tháng Năm là họ đã xây nhà máy được hai năm.",
           "verb": "build",
-          "conjugated": "will have been building",
-          "note": ""
+          "conjugated": "will have been building"
         },
         {
           "english": "Next month I will have been working here for a decade.",
           "vietnamese": "Tháng tới là tôi đã làm ở đây được mười năm.",
           "verb": "work",
-          "conjugated": "will have been working",
-          "note": ""
+          "conjugated": "will have been working"
         },
         {
           "english": "By the end of the trial we will have been testing the software for six months.",
           "vietnamese": "Đến khi kết thúc thử nghiệm là chúng tôi đã kiểm thử phần mềm được sáu tháng.",
           "verb": "test",
-          "conjugated": "will have been testing",
-          "note": ""
+          "conjugated": "will have been testing"
         },
         {
           "english": "By then the machines will have been running non-stop for a week.",
           "vietnamese": "Đến lúc đó là máy móc đã chạy liên tục suốt một tuần.",
           "verb": "run",
-          "conjugated": "will have been running",
-          "note": ""
+          "conjugated": "will have been running"
         },
         {
           "english": "She will not have been managing the team for long by the time of the audit.",
           "vietnamese": "Đến kỳ kiểm toán thì cô ấy vẫn chưa quản lý nhóm được bao lâu.",
           "verb": "manage",
-          "conjugated": "will not have been managing",
-          "note": ""
+          "conjugated": "will not have been managing"
         },
         {
           "english": "How long will you have been waiting by the time the flight departs?",
           "vietnamese": "Đến lúc chuyến bay cất cánh thì bạn đã chờ được bao lâu?",
           "verb": "wait",
-          "conjugated": "will you have been waiting",
-          "note": ""
+          "conjugated": "will you have been waiting"
         }
       ]
     }

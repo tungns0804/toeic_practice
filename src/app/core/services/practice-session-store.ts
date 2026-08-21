@@ -1,5 +1,6 @@
 import { Injectable, computed, signal } from '@angular/core';
 
+import type { LocalizedText } from '../models/lesson.model';
 import {
   PracticeConfig,
   PracticeQuestion,
@@ -15,7 +16,12 @@ export type NextOutcome = 'moved' | 'finished' | 'blocked';
 /** Phần đang luyện, chỉ cần đủ để hiện tên ở màn hình kết quả. */
 export interface SessionLesson {
   id: string;
-  name: string;
+  /**
+   * Tên hai ngôn ngữ chứ không phải chuỗi đã dịch sẵn: màn hình kết quả hiện tên
+   * này, mà nút đổi ngôn ngữ thì vẫn nằm trên header ở đúng màn hình đó. Chụp lấy
+   * một chuỗi lúc bắt đầu phiên là đóng băng nó ở ngôn ngữ cũ.
+   */
+  name: LocalizedText;
 }
 
 /**

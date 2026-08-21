@@ -52,7 +52,7 @@ export class LessonStore {
     this.index().map((entry) => ({
       id: entry.id,
       name: entry.name,
-      description: entry.description ?? '',
+      description: entry.description,
       kind: entry.kind,
       itemCount: entry.itemCount,
       ...(typeof entry.exampleCount === 'number' ? { exampleCount: entry.exampleCount } : {}),
@@ -131,8 +131,18 @@ function text(raw: unknown): string {
   return typeof raw === 'string' ? raw : '';
 }
 
-/** Cặp chữ hai ngôn ngữ. Thiếu một vế thì lấy vế kia bù vào, còn hơn hiện ô trống. */
+/**
+ * Cặp chữ hai ngôn ngữ. Thiếu một vế thì lấy vế kia bù vào, còn hơn hiện ô trống.
+ *
+ * Nhận cả chuỗi trơn: file bài học sinh trước khi có tính năng đa ngôn ngữ ghi
+ * `"name": "Nhóm thì hiện tại"` chứ không phải một object, và một file cũ nằm sẵn
+ * trong `public/lessons/` không được phép làm trống cả trang.
+ */
 function sanitizeLocalized(raw: unknown): LocalizedText | null {
+  if (typeof raw === 'string') {
+    const single = raw.trim();
+    return single ? { vi: single, en: single } : null;
+  }
   if (!raw || typeof raw !== 'object') return null;
   const { vi, en } = raw as Record<string, unknown>;
   const viText = text(vi);
@@ -169,8 +179,10 @@ function sanitizeIndex(raw: unknown): LessonIndexEntry[] {
       {
         id,
         file,
-        name: typeof name === 'string' && name ? name : id,
-        description: text(description),
+        // Không có tên đọc được thì dùng chính id — thà thấy "tu-vung-band-1" còn
+        // hơn thấy một thẻ trống không bấm vào đâu được.
+        name: sanitizeLocalized(name) ?? { vi: id, en: id },
+        description: sanitizeLocalized(description) ?? { vi: '', en: '' },
         kind: sanitizeKind(kind),
         itemCount: typeof itemCount === 'number' ? itemCount : 0,
         ...(typeof exampleCount === 'number' ? { exampleCount } : {}),
@@ -229,7 +241,7 @@ function sanitizeExamples(raw: unknown, seen: Set<string>): TenseExample[] {
         vietnamese,
         verb: text(verb),
         conjugated: text(conjugated),
-        note: text(note),
+        note: sanitizeLocalized(note),
       },
     ];
   });
@@ -305,8 +317,8 @@ function sanitizeLesson(raw: unknown): Lesson | null {
 
   return {
     id,
-    name: typeof name === 'string' && name ? name : id,
-    description: text(description),
+    name: sanitizeLocalized(name) ?? { vi: id, en: id },
+    description: sanitizeLocalized(description) ?? { vi: '', en: '' },
     kind: lessonKind,
     itemCount,
     ...(typeof bandFrom === 'number' ? { bandFrom } : {}),

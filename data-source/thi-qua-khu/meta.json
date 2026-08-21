@@ -1,5 +1,11 @@
 {
-  "name": "Nhóm thì quá khứ",
-  "description": "Quá khứ đơn, quá khứ tiếp diễn, quá khứ hoàn thành và quá khứ hoàn thành tiếp diễn.",
+  "name": {
+    "vi": "Nhóm thì quá khứ",
+    "en": "Past tenses"
+  },
+  "description": {
+    "vi": "Quá khứ đơn, quá khứ tiếp diễn, quá khứ hoàn thành và quá khứ hoàn thành tiếp diễn.",
+    "en": "Past Simple, Past Continuous, Past Perfect and Past Perfect Continuous."
+  },
   "order": 102
 }

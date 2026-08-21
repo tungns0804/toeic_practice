@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 
 import { LanguageStore } from '../../core/i18n/language-store';
 import { T } from '../../core/i18n/t';
+import { LocalizedText, localized } from '../../core/models/lesson.model';
 import { FavoriteStore } from '../../core/services/favorite-store';
 import { LessonStore } from '../../core/services/lesson-store';
 
@@ -23,6 +24,12 @@ export class TenseList {
   readonly errorKey = this.store.errorKey;
 
   readonly groups = computed(() => this.store.summariesOfKind('tense'));
+
+
+  /** Chữ của một cặp hai ngôn ngữ, theo ngôn ngữ đang chọn. */
+  localizedText(text: LocalizedText): string {
+    return localized(text, this.lang.language());
+  }
 
   /** Số mục ★ của một nhóm, hiện trên thẻ để biết chỗ nào còn nợ. */
   favoriteCount(id: string): number {

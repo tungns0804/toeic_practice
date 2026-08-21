@@ -1,7 +1,13 @@
 {
   "id": "thi-qua-khu",
-  "name": "Nhóm thì quá khứ",
-  "description": "Quá khứ đơn, quá khứ tiếp diễn, quá khứ hoàn thành và quá khứ hoàn thành tiếp diễn.",
+  "name": {
+    "vi": "Nhóm thì quá khứ",
+    "en": "Past tenses"
+  },
+  "description": {
+    "vi": "Quá khứ đơn, quá khứ tiếp diễn, quá khứ hoàn thành và quá khứ hoàn thành tiếp diễn.",
+    "en": "Past Simple, Past Continuous, Past Perfect and Past Perfect Continuous."
+  },
   "kind": "tense",
   "itemCount": 4,
   "words": [],
@@ -63,7 +69,10 @@
           "vietnamese": "Giám đốc đã ký hợp đồng vào thứ Sáu tuần trước.",
           "verb": "sign",
           "conjugated": "signed",
-          "note": "\"Last Friday\" là mốc quá khứ rõ ràng."
+          "note": {
+            "vi": "\"Last Friday\" là mốc quá khứ rõ ràng.",
+            "en": "\"Last Friday\" is a definite past time marker."
+          }
         },
         {
           "id": "s-f99zaa",
@@ -71,7 +80,10 @@
           "vietnamese": "Chúng tôi đã mua thiết bị này ba năm trước.",
           "verb": "buy",
           "conjugated": "bought",
-          "note": "buy → bought (bất quy tắc)."
+          "note": {
+            "vi": "buy → bought (bất quy tắc).",
+            "en": "buy → bought (irregular)."
+          }
         },
         {
           "id": "s-8bct2i",
@@ -79,7 +91,10 @@
           "vietnamese": "Công ty đã không đạt chỉ tiêu vào năm 2022.",
           "verb": "reach",
           "conjugated": "did not reach",
-          "note": "Sau \"did\" động từ về nguyên thể."
+          "note": {
+            "vi": "Sau \"did\" động từ về nguyên thể.",
+            "en": "After \"did\" the verb returns to its base form."
+          }
         },
         {
           "id": "s-18f6f3t",
@@ -87,7 +102,10 @@
           "vietnamese": "Cô ấy rời văn phòng trước khi cuộc họp bắt đầu.",
           "verb": "leave",
           "conjugated": "left",
-          "note": "leave → left."
+          "note": {
+            "vi": "leave → left.",
+            "en": "leave → left."
+          }
         },
         {
           "id": "s-7ppzcd",
@@ -95,7 +113,10 @@
           "vietnamese": "Khách hàng đã duyệt bản thiết kế cuối cùng chưa?",
           "verb": "approve",
           "conjugated": "Did the client approve",
-          "note": "Câu hỏi mượn trợ động từ did."
+          "note": {
+            "vi": "Câu hỏi mượn trợ động từ did.",
+            "en": "The question borrows the auxiliary \"did\"."
+          }
         },
         {
           "id": "s-1f3xdyb",
@@ -103,7 +124,7 @@
           "vietnamese": "Hội đồng quản trị đã công bố kết quả vào cuối tháng Ba.",
           "verb": "announce",
           "conjugated": "announced",
-          "note": ""
+          "note": null
         }
       ]
     },
@@ -159,7 +180,10 @@
           "vietnamese": "Tôi đang viết báo cáo thì mất điện.",
           "verb": "write",
           "conjugated": "was writing",
-          "note": "Việc đang diễn ra bị cắt ngang bởi một việc ở quá khứ đơn."
+          "note": {
+            "vi": "Việc đang diễn ra bị cắt ngang bởi một việc ở quá khứ đơn.",
+            "en": "An action in progress interrupted by a past simple event."
+          }
         },
         {
           "id": "s-1gp7s6f",
@@ -167,7 +191,10 @@
           "vietnamese": "Các thanh tra viên đang kiểm tra máy móc suốt buổi sáng.",
           "verb": "check",
           "conjugated": "were checking",
-          "note": "\"The inspectors\" số nhiều nên dùng were."
+          "note": {
+            "vi": "\"The inspectors\" số nhiều nên dùng were.",
+            "en": "\"The inspectors\" is plural, so it takes \"were\"."
+          }
         },
         {
           "id": "s-1uhl6ai",
@@ -175,7 +202,10 @@
           "vietnamese": "Trong lúc cô ấy gọi cho khách hàng thì anh ấy chuẩn bị hoá đơn.",
           "verb": "call",
           "conjugated": "was calling",
-          "note": "Hai việc song song, cả hai đều ở quá khứ tiếp diễn."
+          "note": {
+            "vi": "Hai việc song song, cả hai đều ở quá khứ tiếp diễn.",
+            "en": "Two parallel actions, both in the past continuous."
+          }
         },
         {
           "id": "s-w7o6vo",
@@ -183,7 +213,7 @@
           "vietnamese": "Chín giờ tối qua cả nhóm vẫn đang làm bản đề xuất.",
           "verb": "work",
           "conjugated": "was still working",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-euxjjd",
@@ -191,7 +221,7 @@
           "vietnamese": "Họ đã không chú ý trong lúc thuyết trình.",
           "verb": "pay",
           "conjugated": "were not paying",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-1xtnws9",
@@ -199,7 +229,7 @@
           "vietnamese": "Xe giao hàng có đang đợi bên ngoài vào lúc đó không?",
           "verb": "wait",
           "conjugated": "Was the delivery van waiting",
-          "note": ""
+          "note": null
         }
       ]
     },
@@ -260,7 +290,10 @@
           "vietnamese": "Cuộc họp đã kết thúc trước khi chúng tôi tới.",
           "verb": "finish",
           "conjugated": "had finished",
-          "note": "Việc xảy ra trước, mốc so sánh là \"we arrived\"."
+          "note": {
+            "vi": "Việc xảy ra trước, mốc so sánh là \"we arrived\".",
+            "en": "The earlier event; the reference point is \"we arrived\"."
+          }
         },
         {
           "id": "s-1z0zdx2",
@@ -268,7 +301,10 @@
           "vietnamese": "Đến lúc khách tới thì nhân viên đã chuẩn bị xong mọi thứ.",
           "verb": "prepare",
           "conjugated": "had prepared",
-          "note": "By the time + quá khứ đơn / mệnh đề chính ở quá khứ hoàn thành."
+          "note": {
+            "vi": "By the time + quá khứ đơn / mệnh đề chính ở quá khứ hoàn thành.",
+            "en": "By the time + past simple, with the main clause in the past perfect."
+          }
         },
         {
           "id": "s-f1zi9z",
@@ -276,7 +312,10 @@
           "vietnamese": "Anh ấy bực bội vì đã làm mất tập hồ sơ.",
           "verb": "lose",
           "conjugated": "had lost",
-          "note": "lose → lost."
+          "note": {
+            "vi": "lose → lost.",
+            "en": "lose → lost."
+          }
         },
         {
           "id": "s-gbjgjp",
@@ -284,7 +323,10 @@
           "vietnamese": "Cô ấy nói cô ấy đã gửi hoá đơn rồi.",
           "verb": "send",
           "conjugated": "had already sent",
-          "note": "Câu tường thuật: hiện tại hoàn thành lùi thành quá khứ hoàn thành."
+          "note": {
+            "vi": "Câu tường thuật: hiện tại hoàn thành lùi thành quá khứ hoàn thành.",
+            "en": "Reported speech: the present perfect backshifts to the past perfect."
+          }
         },
         {
           "id": "s-q5iabn",
@@ -292,7 +334,7 @@
           "vietnamese": "Chủ cũ đã bán toà nhà trước năm 2020.",
           "verb": "sell",
           "conjugated": "had sold",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-emhhcc",
@@ -300,7 +342,7 @@
           "vietnamese": "Chúng tôi vẫn chưa ký thoả thuận thì giá thay đổi.",
           "verb": "sign",
           "conjugated": "had not signed",
-          "note": ""
+          "note": null
         }
       ]
     },
@@ -351,7 +393,7 @@
           "vietnamese": "Họ đã đàm phán suốt mấy tiếng trước khi cuối cùng cũng đồng ý.",
           "verb": "negotiate",
           "conjugated": "had been negotiating",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-8hg38t",
@@ -359,7 +401,7 @@
           "vietnamese": "Nhóm đã làm bản thiết kế đó từ tháng Giêng.",
           "verb": "work",
           "conjugated": "had been working",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-1yg0yf2",
@@ -367,7 +409,10 @@
           "vietnamese": "Cô ấy mệt vì đã đi công tác suốt cả tuần.",
           "verb": "travel",
           "conjugated": "had been travelling",
-          "note": "Giải thích nguyên nhân của tình trạng ở quá khứ."
+          "note": {
+            "vi": "Giải thích nguyên nhân của tình trạng ở quá khứ.",
+            "en": "Explains the cause of a past state."
+          }
         },
         {
           "id": "s-1pl6btc",
@@ -375,7 +420,7 @@
           "vietnamese": "Chúng tôi đã chờ lô hàng suốt hai tuần thì cuối cùng nó cũng tới.",
           "verb": "wait",
           "conjugated": "had been waiting",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-1oyzu65",
@@ -383,7 +428,7 @@
           "vietnamese": "Công ty đã không có lãi trước khi sáp nhập.",
           "verb": "make",
           "conjugated": "had not been making",
-          "note": ""
+          "note": null
         },
         {
           "id": "s-f590nq",
@@ -391,7 +436,7 @@
           "vietnamese": "Họ đã dùng hệ thống cũ đó bao lâu rồi?",
           "verb": "use",
           "conjugated": "had they been using",
-          "note": ""
+          "note": null
         }
       ]
     }

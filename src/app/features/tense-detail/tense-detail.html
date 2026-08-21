@@ -20,8 +20,8 @@
     <div class="stack stack-xl">
       <header class="page-head">
         <a routerLink="/tenses" class="small back-link">← {{ t('tense.listTitle') }}</a>
-        <h1>{{ data.name }}</h1>
-        <p>{{ data.description }}</p>
+        <h1>{{ localizedText(data.name) }}</h1>
+        <p>{{ localizedText(data.description) }}</p>
       </header>
 
       <!-- ── Thiết lập luyện tập ──────────────────────────────────────────── -->
@@ -294,8 +294,8 @@
                     <div class="example-text">
                       <p class="example-en en">{{ example.english }}</p>
                       <p class="example-vi muted small">{{ example.vietnamese }}</p>
-                      @if (example.note) {
-                        <p class="example-note small">{{ example.note }}</p>
+                      @if (example.note; as note) {
+                        <p class="example-note small">{{ localizedText(note) }}</p>
                       }
                     </div>
                     <button

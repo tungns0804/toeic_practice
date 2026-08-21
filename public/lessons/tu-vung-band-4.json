@@ -1,7 +1,13 @@
 {
   "id": "tu-vung-band-4",
-  "name": "Band 4 · 750–860",
-  "description": "Từ vựng báo cáo tài chính, pháp lý và quản trị. Xuất hiện dày ở Part 7 với các bài đọc dài.",
+  "name": {
+    "vi": "Band 4 · 750–860",
+    "en": "Band 4 · 750–860"
+  },
+  "description": {
+    "vi": "Từ vựng báo cáo tài chính, pháp lý và quản trị. Xuất hiện dày ở Part 7 với các bài đọc dài.",
+    "en": "Financial reporting, legal and management vocabulary. Dense in the long Part 7 passages."
+  },
   "kind": "vocabulary",
   "itemCount": 40,
   "words": [

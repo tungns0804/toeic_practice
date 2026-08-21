@@ -13,7 +13,10 @@ Cả ba khu dùng chung một bộ máy luyện tập: chọn chiều hỏi → 
 → đánh dấu ★ những mục chưa nhớ để lần sau luyện riêng nhóm đó.
 
 Giao diện có **tiếng Việt và tiếng Anh** (đổi ngay không cần tải lại trang), và
-**tông sáng / tối / theo hệ điều hành**.
+**tông sáng / tối / theo hệ điều hành**. Đa ngôn ngữ phủ cả chữ giao diện lẫn
+metadata của nội dung — tên bài, mô tả bài và ghi chú của từng câu ví dụ đều đổi
+theo. Riêng NGỮ LIỆU thì luôn giữ nguyên tiếng Việt: nghĩa của từ và bản dịch câu
+chính là thứ người học đang tập dịch, dịch chúng sang tiếng Anh là xoá mất bài tập.
 
 ---
 
@@ -133,17 +136,24 @@ data-source/tu-vung-band-6/
 └── vocabulary.txt
 ```
 
-`meta.json`:
+`meta.json` — `name` và `description` là chữ giao diện nên khai cả hai ngôn ngữ:
 
 ```json
 {
-  "name": "Band 6 · 990+",
-  "description": "Mô tả ngắn hiện trên thẻ.",
+  "name": { "vi": "Band 6 · 990+", "en": "Band 6 · 990+" },
+  "description": {
+    "vi": "Mô tả ngắn hiện trên thẻ.",
+    "en": "Short description shown on the card."
+  },
   "order": 206,
   "bandFrom": 900,
   "bandTo": 990
 }
 ```
+
+Viết một chuỗi trơn thay cho cặp `{ vi, en }` cũng chạy — lúc đó cả hai ngôn ngữ
+dùng chung chuỗi đó. Dạng này có để thêm nội dung mới không bị chặn vì chưa kịp
+dịch, nhưng `npm run verify` sẽ báo lỗi cho tới khi bổ sung đủ hai vế.
 
 `vocabulary.txt` — mỗi dòng một từ, các cột ngăn nhau bằng `|`:
 
@@ -180,7 +190,10 @@ phẩy. Câu ví dụ **nên chứa chính từ đó** (kể cả ở dạng đ�
           "vietnamese": "Văn phòng mở cửa lúc tám giờ vào các ngày trong tuần.",
           "verb": "open",
           "conjugated": "opens",
-          "note": "Ghi chú ngắn, có thể để rỗng."
+          "note": {
+            "vi": "Ghi chú ngắn, có thể bỏ hẳn trường này.",
+            "en": "Short note; the field can be omitted entirely."
+          }
         }
       ]
     }
@@ -217,7 +230,7 @@ Ba tầng, đều là những thứ TypeScript không diễn đạt được:
 | Lệnh | Bắt lỗi gì |
 | --- | --- |
 | `verify:i18n` | Khoá thiếu bản dịch một ngôn ngữ; tham số `{ten}` có ở bản này mà thiếu ở bản kia; khoá dùng trong template mà chưa khai; khoá khai rồi mà không nơi nào dùng. |
-| `verify:data` | Câu bị động trỏ tới công thức không tồn tại; câu đánh dấu đảo ngược được nhưng lại không có "by …"; từ vựng có câu ví dụ không chứa chính từ đó. |
+| `verify:data` | Câu bị động trỏ tới công thức không tồn tại; câu đánh dấu đảo ngược được nhưng lại không có "by …"; từ vựng có câu ví dụ không chứa chính từ đó; metadata hoặc ghi chú còn thiếu một vế ngôn ngữ. |
 | `generate:check` | Chạy toàn bộ trình sinh dữ liệu nhưng không ghi file — dùng cho CI. |
 
 ---
@@ -231,3 +244,22 @@ trình sinh dữ liệu trên máy triển khai.
 App định tuyến bằng History API khi chạy qua web server, và tự chuyển sang định
 tuyến bằng dấu `#` khi trang được mở trực tiếp từ ổ đĩa (`file://`) — nơi mà
 `pushState` không dùng được.
+
+---
+
+## Responsive
+
+Bố cục được rà soát bằng Chrome ở bảy khổ máy (320 · 360 · 390 · 430 · 768 · 1024 ·
+1440) trên cả bảy trang và ở **cả hai ngôn ngữ** — chữ tiếng Anh dài hơn tiếng Việt
+ở nhiều nhãn nên có lỗi chỉ lộ ra ở một ngôn ngữ.
+
+Ba quy ước giữ cho nó không vỡ khi thêm nội dung mới:
+
+- **Lưới dùng `minmax(min(Xpx, 100%), 1fr)`**, không phải `minmax(Xpx, 1fr)`. Dạng
+  sau không co được xuống dưới X, nên ở khung hẹp hơn X thì ô lưới tràn ra ngoài và
+  cả trang cuộn ngang.
+- **Bảng rộng nằm trong `.scroll-x`** và tự cuộn trong khung của nó, chứ không đẩy
+  rộng cả trang.
+- **Vùng bấm tối thiểu 44px trên máy chạm** — áp cho cả nút, chip lọc, mục menu và
+  liên kết quay lại, không chỉ cho `.btn`. Phân biệt bằng `@media (hover: none)`
+  chứ không bằng bề rộng: cửa sổ hẹp trên máy tính vẫn có chuột.

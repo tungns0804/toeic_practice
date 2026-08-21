@@ -10,7 +10,7 @@
  * Chạy: npm run verify:data
  */
 
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -135,8 +135,76 @@ function checkVocabulary() {
   log();
 }
 
+// ── Song ngữ ───────────────────────────────────────────────────────────────
+
+/**
+ * Metadata hiển thị phải có ĐỦ hai ngôn ngữ.
+ *
+ * `localized()` cố tình bù vế thiếu bằng vế còn lại để một dòng chưa dịch không
+ * làm trống cả thẻ trên giao diện. Nhưng "không vỡ giao diện" khác hẳn "đã dịch":
+ * nếu không kiểm ở đây thì một mục thiếu bản tiếng Anh sẽ lặng lẽ hiện tiếng Việt
+ * giữa một trang tiếng Anh, và không ai phát hiện ra.
+ *
+ * Tên band ("Band 1 · 300–450") giống nhau ở hai ngôn ngữ là hợp lệ, nên chỗ này
+ * chỉ cảnh báo với phần MÔ TẢ — chỗ mà hai vế giống hệt nhau gần như chắc chắn là
+ * quên dịch chứ không phải cố ý.
+ */
+function checkBilingual() {
+  log(`${c.bold}Song ngữ${c.reset}`);
+
+  const folders = readdirSync(join(ROOT, 'data-source')).sort();
+
+  for (const folder of folders) {
+    const metaPath = join(ROOT, 'data-source', folder, 'meta.json');
+    if (!existsSync(metaPath)) continue;
+    const meta = JSON.parse(readFileSync(metaPath, 'utf8'));
+
+    for (const field of ['name', 'description']) {
+      const value = meta[field];
+      if (value === undefined) continue;
+      if (typeof value === 'string') {
+        fail(`[${folder}] meta.json: "${field}" còn là chuỗi đơn, chưa có bản dịch`);
+        continue;
+      }
+      if (!value.vi?.trim()) fail(`[${folder}] meta.json: "${field}" thiếu bản tiếng Việt`);
+      if (!value.en?.trim()) fail(`[${folder}] meta.json: "${field}" thiếu bản tiếng Anh`);
+      if (field === 'description' && value.vi?.trim() === value.en?.trim()) {
+        warn(`[${folder}] meta.json: mô tả giống hệt nhau ở hai ngôn ngữ — quên dịch?`);
+      }
+    }
+  }
+
+  // Ghi chú của câu ví dụ — cũng là chữ giao diện, cũng phải đủ hai vế.
+  let notes = 0;
+  for (const folder of folders) {
+    const path = join(ROOT, 'data-source', folder, 'tenses.json');
+    if (!existsSync(path)) continue;
+    const data = JSON.parse(readFileSync(path, 'utf8'));
+
+    for (const point of data.points ?? []) {
+      for (const example of point.examples ?? []) {
+        const note = example.note;
+        if (note === undefined || note === null || note === '') continue;
+        if (typeof note === 'string') {
+          fail(`[${folder}] "${example.english}": ghi chú còn là chuỗi đơn, chưa có bản dịch`);
+          continue;
+        }
+        if (!note.vi?.trim() || !note.en?.trim()) {
+          fail(`[${folder}] "${example.english}": ghi chú thiếu một vế ngôn ngữ`);
+          continue;
+        }
+        notes++;
+      }
+    }
+  }
+
+  log(`  ${c.green}OK${c.reset} ${folders.length} thư mục nguồn, ${notes} ghi chú đủ hai ngôn ngữ`);
+  log();
+}
+
 checkPassive();
 checkVocabulary();
+checkBilingual();
 
 log();
 if (errors === 0) {

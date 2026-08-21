@@ -1,7 +1,13 @@
 {
   "id": "tu-vung-band-5",
-  "name": "Band 5 · 860–990",
-  "description": "Từ vựng học thuật và trang trọng, cùng các cụm từ cố định hay bị bẫy. Nhóm từ quyết định chặng cuối lên 990.",
+  "name": {
+    "vi": "Band 5 · 860–990",
+    "en": "Band 5 · 860–990"
+  },
+  "description": {
+    "vi": "Từ vựng học thuật và trang trọng, cùng các cụm từ cố định hay bị bẫy. Nhóm từ quyết định chặng cuối lên 990.",
+    "en": "Academic and formal vocabulary plus the fixed phrases that set the traps. This is what decides the last stretch to 990."
+  },
   "kind": "vocabulary",
   "itemCount": 40,
   "words": [

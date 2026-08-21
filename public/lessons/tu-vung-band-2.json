@@ -1,7 +1,13 @@
 {
   "id": "tu-vung-band-2",
-  "name": "Band 2 · 450–600",
-  "description": "Từ vựng của công việc hằng ngày: tuyển dụng, hậu cần, tài chính cơ bản. Trọng tâm của Part 5 và Part 7.",
+  "name": {
+    "vi": "Band 2 · 450–600",
+    "en": "Band 2 · 450–600"
+  },
+  "description": {
+    "vi": "Từ vựng của công việc hằng ngày: tuyển dụng, hậu cần, tài chính cơ bản. Trọng tâm của Part 5 và Part 7.",
+    "en": "Everyday working vocabulary: hiring, logistics and basic finance. The core of Parts 5 and 7."
+  },
   "kind": "vocabulary",
   "itemCount": 40,
   "words": [

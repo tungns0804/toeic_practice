@@ -257,7 +257,7 @@ export interface QuestionResult {
 
 export interface SessionSummary {
   lessonId: string;
-  lessonName: string;
+  lessonName: LocalizedText;
   config: PracticeConfig;
   total: number;
   correctCount: number;

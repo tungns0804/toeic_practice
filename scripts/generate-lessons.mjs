@@ -21,7 +21,14 @@ import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync, existsSync
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { countExamples, parseTenses, parseVocabulary, slugify, titleFromFolder } from './lesson-core.mjs';
+import {
+  countExamples,
+  localized,
+  parseTenses,
+  parseVocabulary,
+  slugify,
+  titleFromFolder,
+} from './lesson-core.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -145,8 +152,11 @@ function buildLesson(folderName) {
     return null;
   }
 
-  const name = typeof meta.name === 'string' && meta.name ? meta.name : titleFromFolder(folderName);
-  const description = typeof meta.description === 'string' ? meta.description : '';
+  // Tên và mô tả là chữ của GIAO DIỆN (hiện trên thẻ, trên tiêu đề trang), nên
+  // chúng phải đổi theo ngôn ngữ đang chọn. Chưa khai thì lấy tên thư mục — lúc đó
+  // hai ngôn ngữ giống nhau, và đó là điều đúng đắn: tên thư mục không dịch được.
+  const name = localized(meta.name) ?? localized(titleFromFolder(folderName));
+  const description = localized(meta.description);
   const order = typeof meta.order === 'number' ? meta.order : Number.MAX_SAFE_INTEGER;
 
   const rawText = readFileSync(join(folderPath, dataFile.name), 'utf8');
@@ -159,7 +169,7 @@ function buildLesson(folderName) {
     const lesson = {
       id,
       name,
-      description,
+      description: description ?? { vi: '', en: '' },
       kind: 'vocabulary',
       itemCount: words.length,
       words,
@@ -186,7 +196,7 @@ function buildLesson(folderName) {
     lesson: {
       id,
       name,
-      description,
+      description: description ?? { vi: '', en: '' },
       kind: 'tense',
       itemCount: points.length,
       words: [],

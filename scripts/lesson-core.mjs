@@ -136,8 +136,25 @@ function text(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
-/** Cặp chữ hai ngôn ngữ; thiếu hẳn cả hai vế thì trả null. */
-function localized(value) {
+/**
+ * Cặp chữ hai ngôn ngữ.
+ *
+ * Nhận CẢ hai dạng viết:
+ *  - `{ "vi": "...", "en": "..." }` — dạng đầy đủ
+ *  - `"..."` — một chuỗi trơn, dùng chung cho cả hai ngôn ngữ
+ *
+ * Dạng chuỗi trơn có mặt để thêm nội dung mới không bị chặn lại chỉ vì chưa kịp
+ * dịch: viết một vế trước, bổ sung vế kia sau, mà không phải sửa cấu trúc file.
+ * Thiếu một vế trong dạng đầy đủ cũng được bù bằng vế còn lại, vì một ô trống trên
+ * giao diện thì tệ hơn hẳn một dòng chưa dịch.
+ *
+ * Thiếu hẳn cả hai vế thì trả null.
+ */
+export function localized(value) {
+  if (typeof value === 'string') {
+    const single = value.trim();
+    return single ? { vi: single, en: single } : null;
+  }
   if (!value || typeof value !== 'object') return null;
   const vi = text(value.vi);
   const en = text(value.en);
@@ -257,7 +274,10 @@ export function parseTenses(raw) {
         vietnamese,
         verb: text(example.verb),
         conjugated,
-        note: text(example.note),
+        // Ghi chú là lời GIẢI THÍCH của ứng dụng chứ không phải ngữ liệu, nên nó
+        // phải đổi theo ngôn ngữ giao diện — khác với `vietnamese`, vốn chính là
+        // thứ người học đang tập dịch và luôn giữ nguyên tiếng Việt.
+        note: localized(example.note),
       });
     });
 

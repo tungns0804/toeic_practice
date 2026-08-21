@@ -39,8 +39,8 @@ function subjectOf(ref: TenseExampleRef): QuestionSubject {
         ? [
             {
               labelKey: 'practice.recap.note' as MessageKey,
-              value: example.note,
-              valueText: null,
+              value: '',
+              valueText: example.note,
               english: false,
             },
           ]

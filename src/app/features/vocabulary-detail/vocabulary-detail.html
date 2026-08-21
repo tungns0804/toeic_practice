@@ -20,8 +20,8 @@
     <div class="stack stack-xl">
       <header class="page-head">
         <a routerLink="/vocabulary" class="small back-link">← {{ t('vocab.listTitle') }}</a>
-        <h1>{{ data.name }}</h1>
-        <p>{{ data.description }}</p>
+        <h1>{{ localizedText(data.name) }}</h1>
+        <p>{{ localizedText(data.description) }}</p>
       </header>
 
       <!-- ── Thiết lập luyện tập ──────────────────────────────────────────── -->

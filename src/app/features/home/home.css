@@ -2,7 +2,7 @@
    màn hình: khổ máy nào cũng có, mà ngưỡng thì luôn đoán thiếu một cái. */
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--sp-4);
 }
 

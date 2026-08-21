@@ -5,7 +5,7 @@ import { EXERCISES } from '../../core/exercises/exercise.model';
 import { PASSIVE_SENTENCES } from '../../core/exercises/passive-sentences';
 import { LanguageStore } from '../../core/i18n/language-store';
 import { T } from '../../core/i18n/t';
-import { LESSON_KIND_ROUTE } from '../../core/models/lesson.model';
+import { LESSON_KIND_ROUTE, localized } from '../../core/models/lesson.model';
 import { FavoriteStore } from '../../core/services/favorite-store';
 import { LessonStore } from '../../core/services/lesson-store';
 
@@ -61,7 +61,9 @@ export class Home {
         ? [
             {
               id: summary.id,
-              name: summary.name,
+              // Dịch ngay trong computed: nó đã đọc `lang.language()` nên khối này
+              // tự dựng lại khi đổi ngôn ngữ.
+              name: localized(summary.name, this.lang.language()),
               link: [LESSON_KIND_ROUTE[summary.kind], summary.id],
               count,
             },

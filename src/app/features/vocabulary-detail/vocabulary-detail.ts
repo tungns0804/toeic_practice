@@ -4,7 +4,13 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 import { LanguageStore } from '../../core/i18n/language-store';
 import { T } from '../../core/i18n/t';
-import { Lesson, POS_SHORT_KEY, VocabularyWord } from '../../core/models/lesson.model';
+import {
+  Lesson,
+  LocalizedText,
+  POS_SHORT_KEY,
+  VocabularyWord,
+  localized,
+} from '../../core/models/lesson.model';
 import {
   AnswerMode,
   DEFAULT_MAX_WRONG_ATTEMPTS,
@@ -138,6 +144,11 @@ export class VocabularyDetail {
     this.questionLimit.set(null);
     this.search.set('');
     this.onlyFavorites.set(false);
+  }
+
+  /** Chữ của một cặp hai ngôn ngữ, theo ngôn ngữ đang chọn. */
+  localizedText(text: LocalizedText): string {
+    return localized(text, this.lang.language());
   }
 
   // --- Sự kiện thiết lập ---

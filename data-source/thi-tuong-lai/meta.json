@@ -1,5 +1,11 @@
 {
-  "name": "Nhóm thì tương lai",
-  "description": "Tương lai đơn, tương lai tiếp diễn, tương lai hoàn thành và tương lai hoàn thành tiếp diễn.",
+  "name": {
+    "vi": "Nhóm thì tương lai",
+    "en": "Future tenses"
+  },
+  "description": {
+    "vi": "Tương lai đơn, tương lai tiếp diễn, tương lai hoàn thành và tương lai hoàn thành tiếp diễn.",
+    "en": "Future Simple, Future Continuous, Future Perfect and Future Perfect Continuous."
+  },
   "order": 103
 }

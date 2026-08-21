@@ -2,7 +2,10 @@
   "points": [
     {
       "id": "present-simple",
-      "name": { "vi": "Hiện tại đơn", "en": "Present Simple" },
+      "name": {
+        "vi": "Hiện tại đơn",
+        "en": "Present Simple"
+      },
       "summary": {
         "vi": "Nói về sự thật, thói quen và lịch trình cố định — những chuyện đúng cả trước, trong và sau thời điểm nói.",
         "en": "Facts, habits and fixed schedules — things that are true before, during and after the moment of speaking."
@@ -60,48 +63,65 @@
           "vietnamese": "Văn phòng mở cửa lúc tám giờ vào các ngày trong tuần.",
           "verb": "open",
           "conjugated": "opens",
-          "note": "Chủ ngữ số ít \"the office\" nên động từ thêm -s."
+          "note": {
+            "vi": "Chủ ngữ số ít \"the office\" nên động từ thêm -s.",
+            "en": "The singular subject \"the office\" takes -s on the verb."
+          }
         },
         {
           "english": "Our department holds a meeting every Monday morning.",
           "vietnamese": "Bộ phận chúng tôi họp vào sáng thứ Hai hằng tuần.",
           "verb": "hold",
-          "conjugated": "holds",
-          "note": ""
+          "conjugated": "holds"
         },
         {
           "english": "She does not work on weekends.",
           "vietnamese": "Cô ấy không làm việc vào cuối tuần.",
           "verb": "work",
           "conjugated": "does not work",
-          "note": "Phủ định: does + not + động từ nguyên thể."
+          "note": {
+            "vi": "Phủ định: does + not + động từ nguyên thể.",
+            "en": "Negative: does + not + base form of the verb."
+          }
         },
         {
           "english": "The train to the airport leaves at six in the evening.",
           "vietnamese": "Chuyến tàu ra sân bay khởi hành lúc sáu giờ tối.",
           "verb": "leave",
           "conjugated": "leaves",
-          "note": "Lịch trình cố định vẫn dùng hiện tại đơn dù nói về tương lai."
+          "note": {
+            "vi": "Lịch trình cố định vẫn dùng hiện tại đơn dù nói về tương lai.",
+            "en": "A fixed schedule stays in the present simple even when it refers to the future."
+          }
         },
         {
           "english": "Most customers pay by credit card.",
           "vietnamese": "Phần lớn khách hàng thanh toán bằng thẻ tín dụng.",
           "verb": "pay",
           "conjugated": "pay",
-          "note": "\"Most customers\" số nhiều nên động từ giữ nguyên."
+          "note": {
+            "vi": "\"Most customers\" số nhiều nên động từ giữ nguyên.",
+            "en": "\"Most customers\" is plural, so the verb keeps its base form."
+          }
         },
         {
           "english": "This machine needs a new part.",
           "vietnamese": "Chiếc máy này cần một linh kiện mới.",
           "verb": "need",
           "conjugated": "needs",
-          "note": "\"Need\" là động từ chỉ trạng thái, không dùng ở thì tiếp diễn."
+          "note": {
+            "vi": "\"Need\" là động từ chỉ trạng thái, không dùng ở thì tiếp diễn.",
+            "en": "\"Need\" is a stative verb and is not used in continuous forms."
+          }
         }
       ]
     },
     {
       "id": "present-continuous",
-      "name": { "vi": "Hiện tại tiếp diễn", "en": "Present Continuous" },
+      "name": {
+        "vi": "Hiện tại tiếp diễn",
+        "en": "Present Continuous"
+      },
       "summary": {
         "vi": "Việc đang diễn ra ngay lúc này hoặc quanh khoảng thời gian này, và kế hoạch đã hẹn chắc trong tương lai gần.",
         "en": "Something happening right now or around now, plus firm arrangements in the near future."
@@ -157,49 +177,62 @@
           "english": "The technician is repairing the printer at the moment.",
           "vietnamese": "Kỹ thuật viên đang sửa máy in vào lúc này.",
           "verb": "repair",
-          "conjugated": "is repairing",
-          "note": ""
+          "conjugated": "is repairing"
         },
         {
           "english": "We are launching the new campaign next Monday.",
           "vietnamese": "Chúng tôi sẽ ra mắt chiến dịch mới vào thứ Hai tới.",
           "verb": "launch",
           "conjugated": "are launching",
-          "note": "Kế hoạch đã hẹn chắc nên dùng hiện tại tiếp diễn cho tương lai."
+          "note": {
+            "vi": "Kế hoạch đã hẹn chắc nên dùng hiện tại tiếp diễn cho tương lai.",
+            "en": "A firm arrangement takes the present continuous for future meaning."
+          }
         },
         {
           "english": "Sales are growing faster than we expected.",
           "vietnamese": "Doanh số đang tăng nhanh hơn chúng tôi dự kiến.",
           "verb": "grow",
-          "conjugated": "are growing",
-          "note": ""
+          "conjugated": "are growing"
         },
         {
           "english": "He is not attending the conference this year.",
           "vietnamese": "Năm nay anh ấy không dự hội nghị.",
           "verb": "attend",
           "conjugated": "is not attending",
-          "note": "Phủ định: chèn \"not\" giữa \"be\" và V-ing."
+          "note": {
+            "vi": "Phủ định: chèn \"not\" giữa \"be\" và V-ing.",
+            "en": "Negative: put \"not\" between \"be\" and the -ing form."
+          }
         },
         {
           "english": "The two companies are negotiating a long-term contract.",
           "vietnamese": "Hai công ty đang đàm phán một hợp đồng dài hạn.",
           "verb": "negotiate",
           "conjugated": "are negotiating",
-          "note": "Bỏ -e cuối trước khi thêm -ing: negotiate → negotiating."
+          "note": {
+            "vi": "Bỏ -e cuối trước khi thêm -ing: negotiate → negotiating.",
+            "en": "Drop the final -e before adding -ing: negotiate → negotiating."
+          }
         },
         {
           "english": "Are you working on the budget report right now?",
           "vietnamese": "Bạn có đang làm báo cáo ngân sách ngay lúc này không?",
           "verb": "work",
           "conjugated": "Are you working",
-          "note": "Câu hỏi: đảo \"be\" lên trước chủ ngữ."
+          "note": {
+            "vi": "Câu hỏi: đảo \"be\" lên trước chủ ngữ.",
+            "en": "Question: move \"be\" in front of the subject."
+          }
         }
       ]
     },
     {
       "id": "present-perfect",
-      "name": { "vi": "Hiện tại hoàn thành", "en": "Present Perfect" },
+      "name": {
+        "vi": "Hiện tại hoàn thành",
+        "en": "Present Perfect"
+      },
       "summary": {
         "vi": "Nối quá khứ với hiện tại: việc đã xong nhưng kết quả còn giá trị bây giờ, hoặc việc bắt đầu trong quá khứ và kéo dài tới giờ.",
         "en": "Links past to present: something finished whose result still matters now, or something that started in the past and continues."
@@ -258,48 +291,69 @@
           "vietnamese": "Cô ấy đã làm việc ở công ty này từ năm 2019.",
           "verb": "work",
           "conjugated": "has worked",
-          "note": "since + mốc thời gian."
+          "note": {
+            "vi": "since + mốc thời gian.",
+            "en": "since + a point in time."
+          }
         },
         {
           "english": "The supplier has just delivered the missing parts.",
           "vietnamese": "Nhà cung cấp vừa giao các linh kiện còn thiếu.",
           "verb": "deliver",
           "conjugated": "has just delivered",
-          "note": "\"Just\" đứng giữa trợ động từ và V3."
+          "note": {
+            "vi": "\"Just\" đứng giữa trợ động từ và V3.",
+            "en": "\"Just\" sits between the auxiliary and the past participle."
+          }
         },
         {
           "english": "We have not received your payment yet.",
           "vietnamese": "Chúng tôi vẫn chưa nhận được khoản thanh toán của bạn.",
           "verb": "receive",
           "conjugated": "have not received",
-          "note": "\"Yet\" đứng cuối câu phủ định và câu hỏi."
+          "note": {
+            "vi": "\"Yet\" đứng cuối câu phủ định và câu hỏi.",
+            "en": "\"Yet\" goes at the end of negatives and questions."
+          }
         },
         {
           "english": "Our sales team has already met this quarter's target.",
           "vietnamese": "Đội kinh doanh của chúng tôi đã đạt chỉ tiêu của quý này rồi.",
           "verb": "meet",
           "conjugated": "has already met",
-          "note": "meet → met (bất quy tắc)."
+          "note": {
+            "vi": "meet → met (bất quy tắc).",
+            "en": "meet → met (irregular)."
+          }
         },
         {
           "english": "I have visited that factory twice.",
           "vietnamese": "Tôi đã tới thăm nhà máy đó hai lần.",
           "verb": "visit",
           "conjugated": "have visited",
-          "note": "Trải nghiệm, không nói rõ thời điểm."
+          "note": {
+            "vi": "Trải nghiệm, không nói rõ thời điểm.",
+            "en": "Experience, with no stated time."
+          }
         },
         {
           "english": "Have you sent the contract to the client?",
           "vietnamese": "Bạn đã gửi hợp đồng cho khách hàng chưa?",
           "verb": "send",
           "conjugated": "Have you sent",
-          "note": "send → sent (bất quy tắc)."
+          "note": {
+            "vi": "send → sent (bất quy tắc).",
+            "en": "send → sent (irregular)."
+          }
         }
       ]
     },
     {
       "id": "present-perfect-continuous",
-      "name": { "vi": "Hiện tại hoàn thành tiếp diễn", "en": "Present Perfect Continuous" },
+      "name": {
+        "vi": "Hiện tại hoàn thành tiếp diễn",
+        "en": "Present Perfect Continuous"
+      },
       "summary": {
         "vi": "Nhấn vào QUÁ TRÌNH kéo dài từ quá khứ tới hiện tại, và thường vẫn còn tiếp tục — khác với hiện tại hoàn thành vốn nhấn vào kết quả.",
         "en": "Stresses the ongoing PROCESS from past to now, usually still going — unlike the present perfect, which stresses the result."
@@ -321,7 +375,14 @@
           "en": "Stressing duration, often with How long: How long have you been waiting?"
         }
       ],
-      "signals": ["for", "since", "all day / morning", "How long...?", "lately", "recently"],
+      "signals": [
+        "for",
+        "since",
+        "all day / morning",
+        "How long...?",
+        "lately",
+        "recently"
+      ],
       "notes": [
         {
           "vi": "So sánh: \"I have read the report\" (đã đọc xong, biết nội dung) và \"I have been reading the report\" (đang đọc dở, nhấn vào quá trình).",
@@ -342,42 +403,52 @@
           "vietnamese": "Họ đã thảo luận các điều khoản suốt hai tiếng đồng hồ.",
           "verb": "discuss",
           "conjugated": "have been discussing",
-          "note": "for + khoảng thời gian."
+          "note": {
+            "vi": "for + khoảng thời gian.",
+            "en": "for + a length of time."
+          }
         },
         {
           "english": "He is tired because he has been working all night.",
           "vietnamese": "Anh ấy mệt vì đã làm việc suốt đêm.",
           "verb": "work",
           "conjugated": "has been working",
-          "note": "Giải thích kết quả đang thấy ở hiện tại."
+          "note": {
+            "vi": "Giải thích kết quả đang thấy ở hiện tại.",
+            "en": "Explains a result visible right now."
+          }
         },
         {
           "english": "Our team has been testing the new system since April.",
           "vietnamese": "Nhóm chúng tôi đã thử nghiệm hệ thống mới từ tháng Tư.",
           "verb": "test",
-          "conjugated": "has been testing",
-          "note": ""
+          "conjugated": "has been testing"
         },
         {
           "english": "How long have you been waiting for the shipment?",
           "vietnamese": "Bạn đã chờ lô hàng bao lâu rồi?",
           "verb": "wait",
           "conjugated": "have you been waiting",
-          "note": "How long thường đi với thì này."
+          "note": {
+            "vi": "How long thường đi với thì này.",
+            "en": "How long usually pairs with this tense."
+          }
         },
         {
           "english": "Prices have been rising steadily for six months.",
           "vietnamese": "Giá đã tăng đều đặn suốt sáu tháng qua.",
           "verb": "rise",
-          "conjugated": "have been rising",
-          "note": ""
+          "conjugated": "have been rising"
         },
         {
           "english": "She has not been feeling well recently.",
           "vietnamese": "Gần đây cô ấy thấy không khoẻ.",
           "verb": "feel",
           "conjugated": "has not been feeling",
-          "note": "Phủ định: not đứng trước been."
+          "note": {
+            "vi": "Phủ định: not đứng trước been.",
+            "en": "Negative: \"not\" comes before \"been\"."
+          }
         }
       ]
     }

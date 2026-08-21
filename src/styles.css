@@ -602,7 +602,7 @@ a:hover {
    ngưỡng màn hình. */
 .options-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
   gap: var(--sp-2);
 }
 
@@ -676,7 +676,7 @@ a:hover {
    theo bề rộng còn lại. */
 .setup-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: var(--sp-4);
 }
 
@@ -1032,14 +1032,35 @@ kbd {
   }
 }
 
+/* Trên máy CHẠM ở khổ đó, hai hàng của header còn cao thêm nữa vì mục menu và nút
+   biểu tượng đều được nới lên 44px (xem khối `hover: none` ở cuối file):
+   6 + 44 + 4 + 44 + 6 = 104.
+
+   Tách riêng khỏi khối trên chứ không lấy luôn 104 cho mọi thiết bị: cửa sổ hẹp
+   trên máy tính vẫn có chuột nên header ở đó vẫn cao 92px, và chừa dư 12px sẽ để
+   lại một khe hở dưới thanh tiến độ dính khi luyện tập. */
+@media (max-width: 520px) and (hover: none) {
+  :root {
+    --header-h: 104px;
+  }
+}
+
 /* --- Thiết bị chạm ---------------------------------------------------------
    Phân biệt bằng (hover: none) chứ không bằng bề rộng: máy tính cửa sổ hẹp vẫn có
    chuột nên vẫn cần hiệu ứng hover, còn tablet rộng thì vẫn cần vùng bấm to. */
 
 @media (hover: none) {
-  /* 44px là ngưỡng vùng bấm tối thiểu để ngón tay không bấm trượt. */
+  /* 44px là ngưỡng vùng bấm tối thiểu để ngón tay không bấm trượt.
+
+     Danh sách này phải phủ MỌI thứ bấm được, không chỉ `.btn`: đo thực tế trên
+     khổ điện thoại thì nút ngôn ngữ / sáng-tối cao 30px, mục menu 31px, chip lọc
+     30px và liên kết quay lại chỉ 23px — đều dưới ngưỡng, và đều là những thứ
+     người dùng bấm nhiều nhất. */
   .btn:not(.btn-sm),
-  .option {
+  .option,
+  .chip,
+  .icon-btn,
+  .app-nav a {
     min-height: 44px;
   }
 
@@ -1047,10 +1068,28 @@ kbd {
     min-height: 36px;
   }
 
+  /* Chip và mục menu là chữ nằm giữa một viên thuốc — phải căn giữa theo chiều
+     dọc, nếu không chữ dính lên mép trên của vùng vừa cao thêm. */
+  .chip,
+  .icon-btn,
+  .app-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Liên kết quay lại là chữ trong dòng, không có nền, nên chỉ cần nới chiều cao
+     vùng bấm chứ không đổi hình dạng. */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
   .search-clear,
   .star-btn {
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
   }
 }
 

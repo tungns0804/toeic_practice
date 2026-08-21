@@ -1,5 +1,11 @@
 {
-  "name": "Nhóm thì hiện tại",
-  "description": "Hiện tại đơn, hiện tại tiếp diễn, hiện tại hoàn thành và hiện tại hoàn thành tiếp diễn.",
+  "name": {
+    "vi": "Nhóm thì hiện tại",
+    "en": "Present tenses"
+  },
+  "description": {
+    "vi": "Hiện tại đơn, hiện tại tiếp diễn, hiện tại hoàn thành và hiện tại hoàn thành tiếp diễn.",
+    "en": "Present Simple, Present Continuous, Present Perfect and Present Perfect Continuous."
+  },
   "order": 101
 }

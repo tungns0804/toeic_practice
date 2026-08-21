@@ -144,9 +144,15 @@
     align-items: center;
     /* Xuống hàng riêng: cột bên phải ở khổ hẹp chỉ còn vài chục pixel và hai badge
        sẽ bị bóp thành nhiều dòng chữ vụn. */
-    flex: 1 0 100%;
+    flex: 1 1 100%;
     order: 3;
     padding-left: calc(30px + var(--sp-3));
+    /* Hai badge bên trong đều `white-space: nowrap`, nên nếu hàng này không được
+       xuống dòng thì bề rộng tối thiểu của nó là TỔNG bề rộng hai badge — vượt
+       khung ở khổ điện thoại và làm cả trang cuộn ngang. Cho phép wrap, và dùng
+       `flex-shrink: 1` (không phải 0) để nó co được về đúng bề rộng còn lại. */
+    flex-wrap: wrap;
+    min-width: 0;
   }
 
   .sentence {

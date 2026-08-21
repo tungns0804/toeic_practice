@@ -98,8 +98,14 @@ export interface TenseExample {
    * Rỗng nghĩa là không dùng được cho dạng "chia động từ".
    */
   conjugated: string;
-  /** Ghi chú ngắn cho riêng câu này. Rỗng nếu không có. */
-  note: string;
+  /**
+   * Ghi chú ngắn cho riêng câu này, null nếu không có.
+   *
+   * Là cặp hai ngôn ngữ vì đây là lời GIẢI THÍCH của ứng dụng ("chủ ngữ số ít nên
+   * động từ thêm -s"), không phải ngữ liệu. Trường `vietnamese` ngay bên trên thì
+   * ngược lại: nó chính là thứ người học đang tập dịch nên luôn là tiếng Việt.
+   */
+  note: LocalizedText | null;
 }
 
 /** Một thì: tên, công thức, cách dùng, dấu hiệu nhận biết và câu ví dụ. */
@@ -160,8 +166,9 @@ export const LESSON_KIND_ROUTE: Record<LessonKind, string> = {
 /** Bài học đầy đủ. Tuỳ `kind` mà dùng `words` hay `tensePoints`. */
 export interface Lesson {
   id: string;
-  name: string;
-  description: string;
+  /** Tên hiển thị, hai ngôn ngữ (xem `LocalizedText`). */
+  name: LocalizedText;
+  description: LocalizedText;
   kind: LessonKind;
   /** Số mục trong bài: số từ vựng, hoặc số thì. */
   itemCount: number;
@@ -178,8 +185,8 @@ export interface Lesson {
 /** Thông tin tóm tắt để hiển thị ở màn hình danh sách (chưa cần tải nội dung). */
 export interface LessonSummary {
   id: string;
-  name: string;
-  description: string;
+  name: LocalizedText;
+  description: LocalizedText;
   kind: LessonKind;
   itemCount: number;
   bandFrom?: number;
@@ -194,8 +201,8 @@ export interface LessonSummary {
  */
 export interface LessonIndexEntry {
   id: string;
-  name: string;
-  description?: string;
+  name: LocalizedText;
+  description: LocalizedText;
   kind: LessonKind;
   itemCount: number;
   exampleCount?: number;

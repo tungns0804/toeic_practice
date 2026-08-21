@@ -1,6 +1,12 @@
 {
-  "name": "Band 1 · 300–450",
-  "description": "Từ nền tảng của môi trường công sở: lịch hẹn, đơn hàng, khách hàng, giao nhận. Gặp ở mọi phần của bài thi.",
+  "name": {
+    "vi": "Band 1 · 300–450",
+    "en": "Band 1 · 300–450"
+  },
+  "description": {
+    "vi": "Từ nền tảng của môi trường công sở: lịch hẹn, đơn hàng, khách hàng, giao nhận. Gặp ở mọi phần của bài thi.",
+    "en": "The office basics: appointments, orders, customers and deliveries. These turn up in every part of the test."
+  },
   "order": 201,
   "bandFrom": 300,
   "bandTo": 450

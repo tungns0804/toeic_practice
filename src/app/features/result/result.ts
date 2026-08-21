@@ -3,7 +3,12 @@ import { Router } from '@angular/router';
 
 import { LanguageStore } from '../../core/i18n/language-store';
 import { T } from '../../core/i18n/t';
-import { LESSON_KIND_ROUTE, LessonKind, localized } from '../../core/models/lesson.model';
+import {
+  LESSON_KIND_ROUTE,
+  LessonKind,
+  LocalizedText,
+  localized,
+} from '../../core/models/lesson.model';
 import { QuestionResult, describeConfigKeys } from '../../core/models/practice.model';
 import { reshuffleChoices } from '../../core/practice/build-questions';
 import { FavoriteStore } from '../../core/services/favorite-store';
@@ -91,6 +96,11 @@ export class Result {
     const ids = new Set(this.wrongResults().map((r) => r.question.subject.id));
     return [...ids].filter((id) => !this.favoriteStore.isFavorite(summary.lessonId, id));
   });
+
+  /** Chữ của một cặp hai ngôn ngữ, theo ngôn ngữ đang chọn. */
+  localizedText(text: LocalizedText): string {
+    return localized(text, this.lang.language());
+  }
 
   /** Chữ hiển thị của một giá trị trong kết quả (câu nhận diện thì lưu id của thì). */
   answerText(item: QuestionResult, value: string): string {

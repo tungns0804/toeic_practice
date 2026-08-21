@@ -1,7 +1,13 @@
 {
   "id": "tu-vung-band-3",
-  "name": "Band 3 · 600–750",
-  "description": "Từ vựng hợp đồng, đàm phán và vận hành. Đây là mốc phân loại giữa người đọc hiểu được và người chỉ đoán được.",
+  "name": {
+    "vi": "Band 3 · 600–750",
+    "en": "Band 3 · 600–750"
+  },
+  "description": {
+    "vi": "Từ vựng hợp đồng, đàm phán và vận hành. Đây là mốc phân loại giữa người đọc hiểu được và người chỉ đoán được.",
+    "en": "Contracts, negotiation and operations — the band that separates readers who understand from readers who guess."
+  },
   "kind": "vocabulary",
   "itemCount": 40,
   "words": [

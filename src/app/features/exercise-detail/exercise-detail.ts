@@ -15,6 +15,7 @@ import {
 } from '../../core/exercises/exercise.model';
 import { PASSIVE_FORMULAS, PASSIVE_SENTENCES, passiveFormula } from '../../core/exercises/passive-sentences';
 import { LanguageStore } from '../../core/i18n/language-store';
+import { MESSAGES } from '../../core/i18n/messages';
 import { T } from '../../core/i18n/t';
 import { LocalizedText, localized } from '../../core/models/lesson.model';
 import {
@@ -281,7 +282,9 @@ export class ExerciseDetail {
 
     const questions = orderQuestions(buildPassiveQuestions(this.pool(), config), config);
 
-    if (this.session.start({ id: info.id, name: this.lang.t(info.nameKey) }, config, questions)) {
+    // Đọc thẳng cả hai vế của bảng thông điệp thay vì `lang.t(...)`: tên phiên phải
+    // đổi được theo ngôn ngữ ngay cả khi đang đứng ở màn hình kết quả.
+    if (this.session.start({ id: info.id, name: MESSAGES[info.nameKey] }, config, questions)) {
       void this.router.navigate(['/practice']);
     }
   }
