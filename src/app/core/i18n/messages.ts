@@ -743,6 +743,15 @@ export const MESSAGES = {
   'speaking.step.drill': { vi: '2. Luyện từ', en: '2. Drill' },
   'speaking.step.questions': { vi: '3. Câu hỏi', en: '3. Questions' },
 
+  'speaking.pos.noun': { vi: 'Cụm danh từ', en: 'Noun phrase' },
+  'speaking.pos.verb': { vi: 'Cụm động từ', en: 'Verb phrase' },
+  'speaking.pos.adj': { vi: 'Tính từ', en: 'Adjective' },
+  'speaking.pos.adv': { vi: 'Trạng từ', en: 'Adverb' },
+  'speaking.pos.legend': {
+    vi: '(n) danh từ · (v) động từ · (adj) tính từ · (adv) trạng từ',
+    en: '(n) noun · (v) verb · (adj) adjective · (adv) adverb',
+  },
+  'speaking.words': { vi: 'Nghĩa từng từ', en: 'Word by word' },
   'speaking.type.collocation': { vi: 'Collocation', en: 'Collocation' },
   'speaking.type.idiom': { vi: 'Thành ngữ', en: 'Idiom' },
   'speaking.type.phrase': { vi: 'Cụm từ', en: 'Phrase' },

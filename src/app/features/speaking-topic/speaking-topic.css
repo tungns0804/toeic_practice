@@ -33,9 +33,50 @@
   color: var(--accent);
 }
 
+.phrase-top {
+  gap: 6px;
+}
+
+.phrase-pos {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.phrase-short {
+  margin: 0;
+  font-weight: 650;
+}
+
 .phrase-meaning,
 .phrase-example {
   margin: 0;
+}
+
+/* Nghĩa từng từ trong cụm: một dòng chip nhỏ, tách khỏi định nghĩa cả cụm. */
+.word-gloss {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.word-gloss li {
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-inset);
+  font-size: var(--fs-sm);
+}
+
+.word-gloss-word {
+  font-weight: 650;
+}
+
+.word-gloss-pos {
+  margin-inline: 3px 4px;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 .phrase-example {

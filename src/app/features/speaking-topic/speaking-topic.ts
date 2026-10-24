@@ -10,6 +10,8 @@ import { SpeakingStore } from '../../core/speaking/speaking-store';
 import { ANSWER_STRATEGIES, findSpeakingTopic } from '../../core/speaking/speaking-topics';
 import {
   PHRASE_TYPE_KEY,
+  POS_ABBR,
+  POS_KEY,
   type SpeakingPart,
   type SpeakingQuestion,
   exampleSegments,
@@ -55,6 +57,8 @@ export class SpeakingTopicPage {
   protected readonly steps = STEPS;
   protected readonly strategies = ANSWER_STRATEGIES;
   protected readonly typeKey = PHRASE_TYPE_KEY;
+  protected readonly posAbbr = POS_ABBR;
+  protected readonly posKey = POS_KEY;
   protected readonly partDesc = PART_DESC;
   protected readonly segmentsOf = exampleSegments;
 

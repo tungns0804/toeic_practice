@@ -15,6 +15,7 @@ import {
   type ExampleSegment,
   type SpeakingPhrase,
   type SpeakingTopic,
+  POS_ABBR,
   exampleSegments,
 } from '../../core/speaking/speaking.model';
 import { pickRandom, shuffle } from '../../core/utils/random';
@@ -52,6 +53,7 @@ export class SpeakingDrill {
 
   protected readonly t = this.lang.t.bind(this.lang);
   protected readonly language = this.lang.language;
+  protected readonly posAbbr = POS_ABBR;
 
   protected readonly phase = signal<'intro' | 'run' | 'done'>('intro');
   protected readonly items = signal<readonly DrillItem[]>([]);

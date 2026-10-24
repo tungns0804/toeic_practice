@@ -19,11 +19,42 @@ export const PHRASE_TYPE_KEY: Record<SpeakingPhraseType, MessageKey> = {
   phrasalVerb: 'speaking.type.phrasalVerb',
 };
 
+/** Từ loại, theo cách ghi của từ điển: (n) (v) (adj) (adv). */
+export type SpeakingPos = 'noun' | 'verb' | 'adj' | 'adv';
+
+export const POS_ABBR: Record<SpeakingPos, string> = {
+  noun: 'n',
+  verb: 'v',
+  adj: 'adj',
+  adv: 'adv',
+};
+
+export const POS_KEY: Record<SpeakingPos, MessageKey> = {
+  noun: 'speaking.pos.noun',
+  verb: 'speaking.pos.verb',
+  adj: 'speaking.pos.adj',
+  adv: 'speaking.pos.adv',
+};
+
+/** Một từ trong cụm, kèm từ loại và nghĩa tiếng Việt. */
+export interface SpeakingWord {
+  readonly word: string;
+  readonly pos: SpeakingPos;
+  readonly vi: string;
+}
+
 export interface SpeakingPhrase {
   /** Duy nhất trong chủ đề; dùng làm khoá lưu "câu sai" của phần luyện từ. */
   readonly id: string;
   readonly phrase: string;
+  /** Loại cụm (collocation, idiom…) — theo sách. */
   readonly type: SpeakingPhraseType;
+  /** Từ loại của CẢ cụm khi dùng trong câu: cụm danh từ hay cụm động từ. */
+  readonly pos: SpeakingPos;
+  /** Nghĩa ngắn tiếng Việt, kiểu một dòng trong sổ từ vựng. */
+  readonly short: string;
+  /** Nghĩa từng từ trong cụm. */
+  readonly words: readonly SpeakingWord[];
   readonly meaning: LocalizedText;
   /**
    * Câu ví dụ, phần chứa cụm từ bọc trong `[[...]]`. Phần đó được tô đậm ở bảng

@@ -33,15 +33,29 @@
         @case ('vocab') {
           <section class="stack">
             <p class="muted lead"><app-t key="speaking.vocab.lead" block /></p>
+            <p class="faint small">{{ t('speaking.pos.legend') }}</p>
             <ol class="phrase-list">
               @for (phrase of topic.phrases; track phrase.id) {
                 <li class="card phrase-card">
                   <div class="card-body stack stack-sm">
-                    <div class="row">
+                    <div class="row phrase-top">
                       <strong class="phrase-name" lang="en">{{ phrase.phrase }}</strong>
+                      <span class="phrase-pos">({{ posAbbr[phrase.pos] }})</span>
+                      <span class="spacer"></span>
+                      <span class="badge badge-accent">{{ t(posKey[phrase.pos]) }}</span>
                       <span class="badge">{{ t(typeKey[phrase.type]) }}</span>
                     </div>
-                    <p class="phrase-meaning">{{ phrase.meaning[language()] }}</p>
+                    <p class="phrase-short">{{ phrase.short }}</p>
+                    <p class="phrase-meaning muted small">{{ phrase.meaning[language()] }}</p>
+                    <ul class="word-gloss" [attr.aria-label]="t('speaking.words')">
+                      @for (w of phrase.words; track w.word) {
+                        <li>
+                          <span lang="en" class="word-gloss-word">{{ w.word }}</span>
+                          <span class="word-gloss-pos">({{ posAbbr[w.pos] }})</span>
+                          {{ w.vi }}
+                        </li>
+                      }
+                    </ul>
                     <p class="phrase-example" lang="en">
                       @for (seg of segmentsOf(phrase.example); track $index) {
                         @if (seg.target) {
@@ -118,8 +132,8 @@
                 <ul class="help-body help-phrases">
                   @for (phrase of topic.phrases; track phrase.id) {
                     <li>
-                      <strong lang="en">{{ phrase.phrase }}</strong>
-                      <span class="muted small">{{ phrase.meaning[language()] }}</span>
+                      <span><strong lang="en">{{ phrase.phrase }}</strong> <span class="faint small">({{ posAbbr[phrase.pos] }})</span></span>
+                      <span class="small">{{ phrase.short }}</span>
                     </li>
                   }
                 </ul>
