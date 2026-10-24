@@ -811,8 +811,8 @@ export const MESSAGES = {
   },
   'speaking.sample.show': { vi: 'Xem câu trả lời mẫu (khoảng band 5.0)', en: 'See a sample answer (about band 5.0)' },
   'speaking.sample.note': {
-    vi: 'Chỉ để tham khảo cách triển khai ý — hãy viết lại bằng ý và từ của bạn.',
-    en: 'For reference on how to develop ideas — rewrite it with your own ideas and words.',
+    vi: 'Chữ in đậm là cấu trúc trong sơ đồ "Cách phát triển câu trả lời" (lý do, ví dụ, kết quả, cảm xúc, lợi ích) và cụm từ của chủ đề. Chỉ để tham khảo — hãy viết lại bằng ý và từ của bạn.',
+    en: 'Bold text marks the structures from the "How to develop an answer" map (reason, example, result, emotion, benefit) and the topic phrases. For reference only — rewrite it with your own ideas and words.',
   },
   'speaking.answer.save': { vi: 'Lưu', en: 'Save' },
   'speaking.answer.clear': { vi: 'Xoá', en: 'Clear' },
