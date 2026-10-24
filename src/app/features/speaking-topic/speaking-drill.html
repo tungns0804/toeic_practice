@@ -1,0 +1,152 @@
+@switch (phase()) {
+  @case ('intro') {
+    <div class="card">
+      <div class="card-body stack">
+        <p>{{ t('speaking.drill.lead', { count: topic().phrases.length }) }}</p>
+        <div class="row">
+          <button type="button" class="btn btn-primary btn-lg" (click)="start()">
+            {{ t('speaking.drill.start') }}
+          </button>
+          @if (best(); as b) {
+            <span class="badge badge-success tnum">
+              {{ t('speaking.drill.best', { correct: b.correct, total: b.total }) }}
+            </span>
+          }
+        </div>
+        <p class="faint small">{{ t('speaking.drill.keys') }}</p>
+      </div>
+    </div>
+  }
+
+  @case ('run') {
+    @if (current(); as item) {
+      <div class="card drill-card">
+        <div class="card-body stack">
+          <div class="row small">
+            <span class="badge tnum">
+              {{ t('speaking.drill.progress', { current: index() + 1, total: items().length }) }}
+            </span>
+            <span class="spacer"></span>
+            <span class="faint tnum">✓ {{ index() + (picked() ? 1 : 0) - missed().length }} · ✗ {{ missed().length }}</span>
+          </div>
+          <div class="drill-bar" aria-hidden="true">
+            <span [style.width.%]="((index() + (picked() ? 1 : 0)) / items().length) * 100"></span>
+          </div>
+
+          @if (item.kind === 'meaning') {
+            <p class="drill-ask muted small">{{ t('speaking.drill.askMeaning') }}</p>
+            <p class="drill-prompt">{{ item.phrase.meaning[language()] }}</p>
+          } @else {
+            <p class="drill-ask muted small">{{ t('speaking.drill.askCloze') }}</p>
+            <p class="drill-prompt" lang="en">
+              @for (seg of item.segments; track $index) {
+                @if (seg.target) {
+                  @if (picked()) {
+                    <mark class="drill-filled">{{ seg.text }}</mark>
+                  } @else {
+                    <span class="drill-gap">_______</span>
+                  }
+                } @else {
+                  {{ seg.text }}
+                }
+              }
+            </p>
+          }
+
+          <div class="options drill-options" role="group">
+            @for (option of item.options; track option.id; let i = $index) {
+              <button
+                type="button"
+                class="option drill-option"
+                [attr.data-state]="optionState(option)"
+                [disabled]="picked() !== null && optionState(option) === 'idle'"
+                (click)="pick(option)"
+                lang="en"
+              >
+                <kbd class="drill-key" aria-hidden="true">{{ i + 1 }}</kbd>
+                <span>{{ option.phrase }}</span>
+              </button>
+            }
+          </div>
+
+          @if (picked(); as p) {
+            <div
+              class="notice"
+              [class.notice-success]="p === item.phrase.id"
+              [class.notice-error]="p !== item.phrase.id"
+              role="status"
+            >
+              <div class="stack stack-sm">
+                <strong>
+                  @if (p === item.phrase.id) {
+                    {{ t('speaking.drill.correct') }}
+                  } @else {
+                    {{ t('speaking.drill.wrong') }} “{{ item.phrase.phrase }}”
+                  }
+                </strong>
+                <span>{{ item.phrase.meaning[language()] }}</span>
+                @if (item.kind === 'meaning') {
+                  <span lang="en">
+                    @for (seg of item.segments; track $index) {
+                      @if (seg.target) {
+                        <strong>{{ seg.text }}</strong>
+                      } @else {
+                        {{ seg.text }}
+                      }
+                    }
+                  </span>
+                }
+                <span class="muted small">{{ item.phrase.exampleVi }}</span>
+              </div>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-primary" (click)="next()">
+                {{ isLast() ? t('speaking.drill.finish') : t('speaking.drill.next') }} →
+              </button>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  }
+
+  @case ('done') {
+    <div class="card">
+      <div class="card-body stack">
+        <h3 class="drill-score tnum">
+          {{ t('speaking.drill.score', { correct: correctCount(), total: items().length }) }}
+        </h3>
+
+        @if (missedPhrases().length === 0) {
+          <p class="muted">{{ t('speaking.drill.perfect') }}</p>
+        } @else {
+          <div class="stack stack-sm">
+            <p class="label">{{ t('speaking.drill.review') }}</p>
+            <ul class="drill-review">
+              @for (phrase of missedPhrases(); track phrase.id) {
+                <li>
+                  <strong lang="en">{{ phrase.phrase }}</strong>
+                  <span class="muted"> — {{ phrase.meaning[language()] }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+
+        <div class="row">
+          <button type="button" class="btn btn-primary" (click)="toQuestions.emit()">
+            {{ t('speaking.drill.toQuestions') }} →
+          </button>
+          @if (missed().length > 0) {
+            <button type="button" class="btn" (click)="start(missed())">
+              {{ t('speaking.drill.retryWrong', { count: missed().length }) }}
+            </button>
+          }
+          <button type="button" class="btn btn-ghost" (click)="start()">
+            {{ t('speaking.drill.retry') }}
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+}

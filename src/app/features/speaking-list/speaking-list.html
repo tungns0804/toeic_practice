@@ -1,0 +1,44 @@
+<div class="container page">
+  <div class="stack stack-xl">
+    <header class="page-head">
+      <h1>{{ t('speaking.listTitle') }}</h1>
+      <p><app-t key="speaking.listLead" block /></p>
+    </header>
+
+    <div class="topic-grid">
+      @for (topic of topics; track topic.id) {
+        @let best = store.vocabBest(topic.id);
+        @let done = store.answeredCount(topic.id);
+        <a [routerLink]="['/speaking', topic.id]" class="card topic-card">
+          <div class="card-body stack stack-sm">
+            <div class="row">
+              <span class="badge badge-accent tnum">
+                {{ t('speaking.topicNumber', { number: topic.number }) }}
+              </span>
+              <span class="badge tnum">{{ t('speaking.phraseCount', { count: topic.phrases.length }) }}</span>
+            </div>
+            <h2>{{ topic.title[language()] }}</h2>
+            <p class="muted small">{{ topic.title[language() === 'vi' ? 'en' : 'vi'] }}</p>
+
+            <div class="topic-progress" aria-hidden="true">
+              <span [style.width.%]="(done / topic.questions.length) * 100"></span>
+            </div>
+            <div class="row small">
+              <span class="tnum" [class.muted]="done === 0">
+                {{ t('speaking.answered', { done, total: topic.questions.length }) }}
+              </span>
+              <span class="spacer"></span>
+              @if (best) {
+                <span class="badge badge-success tnum">
+                  {{ t('speaking.vocabBest', { correct: best.correct, total: best.total }) }}
+                </span>
+              } @else {
+                <span class="faint">{{ t('speaking.vocabNotYet') }}</span>
+              }
+            </div>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</div>

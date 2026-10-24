@@ -43,6 +43,7 @@ export const MESSAGES = {
   'app.nav.vocabulary': { vi: 'Từ vựng', en: 'Vocabulary' },
   'app.nav.exercise': { vi: 'Bài tập', en: 'Drills' },
   'app.nav.grammar': { vi: 'Ngữ pháp', en: 'Grammar' },
+  'app.nav.speaking': { vi: 'Luyện nói', en: 'Speaking' },
   'app.language.switch': { vi: 'Chuyển sang {name}', en: 'Switch to {name}' },
   'app.breadcrumb': { vi: 'Bạn đang ở', en: 'You are here' },
   'app.navigating': { vi: 'Đang mở trang…', en: 'Opening page…' },
@@ -70,6 +71,8 @@ export const MESSAGES = {
   'route.result': { vi: 'Kết quả', en: 'Result' },
   'route.grammar': { vi: 'Khóa ngữ pháp', en: 'Grammar course' },
   'route.grammarLesson': { vi: 'Bài học ngữ pháp', en: 'Grammar lesson' },
+  'route.speaking': { vi: 'Luyện nói theo chủ đề', en: 'Speaking by topic' },
+  'route.speakingTopic': { vi: 'Chủ đề luyện nói', en: 'Speaking topic' },
 
   // ── Trang Hôm nay ──────────────────────────────────────────────────────
   'today.title': { vi: 'Hôm nay học gì?', en: 'What shall we study today?' },
@@ -720,6 +723,105 @@ export const MESSAGES = {
   'grammar.history.trimmed': {
     vi: 'Chỉ hiện {count} lần gần nhất.',
     en: 'Showing the latest {count} attempts.',
+  },
+
+  // ── Luyện nói ──────────────────────────────────────────────────────────
+  'speaking.listTitle': { vi: 'Luyện nói theo chủ đề', en: 'Speaking by topic' },
+  'speaking.listLead': {
+    vi: 'Mỗi chủ đề: học cụm từ, luyện cho nhớ, rồi viết ý cho từng câu hỏi Part 1–3 và dựa vào đó để nói. Câu trả lời được lưu lại trên trình duyệt này.',
+    en: 'For each topic: learn the phrases, drill them, then write your ideas for every Part 1–3 question and use them to speak. Your answers are saved in this browser.',
+  },
+  'speaking.topicNumber': { vi: 'Chủ đề {number}', en: 'Topic {number}' },
+  'speaking.phraseCount': { vi: '{count} cụm từ', en: '{count} phrases' },
+  'speaking.answered': { vi: 'Đã trả lời {done}/{total} câu', en: '{done}/{total} answered' },
+  'speaking.vocabBest': { vi: 'Luyện từ: {correct}/{total}', en: 'Phrase drill: {correct}/{total}' },
+  'speaking.vocabNotYet': { vi: 'Chưa luyện từ', en: 'Phrases not drilled yet' },
+  'speaking.back': { vi: 'Tất cả chủ đề', en: 'All topics' },
+  'speaking.notFound': { vi: 'Không tìm thấy chủ đề này.', en: 'Topic not found.' },
+  'speaking.steps': { vi: 'Các bước của chủ đề', en: 'Topic steps' },
+  'speaking.step.vocab': { vi: '1. Từ vựng', en: '1. Phrases' },
+  'speaking.step.drill': { vi: '2. Luyện từ', en: '2. Drill' },
+  'speaking.step.questions': { vi: '3. Câu hỏi', en: '3. Questions' },
+
+  'speaking.type.collocation': { vi: 'Collocation', en: 'Collocation' },
+  'speaking.type.idiom': { vi: 'Thành ngữ', en: 'Idiom' },
+  'speaking.type.phrase': { vi: 'Cụm từ', en: 'Phrase' },
+  'speaking.type.phrasalVerb': { vi: 'Cụm động từ', en: 'Phrasal verb' },
+
+  'speaking.vocab.lead': {
+    vi: 'Học cụm từ theo ngữ cảnh và cách dùng chứ không chỉ học thuộc lòng. Đọc kỹ câu ví dụ rồi sang bước luyện từ.',
+    en: 'Learn each phrase in context and in use, not just by heart. Read the examples, then move on to the drill.',
+  },
+  'speaking.vocab.start': { vi: 'Bắt đầu luyện từ', en: 'Start the drill' },
+
+  'speaking.drill.lead': {
+    vi: '{count} câu trắc nghiệm: chọn cụm từ đúng nghĩa, hoặc hợp với chỗ trống trong câu ví dụ. Làm trước khi trả lời câu hỏi để có sẵn từ mà dùng.',
+    en: '{count} multiple-choice items: pick the phrase that matches the meaning or fits the gap in the example. Do it before the questions so the phrases are ready to use.',
+  },
+  'speaking.drill.start': { vi: 'Bắt đầu', en: 'Start' },
+  'speaking.drill.best': { vi: 'Điểm cao nhất: {correct}/{total}', en: 'Best score: {correct}/{total}' },
+  'speaking.drill.progress': { vi: 'Câu {current}/{total}', en: 'Item {current}/{total}' },
+  'speaking.drill.askMeaning': { vi: 'Cụm từ nào mang nghĩa này?', en: 'Which phrase has this meaning?' },
+  'speaking.drill.askCloze': { vi: 'Cụm từ nào hợp với chỗ trống?', en: 'Which phrase fits the gap?' },
+  'speaking.drill.correct': { vi: 'Chính xác!', en: 'Correct!' },
+  'speaking.drill.wrong': { vi: 'Chưa đúng — đáp án là', en: 'Not quite — the answer is' },
+  'speaking.drill.next': { vi: 'Câu tiếp', en: 'Next' },
+  'speaking.drill.finish': { vi: 'Xem kết quả', en: 'See result' },
+  'speaking.drill.keys': {
+    vi: 'Phím tắt: 1–4 để chọn, Enter để sang câu tiếp.',
+    en: 'Shortcuts: 1–4 to choose, Enter for the next item.',
+  },
+  'speaking.drill.score': { vi: 'Bạn đúng {correct}/{total} câu', en: 'You got {correct}/{total} right' },
+  'speaking.drill.perfect': {
+    vi: 'Không sai câu nào — sẵn sàng dùng các cụm này khi trả lời.',
+    en: 'No mistakes — you are ready to use these phrases in your answers.',
+  },
+  'speaking.drill.review': { vi: 'Các cụm cần xem lại', en: 'Phrases to review' },
+  'speaking.drill.retry': { vi: 'Luyện lại', en: 'Drill again' },
+  'speaking.drill.retryWrong': { vi: 'Luyện lại {count} câu sai', en: 'Retry {count} missed' },
+  'speaking.drill.toQuestions': { vi: 'Sang phần câu hỏi', en: 'Go to the questions' },
+
+  'speaking.questions.lead': {
+    vi: 'Viết ý trước, rồi dựa vào đó để nói thành một câu trả lời tự nhiên.',
+    en: 'Write your ideas first. Then use them to build a natural spoken answer.',
+  },
+  'speaking.part': { vi: 'Part {part}', en: 'Part {part}' },
+  'speaking.partDesc.1': {
+    vi: 'Trả lời ngắn gọn với 1–2 ý chính kèm theo chi tiết bổ trợ.',
+    en: 'Answer briefly with 1–2 main ideas plus supporting details.',
+  },
+  'speaking.partDesc.2': {
+    vi: 'Sắp xếp ý tưởng thành một câu chuyện hoặc bài miêu tả đơn giản.',
+    en: 'Organise your ideas into a simple story or description.',
+  },
+  'speaking.partDesc.3': {
+    vi: 'Phát triển ý tưởng sâu hơn bằng cách đưa ra lý do, ví dụ, kết quả và lời giải thích.',
+    en: 'Develop your ideas further with reasons, examples, results and explanations.',
+  },
+  'speaking.questionNumber': { vi: 'Câu {number}', en: 'Question {number}' },
+  'speaking.copyAll': { vi: 'Sao chép mọi câu trả lời', en: 'Copy all answers' },
+  'speaking.copied': { vi: 'Đã sao chép', en: 'Copied' },
+  'speaking.strategy.title': { vi: 'Cách phát triển câu trả lời', en: 'How to develop an answer' },
+  'speaking.strategy.example': { vi: 'Ví dụ', en: 'Example' },
+  'speaking.phrases.title': { vi: 'Từ vựng của chủ đề', en: 'Topic phrases' },
+
+  'speaking.answer.placeholder': {
+    vi: 'Viết ý chính, lý do, ví dụ… bằng tiếng Anh',
+    en: 'Write your main idea, reasons, examples… in English',
+  },
+  'speaking.answer.save': { vi: 'Lưu', en: 'Save' },
+  'speaking.answer.clear': { vi: 'Xoá', en: 'Clear' },
+  'speaking.answer.clearConfirm': { vi: 'Xoá câu trả lời này?', en: 'Clear this answer?' },
+  'speaking.answer.savedAt': { vi: 'Đã lưu lúc {time}', en: 'Saved at {time}' },
+  'speaking.answer.unsaved': { vi: 'Chưa lưu', en: 'Not saved' },
+  'speaking.answer.saveFailed': {
+    vi: 'Không lưu được: trình duyệt đang chặn bộ nhớ cục bộ.',
+    en: 'Could not save: the browser is blocking local storage.',
+  },
+  'speaking.answer.words': { vi: '{count} từ', en: '{count} words' },
+  'speaking.answer.shortcut': {
+    vi: 'Tự lưu khi bạn ngừng gõ; Ctrl+S để lưu ngay.',
+    en: 'Saves automatically when you stop typing; Ctrl+S saves now.',
   },
 
   // ── Lỗi ────────────────────────────────────────────────────────────────

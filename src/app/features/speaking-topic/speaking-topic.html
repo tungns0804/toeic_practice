@@ -1,0 +1,138 @@
+<div class="container page">
+  @if (topic(); as topic) {
+    <div class="stack stack-xl">
+      <header class="stack stack-sm">
+        <a routerLink="/speaking" class="small back-link">← {{ t('speaking.back') }}</a>
+        <div class="page-head">
+          <div class="row">
+            <span class="badge badge-accent tnum">{{ t('speaking.topicNumber', { number: topic.number }) }}</span>
+            <span class="badge tnum">
+              {{ t('speaking.answered', { done: store.answeredCount(topic.id), total: topic.questions.length }) }}
+            </span>
+          </div>
+          <h1>{{ topic.title[language()] }}</h1>
+        </div>
+      </header>
+
+      <nav class="sub-nav-track step-nav" [attr.aria-label]="t('speaking.steps')">
+        @for (s of steps; track s.id) {
+          <button
+            type="button"
+            class="sub-nav-link"
+            [class.is-active]="step() === s.id"
+            [attr.aria-current]="step() === s.id ? 'step' : null"
+            (click)="go(s.id)"
+          >
+            <app-t [key]="s.key" />
+          </button>
+        }
+      </nav>
+
+      @switch (step()) {
+        <!-- ── Bước 1: học cụm từ ─────────────────────────────────────────── -->
+        @case ('vocab') {
+          <section class="stack">
+            <p class="muted lead"><app-t key="speaking.vocab.lead" block /></p>
+            <ol class="phrase-list">
+              @for (phrase of topic.phrases; track phrase.id) {
+                <li class="card phrase-card">
+                  <div class="card-body stack stack-sm">
+                    <div class="row">
+                      <strong class="phrase-name" lang="en">{{ phrase.phrase }}</strong>
+                      <span class="badge">{{ t(typeKey[phrase.type]) }}</span>
+                    </div>
+                    <p class="phrase-meaning">{{ phrase.meaning[language()] }}</p>
+                    <p class="phrase-example" lang="en">
+                      @for (seg of segmentsOf(phrase.example); track $index) {
+                        @if (seg.target) {
+                          <strong>{{ seg.text }}</strong>
+                        } @else {
+                          {{ seg.text }}
+                        }
+                      }
+                    </p>
+                    <p class="muted small">{{ phrase.exampleVi }}</p>
+                  </div>
+                </li>
+              }
+            </ol>
+            <div class="row">
+              <button type="button" class="btn btn-primary btn-lg" (click)="go('drill')">
+                {{ t('speaking.vocab.start') }} →
+              </button>
+            </div>
+          </section>
+        }
+
+        <!-- ── Bước 2: luyện cụm từ ───────────────────────────────────────── -->
+        @case ('drill') {
+          <app-speaking-drill [topic]="topic" (toQuestions)="go('questions')" />
+        }
+
+        <!-- ── Bước 3: câu hỏi và câu trả lời ─────────────────────────────── -->
+        @case ('questions') {
+          <div class="q-layout">
+            <div class="stack stack-xl q-main">
+              <div class="row">
+                <p class="muted lead"><app-t key="speaking.questions.lead" block /></p>
+                <span class="spacer"></span>
+                <button type="button" class="btn btn-sm" (click)="copyAll()">
+                  {{ copied() ? '✓ ' + t('speaking.copied') : t('speaking.copyAll') }}
+                </button>
+              </div>
+              <p class="faint small">{{ t('speaking.answer.shortcut') }}</p>
+
+              @for (group of parts(); track group.part) {
+                <section class="stack" [attr.aria-labelledby]="'part-' + group.part">
+                  <div class="part-head">
+                    <h2 [id]="'part-' + group.part">{{ t('speaking.part', { part: group.part }) }}</h2>
+                    <p class="muted small">{{ t(partDesc[group.part]) }}</p>
+                  </div>
+                  @for (question of group.questions; track question.id) {
+                    <app-speaking-answer [topicId]="topic.id" [question]="question" />
+                  }
+                </section>
+              }
+            </div>
+
+            <aside class="q-aside stack">
+              <details class="card help-box">
+                <summary>{{ t('speaking.strategy.title') }}</summary>
+                <div class="help-body stack">
+                  @for (s of strategies; track s.id) {
+                    <div class="strategy" [attr.data-kind]="s.id">
+                      <strong>{{ s.name[language()] }}</strong>
+                      <ul class="strategy-list" lang="en">
+                        @for (st of s.structures; track st) {
+                          <li>{{ st }}</li>
+                        }
+                      </ul>
+                      <p class="small" lang="en"><em>{{ t('speaking.strategy.example') }}:</em> {{ s.example }}</p>
+                    </div>
+                  }
+                </div>
+              </details>
+
+              <details class="card help-box">
+                <summary>{{ t('speaking.phrases.title') }}</summary>
+                <ul class="help-body help-phrases">
+                  @for (phrase of topic.phrases; track phrase.id) {
+                    <li>
+                      <strong lang="en">{{ phrase.phrase }}</strong>
+                      <span class="muted small">{{ phrase.meaning[language()] }}</span>
+                    </li>
+                  }
+                </ul>
+              </details>
+            </aside>
+          </div>
+        }
+      }
+    </div>
+  } @else {
+    <div class="stack">
+      <a routerLink="/speaking" class="small back-link">← {{ t('speaking.back') }}</a>
+      <div class="notice notice-warning">{{ t('speaking.notFound') }}</div>
+    </div>
+  }
+</div>

@@ -1,0 +1,147 @@
+.step-nav {
+  width: fit-content;
+}
+
+/* .sub-nav-link vốn viết cho thẻ <a>; ở đây là <button> nên phải bỏ viền và nền
+   mặc định của nút. */
+.step-nav .sub-nav-link {
+  border: 0;
+}
+
+.step-nav .sub-nav-link:not(.is-active) {
+  background: transparent;
+}
+
+.lead {
+  max-width: 70ch;
+  margin: 0;
+}
+
+/* --- Bước 1: thẻ cụm từ --------------------------------------------------- */
+
+.phrase-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+  gap: var(--sp-3);
+}
+
+.phrase-name {
+  font-size: var(--fs-md);
+  color: var(--accent);
+}
+
+.phrase-meaning,
+.phrase-example {
+  margin: 0;
+}
+
+.phrase-example {
+  padding-left: 10px;
+  border-left: 2px solid var(--border-strong);
+  line-height: 1.6;
+}
+
+/* --- Bước 3: câu hỏi + cột trợ giúp ------------------------------------------
+   Máy tính: cột trợ giúp dính bên phải, viết tới đâu tra cấu trúc tới đó. Điện
+   thoại: cột đó nằm TRÊN danh sách câu hỏi, gập sẵn để khỏi đẩy câu hỏi xuống. */
+
+.q-layout {
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.q-aside {
+  order: -1;
+}
+
+@media (min-width: 1100px) {
+  .q-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: start;
+  }
+
+  .q-aside {
+    order: 0;
+    position: sticky;
+    top: calc(var(--header-h, 64px) + var(--sp-4));
+    max-height: calc(100vh - var(--header-h, 64px) - var(--sp-6));
+    overflow-y: auto;
+  }
+}
+
+.part-head h2 {
+  font-size: var(--fs-xl);
+}
+
+.part-head p {
+  margin: 4px 0 0;
+}
+
+.help-box summary {
+  padding: 12px 16px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.help-body {
+  padding: 0 16px 16px;
+}
+
+.help-phrases {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.help-phrases li {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Năm nhánh của sơ đồ, mỗi nhánh một màu như sơ đồ gốc. */
+.strategy {
+  --c: var(--accent);
+  padding: 10px 12px;
+  border-left: 3px solid var(--c);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--c) 8%, transparent);
+}
+
+.strategy[data-kind='reason'] {
+  --c: var(--success);
+}
+
+.strategy[data-kind='result'] {
+  --c: var(--warning);
+}
+
+.strategy[data-kind='example'] {
+  --c: #8b5cf6;
+}
+
+.strategy[data-kind='emotion'] {
+  --c: #e0457b;
+}
+
+.strategy[data-kind='benefit'] {
+  --c: var(--accent);
+}
+
+.strategy strong {
+  color: var(--c);
+}
+
+.strategy-list {
+  margin: 6px 0;
+  padding-left: 18px;
+  font-size: var(--fs-sm);
+}
+
+.strategy p {
+  margin: 0;
+}

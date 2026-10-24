@@ -1,0 +1,58 @@
+:host {
+  display: block;
+}
+
+/* Câu đã có câu trả lời: vạch màu bên trái, liếc là biết câu nào còn bỏ trống. */
+.q-card.has-answer {
+  border-left: 3px solid var(--success);
+}
+
+.q-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.q-text {
+  font-size: var(--fs-md);
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.q-vi {
+  margin: 0;
+}
+
+/* Ô tự cao theo nội dung ở trình duyệt hỗ trợ field-sizing; nơi khác thì vẫn kéo
+   giãn tay được. */
+.q-input {
+  width: 100%;
+  min-height: 7.5em;
+  resize: vertical;
+  field-sizing: content;
+  /* .textarea chung dùng font mono (cho khung dán dữ liệu); đây là văn xuôi. */
+  font-family: var(--font-ui);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+}
+
+.q-foot {
+  gap: var(--sp-2) var(--sp-3);
+}
+
+.q-status {
+  color: var(--text-faint);
+}
+
+.q-status[data-state='saved'] {
+  color: var(--success);
+}
+
+.q-status[data-state='dirty'] {
+  color: var(--warning);
+}
+
+.q-status[data-state='failed'] {
+  color: var(--danger);
+}

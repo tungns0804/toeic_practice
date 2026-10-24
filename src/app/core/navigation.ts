@@ -2,7 +2,7 @@ import type { MessageKey } from './i18n/messages';
 import type { IconName } from '../shared/icon';
 
 /**
- * Menu chính: năm mục, mỗi mục một khu của app.
+ * Menu chính: sáu mục, mỗi mục một khu của app.
  *
  * Dựng theo khung của dự án minano_nihongo (thanh bên trên máy tính, thanh đáy trên
  * điện thoại, breadcrumb trên thanh trên cùng). Ở đây mỗi nhóm chỉ có MỘT trang
@@ -11,7 +11,7 @@ import type { IconName } from '../shared/icon';
  * Trang Hôm nay chiếm "/" — trước đây là trang chủ giới thiệu ba khu.
  */
 
-export type NavGroupId = 'today' | 'grammar' | 'tenses' | 'vocabulary' | 'exercise';
+export type NavGroupId = 'today' | 'grammar' | 'tenses' | 'vocabulary' | 'exercise' | 'speaking';
 
 export interface NavGroup {
   readonly id: NavGroupId;
@@ -26,6 +26,7 @@ export const NAV_GROUPS: readonly NavGroup[] = [
   { id: 'tenses', path: '/tenses', labelKey: 'app.nav.tense', icon: 'clock' },
   { id: 'vocabulary', path: '/vocabulary', labelKey: 'app.nav.vocabulary', icon: 'book' },
   { id: 'exercise', path: '/exercise', labelKey: 'app.nav.exercise', icon: 'clipboard' },
+  { id: 'speaking', path: '/speaking', labelKey: 'app.nav.speaking', icon: 'mic' },
 ];
 
 /** Đường dẫn trần của một URL: bỏ query, fragment và tham số ma trận. */

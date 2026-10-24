@@ -113,7 +113,7 @@ const referenced = new Map();
 
 /** Đầu khoá hợp lệ — dùng để đoán "chuỗi này ĐỊNH là một khoá nhưng gõ sai". */
 const KEY_PREFIXES =
-  /^(?:app|home|today|streak|plan|stats|common|theme|route|grammar|tense|vocab|pos|exercise|passive|direction|tenseMode|passiveMode|setup|scope|favorite|practice|result|error)\./;
+  /^(?:app|home|today|streak|plan|stats|common|theme|route|grammar|speaking|tense|vocab|pos|exercise|passive|direction|tenseMode|passiveMode|setup|scope|favorite|practice|result|error)\./;
 
 /** Ràng buộc thuộc tính của Angular: [key]="bieuThuc". */
 const ANGULAR_BINDING = /\[[\w.$-]+\]="[^"]*"/g;

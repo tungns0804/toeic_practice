@@ -68,6 +68,18 @@ export const routes: Routes = [
       import('./features/exercise-detail/exercise-detail').then((m) => m.ExerciseDetail),
   },
   {
+    path: 'speaking',
+    title: 'route.speaking',
+    loadComponent: () =>
+      import('./features/speaking-list/speaking-list').then((m) => m.SpeakingList),
+  },
+  {
+    path: 'speaking/:id',
+    title: 'route.speakingTopic',
+    loadComponent: () =>
+      import('./features/speaking-topic/speaking-topic').then((m) => m.SpeakingTopicPage),
+  },
+  {
     path: 'practice',
     title: 'route.practice',
     canActivate: [practiceGuard],

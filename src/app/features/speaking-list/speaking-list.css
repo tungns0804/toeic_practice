@@ -1,0 +1,40 @@
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: var(--sp-4);
+}
+
+.topic-card {
+  display: block;
+  color: inherit;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.topic-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.topic-card h2 {
+  font-size: var(--fs-lg);
+}
+
+/* Vạch tiến độ: số câu đã có câu trả lời trên tổng số câu của chủ đề. */
+.topic-progress {
+  height: 6px;
+  margin-top: var(--sp-2);
+  border-radius: var(--radius-pill);
+  background: var(--bg-inset);
+  overflow: hidden;
+}
+
+.topic-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width var(--dur) var(--ease);
+}
