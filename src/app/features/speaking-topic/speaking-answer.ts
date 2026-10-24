@@ -11,6 +11,7 @@ import {
 
 import { LanguageStore } from '../../core/i18n/language-store';
 import { SpeakingStore } from '../../core/speaking/speaking-store';
+import { SPEAKING_SAMPLES } from '../../core/speaking/speaking-samples';
 import type { SpeakingQuestion } from '../../core/speaking/speaking.model';
 
 /** Ngừng gõ bao lâu thì tự lưu (ms). */
@@ -78,6 +79,33 @@ const AUTOSAVE_DELAY = 1200;
             {{ t('speaking.answer.save') }}
           </button>
         </footer>
+
+        @if (sample(); as s) {
+          <details class="q-sample">
+            <summary>{{ t('speaking.sample.show') }}</summary>
+            <div class="q-sample-body stack stack-sm">
+              <div lang="en" class="stack stack-sm">
+                @for (para of s.en; track $index) {
+                  <p>
+                    @for (seg of para; track $index) {
+                      @if (seg.target) {
+                        <strong>{{ seg.text }}</strong>
+                      } @else {
+                        {{ seg.text }}
+                      }
+                    }
+                  </p>
+                }
+              </div>
+              <div class="muted small stack stack-sm">
+                @for (para of s.vi; track $index) {
+                  <p>{{ para }}</p>
+                }
+              </div>
+              <p class="faint small">{{ t('speaking.sample.note') }}</p>
+            </div>
+          </details>
+        }
       </div>
     </article>
   `,
@@ -92,6 +120,26 @@ export class SpeakingAnswer {
   readonly question = input.required<SpeakingQuestion>();
 
   protected readonly t = this.lang.t.bind(this.lang);
+
+  /** Câu trả lời mẫu, tách đoạn; `**` bọc cụm từ của chủ đề để in đậm. */
+  protected readonly sample = computed(() => {
+    const raw = SPEAKING_SAMPLES[`${this.topicId()}/${this.question().id}`];
+    if (!raw) return null;
+    const paragraphs = (text: string) => text.split('\n\n');
+    return {
+      en: paragraphs(raw.en).map((para) =>
+        para
+          .split(/(\*\*[^*]+\*\*)/)
+          .filter(Boolean)
+          .map((part) =>
+            part.startsWith('**')
+              ? { text: part.slice(2, -2), target: true }
+              : { text: part, target: false },
+          ),
+      ),
+      vi: paragraphs(raw.vi),
+    };
+  });
 
   protected readonly saved = computed(() => this.store.answerOf(this.topicId(), this.question().id));
 

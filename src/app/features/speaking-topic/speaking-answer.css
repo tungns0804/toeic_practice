@@ -37,6 +37,26 @@
   line-height: 1.6;
 }
 
+.q-sample summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.q-sample-body {
+  margin-top: var(--sp-2);
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+}
+
+.q-sample-body p {
+  margin: 0;
+  line-height: 1.65;
+}
+
 .q-foot {
   gap: var(--sp-2) var(--sp-3);
 }

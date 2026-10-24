@@ -809,6 +809,11 @@ export const MESSAGES = {
     vi: 'Viết ý chính, lý do, ví dụ… bằng tiếng Anh',
     en: 'Write your main idea, reasons, examples… in English',
   },
+  'speaking.sample.show': { vi: 'Xem câu trả lời mẫu (khoảng band 5.0)', en: 'See a sample answer (about band 5.0)' },
+  'speaking.sample.note': {
+    vi: 'Chỉ để tham khảo cách triển khai ý — hãy viết lại bằng ý và từ của bạn.',
+    en: 'For reference on how to develop ideas — rewrite it with your own ideas and words.',
+  },
   'speaking.answer.save': { vi: 'Lưu', en: 'Save' },
   'speaking.answer.clear': { vi: 'Xoá', en: 'Clear' },
   'speaking.answer.clearConfirm': { vi: 'Xoá câu trả lời này?', en: 'Clear this answer?' },
