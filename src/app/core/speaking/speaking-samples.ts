@@ -18,8 +18,8 @@ export const SPEAKING_SAMPLES: Record<string, LocalizedText> = {
     vi: 'Có, tôi rất thích học những điều mới. Đó là vì nó làm cuộc sống của tôi thú vị hơn. Ví dụ, năm ngoái tôi học nấu ăn qua video YouTube. Kết quả là giờ tôi có thể nấu bữa tối cho gia đình vào cuối tuần. Điều đó khiến tôi thấy tự hào và tự tin hơn.',
   },
   'education/q2': {
-    en: 'My favorite subject at school was English. **That\'s because** my teacher was very kind and her lessons were fun. **For instance**, we often played word games and sang English songs in class. **So** it was easy for me to remember new words. **I find it to be** the most useful subject now, because I use English at work every day.',
-    vi: 'Môn học yêu thích của tôi hồi đi học là tiếng Anh. Đó là vì cô giáo rất tốt bụng và giờ học của cô rất vui. Chẳng hạn, chúng tôi hay chơi trò chơi từ vựng và hát các bài hát tiếng Anh trong lớp. Vì vậy tôi nhớ từ mới rất dễ. Tôi thấy đó là môn hữu ích nhất bây giờ, vì ngày nào đi làm tôi cũng dùng tiếng Anh.',
+    en: 'My favorite subject at school was Math. **That\'s because** I liked solving problems step by step. **For instance**, when I found the answer to a difficult question, I felt very happy and proud. **As a result**, I always got good marks in Math tests. **I find it to be** very useful now, because I use numbers at work every day.',
+    vi: 'Môn học yêu thích của tôi hồi đi học là Toán. Đó là vì tôi thích giải bài theo từng bước. Chẳng hạn, khi tìm ra đáp án của một bài khó, tôi thấy rất vui và tự hào. Kết quả là tôi luôn được điểm cao trong các bài kiểm tra Toán. Tôi thấy môn này rất hữu ích bây giờ, vì ngày nào đi làm tôi cũng phải làm việc với các con số.',
   },
   'education/q3': {
     en: 'Before an important test, I usually make a study plan. **This is a great way to** know what I need to review each day. After that, I do some practice tests at home. **This is because** they show me my weak points. **It helps me** feel less nervous on the day of the test.',
