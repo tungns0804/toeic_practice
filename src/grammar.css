@@ -1,0 +1,396 @@
+/* ============================================================================
+   KHOÁ NGỮ PHÁP — khung bố cục và các biến riêng của khu này.
+
+   Toàn app giờ đã dùng chung ngôn ngữ thiết kế theo ByeTOEIC (src/styles/), nên
+   phần lớn biến --gc-* dưới đây chỉ TRỎ về biến chung: đổi tông sáng/tối/đèn đêm
+   là khu này đổi theo, không phải khai bảng màu lần thứ hai. Chỉ những màu không
+   có ở bảng chung mới khai riêng: xanh lá tươi của thẻ "Bài tiếp theo" và thanh
+   tiến độ, cam của chuỗi ngày / XP.
+   ========================================================================== */
+
+.gc {
+  /* --- Nền và chữ: theo bảng màu chung ---------------------------------- */
+  --gc-bg: var(--bg);
+  --gc-card: var(--bg-elevated);
+  --gc-card-raised: var(--bg-elevated);
+  --gc-muted: var(--bg-subtle);
+  --gc-fg: var(--text);
+  --gc-fg-muted: var(--text-muted);
+  --gc-fg-faint: var(--text-faint);
+  --gc-border: var(--border);
+  --gc-border-strong: var(--border-strong);
+
+  /* --- Màu nhận diện ----------------------------------------------------- */
+  /* Xanh lá tươi (#20b486) chỉ dùng cho NỀN lớn và vạch tiến độ — nó chỉ đạt 2.6:1
+     với chữ trắng. Chữ xanh và nút có chữ trắng dùng --accent (bản đậm, 4.6:1). */
+  --gc-green: light-dark(#20b486, #21ab80);
+  --gc-green-light: light-dark(#4ac8ae, #26c795);
+  --gc-green-dark: var(--accent);
+  --gc-green-soft: var(--accent-soft);
+  --gc-green-ring: var(--accent-ring);
+  --gc-on-green: #ffffff;
+  /* Điểm cuối của dải chuyển sắc trên thẻ "Bài tiếp theo" — giữ nguyên mọi tông. */
+  --gc-green-deep: #168060;
+
+  /* Xanh dương thương hiệu: số chương, vòng tròn bài đang mở. */
+  --gc-blue: var(--brand);
+  --gc-blue-soft: var(--brand-soft);
+
+  /* Cam: biểu tượng chuỗi ngày học và XP. */
+  --gc-orange: light-dark(#ffa944, #e0a55e);
+  --gc-orange-light: light-dark(#ffc178, #e0a55e);
+
+  --gc-success: var(--accent);
+  --gc-success-soft: var(--accent-soft);
+  --gc-danger: var(--danger);
+  --gc-danger-soft: var(--danger-soft);
+  --gc-warning: var(--warning);
+  --gc-warning-soft: var(--warning-soft);
+
+  --gc-shadow: 0 1px 2px light-dark(rgb(0 0 0 / 6%), rgb(0 0 0 / 45%));
+  --gc-shadow-hover: 0 4px 14px light-dark(rgb(34 45 57 / 10%), rgb(0 0 0 / 55%));
+  --gc-shadow-green: 0 10px 30px light-dark(rgb(22 128 96 / 22%), rgb(0 0 0 / 45%));
+
+  --gc-radius-sm: 8px;
+  --gc-radius: 12px;
+  --gc-radius-lg: 18px;
+  --gc-radius-xl: 24px;
+
+  --gc-font-body: var(--font-ui);
+  --gc-font-display: var(--font-display);
+
+  --gc-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --gc-sidebar-w: 340px;
+
+  background: var(--gc-bg);
+  color: var(--gc-fg);
+  font-family: var(--gc-font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.gc h1,
+.gc h2,
+.gc h3 {
+  font-family: var(--gc-font-display);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--gc-fg);
+}
+
+.gc a {
+  color: inherit;
+}
+
+.gc a:hover {
+  text-decoration: none;
+}
+
+.gc :focus-visible {
+  outline-color: var(--gc-green-dark);
+}
+
+.gc ::selection {
+  background: var(--gc-green-soft);
+  color: var(--gc-green-dark);
+}
+
+/* --- Khung: thanh bên + cột nội dung -------------------------------------- */
+
+.gc-shell {
+  display: grid;
+  grid-template-columns: var(--gc-sidebar-w) minmax(0, 1fr);
+  min-height: calc(100dvh - var(--header-h));
+}
+
+.gc-main {
+  min-width: 0;
+  padding: var(--sp-8) max(20px, env(safe-area-inset-right)) calc(72px + env(safe-area-inset-bottom))
+    max(20px, env(safe-area-inset-left));
+}
+
+/* Cột đọc hẹp như bản gốc: lý thuyết và câu hỏi là chữ để đọc kỹ, dòng quá dài
+   thì mắt khó tìm đầu dòng tiếp theo. */
+.gc-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  animation: gc-rise 0.3s var(--gc-ease) both;
+}
+
+/* Dưới 1024px thanh bên lên nằm trên cùng thành một khối thu gọn được (xem
+   grammar-sidebar.css), cột nội dung chiếm trọn bề ngang. */
+@media (max-width: 1023px) {
+  .gc-shell {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+  }
+
+  .gc-main {
+    padding-top: var(--sp-5);
+  }
+}
+
+@media (max-width: 640px) {
+  .gc {
+    font-size: 14.5px;
+  }
+
+  .gc-main {
+    padding-inline: max(14px, env(safe-area-inset-left)) max(14px, env(safe-area-inset-right));
+  }
+
+  .gc-column {
+    gap: var(--sp-5);
+  }
+}
+
+/* --- Thẻ ------------------------------------------------------------------ */
+
+.gc-card {
+  background: var(--gc-card);
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius-xl);
+  box-shadow: var(--gc-shadow);
+  padding: var(--sp-6);
+}
+
+@media (max-width: 640px) {
+  .gc-card {
+    padding: var(--sp-5) var(--sp-4);
+    border-radius: var(--gc-radius-lg);
+  }
+}
+
+/* Nhãn nhỏ viết hoa phía trên một nhóm ("MỖI BÀI HỌC DIỄN RA THEO LỘ TRÌNH"). */
+.gc-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gc-fg-muted);
+}
+
+.gc-muted {
+  color: var(--gc-fg-muted);
+}
+
+/* Huy hiệu nền xanh lá nhạt ("Bài 0 · Tổng quan"). */
+.gc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 3px 9px;
+  border-radius: var(--gc-radius-sm);
+  background: var(--gc-green-soft);
+  color: var(--gc-green-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.gc-badge-blue {
+  background: var(--gc-blue-soft);
+  color: var(--gc-blue);
+}
+
+.gc-badge-muted {
+  background: var(--gc-muted);
+  color: var(--gc-fg-muted);
+}
+
+.gc-badge-orange {
+  background: var(--gc-warning-soft);
+  color: var(--gc-warning);
+}
+
+/* --- Nút ------------------------------------------------------------------ */
+
+.gc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 18px;
+  border: 1px solid transparent;
+  border-radius: var(--gc-radius);
+  background: var(--gc-green-dark);
+  color: var(--gc-on-green);
+  font-family: var(--gc-font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px var(--gc-green-ring);
+  transition: background-color 0.18s var(--gc-ease), border-color 0.18s var(--gc-ease),
+    color 0.18s var(--gc-ease), box-shadow 0.18s var(--gc-ease), transform 0.06s var(--gc-ease);
+}
+
+.gc a.gc-btn {
+  color: var(--gc-on-green);
+}
+
+.gc-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--gc-green-dark) 88%, #000);
+  box-shadow: 0 4px 14px var(--gc-green-ring);
+}
+
+.gc-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.gc-btn:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+.gc-btn-outline,
+.gc a.gc-btn-outline {
+  background: var(--gc-card);
+  border-color: var(--gc-border-strong);
+  color: var(--gc-fg);
+  box-shadow: none;
+}
+
+.gc-btn-outline:hover:not(:disabled) {
+  background: var(--gc-muted);
+  border-color: var(--gc-fg-faint);
+  box-shadow: none;
+}
+
+.gc-btn-ghost,
+.gc a.gc-btn-ghost {
+  background: transparent;
+  color: var(--gc-fg-muted);
+  box-shadow: none;
+}
+
+.gc-btn-ghost:hover:not(:disabled) {
+  background: var(--gc-muted);
+  color: var(--gc-fg);
+  box-shadow: none;
+}
+
+.gc-btn-danger-text {
+  min-height: 0;
+  padding: 4px 8px;
+  background: transparent;
+  color: var(--gc-danger);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.gc-btn-danger-text:hover:not(:disabled) {
+  background: var(--gc-danger-soft);
+  box-shadow: none;
+}
+
+.gc-btn .gc-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Lộ trình bốn bước ("Ví dụ lỗi sai → Lý thuyết → Luyện tập → Kết quả") --- */
+
+.gc-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gc-flow li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gc-flow-step {
+  padding: 3px 9px;
+  border-radius: var(--gc-radius-sm);
+  background: var(--gc-green-soft);
+  color: var(--gc-green-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gc-flow-arrow {
+  color: var(--gc-green);
+  opacity: 0.7;
+}
+
+.gc-flow-arrow .gc-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* --- Chữ có đánh dấu (<app-rich-text>) ------------------------------------ */
+
+.gc-rich strong {
+  font-weight: 700;
+  color: var(--gc-fg);
+}
+
+.gc-mark {
+  padding: 0 3px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.gc-mark.is-wrong {
+  background: var(--gc-danger-soft);
+  color: var(--gc-danger);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.gc-mark.is-right {
+  background: var(--gc-success-soft);
+  color: var(--gc-success);
+}
+
+/* --- Biểu tượng ------------------------------------------------------------ */
+
+.gc-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+/* --- Chuyển động ------------------------------------------------------------
+   Cùng nguyên tắc với styles.css: mỗi hiệu ứng trả lời một câu hỏi, và tắt hẳn
+   theo `prefers-reduced-motion` (khối cuối styles.css áp cho mọi phần tử). */
+
+@keyframes gc-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes gc-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@keyframes gc-fade {
+  from {
+    opacity: 0;
+  }
+}

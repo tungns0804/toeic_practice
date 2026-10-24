@@ -1,0 +1,602 @@
+<div class="gc gc-shell">
+  <app-grammar-sidebar [currentId]="lessonId()" />
+
+  <div class="gc-main">
+    <div class="gc-column">
+      @if (entry(); as lessonEntry) {
+        <!-- ── Đầu bài ─────────────────────────────────────────────────── -->
+        <header class="gcl-head">
+          <nav class="gcl-crumbs" [attr.aria-label]="t('grammar.lesson.crumbs')">
+            <a routerLink="/grammar" class="gcl-back">
+              <app-gc-icon name="arrow-left" />
+              {{ t('grammar.lesson.back') }}
+            </a>
+            <span class="gcl-crumb-sep" aria-hidden="true">/</span>
+            <span class="gcl-crumb">
+              {{ t('grammar.lesson.chapter', { number: lessonEntry.chapterNumber, title: lessonEntry.chapter.title }) }}
+            </span>
+          </nav>
+
+          <div class="gcl-badges">
+            <span class="gc-badge gc-badge-blue">{{ t('grammar.lesson.code', { code: lessonEntry.code }) }}</span>
+            @if (record().passed) {
+              <span class="gc-badge"><app-gc-icon name="check" /> {{ t('grammar.lesson.passed') }}</span>
+            }
+            @if (record().attemptCount > 0) {
+              <span class="gc-badge gc-badge-muted">
+                {{ t('grammar.lesson.attempts', { count: record().attemptCount }) }}
+              </span>
+              @if (content(); as lesson) {
+                <span class="gc-badge gc-badge-muted">
+                  {{ t('grammar.lesson.best', { best: record().bestCorrect, total: lesson.questions.length }) }}
+                </span>
+              }
+            }
+          </div>
+
+          <h1>{{ title() }}</h1>
+        </header>
+
+        @if (!unlocked()) {
+          <!-- ── Bài đang khoá ──────────────────────────────────────────── -->
+          <section class="gc-card gcl-locked">
+            <span class="gcl-locked-icon"><app-gc-icon name="lock" /></span>
+            <h2>{{ t('grammar.locked.title') }}</h2>
+            @if (previousEntry(); as previous) {
+              <p class="gc-muted">
+                {{
+                  t('grammar.locked.text', {
+                    code: previous.code,
+                    title: tx(previous.meta.title),
+                    need: passNeeded(),
+                    total: questionsPerLesson,
+                  })
+                }}
+              </p>
+              <a class="gc-btn" [routerLink]="['/grammar', previous.id]">
+                {{ t('grammar.locked.go', { code: previous.code }) }}
+                <app-gc-icon name="arrow-right" />
+              </a>
+            }
+          </section>
+        } @else {
+          <!-- ── Thanh bước ───────────────────────────────────────────────── -->
+          <ol class="gcl-steps" [attr.aria-label]="t('grammar.lesson.steps')">
+            @for (item of steps(); track item.id) {
+              <li class="gcl-step-item">
+                <button
+                  type="button"
+                  class="gcl-step"
+                  [class.is-active]="item.active"
+                  [class.is-done]="item.done && !item.active"
+                  [disabled]="!item.reachable"
+                  [attr.aria-current]="item.active ? 'step' : null"
+                  [title]="item.reachable ? '' : t('grammar.lesson.stepLocked')"
+                  (click)="goToStep(item.id)"
+                >
+                  <span class="gcl-step-dot">
+                    @if (item.done && !item.active) {
+                      <app-gc-icon name="check" />
+                    } @else {
+                      {{ item.number }}
+                    }
+                  </span>
+                  <span class="gcl-step-label">{{ t(item.labelKey) }}</span>
+                </button>
+              </li>
+            }
+          </ol>
+
+          @switch (status()) {
+            @case ('loading') {
+              <section class="gc-card gcl-skeleton" aria-busy="true">
+                <span class="sr-only">{{ t('grammar.lesson.loading') }}</span>
+                <span class="skeleton gcl-sk-title"></span>
+                <span class="skeleton gcl-sk-line"></span>
+                <span class="skeleton gcl-sk-line"></span>
+                <span class="skeleton gcl-sk-block"></span>
+              </section>
+            }
+            @case ('error') {
+              <div class="gc-card gcl-error" role="alert">
+                <p>{{ t('grammar.lesson.loadError') }}</p>
+                <button type="button" class="gc-btn gc-btn-outline" (click)="retry()">
+                  <app-gc-icon name="rotate" /> {{ t('common.retry') }}
+                </button>
+              </div>
+            }
+            @default {
+              @if (content(); as lesson) {
+                @switch (step()) {
+                  @case ('mistakes') {
+                    <section class="gc-card gcl-panel">
+                      <header class="gcl-panel-head">
+                        <span class="gcl-panel-icon is-red"><app-gc-icon name="x-circle" /></span>
+                        <div>
+                          <h2>{{ t('grammar.step.mistakes') }}</h2>
+                          <p class="gc-muted">{{ t('grammar.mistakes.lead') }}</p>
+                        </div>
+                      </header>
+
+                      <ol class="gcl-mistakes">
+                        @for (mistake of lesson.mistakes; track $index) {
+                          <li class="gcl-mistake">
+                            <div class="gcl-line is-wrong">
+                              <span class="gcl-line-tag">
+                                <app-gc-icon name="x" /> {{ t('grammar.mistakes.wrong') }}
+                              </span>
+                              <p class="en"><app-rich-text [text]="mistake.wrong" tone="wrong" /></p>
+                            </div>
+                            <div class="gcl-line is-right">
+                              <span class="gcl-line-tag">
+                                <app-gc-icon name="check" /> {{ t('grammar.mistakes.right') }}
+                              </span>
+                              <p class="en"><app-rich-text [text]="mistake.right" tone="right" /></p>
+                            </div>
+                            <p class="gcl-why">
+                              <app-gc-icon name="lightbulb" class="gcl-why-icon" />
+                              <app-rich-text [text]="tx(mistake.explanation)" />
+                            </p>
+                          </li>
+                        }
+                      </ol>
+
+                      <footer class="gcl-panel-foot">
+                        <span class="gcl-spacer"></span>
+                        <button type="button" class="gc-btn" (click)="goToStep('theory')">
+                          {{ t('grammar.mistakes.next') }}
+                          <app-gc-icon name="arrow-right" />
+                        </button>
+                      </footer>
+                    </section>
+                  }
+
+                  @case ('theory') {
+                    <section class="gc-card gcl-panel">
+                      <header class="gcl-panel-head">
+                        <span class="gcl-panel-icon is-green"><app-gc-icon name="book-open" /></span>
+                        <div>
+                          <h2>{{ t('grammar.step.theory') }}</h2>
+                          <p class="gc-muted"><app-rich-text [text]="tx(lesson.intro)" /></p>
+                        </div>
+                      </header>
+
+                      @for (section of lesson.theory; track $index; let i = $index) {
+                        <article class="gcl-section">
+                          <h3>
+                            <span class="gcl-section-num">{{ i + 1 }}</span>
+                            {{ tx(section.heading) }}
+                          </h3>
+
+                          @if (section.body) {
+                            <p class="gcl-body"><app-rich-text [text]="tx(section.body)" /></p>
+                          }
+
+                          @if (section.points) {
+                            <ul class="gcl-points">
+                              @for (point of section.points; track $index) {
+                                <li><app-rich-text [text]="tx(point)" /></li>
+                              }
+                            </ul>
+                          }
+
+                          @if (section.table) {
+                            <div class="gcl-table-wrap scroll-x">
+                              <table class="gcl-table">
+                                <thead>
+                                  <tr>
+                                    @for (head of section.table.head; track $index) {
+                                      <th scope="col">{{ tx(head) }}</th>
+                                    }
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  @for (row of section.table.rows; track $index) {
+                                    <tr>
+                                      @for (value of row; track $index; let first = $first) {
+                                        <td [class.gcl-cell-key]="first">
+                                          <app-rich-text [text]="cell(value)" />
+                                        </td>
+                                      }
+                                    </tr>
+                                  }
+                                </tbody>
+                              </table>
+                            </div>
+                          }
+
+                          @if (section.examples) {
+                            <ul class="gcl-examples">
+                              @for (example of section.examples; track $index) {
+                                <li>
+                                  <p class="en gcl-example-en"><app-rich-text [text]="example.en" /></p>
+                                  <p class="gcl-example-vi">{{ example.vi }}</p>
+                                </li>
+                              }
+                            </ul>
+                          }
+
+                          @if (section.callout; as box) {
+                            <aside class="gcl-callout" [class]="'is-' + box.kind">
+                              <app-gc-icon [name]="callout[box.kind].icon" class="gcl-callout-icon" />
+                              <div>
+                                <p class="gcl-callout-label">{{ t(callout[box.kind].labelKey) }}</p>
+                                <p><app-rich-text [text]="tx(box.text)" /></p>
+                              </div>
+                            </aside>
+                          }
+                        </article>
+                      }
+
+                      <footer class="gcl-panel-foot">
+                        <button type="button" class="gc-btn gc-btn-ghost" (click)="goToStep('mistakes')">
+                          <app-gc-icon name="arrow-left" />
+                          {{ t('grammar.step.mistakes') }}
+                        </button>
+                        <span class="gcl-spacer"></span>
+                        <button type="button" class="gc-btn" (click)="startPractice()">
+                          {{ run() ? t('grammar.theory.resume') : t('grammar.theory.start') }}
+                          <app-gc-icon name="arrow-right" />
+                        </button>
+                      </footer>
+                    </section>
+                  }
+
+                  @case ('practice') {
+                    @if (run()) {
+                      @for (q of currentList(); track q.pos) {
+                        <section class="gc-card gcl-practice">
+                          <div class="gcl-practice-top">
+                            <span class="gcl-qcount">
+                              {{ t('grammar.practice.questionOf', { current: q.number, total: q.total }) }}
+                            </span>
+                            <span class="gcl-tally">
+                              {{ t('grammar.practice.tally', { right: tally().right, wrong: tally().wrong }) }}
+                            </span>
+                          </div>
+
+                          <div class="gcl-dots">
+                            @for (dot of dots(); track dot.pos) {
+                              <button
+                                type="button"
+                                class="gcl-dot"
+                                [class.is-right]="dot.state === 'right'"
+                                [class.is-wrong]="dot.state === 'wrong'"
+                                [class.is-current]="dot.current"
+                                [disabled]="!dot.reachable"
+                                [attr.aria-current]="dot.current ? 'step' : null"
+                                [attr.aria-label]="t('grammar.practice.goTo', { number: dot.number })"
+                                (click)="goToQuestion(dot.pos)"
+                              ></button>
+                            }
+                          </div>
+
+                          @if (resumed()) {
+                            <p class="gcl-resumed">{{ t('grammar.practice.resumed') }}</p>
+                          }
+
+                          <p class="en gcl-sentence">
+                            {{ q.before
+                            }}<span
+                              class="gcl-blank"
+                              [class.is-filled]="q.answered"
+                              [class.is-right]="q.answered && q.correct"
+                              [class.is-wrong]="q.answered && !q.correct"
+                              >{{ q.answered ? q.chosenText : '' }}</span
+                            >{{ q.after }}
+                          </p>
+
+                          <div class="gcl-options" role="group" [attr.aria-label]="t('grammar.practice.options')">
+                            @for (option of q.options; track option.original) {
+                              <button
+                                type="button"
+                                class="gcl-option"
+                                [class.is-correct]="q.answered && option.isCorrect"
+                                [class.is-wrong]="q.answered && option.isChosen && !option.isCorrect"
+                                [class.is-dim]="q.answered && !option.isCorrect && !option.isChosen"
+                                [disabled]="q.answered"
+                                [attr.aria-pressed]="option.isChosen"
+                                (click)="choose(option.original)"
+                              >
+                                <span class="gcl-option-letter">{{ option.letter }}</span>
+                                <span class="en gcl-option-text">{{ option.text }}</span>
+                                @if (q.answered && option.isCorrect) {
+                                  <app-gc-icon name="check-circle" class="gcl-option-mark" />
+                                } @else if (q.answered && option.isChosen) {
+                                  <app-gc-icon name="x-circle" class="gcl-option-mark" />
+                                }
+                              </button>
+                            }
+                          </div>
+
+                          @if (q.answered) {
+                            <div class="gcl-feedback" [class.is-right]="q.correct" role="status">
+                              <p class="gcl-feedback-title">
+                                <app-gc-icon [name]="q.correct ? 'check-circle' : 'x-circle'" />
+                                @if (q.correct) {
+                                  {{ t('grammar.practice.correct') }}
+                                } @else {
+                                  {{
+                                    t('grammar.practice.incorrect', {
+                                      letter: q.correctOption.letter,
+                                      answer: q.correctOption.text,
+                                    })
+                                  }}
+                                }
+                              </p>
+                              <p><app-rich-text [text]="tx(q.question.explanation)" /></p>
+                              <p class="gcl-translation">
+                                <span class="gc-eyebrow">{{ t('grammar.practice.translation') }}</span>
+                                {{ q.question.translation }}
+                              </p>
+                            </div>
+                          }
+
+                          <footer class="gcl-panel-foot">
+                            <button
+                              type="button"
+                              class="gc-btn gc-btn-ghost"
+                              [disabled]="q.pos === 0"
+                              (click)="goToQuestion(q.pos - 1)"
+                            >
+                              <app-gc-icon name="arrow-left" />
+                              {{ t('grammar.practice.prev') }}
+                            </button>
+                            <span class="gcl-spacer"></span>
+                            @if (allAnswered()) {
+                              <button type="button" class="gc-btn" (click)="submit()">
+                                {{ t('grammar.practice.submit') }}
+                                <app-gc-icon name="arrow-right" />
+                              </button>
+                            } @else {
+                              <button
+                                type="button"
+                                class="gc-btn"
+                                [disabled]="!q.answered"
+                                (click)="nextQuestion()"
+                              >
+                                {{ t('grammar.practice.next') }}
+                                <app-gc-icon name="arrow-right" />
+                              </button>
+                            }
+                          </footer>
+
+                          <p class="gcl-shortcuts">{{ t('grammar.practice.shortcuts') }}</p>
+                        </section>
+                      }
+                    } @else {
+                      <section class="gc-card gcl-panel gcl-intro">
+                        <span class="gcl-panel-icon is-green gcl-intro-icon"><app-gc-icon name="pen" /></span>
+                        <h2>{{ t('grammar.step.practice') }}</h2>
+                        <p class="gc-muted">
+                          {{ t('grammar.practice.lead', { count: lesson.questions.length, need: passNeeded() }) }}
+                        </p>
+                        @if (record().attemptCount > 0) {
+                          <p class="gcl-intro-history">
+                            {{
+                              t('grammar.practice.history', {
+                                count: record().attemptCount,
+                                best: record().bestCorrect,
+                                total: lesson.questions.length,
+                              })
+                            }}
+                          </p>
+                        }
+                        <div class="gcl-intro-actions">
+                          <button type="button" class="gc-btn" (click)="restart()">
+                            @if (record().attemptCount > 0) {
+                              <app-gc-icon name="rotate" /> {{ t('grammar.practice.retry') }}
+                            } @else {
+                              {{ t('grammar.practice.start') }} <app-gc-icon name="arrow-right" />
+                            }
+                          </button>
+                          <button type="button" class="gc-btn gc-btn-ghost" (click)="goToStep('theory')">
+                            {{ t('grammar.practice.reviewTheory') }}
+                          </button>
+                        </div>
+                      </section>
+                    }
+                  }
+
+                  @case ('result') {
+                    @if (review(); as result) {
+                      <section class="gc-card gcl-result" [class.is-pass]="result.passed">
+                        <div class="gcl-result-hero">
+                          <app-progress-ring
+                            class="gcl-result-ring"
+                            [percent]="result.percent"
+                            role="img"
+                            [attr.aria-label]="t('grammar.result.score', { correct: result.correct, total: result.total })"
+                          >
+                            <strong class="gcl-result-score">{{ result.correct }}/{{ result.total }}</strong>
+                            <span class="gcl-result-percent">{{ result.percent }}%</span>
+                          </app-progress-ring>
+
+                          <div class="gcl-result-text">
+                            <p class="gc-eyebrow">
+                              {{ t('grammar.result.attempt', { number: outcome()?.attemptNumber ?? record().attemptCount }) }}
+                            </p>
+                            <h2>{{ result.passed ? t('grammar.result.passed') : t('grammar.result.failed') }}</h2>
+                            <p class="gc-muted">
+                              @if (!result.passed) {
+                                {{ t('grammar.result.need', { need: passNeeded(), total: result.total }) }}
+                              } @else if (!nextEntry()) {
+                                {{ t('grammar.result.courseDone') }}
+                              } @else if (outcome()?.firstPass) {
+                                {{ t('grammar.result.unlocked', { code: nextEntry()!.code }) }}
+                              } @else {
+                                {{ t('grammar.result.mastered') }}
+                              }
+                            </p>
+                            <div class="gcl-result-chips">
+                              @if (outcome(); as fresh) {
+                                <span class="gc-badge gc-badge-orange">
+                                  <app-gc-icon name="zap" /> {{ t('grammar.result.xp', { count: fresh.xpGained }) }}
+                                </span>
+                                @if (fresh.isNewBest && fresh.attemptNumber > 1) {
+                                  <span class="gc-badge"><app-gc-icon name="trophy" /> {{ t('grammar.result.newBest') }}</span>
+                                }
+                              }
+                              <span class="gc-badge gc-badge-blue">
+                                {{ t('grammar.lesson.best', { best: record().bestCorrect, total: result.total }) }}
+                              </span>
+                              <span class="gc-badge gc-badge-muted">
+                                {{ t('grammar.lesson.attempts', { count: record().attemptCount }) }}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="gcl-result-actions">
+                          @if (nextEntry(); as next) {
+                            @if (nextUnlocked()) {
+                              <a class="gc-btn" [routerLink]="['/grammar', next.id]">
+                                {{ t('grammar.result.nextLesson', { code: next.code }) }}
+                                <app-gc-icon name="arrow-right" />
+                              </a>
+                            }
+                          } @else if (result.passed) {
+                            <a class="gc-btn" routerLink="/grammar">{{ t('grammar.result.backToCourse') }}</a>
+                          }
+                          <button
+                            type="button"
+                            class="gc-btn"
+                            [class.gc-btn-outline]="nextUnlocked() || (!nextEntry() && result.passed)"
+                            (click)="restart()"
+                          >
+                            <app-gc-icon name="rotate" /> {{ t('grammar.practice.retry') }}
+                          </button>
+                          <button type="button" class="gc-btn gc-btn-ghost" (click)="goToStep('theory')">
+                            {{ t('grammar.practice.reviewTheory') }}
+                          </button>
+                        </div>
+                      </section>
+
+                      <section class="gc-card gcl-review">
+                        <h2>{{ t('grammar.result.details') }}</h2>
+                        <ol class="gcl-review-list">
+                          @for (item of result.items; track item.number) {
+                            <li class="gcl-review-item" [class.is-wrong]="!item.isCorrect">
+                              <div class="gcl-review-head">
+                                <span class="gcl-review-num">{{ item.number }}</span>
+                                <app-gc-icon
+                                  [name]="item.isCorrect ? 'check-circle' : 'x-circle'"
+                                  class="gcl-review-mark"
+                                />
+                                <p class="en gcl-review-sentence">
+                                  {{ item.before
+                                  }}<span class="gcl-blank is-filled is-right">{{ item.correctText }}</span
+                                  >{{ item.after }}
+                                </p>
+                              </div>
+                              @if (!item.isCorrect) {
+                                <p class="gcl-review-answer">
+                                  {{ t('grammar.result.yourAnswer') }}:
+                                  <s class="en">{{ item.chosenText ?? t('result.noAnswer') }}</s>
+                                  · {{ t('grammar.result.correctAnswer') }}:
+                                  <strong class="en">{{ item.correctText }}</strong>
+                                </p>
+                              }
+                              <p class="gcl-review-why"><app-rich-text [text]="tx(item.question.explanation)" /></p>
+                              <p class="gcl-translation">{{ item.question.translation }}</p>
+                            </li>
+                          }
+                        </ol>
+                      </section>
+
+                      @if (history().length > 0) {
+                        <section class="gc-card gcl-history">
+                          <h2>{{ t('grammar.history.title') }}</h2>
+                          <div class="scroll-x">
+                            <table class="gcl-table gcl-history-table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">{{ t('grammar.history.attempt') }}</th>
+                                  <th scope="col">{{ t('grammar.history.date') }}</th>
+                                  <th scope="col">{{ t('grammar.history.score') }}</th>
+                                  <th scope="col">{{ t('grammar.history.duration') }}</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                @for (attempt of history(); track attempt.number) {
+                                  <tr>
+                                    <td class="tnum">#{{ attempt.number }}</td>
+                                    <td class="tnum">{{ attempt.date }}</td>
+                                    <td>
+                                      <span
+                                        class="gcl-history-score tnum"
+                                        [class.is-pass]="attempt.passed"
+                                        >{{ attempt.correct }}/{{ attempt.total }}</span
+                                      >
+                                      @if (attempt.best) {
+                                        <app-gc-icon name="trophy" class="gcl-history-best" />
+                                      }
+                                    </td>
+                                    <td class="tnum">{{ attempt.duration }}</td>
+                                  </tr>
+                                }
+                              </tbody>
+                            </table>
+                          </div>
+                          @if (historyTrimmed()) {
+                            <p class="gc-muted gcl-history-note">
+                              {{ t('grammar.history.trimmed', { count: history().length }) }}
+                            </p>
+                          }
+                        </section>
+                      }
+                    } @else {
+                      <section class="gc-card gcl-panel gcl-intro">
+                        <p class="gc-muted">{{ t('grammar.result.none') }}</p>
+                        <div class="gcl-intro-actions">
+                          <button type="button" class="gc-btn" (click)="startPractice()">
+                            {{ t('grammar.practice.start') }} <app-gc-icon name="arrow-right" />
+                          </button>
+                        </div>
+                      </section>
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          <!-- ── Bài trước / bài sau ──────────────────────────────────────── -->
+          <nav class="gcl-pager" [attr.aria-label]="t('grammar.lesson.pager')">
+            @if (previousEntry(); as previous) {
+              <a class="gcl-pager-link" [routerLink]="['/grammar', previous.id]">
+                <span class="gcl-pager-dir"><app-gc-icon name="arrow-left" /> {{ t('grammar.lesson.prev') }}</span>
+                <span class="gcl-pager-title">{{ previous.code }} · {{ tx(previous.meta.title) }}</span>
+              </a>
+            } @else {
+              <span></span>
+            }
+            @if (nextEntry(); as next) {
+              @if (nextUnlocked()) {
+                <a class="gcl-pager-link is-next" [routerLink]="['/grammar', next.id]">
+                  <span class="gcl-pager-dir">{{ t('grammar.lesson.next') }} <app-gc-icon name="arrow-right" /></span>
+                  <span class="gcl-pager-title">{{ next.code }} · {{ tx(next.meta.title) }}</span>
+                </a>
+              } @else {
+                <span class="gcl-pager-link is-next is-locked" [title]="t('grammar.sidebar.locked')">
+                  <span class="gcl-pager-dir">{{ t('grammar.lesson.next') }} <app-gc-icon name="lock" /></span>
+                  <span class="gcl-pager-title">{{ next.code }} · {{ tx(next.meta.title) }}</span>
+                </span>
+              }
+            }
+          </nav>
+        }
+      } @else {
+        <!-- ── Không có bài này ───────────────────────────────────────────── -->
+        <section class="gc-card gcl-locked">
+          <span class="gcl-locked-icon"><app-gc-icon name="x-circle" /></span>
+          <h2>{{ t('grammar.lesson.notFound') }}</h2>
+          <p class="gc-muted">{{ t('error.notFoundHint') }}</p>
+          <a class="gc-btn" routerLink="/grammar">
+            <app-gc-icon name="arrow-left" /> {{ t('grammar.lesson.back') }}
+          </a>
+        </section>
+      }
+    </div>
+  </div>
+</div>

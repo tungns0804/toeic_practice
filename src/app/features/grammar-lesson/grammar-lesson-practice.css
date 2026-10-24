@@ -1,0 +1,644 @@
+/* Bước Luyện tập và Kết quả, cùng các trạng thái phụ (khoá, chờ, lỗi, chuyển bài).
+   Tách khỏi grammar-lesson.css chỉ để mỗi file nằm dưới ngưỡng dung lượng
+   style của một component. */
+
+/* --- Câu hỏi --- */
+
+.gcl-practice {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: gc-rise 0.24s var(--gc-ease) both;
+}
+
+.gcl-practice-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gcl-qcount {
+  color: var(--gc-green-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.gcl-tally {
+  color: var(--gc-fg-muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mỗi câu một vạch: liếc là thấy đã làm tới đâu, đúng sai ra sao. Vạch là nút
+   bấm được để xem lại câu đã làm. */
+.gcl-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.gcl-dot {
+  flex: 1;
+  height: 22px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.gcl-dot::before {
+  content: '';
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--gc-muted);
+  transition: background-color 0.2s var(--gc-ease), box-shadow 0.2s var(--gc-ease);
+}
+
+.gcl-dot:disabled {
+  cursor: default;
+}
+
+.gcl-dot.is-right::before {
+  background: var(--gc-green);
+}
+
+.gcl-dot.is-wrong::before {
+  background: var(--gc-danger);
+}
+
+.gcl-dot.is-current::before {
+  box-shadow: 0 0 0 2px var(--gc-card), 0 0 0 4px var(--gc-green-dark);
+}
+
+.gcl-resumed {
+  padding: 8px 12px;
+  border-radius: var(--gc-radius-sm);
+  background: var(--gc-blue-soft);
+  color: var(--gc-blue);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.gcl-sentence {
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+.gcl-blank {
+  display: inline-block;
+  min-width: 6.5em;
+  margin: 0 3px;
+  border-bottom: 2px dashed var(--gc-border-strong);
+  line-height: 1.4;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.gcl-blank.is-filled {
+  min-width: 0;
+  padding: 0 8px;
+  border-bottom-style: solid;
+  border-radius: 6px 6px 0 0;
+  font-weight: 700;
+}
+
+.gcl-blank.is-right {
+  border-color: var(--gc-success);
+  background: var(--gc-success-soft);
+  color: var(--gc-success);
+}
+
+.gcl-blank.is-wrong {
+  border-color: var(--gc-danger);
+  background: var(--gc-danger-soft);
+  color: var(--gc-danger);
+}
+
+.gcl-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 10px;
+}
+
+.gcl-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--gc-border);
+  border-radius: var(--gc-radius);
+  background: var(--gc-card);
+  color: var(--gc-fg);
+  font-size: 0.95rem;
+  text-align: left;
+  transition: border-color 0.15s var(--gc-ease), background-color 0.15s var(--gc-ease),
+    opacity 0.15s var(--gc-ease), transform 0.06s var(--gc-ease);
+  animation: gc-fade 0.22s var(--gc-ease) both;
+}
+
+.gcl-option:nth-child(2) {
+  animation-delay: 0.03s;
+}
+
+.gcl-option:nth-child(3) {
+  animation-delay: 0.06s;
+}
+
+.gcl-option:nth-child(4) {
+  animation-delay: 0.09s;
+}
+
+.gcl-option:not(:disabled):hover {
+  border-color: var(--gc-green);
+  background: var(--gc-green-soft);
+}
+
+.gcl-option:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.gcl-option:disabled {
+  cursor: default;
+}
+
+.gcl-option-letter {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--gc-muted);
+  color: var(--gc-fg-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.gcl-option-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.gcl-option-mark {
+  font-size: 18px;
+}
+
+.gcl-option.is-correct {
+  border-color: var(--gc-success);
+  background: var(--gc-success-soft);
+}
+
+.gcl-option.is-correct .gcl-option-letter {
+  background: var(--gc-success);
+  color: var(--gc-card);
+}
+
+.gcl-option.is-correct .gcl-option-mark {
+  color: var(--gc-success);
+}
+
+.gcl-option.is-wrong {
+  border-color: var(--gc-danger);
+  background: var(--gc-danger-soft);
+}
+
+.gcl-option.is-wrong .gcl-option-letter {
+  background: var(--gc-danger);
+  color: var(--gc-card);
+}
+
+.gcl-option.is-wrong .gcl-option-mark {
+  color: var(--gc-danger);
+}
+
+.gcl-option.is-dim {
+  opacity: 0.5;
+}
+
+.gcl-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 1px solid color-mix(in srgb, var(--gc-danger) 35%, transparent);
+  border-radius: var(--gc-radius);
+  background: var(--gc-danger-soft);
+  font-size: 0.9rem;
+  animation: gc-pop 0.24s var(--gc-ease) both;
+}
+
+.gcl-feedback.is-right {
+  border-color: color-mix(in srgb, var(--gc-success) 35%, transparent);
+  background: var(--gc-success-soft);
+}
+
+.gcl-feedback-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gc-danger);
+  font-weight: 700;
+}
+
+.gcl-feedback.is-right .gcl-feedback-title {
+  color: var(--gc-success);
+}
+
+.gcl-translation {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--gc-fg-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.gcl-translation .gc-eyebrow {
+  font-style: normal;
+}
+
+.gcl-shortcuts {
+  color: var(--gc-fg-faint);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (hover: none) {
+  .gcl-shortcuts {
+    display: none;
+  }
+
+  .gcl-dot {
+    height: 32px;
+  }
+}
+
+/* --- Màn mở đầu phần luyện tập --- */
+
+.gcl-intro {
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.gcl-intro-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  font-size: 24px;
+}
+
+.gcl-intro h2 {
+  font-size: 1.25rem;
+}
+
+.gcl-intro-history {
+  padding: 6px 12px;
+  border-radius: var(--gc-radius-sm);
+  background: var(--gc-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.gcl-intro-actions,
+.gcl-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* --- Kết quả --- */
+
+.gcl-result {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  animation: gc-pop 0.3s var(--gc-ease) both;
+}
+
+.gcl-result-hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.gcl-result-ring {
+  --ring-size: 124px;
+  --ring-width: 9;
+  --ring-track: var(--gc-muted);
+  --ring-fill: var(--gc-orange);
+}
+
+.gcl-result.is-pass .gcl-result-ring {
+  --ring-fill: var(--gc-green);
+}
+
+.gcl-result-score {
+  font-family: var(--gc-font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.gcl-result-percent {
+  color: var(--gc-fg-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.gcl-result-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.gcl-result-text h2 {
+  font-size: 1.4rem;
+}
+
+.gcl-result.is-pass .gcl-result-text h2 {
+  color: var(--gc-green-dark);
+}
+
+.gcl-result-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.gcl-result-actions {
+  justify-content: flex-start;
+  padding-top: 18px;
+  border-top: 1px solid var(--gc-border);
+}
+
+.gcl-review,
+.gcl-history {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gcl-review h2,
+.gcl-history h2 {
+  font-size: 1.1rem;
+}
+
+.gcl-review-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gcl-review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 0;
+  border-top: 1px solid var(--gc-border);
+  font-size: 0.875rem;
+}
+
+.gcl-review-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.gcl-review-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.gcl-review-num {
+  min-width: 20px;
+  color: var(--gc-fg-muted);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.gcl-review-mark {
+  margin-top: 3px;
+  color: var(--gc-success);
+  font-size: 17px;
+}
+
+.gcl-review-item.is-wrong .gcl-review-mark {
+  color: var(--gc-danger);
+}
+
+.gcl-review-sentence {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.gcl-review-answer,
+.gcl-review-why,
+.gcl-review-item .gcl-translation {
+  padding-left: 57px;
+}
+
+.gcl-review-answer s {
+  color: var(--gc-danger);
+}
+
+.gcl-review-answer strong {
+  color: var(--gc-success);
+}
+
+.gcl-review-why {
+  color: var(--gc-fg-muted);
+}
+
+.gcl-history-table td {
+  white-space: nowrap;
+}
+
+.gcl-history-score {
+  color: var(--gc-warning);
+  font-weight: 700;
+}
+
+.gcl-history-score.is-pass {
+  color: var(--gc-success);
+}
+
+.gcl-history-best {
+  margin-left: 6px;
+  color: var(--gc-orange);
+  font-size: 14px;
+  vertical-align: -2px;
+}
+
+.gcl-history-note {
+  font-size: 0.8rem;
+}
+
+/* --- Trạng thái phụ --- */
+
+.gcl-locked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-block: 40px;
+  text-align: center;
+}
+
+.gcl-locked p {
+  max-width: 46ch;
+  font-size: 0.9rem;
+}
+
+.gcl-locked .gc-btn {
+  margin-top: 8px;
+}
+
+.gcl-locked-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  background: var(--gc-muted);
+  color: var(--gc-fg-muted);
+  font-size: 26px;
+}
+
+.gcl-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gcl-sk-title {
+  width: 40%;
+  height: 24px;
+}
+
+.gcl-sk-line {
+  height: 14px;
+}
+
+.gcl-sk-block {
+  height: 160px;
+  margin-top: 8px;
+}
+
+.gcl-error {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--gc-danger);
+}
+
+/* --- Bài trước / bài sau --- */
+
+.gcl-pager {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gcl-pager-link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius);
+  background: var(--gc-card);
+  transition: border-color 0.15s var(--gc-ease), background-color 0.15s var(--gc-ease);
+}
+
+a.gcl-pager-link:hover {
+  border-color: var(--gc-green);
+  background: var(--gc-green-soft);
+}
+
+.gcl-pager-link.is-next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.gcl-pager-link.is-locked {
+  color: var(--gc-fg-faint);
+  cursor: not-allowed;
+}
+
+.gcl-pager-dir {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gc-fg-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.gcl-pager-title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* --- Màn hình hẹp --- */
+
+@media (max-width: 560px) {
+  .gcl-steps {
+    padding: 12px 2px;
+  }
+
+  .gcl-step {
+    font-size: 0.7rem;
+  }
+
+  .gcl-step-dot {
+    width: 28px;
+    height: 28px;
+  }
+
+  .gcl-step-item + .gcl-step-item::before {
+    top: 13px;
+  }
+
+  .gcl-line {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .gcl-result-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .gcl-review-answer,
+  .gcl-review-why,
+  .gcl-review-item .gcl-translation {
+    padding-left: 0;
+  }
+
+  .gcl-pager {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gcl-panel-foot .gc-btn:not(.gc-btn-ghost) {
+    flex: 1;
+  }
+}

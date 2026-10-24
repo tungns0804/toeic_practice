@@ -1,0 +1,509 @@
+/* Trang Hôm nay. Thẻ khu học dùng lại .lesson-card của danh sách bài (src/styles/lists.css). */
+
+/* --- Chuỗi ngày + kế hoạch: hai cột trên máy tính, xếp dọc trên điện thoại ----- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--sp-4);
+  align-items: stretch;
+}
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.hero-grid .card-body {
+  height: 100%;
+  gap: var(--sp-3);
+}
+
+.today-card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-lg);
+}
+
+.today-card-title app-icon {
+  color: var(--accent);
+}
+
+/* --- Chuỗi ngày ---------------------------------------------------------------
+   Màu lửa (--star) khi chuỗi đang sống; xám khi chưa có chuỗi. Hôm nay đã giữ
+   chuỗi thì cả thẻ ấm lên một chút — phần thưởng nhìn thấy được. */
+.streak-card {
+  --flame: var(--star);
+}
+
+.streak-card[data-state='none'] {
+  --flame: var(--text-faint);
+}
+
+.streak-card[data-state='done'] {
+  border-color: color-mix(in srgb, var(--flame) 55%, var(--border));
+  background: linear-gradient(160deg, color-mix(in srgb, var(--flame) 12%, var(--bg-elevated)), var(--bg-elevated) 60%);
+}
+
+.streak-card .today-card-title app-icon {
+  color: var(--flame);
+}
+
+.streak-figure {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+}
+
+.streak-figure strong {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 2rem + 2vw, 3.4rem);
+  line-height: 1;
+  color: var(--flame);
+  font-variant-numeric: tabular-nums;
+}
+
+.streak-figure span {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.streak-hint {
+  margin: 0;
+  font-weight: 600;
+}
+
+.streak-week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  margin: var(--sp-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.streak-week li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.streak-dot {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1.5px dashed var(--border-strong);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.streak-week li.is-met .streak-dot {
+  border: none;
+  background: var(--flame);
+}
+
+.streak-week li.is-today .streak-dot {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--flame) 30%, transparent);
+}
+
+.streak-dow {
+  font-size: var(--fs-2xs);
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.streak-week li.is-today .streak-dow {
+  color: var(--text);
+}
+
+.streak-today {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.streak-today-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+.streak-today-row strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.streak-bar {
+  height: 8px;
+}
+
+.streak-bar span {
+  background: var(--flame);
+}
+
+.streak-best {
+  margin: auto 0 0;
+}
+
+/* --- Kế hoạch hôm nay ---------------------------------------------------------- */
+.plan-all-done {
+  margin: 0;
+}
+
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+.plan-item.is-done {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: var(--accent-soft);
+}
+
+.plan-check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  font-weight: 800;
+}
+
+.plan-item.is-done .plan-check {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.plan-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.plan-title {
+  font-weight: 600;
+}
+
+.plan-item.is-done .plan-title {
+  color: var(--text-muted);
+}
+
+.plan-detail {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+.plan-bar,
+.today-bar {
+  display: block;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  overflow: hidden;
+}
+
+.plan-bar span,
+.today-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width var(--dur) var(--ease);
+}
+
+.plan-item .btn {
+  flex-shrink: 0;
+}
+
+.goal-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-3);
+  margin-top: auto;
+  padding-top: var(--sp-2);
+}
+
+.goal-options {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+}
+
+.goal-option {
+  min-width: 2.6rem;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.goal-option:hover {
+  color: var(--text);
+}
+
+.goal-option.is-active {
+  background: var(--bg-elevated);
+  color: var(--accent);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+}
+
+.how-it-works summary {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.how-it-works summary:hover {
+  color: var(--text);
+}
+
+.how-it-works p {
+  margin: var(--sp-2) 0 0;
+  max-width: 62ch;
+}
+
+.section-title {
+  font-size: var(--fs-lg);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 14px;
+}
+
+.skill-card .lesson-card-top {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.skill-icon {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+/* --- Thống kê học tập ----------------------------------------------------------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: var(--sp-2);
+  margin: 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+}
+
+.stat dt {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.stat dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* --- Biểu đồ 30 ngày -------------------------------------------------------------
+   Một chuỗi số liệu, một màu (--accent). Cột mảnh, đầu cột bo 4px, khe 2px giữa
+   các cột; ngày đạt mục tiêu đậm hơn ngày chưa đạt. Vạch đứt là mục tiêu hiện tại.
+   Lưới và trục để nhạt — dữ liệu mới là thứ cần nhìn. */
+.activity-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: var(--sp-2) 0 0;
+}
+
+.activity-chart-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.activity-chart-title {
+  font-weight: 600;
+}
+
+.activity-chart-goal {
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+.activity-plot {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(30, minmax(0, 1fr));
+  align-items: end;
+  gap: 2px;
+  height: 120px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.activity-goal-line {
+  position: absolute;
+  inset-inline: 0;
+  border-top: 1px dashed var(--text-faint);
+  pointer-events: none;
+}
+
+/* Cả cột cao hết khung là vùng rê chuột, không chỉ phần đã tô: ngày ít câu vẫn
+   bấm trúng được. */
+.activity-bar {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+  outline-offset: 1px;
+}
+
+.activity-bar-fill {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  border-radius: 4px 4px 0 0;
+  background: color-mix(in srgb, var(--accent) 45%, var(--bg-elevated));
+  transition: height var(--dur) var(--ease);
+}
+
+.activity-bar.is-met .activity-bar-fill {
+  background: var(--accent);
+}
+
+.activity-bar:hover,
+.activity-bar:focus-visible {
+  background: var(--bg-subtle);
+}
+
+/* Chú thích khi rê chuột / focus: chữ màu chữ thường trên nền thẻ nổi. */
+.activity-bar:hover::after,
+.activity-bar:focus-visible::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  z-index: 2;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Cột ở hai mép: neo chú thích vào mép tương ứng để nó không tràn khỏi thẻ. */
+.activity-bar:nth-child(-n + 6):hover::after,
+.activity-bar:nth-child(-n + 6):focus-visible::after {
+  left: 0;
+  transform: none;
+}
+
+.activity-bar:nth-last-child(-n + 5):hover::after,
+.activity-bar:nth-last-child(-n + 5):focus-visible::after {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+.activity-axis {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-faint);
+  font-size: var(--fs-2xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-empty {
+  margin: 0;
+}
+
+/* --- Mục đã đánh dấu ★ ----------------------------------------------------------- */
+.favorite-icon {
+  color: var(--star) !important;
+}
+
+.favorite-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.favorite-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 550;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+
+.favorite-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.favorite-count {
+  color: var(--star);
+  font-weight: 700;
+}

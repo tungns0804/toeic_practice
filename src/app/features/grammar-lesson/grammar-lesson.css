@@ -1,0 +1,428 @@
+/* --- Đầu bài --- */
+
+.gcl-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gcl-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  color: var(--gc-fg-muted);
+  font-size: 0.8rem;
+}
+
+.gcl-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  transition: color 0.15s var(--gc-ease);
+}
+
+.gcl-back:hover {
+  color: var(--gc-green-dark);
+}
+
+.gcl-crumb-sep {
+  opacity: 0.5;
+}
+
+.gcl-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gcl-head h1 {
+  font-size: clamp(1.3rem, 1.1rem + 0.9vw, 1.6rem);
+  line-height: 1.3;
+}
+
+/* --- Thanh bước --- */
+
+.gcl-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 14px 8px;
+  list-style: none;
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius-lg);
+  background: var(--gc-card);
+  box-shadow: var(--gc-shadow);
+}
+
+.gcl-step-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Vạch nối giữa hai bước, chạy qua tâm vòng tròn. */
+.gcl-step-item + .gcl-step-item::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: calc(50% + 20px);
+  left: calc(-50% + 20px);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gc-border);
+}
+
+.gcl-step-item:has(.is-done) + .gcl-step-item::before,
+.gcl-step-item:has(.is-done) + .gcl-step-item:has(.is-active)::before {
+  background: var(--gc-green);
+}
+
+.gcl-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 4px;
+  border: none;
+  background: none;
+  color: var(--gc-fg);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.gcl-step:disabled {
+  color: var(--gc-fg-faint);
+  cursor: default;
+}
+
+.gcl-step-dot {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--gc-border-strong);
+  border-radius: 999px;
+  background: var(--gc-card);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: background-color 0.2s var(--gc-ease), border-color 0.2s var(--gc-ease),
+    color 0.2s var(--gc-ease), box-shadow 0.2s var(--gc-ease);
+}
+
+.gcl-step:not(:disabled):hover .gcl-step-dot {
+  border-color: var(--gc-green);
+}
+
+.gcl-step.is-done {
+  color: var(--gc-green-dark);
+}
+
+.gcl-step.is-done .gcl-step-dot {
+  border-color: var(--gc-green);
+  background: var(--gc-green-soft);
+  color: var(--gc-green-dark);
+}
+
+.gcl-step.is-active {
+  color: var(--gc-green-dark);
+  font-weight: 700;
+}
+
+.gcl-step.is-active .gcl-step-dot {
+  border-color: var(--gc-green);
+  background: var(--gc-green);
+  color: var(--gc-on-green);
+  box-shadow: 0 0 0 4px var(--gc-green-soft);
+}
+
+/* --- Khung chung của một bước --- */
+
+.gcl-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  animation: gc-pop 0.26s var(--gc-ease) both;
+}
+
+.gcl-panel-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.gcl-panel-head h2 {
+  font-size: 1.2rem;
+}
+
+.gcl-panel-head p {
+  margin-top: 2px;
+  font-size: 0.875rem;
+}
+
+.gcl-panel-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--gc-radius);
+  font-size: 20px;
+}
+
+.gcl-panel-icon.is-red {
+  background: var(--gc-danger-soft);
+  color: var(--gc-danger);
+}
+
+.gcl-panel-icon.is-green {
+  background: var(--gc-green-soft);
+  color: var(--gc-green-dark);
+}
+
+.gcl-panel-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--gc-border);
+}
+
+.gcl-spacer {
+  flex: 1;
+}
+
+/* --- Bước 1: lỗi sai --- */
+
+.gcl-mistakes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gcl-mistake {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius-lg);
+  background: var(--gc-bg);
+}
+
+.gcl-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.gcl-line p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.gcl-line-tag {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  min-width: 64px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gcl-line.is-wrong .gcl-line-tag {
+  background: var(--gc-danger-soft);
+  color: var(--gc-danger);
+}
+
+.gcl-line.is-right .gcl-line-tag {
+  background: var(--gc-success-soft);
+  color: var(--gc-success);
+}
+
+.gcl-why {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--gc-border);
+  color: var(--gc-fg-muted);
+  font-size: 0.875rem;
+}
+
+.gcl-why-icon {
+  margin-top: 3px;
+  color: var(--gc-orange);
+  font-size: 16px;
+}
+
+/* --- Bước 2: lý thuyết --- */
+
+.gcl-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gc-border);
+}
+
+.gcl-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+}
+
+.gcl-section-num {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--gc-green-soft);
+  color: var(--gc-green-dark);
+  font-family: var(--gc-font-body);
+  font-size: 0.75rem;
+}
+
+.gcl-body,
+.gcl-points {
+  font-size: 0.92rem;
+}
+
+.gcl-points {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.gcl-points li::marker {
+  color: var(--gc-green);
+}
+
+.gcl-table-wrap {
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius);
+}
+
+.gcl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.gcl-table th,
+.gcl-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--gc-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.gcl-table th {
+  background: var(--gc-muted);
+  color: var(--gc-fg-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.gcl-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.gcl-cell-key {
+  color: var(--gc-green-dark);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.gcl-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gcl-examples li {
+  padding: 10px 14px;
+  border-left: 3px solid var(--gc-green);
+  border-radius: 0 var(--gc-radius-sm) var(--gc-radius-sm) 0;
+  background: var(--gc-green-soft);
+}
+
+.gcl-example-en {
+  font-weight: 500;
+}
+
+.gcl-example-vi {
+  color: var(--gc-fg-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.gcl-callout {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--gc-radius);
+  font-size: 0.875rem;
+}
+
+.gcl-callout-icon {
+  margin-top: 2px;
+  font-size: 18px;
+}
+
+.gcl-callout-label {
+  font-weight: 700;
+}
+
+.gcl-callout.is-tip {
+  border-color: var(--gc-green-ring);
+  background: var(--gc-green-soft);
+}
+
+.gcl-callout.is-tip .gcl-callout-icon,
+.gcl-callout.is-tip .gcl-callout-label {
+  color: var(--gc-green-dark);
+}
+
+.gcl-callout.is-warning {
+  border-color: color-mix(in srgb, var(--gc-warning) 30%, transparent);
+  background: var(--gc-warning-soft);
+}
+
+.gcl-callout.is-warning .gcl-callout-icon,
+.gcl-callout.is-warning .gcl-callout-label {
+  color: var(--gc-warning);
+}
+
+.gcl-callout.is-info {
+  border-color: color-mix(in srgb, var(--gc-blue) 25%, transparent);
+  background: var(--gc-blue-soft);
+}
+
+.gcl-callout.is-info .gcl-callout-icon,
+.gcl-callout.is-info .gcl-callout-label {
+  color: var(--gc-blue);
+}

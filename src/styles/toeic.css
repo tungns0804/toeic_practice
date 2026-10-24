@@ -1,0 +1,271 @@
+/* Thành phần riêng của app luyện TOEIC, không có trong bộ style dùng chung lấy từ
+   dự án minano_nihongo: chip lọc, khung thiết lập luyện tập, danh sách gạch đầu
+   dòng, chữ ngữ liệu tiếng Anh / phiên âm / công thức, bảng, và chuyển động của
+   các thẻ danh sách. Nạp SAU các file dùng chung nên được dựa vào biến của chúng. */
+
+/* Lưới nút chọn tự xuống hàng theo bề rộng, không cần khai báo số cột theo từng
+   ngưỡng màn hình. */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+  gap: var(--sp-2);
+}
+
+.option-title {
+  font-weight: 620;
+}
+
+/* --- Chip (nút chọn nhỏ, xếp thành hàng) ---------------------------------- */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-weight: 550;
+  white-space: nowrap;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.chip:hover:not(:disabled) {
+  border-color: var(--border-strong);
+  background: var(--bg-inset);
+  color: var(--text);
+}
+
+/* Số đếm nhỏ bên trong chip ("Cơ bản 18", "Đ.từ 42"). */
+.chip-count {
+  margin-left: 5px;
+  opacity: 0.75;
+  font-weight: 600;
+}
+
+/* Chip gộp nhóm ("Chỉ cụm nhiều từ"): đậm hơn các chip thường một bậc vì nó bật
+   tắt cả năm chip bên dưới cùng lúc. */
+.chip-strong {
+  font-weight: 650;
+  border-style: dashed;
+}
+
+/* Năm nhóm cụm nhiều từ dùng chung một vạch màu bên trái, để mắt tách được chúng
+   khỏi các từ loại đơn (danh từ, động từ…) nằm cùng hàng. */
+.chip.is-multiword {
+  border-left: 3px solid color-mix(in srgb, var(--accent) 55%, var(--border));
+}
+
+/* Hàng nhãn có thêm nút phụ ở bên phải. */
+.label-row {
+  gap: var(--sp-2);
+  margin-bottom: 2px;
+}
+
+.chip.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.chip:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- Khung thiết lập luyện tập -------------------------------------------- */
+/* Bốn nhóm lựa chọn nhỏ (phạm vi, cách trả lời, số câu…) tự xếp thành 1–2 cột
+   theo bề rộng còn lại. */
+.setup-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: var(--sp-4);
+}
+
+.setup-start {
+  padding-top: var(--sp-2);
+  border-top: 1px solid var(--border);
+}
+
+/* Dòng tóm tắt hiện khi khung thiết lập đang thu gọn: cho biết sẽ luyện theo
+   thiết lập nào mà không phải mở ra xem. */
+.setup-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Nút mở/thu khung thiết lập. Mũi tên quay 180° khi mở, để trạng thái đọc được
+   ngay cả khi phần thân đã cuộn khỏi màn hình. */
+.setup-toggle-caret {
+  display: inline-block;
+  transition: transform var(--dur) var(--ease);
+}
+
+.setup-toggle[aria-expanded='true'] .setup-toggle-caret {
+  transform: rotate(180deg);
+}
+
+/* Khung thiết lập lúc thu gọn không cần đường kẻ ngăn: nó chỉ còn hai dòng. */
+.setup-start.is-compact {
+  padding-top: 0;
+  border-top: none;
+}
+
+/* --- Danh sách gạch đầu dòng ---------------------------------------------- */
+.bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.bullet-list li::marker {
+  color: var(--accent);
+}
+
+/* --- Chữ tiếng Anh --------------------------------------------------------
+   Ngữ liệu tiếng Anh không còn đổi họ chữ nữa (xem ghi chú ở --font-ui), nhưng
+   lớp này vẫn giữ nguyên tên và vẫn được dùng ở mọi chỗ cũ: nó là chỗ duy nhất
+   để chỉnh riêng phần ngữ liệu, và bỏ đi thì lần sau muốn chỉnh phải đi tìm lại
+   từng chỗ trong mười mấy template.
+
+   Nới nhẹ khoảng cách chữ, ngược với phần siết ở `body`: câu tiếng Anh ở đây để
+   ĐỌC KỸ chứ không phải liếc, và người học còn phải nhận ra từng chữ cái một. */
+.en {
+  letter-spacing: 0;
+}
+
+/* Phiên âm IPA — xem ghi chú ở --font-ipa. */
+.ipa {
+  font-family: var(--font-ipa);
+}
+
+/* Công thức ngữ pháp: chữ đều bề rộng để "S + have/has + V3" xếp thẳng cột giữa
+   các thì khi đặt cạnh nhau. */
+.formula {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  letter-spacing: -0.01em;
+}
+
+/* --- Bảng ----------------------------------------------------------------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.table th,
+.table td {
+  padding: 9px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+/* KHÔNG đặt `position: sticky` cho hàng tiêu đề.
+
+   Bảng nằm trong `.scroll-x` (`overflow-x: auto`), mà một phần tử cuộn được sẽ
+   trở thành khối chứa cho mọi phần tử sticky bên trong nó. Hàng tiêu đề vì thế
+   dính theo KHUNG CUỘN NGANG chứ không theo khung nhìn của trang, và khi cuộn
+   dọc nó trôi xuống đè lên chính dòng dữ liệu đầu tiên — đúng như ảnh chụp cho
+   thấy: nhãn cột nằm chồng lên chữ của từ đầu bảng.
+
+   Muốn tiêu đề dính thật thì phải cho bảng một khung cuộn DỌC riêng, tức là
+   khoá chiều cao bảng lại. Với bảng 40 từ đọc trên điện thoại, khoá chiều cao
+   còn khó chịu hơn là phải cuộn ngược lên xem tên cột. */
+.table th {
+  background: var(--bg-elevated);
+  font-size: var(--fs-xs);
+  font-weight: 620;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Thẻ trong danh sách hiện lần lượt chứ không bụp ra cùng lúc: mắt bắt được
+   rằng đây là một DÃY mục, và độ trễ tăng dần cho biết thứ tự đọc.
+
+   Chỉ trễ tới thẻ thứ tám. Sau đó dừng hẳn, nếu không thẻ thứ ba mươi sẽ phải
+   đợi gần một giây — với bảng dài thì đó là chờ đợi thuần tuý. */
+.home-card,
+.tense-card,
+.band-card,
+.exercise-card {
+  animation: pop-in 0.28s var(--ease) both;
+}
+
+.home-card:nth-child(2),
+.tense-card:nth-child(2),
+.band-card:nth-child(2),
+.exercise-card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.home-card:nth-child(3),
+.tense-card:nth-child(3),
+.band-card:nth-child(3),
+.exercise-card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.home-card:nth-child(4),
+.band-card:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.band-card:nth-child(n + 5) {
+  animation-delay: 0.2s;
+}
+
+/* Thẻ nhấc lên khi rê chuột — đã có sẵn transform, chỉ thêm bóng cho có chiều sâu. */
+.home-card,
+.tense-card,
+.exercise-card,
+.band-card {
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+/* --- Chuyển động trong lúc luyện tập ---
+   Đây là chỗ chuyển động có giá trị nhất: người học vừa bấm xong và cần biết
+   NGAY chuyện gì vừa xảy ra. */
+/* Khối phản hồi đúng/sai bật lên từ dưới. */
+.feedback {
+  animation: pop-in 0.24s var(--ease) both;
+}
+
+/* Phần thân khung thiết lập khi mở ra. Không dùng transition trên height vì
+   chiều cao ở đây do nội dung quyết định, mà `height: auto` thì không nội suy
+   được — trượt nhẹ theo trục dọc cho cùng hiệu quả mà không phải đo đạc gì. */
+/* Phần thân khung thiết lập.
+
+   Phải tự dựng lại bố cục cột + khoảng cách: nó là MỘT phần tử con của
+   `.card-body.stack`, nên nếu không khai gì thì cả khối bên trong dính vào nhau
+   và mất hết khoảng cách giữa các nhóm tuỳ chọn. */
+.setup-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  animation: rise-in 0.22s var(--ease) both;
+}

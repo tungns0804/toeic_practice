@@ -1,5 +1,6 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 
+import { ActivityStore } from '../activity/activity-store';
 import type { LocalizedText } from '../models/lesson.model';
 import {
   PracticeConfig,
@@ -36,6 +37,13 @@ export interface SessionLesson {
  */
 @Injectable({ providedIn: 'root' })
 export class PracticeSessionStore {
+  /**
+   * Số câu đã làm mỗi ngày — nguồn của chuỗi ngày học. Mỗi câu được ghi ĐÚNG MỘT
+   * LẦN, lúc nó chấm xong (đúng, hết lượt, hoặc bấm xem đáp án); câu còn đang thử
+   * lại thì chưa tính.
+   */
+  private readonly activity = inject(ActivityStore);
+
   private readonly lessonRef = signal<SessionLesson | null>(null);
   private readonly configRef = signal<PracticeConfig | null>(null);
   private readonly questionList = signal<PracticeQuestion[]>([]);
@@ -119,6 +127,7 @@ export class PracticeSessionStore {
 
     if (correct) {
       this.patchCurrentState({ status: 'correct', attempts });
+      this.activity.recordAnswer(true);
       return 'correct';
     }
 
@@ -126,6 +135,7 @@ export class PracticeSessionStore {
     const status: QuestionStatus =
       wrongAttempts >= question.maxWrongAttempts ? 'revealed' : 'pending';
     this.patchCurrentState({ status, attempts, wrongAttempts });
+    if (status === 'revealed') this.activity.recordAnswer(false);
     return status;
   }
 
@@ -135,6 +145,7 @@ export class PracticeSessionStore {
     if (!state || state.status !== 'pending') return state?.status ?? 'pending';
 
     this.patchCurrentState({ status: 'revealed', wrongAttempts: Math.max(1, state.wrongAttempts) });
+    this.activity.recordAnswer(false);
     return 'revealed';
   }
 

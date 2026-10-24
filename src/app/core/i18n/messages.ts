@@ -37,16 +37,15 @@ export const MESSAGES = {
   // ── Vỏ ứng dụng ────────────────────────────────────────────────────────
   'app.title': { vi: 'Luyện thi TOEIC 990', en: 'TOEIC 990 Practice' },
   'app.namePrefix': { vi: 'Luyện thi', en: 'Practice' },
-  'app.tagline': {
-    vi: 'Thì · Từ vựng theo band · Bài tập chuyên đề',
-    en: 'Tenses · Vocabulary by band · Focused drills',
-  },
   'app.nav': { vi: 'Điều hướng chính', en: 'Main navigation' },
-  'app.nav.home': { vi: 'Trang chủ', en: 'Home' },
+  'app.nav.today': { vi: 'Hôm nay', en: 'Today' },
   'app.nav.tense': { vi: 'Các thì', en: 'Tenses' },
   'app.nav.vocabulary': { vi: 'Từ vựng', en: 'Vocabulary' },
   'app.nav.exercise': { vi: 'Bài tập', en: 'Drills' },
+  'app.nav.grammar': { vi: 'Ngữ pháp', en: 'Grammar' },
   'app.language.switch': { vi: 'Chuyển sang {name}', en: 'Switch to {name}' },
+  'app.breadcrumb': { vi: 'Bạn đang ở', en: 'You are here' },
+  'app.navigating': { vi: 'Đang mở trang…', en: 'Opening page…' },
   'app.skipToContent': { vi: 'Tới nội dung chính', en: 'Skip to main content' },
   'app.backToTop': { vi: 'Lên đầu trang', en: 'Back to top' },
 
@@ -54,6 +53,7 @@ export const MESSAGES = {
   'theme.system': { vi: 'Tự động', en: 'Auto' },
   'theme.light': { vi: 'Sáng', en: 'Light' },
   'theme.dark': { vi: 'Tối', en: 'Dark' },
+  'theme.night': { vi: 'Đèn đêm', en: 'Night light' },
   'theme.title': {
     vi: 'Giao diện: {current} — bấm để chuyển sang {next}',
     en: 'Theme: {current} — click to switch to {next}',
@@ -68,13 +68,94 @@ export const MESSAGES = {
   'route.exerciseDetail': { vi: 'Bài tập', en: 'Drill' },
   'route.practice': { vi: 'Đang luyện tập', en: 'Practising' },
   'route.result': { vi: 'Kết quả', en: 'Result' },
+  'route.grammar': { vi: 'Khóa ngữ pháp', en: 'Grammar course' },
+  'route.grammarLesson': { vi: 'Bài học ngữ pháp', en: 'Grammar lesson' },
 
-  // ── Trang chủ ──────────────────────────────────────────────────────────
-  'home.title': { vi: 'Luyện thi TOEIC 990', en: 'TOEIC 990 Practice' },
-  'home.lead': {
-    vi: 'Ba khu luyện tập độc lập: nắm chắc 12 thì, mở rộng từ vựng theo band điểm, và luyện riêng từng chuyên đề ngữ pháp hay sai.',
-    en: 'Three independent areas: master the 12 tenses, grow vocabulary band by band, and drill the grammar points that cost the most points.',
+  // ── Trang Hôm nay ──────────────────────────────────────────────────────
+  'today.title': { vi: 'Hôm nay học gì?', en: 'What shall we study today?' },
+  'today.subtitle': {
+    vi: 'Giữ chuỗi ngày học, đi tiếp bài ngữ pháp đang dở, và xem mình đã tiến tới đâu.',
+    en: 'Keep your streak, continue the grammar lesson you left off, and see how far you have come.',
   },
+  'today.skills.title': { vi: 'Các khu học', en: 'Study areas' },
+
+  // ── Chuỗi ngày học (core/activity) ─────────────────────────────────────
+  'streak.title': { vi: 'Chuỗi ngày học', en: 'Study streak' },
+  'streak.unit': { vi: 'ngày liên tiếp', en: 'days in a row' },
+  'streak.state.done': { vi: 'Hôm nay đã giữ chuỗi — tuyệt vời! 🎉', en: 'Streak kept for today — great work! 🎉' },
+  'streak.state.atRisk': {
+    vi: 'Còn {count} câu nữa để giữ chuỗi hôm nay',
+    en: '{count} more questions to keep your streak today',
+  },
+  'streak.state.none': {
+    vi: 'Trả lời {count} câu hôm nay để bắt đầu chuỗi',
+    en: 'Answer {count} questions today to start a streak',
+  },
+  'streak.today': { vi: 'Hôm nay', en: 'Today' },
+  'streak.todayCount': { vi: '{answered}/{goal} câu', en: '{answered}/{goal} questions' },
+  'streak.best': { vi: 'Kỷ lục: {count} ngày', en: 'Best: {count} days' },
+  'streak.weekAria': { vi: 'Bảy ngày gần nhất', en: 'The last seven days' },
+  'streak.dayMet': { vi: 'đạt mục tiêu', en: 'goal met' },
+  'streak.dayMissed': { vi: 'chưa đạt', en: 'goal not met' },
+  'streak.dow.0': { vi: 'CN', en: 'Sun' },
+  'streak.dow.1': { vi: 'T2', en: 'Mon' },
+  'streak.dow.2': { vi: 'T3', en: 'Tue' },
+  'streak.dow.3': { vi: 'T4', en: 'Wed' },
+  'streak.dow.4': { vi: 'T5', en: 'Thu' },
+  'streak.dow.5': { vi: 'T6', en: 'Fri' },
+  'streak.dow.6': { vi: 'T7', en: 'Sat' },
+  'streak.goal': { vi: 'Mục tiêu mỗi ngày (câu)', en: 'Daily goal (questions)' },
+  'streak.how.title': { vi: 'Chuỗi ngày tính thế nào?', en: 'How does the streak work?' },
+  'streak.how.body': {
+    vi: 'Mỗi câu bạn trả lời xong — đúng hay sai, ở bất kỳ khu nào: khoá ngữ pháp, các thì, từ vựng, bài tập — đều được đếm. Đủ {goal} câu trong ngày là giữ được chuỗi. Hôm nay chưa học thì chuỗi vẫn còn tới hết ngày; bỏ trọn một ngày thì chuỗi về 0, nhưng kỷ lục vẫn được giữ. Đổi mục tiêu chỉ áp dụng từ hôm nay.',
+    en: 'Every question you finish — right or wrong, in any area: the grammar course, tenses, vocabulary or drills — counts. Reach {goal} questions in a day to keep the streak. If you have not studied yet today, the streak survives until the day ends; skip a whole day and it resets to 0, but your best is kept. A new goal only applies from today.',
+  },
+  'streak.chip': {
+    vi: 'Chuỗi {count} ngày · hôm nay {answered}/{goal} câu',
+    en: '{count}-day streak · today {answered}/{goal} questions',
+  },
+
+  // ── Kế hoạch hôm nay ───────────────────────────────────────────────────
+  'plan.title': { vi: 'Kế hoạch hôm nay', en: "Today's plan" },
+  'plan.goal': { vi: 'Trả lời {goal} câu', en: 'Answer {goal} questions' },
+  'plan.goal.detail': { vi: 'Đã làm {answered} câu', en: '{answered} answered so far' },
+  'plan.grammar': { vi: 'Đạt bài {code}: {title}', en: 'Pass lesson {code}: {title}' },
+  'plan.grammar.allDone': {
+    vi: 'Đã đạt toàn bộ khoá ngữ pháp',
+    en: 'Every grammar lesson passed',
+  },
+  'plan.grammar.detail': {
+    vi: 'Khoá ngữ pháp: {passed}/{total} bài đạt',
+    en: 'Grammar course: {passed}/{total} lessons passed',
+  },
+  'plan.allDone': {
+    vi: 'Xong kế hoạch hôm nay — hẹn gặp lại ngày mai! 🎉',
+    en: "Today's plan is done — see you tomorrow! 🎉",
+  },
+  'plan.go.learn': { vi: 'Học tiếp', en: 'Keep going' },
+  'plan.go.grammar': { vi: 'Vào bài', en: 'Open lesson' },
+
+  // ── Thống kê học tập ───────────────────────────────────────────────────
+  'stats.title': { vi: 'Thống kê học tập', en: 'Study statistics' },
+  'stats.answered': { vi: 'Câu đã làm', en: 'Questions answered' },
+  'stats.accuracy': { vi: 'Tỉ lệ đúng', en: 'Accuracy' },
+  'stats.activeDays': { vi: 'Ngày đã học', en: 'Days studied' },
+  'stats.bestStreak': { vi: 'Chuỗi dài nhất', en: 'Longest streak' },
+  'stats.days': { vi: '{count} ngày', en: '{count} days' },
+  'stats.grammar': { vi: 'Bài ngữ pháp đạt', en: 'Grammar lessons passed' },
+  'stats.xp': { vi: 'Điểm XP', en: 'XP' },
+  'stats.chart.title': { vi: 'Số câu mỗi ngày · 30 ngày gần nhất', en: 'Questions per day · last 30 days' },
+  'stats.chart.goal': { vi: 'Vạch đứt: mục tiêu {goal} câu', en: 'Dashed line: goal of {goal}' },
+  'stats.chart.tip': {
+    vi: '{date}: {answered} câu, đúng {correct}',
+    en: '{date}: {answered} answered, {correct} right',
+  },
+  'stats.chart.empty': {
+    vi: 'Chưa có dữ liệu — mỗi câu bạn làm sẽ hiện thành một cột ở đây.',
+    en: 'No data yet — every question you answer shows up as a bar here.',
+  },
+
+  // ── Thẻ các khu học (trang Hôm nay) ───────────────────────────────────
   'home.card.tense.title': { vi: 'Các thì tiếng Anh', en: 'English tenses' },
   'home.card.tense.desc': {
     vi: 'Công thức, dấu hiệu nhận biết, lỗi hay gặp của 12 thì. Học xong luyện dịch Việt → Anh và Anh → Việt ngay trên câu ví dụ.',
@@ -90,23 +171,15 @@ export const MESSAGES = {
     vi: 'Bài tập cho từng điểm ngữ pháp riêng lẻ, bắt đầu với thể bị động — chuyển câu chủ động ↔ bị động và dịch câu bị động.',
     en: 'One drill per grammar point, starting with the passive voice — convert active ↔ passive and translate passive sentences.',
   },
-  'home.card.open': { vi: 'Mở →', en: 'Open →' },
+  'home.card.grammar.title': { vi: 'Khóa ngữ pháp', en: 'Grammar course' },
+  'home.card.grammar.desc': {
+    vi: '18 chương, 59 bài học tuần tự cho Part 5 & 6. Mỗi bài: ví dụ lỗi sai, lý thuyết và 10 câu luyện tập có chấm điểm. Tiến độ và số lần làm được lưu lại.',
+    en: '18 chapters and 59 sequential lessons for Parts 5 & 6. Each lesson: common mistakes, theory and 10 scored questions. Your progress and attempts are saved.',
+  },
+  'home.stat.grammar': { vi: '{passed}/{total} bài đạt', en: '{passed}/{total} lessons passed' },
   'home.stat.tenses': { vi: '{count} thì', en: '{count} tenses' },
   'home.stat.words': { vi: '{count} từ', en: '{count} words' },
   'home.stat.sentences': { vi: '{count} câu', en: '{count} sentences' },
-  'home.tips.title': { vi: 'Cách dùng hiệu quả', en: 'How to get the most out of it' },
-  'home.tips.1': {
-    vi: 'Đọc lý thuyết một thì, rồi luyện ngay phần dịch của chính thì đó — nhớ công thức mà không tự đặt được câu thì vào phòng thi vẫn sai.',
-    en: 'Read one tense, then immediately drill its translations — a formula you cannot turn into a sentence still fails on test day.',
-  },
-  'home.tips.2': {
-    vi: 'Từ nào sai thì bấm ★. Lần sau chọn phạm vi "Đã đánh dấu ★" để chỉ luyện đúng nhóm đó.',
-    en: 'Star (★) whatever you get wrong, then set the scope to "Starred" next time to drill exactly those items.',
-  },
-  'home.tips.3': {
-    vi: 'Chế độ gõ đáp án khó hơn trắc nghiệm nhiều nhưng sát với Part 5–6 hơn. Trắc nghiệm chỉ nên dùng ở lượt làm quen đầu tiên.',
-    en: 'Typing is much harder than multiple choice but far closer to Parts 5–6. Keep multiple choice for the first pass only.',
-  },
   'home.favorites.title': { vi: 'Mục đã đánh dấu ★', en: 'Starred items' },
   'home.favorites.empty': {
     vi: 'Chưa đánh dấu ★ mục nào. Trong lúc luyện, bấm ★ ở câu sai để gom lại thành nhóm ôn riêng.',
@@ -445,6 +518,18 @@ export const MESSAGES = {
     vi: 'Đúng cả {count} câu, không sai câu nào.',
     en: 'All {count} questions correct — nothing missed.',
   },
+  'result.streak.met': {
+    vi: 'Đạt mục tiêu hôm nay! Chuỗi {count} ngày liên tiếp 🎉',
+    en: "Today's goal reached! {count}-day streak 🎉",
+  },
+  'result.streak.done': {
+    vi: 'Hôm nay {answered} câu · chuỗi {count} ngày đang giữ vững',
+    en: 'Today {answered} questions · {count}-day streak going strong',
+  },
+  'result.streak.remaining': {
+    vi: 'Hôm nay {answered}/{goal} câu · còn {remaining} câu nữa để giữ chuỗi',
+    en: 'Today {answered}/{goal} · {remaining} more to keep your streak',
+  },
   'result.backToSection': { vi: 'Về phần vừa luyện', en: 'Back to the section' },
   'result.home': { vi: 'Trang chủ', en: 'Home' },
   'result.details': { vi: 'Chi tiết từng câu', en: 'Question by question' },
@@ -454,6 +539,188 @@ export const MESSAGES = {
   'result.yourAnswers': { vi: 'Bạn đã trả lời:', en: 'You answered:' },
   'result.noAnswer': { vi: 'Không trả lời', en: 'No answer' },
   'result.empty': { vi: 'Không có câu nào trong bộ lọc này.', en: 'No questions match this filter.' },
+
+  // ── Khoá ngữ pháp ──────────────────────────────────────────────────────
+  'grammar.sidebar.title': { vi: 'Nội dung khóa học', en: 'Course content' },
+  'grammar.sidebar.progress': { vi: 'Tiến độ', en: 'Progress' },
+  'grammar.sidebar.nav': { vi: 'Danh sách bài học', en: 'Lesson list' },
+  'grammar.sidebar.locked': {
+    vi: 'Hoàn thành bài trước để mở khóa',
+    en: 'Pass the previous lesson to unlock',
+  },
+  'grammar.sidebar.lockedShort': { vi: 'đang khoá', en: 'locked' },
+  'grammar.sidebar.passedShort': { vi: 'đã đạt', en: 'passed' },
+
+  'grammar.course.title': {
+    vi: 'Bạn sẽ học được gì ở khóa học này?',
+    en: 'What will you learn in this course?',
+  },
+  'grammar.course.lead': {
+    vi: 'Khóa học gồm {chapters} chương ngữ pháp trọng tâm và {lessons} bài học tuần tự, bao trùm toàn bộ điểm ngữ pháp thường gặp trong TOEIC Part 5 & 6. Mỗi bài đều có lý thuyết, ví dụ và luyện tập có chấm điểm.',
+    en: 'The course has {chapters} core grammar chapters and {lessons} sequential lessons covering every grammar point that regularly appears in TOEIC Parts 5 & 6. Each lesson comes with theory, examples and scored practice.',
+  },
+  'grammar.course.nextLesson': { vi: 'Bài tiếp theo', en: 'Next lesson' },
+  'grammar.course.nextMeta': { vi: 'Chương {chapter} · {count} Q', en: 'Chapter {chapter} · {count} Q' },
+  'grammar.course.start': { vi: 'Bắt đầu', en: 'Start' },
+  'grammar.course.continue': { vi: 'Tiếp tục', en: 'Continue' },
+  'grammar.course.allDone': { vi: 'Hoàn thành toàn bộ khóa học! 🎉', en: 'Course complete! 🎉' },
+  'grammar.course.allDoneHint': {
+    vi: 'Tuyệt vời! Ôn tập thường xuyên để nhớ lâu hơn.',
+    en: 'Great work! Review regularly to make it stick.',
+  },
+  'grammar.course.review': { vi: 'Ôn lại từ đầu', en: 'Review from the start' },
+  'grammar.course.ringLabel': {
+    vi: 'Đã hoàn thành {percent}% khóa học',
+    en: '{percent}% of the course completed',
+  },
+  'grammar.course.lesson0': { vi: 'Bài 0 · Tổng quan', en: 'Lesson 0 · Overview' },
+  'grammar.course.flowTitle': {
+    vi: 'Mỗi bài học diễn ra theo lộ trình',
+    en: 'Every lesson follows the same path',
+  },
+  'grammar.course.topicsTitle': {
+    vi: 'Các chủ đề ngữ pháp bạn sẽ chinh phục',
+    en: 'The grammar topics you will master',
+  },
+  'grammar.course.passedCount': { vi: '{passed}/{total} bài đạt', en: '{passed}/{total} lessons passed' },
+  'grammar.course.lessonCount': { vi: '{count} bài', en: '{count} lessons' },
+  'grammar.course.chapterProgress': { vi: '{passed}/{count} bài', en: '{passed}/{count} lessons' },
+  'grammar.course.reset': { vi: 'Xoá toàn bộ tiến độ', en: 'Reset all progress' },
+  'grammar.course.resetConfirm': {
+    vi: 'Xoá toàn bộ tiến độ khoá ngữ pháp (bài đã đạt, lịch sử làm bài, XP, chuỗi ngày học)? Không thể hoàn tác.',
+    en: 'Reset all grammar course progress (passed lessons, attempt history, XP, study streak)? This cannot be undone.',
+  },
+
+  'grammar.stat.streak': { vi: '{count} ngày', en: '{count}-day streak' },
+  'grammar.stat.streakTitle': {
+    vi: 'Chuỗi ngày học của cả app — mỗi ngày trả lời đủ số câu mục tiêu ở bất kỳ khu nào',
+    en: 'App-wide study streak — answer your daily goal of questions in any area to keep it going',
+  },
+  'grammar.stat.xp': { vi: '{count} Điểm XP', en: '{count} XP' },
+  'grammar.stat.xpTitle': {
+    vi: 'Điểm kinh nghiệm: 10 XP mỗi câu đúng, thưởng 50 XP khi đạt một bài lần đầu',
+    en: 'Experience points: 10 XP per correct answer, plus 50 XP the first time you pass a lesson',
+  },
+
+  'grammar.step.mistakes': { vi: 'Ví dụ lỗi sai', en: 'Common mistakes' },
+  'grammar.step.theory': { vi: 'Lý thuyết', en: 'Theory' },
+  'grammar.step.practice': { vi: 'Luyện tập', en: 'Practice' },
+  'grammar.step.result': { vi: 'Kết quả', en: 'Result' },
+
+  'grammar.lesson.back': { vi: 'Khóa ngữ pháp', en: 'Grammar course' },
+  'grammar.lesson.crumbs': { vi: 'Vị trí bài học', en: 'Lesson location' },
+  'grammar.lesson.chapter': { vi: 'Chương {number} · {title}', en: 'Chapter {number} · {title}' },
+  'grammar.lesson.code': { vi: 'Bài {code}', en: 'Lesson {code}' },
+  'grammar.lesson.passed': { vi: 'Đã đạt', en: 'Passed' },
+  'grammar.lesson.attempts': { vi: 'Đã làm {count} lần', en: 'Attempts: {count}' },
+  'grammar.lesson.best': { vi: 'Cao nhất {best}/{total}', en: 'Best {best}/{total}' },
+  'grammar.lesson.steps': { vi: 'Các bước của bài học', en: 'Lesson steps' },
+  'grammar.lesson.stepLocked': {
+    vi: 'Bắt đầu luyện tập ở bước Lý thuyết để mở bước này',
+    en: 'Start the practice from the Theory step to open this one',
+  },
+  'grammar.lesson.loading': { vi: 'Đang tải bài học…', en: 'Loading lesson…' },
+  'grammar.lesson.loadError': {
+    vi: 'Không tải được nội dung bài học. Kiểm tra kết nối mạng rồi thử lại.',
+    en: 'Could not load the lesson. Check your connection and try again.',
+  },
+  'grammar.lesson.notFound': { vi: 'Không tìm thấy bài học này.', en: 'Lesson not found.' },
+  'grammar.lesson.pager': { vi: 'Chuyển bài', en: 'Lesson navigation' },
+  'grammar.lesson.prev': { vi: 'Bài trước', en: 'Previous lesson' },
+  'grammar.lesson.next': { vi: 'Bài sau', en: 'Next lesson' },
+
+  'grammar.locked.title': { vi: 'Bài học đang khoá', en: 'This lesson is locked' },
+  'grammar.locked.text': {
+    vi: 'Hoàn thành bài {code} · {title} với tối thiểu {need}/{total} câu đúng để mở khoá bài này.',
+    en: 'Pass lesson {code} · {title} with at least {need}/{total} correct answers to unlock this one.',
+  },
+  'grammar.locked.go': { vi: 'Đến bài {code}', en: 'Go to lesson {code}' },
+
+  'grammar.mistakes.lead': {
+    vi: 'Những lỗi người học hay mắc nhất ở chủ điểm này. Nhìn kỹ chỗ được tô màu trước khi vào phần lý thuyết.',
+    en: 'The mistakes learners make most often with this point. Look closely at the highlighted words before moving on to the theory.',
+  },
+  'grammar.mistakes.wrong': { vi: 'Sai', en: 'Wrong' },
+  'grammar.mistakes.right': { vi: 'Đúng', en: 'Right' },
+  'grammar.mistakes.next': { vi: 'Tiếp theo: Lý thuyết', en: 'Next: Theory' },
+
+  'grammar.theory.start': { vi: 'Bắt đầu luyện tập', en: 'Start practice' },
+  'grammar.theory.resume': { vi: 'Tiếp tục luyện tập', en: 'Resume practice' },
+  'grammar.callout.tip': { vi: 'Mẹo', en: 'Tip' },
+  'grammar.callout.warning': { vi: 'Bẫy cần tránh', en: 'Watch out' },
+  'grammar.callout.info': { vi: 'Ghi nhớ', en: 'Remember' },
+
+  'grammar.practice.lead': {
+    vi: '{count} câu hỏi kiểu TOEIC Part 5. Đúng tối thiểu {need}/{count} câu để đạt và mở khoá bài tiếp theo.',
+    en: '{count} TOEIC Part 5-style questions. Get at least {need}/{count} right to pass and unlock the next lesson.',
+  },
+  'grammar.practice.history': {
+    vi: 'Bạn đã làm bài này {count} lần, cao nhất {best}/{total} câu đúng.',
+    en: 'You have taken this {count} times; your best is {best}/{total}.',
+  },
+  'grammar.practice.start': { vi: 'Bắt đầu làm bài', en: 'Start' },
+  'grammar.practice.retry': { vi: 'Làm lại', en: 'Try again' },
+  'grammar.practice.reviewTheory': { vi: 'Ôn lại lý thuyết', en: 'Review the theory' },
+  'grammar.practice.questionOf': { vi: 'Câu {current}/{total}', en: 'Question {current}/{total}' },
+  'grammar.practice.tally': { vi: 'Đúng {right} · Sai {wrong}', en: '{right} right · {wrong} wrong' },
+  'grammar.practice.goTo': { vi: 'Đến câu {number}', en: 'Go to question {number}' },
+  'grammar.practice.resumed': {
+    vi: 'Đang tiếp tục lượt làm dở lần trước.',
+    en: 'Picking up your unfinished attempt.',
+  },
+  'grammar.practice.options': { vi: 'Các lựa chọn', en: 'Answer choices' },
+  'grammar.practice.correct': { vi: 'Chính xác!', en: 'Correct!' },
+  'grammar.practice.incorrect': {
+    vi: 'Chưa đúng — đáp án là ({letter}) {answer}',
+    en: 'Not quite — the answer is ({letter}) {answer}',
+  },
+  'grammar.practice.translation': { vi: 'Dịch nghĩa', en: 'Translation' },
+  'grammar.practice.prev': { vi: 'Câu trước', en: 'Previous' },
+  'grammar.practice.next': { vi: 'Câu tiếp theo', en: 'Next question' },
+  'grammar.practice.submit': { vi: 'Nộp bài và xem kết quả', en: 'Submit and see results' },
+  'grammar.practice.shortcuts': {
+    vi: 'Phím tắt: 1–4 hoặc A–D để chọn đáp án, Enter để sang câu tiếp.',
+    en: 'Shortcuts: 1–4 or A–D to choose, Enter for the next question.',
+  },
+
+  'grammar.result.attempt': { vi: 'Kết quả lần làm thứ {number}', en: 'Attempt {number} result' },
+  'grammar.result.passed': { vi: 'Đạt rồi! 🎉', en: 'Passed! 🎉' },
+  'grammar.result.failed': { vi: 'Chưa đạt', en: 'Not passed yet' },
+  'grammar.result.score': { vi: '{correct}/{total} câu đúng', en: '{correct}/{total} correct' },
+  'grammar.result.need': {
+    vi: 'Cần đúng tối thiểu {need}/{total} câu để đạt. Xem lại các câu sai bên dưới rồi thử lại nhé.',
+    en: 'You need at least {need}/{total} to pass. Go over the missed questions below and try again.',
+  },
+  'grammar.result.unlocked': { vi: 'Bài {code} đã được mở khoá.', en: 'Lesson {code} is now unlocked.' },
+  'grammar.result.mastered': {
+    vi: 'Bạn đã nắm chắc chủ điểm này.',
+    en: 'You have this grammar point down.',
+  },
+  'grammar.result.courseDone': {
+    vi: 'Bạn đã hoàn thành bài cuối cùng của khoá học!',
+    en: 'You have finished the last lesson of the course!',
+  },
+  'grammar.result.xp': { vi: '+{count} XP', en: '+{count} XP' },
+  'grammar.result.newBest': { vi: 'Kỷ lục mới', en: 'New best' },
+  'grammar.result.nextLesson': { vi: 'Bài tiếp theo: {code}', en: 'Next lesson: {code}' },
+  'grammar.result.backToCourse': { vi: 'Về trang khoá học', en: 'Back to the course' },
+  'grammar.result.details': { vi: 'Chi tiết từng câu', en: 'Question by question' },
+  'grammar.result.yourAnswer': { vi: 'Bạn chọn', en: 'Your answer' },
+  'grammar.result.correctAnswer': { vi: 'Đáp án', en: 'Answer' },
+  'grammar.result.none': {
+    vi: 'Chưa có kết quả nào cho bài này. Làm phần luyện tập để xem kết quả.',
+    en: 'No results for this lesson yet. Take the practice to see one.',
+  },
+
+  'grammar.history.title': { vi: 'Lịch sử làm bài', en: 'Attempt history' },
+  'grammar.history.attempt': { vi: 'Lần', en: 'Attempt' },
+  'grammar.history.date': { vi: 'Thời điểm', en: 'Date' },
+  'grammar.history.score': { vi: 'Điểm', en: 'Score' },
+  'grammar.history.duration': { vi: 'Thời gian làm', en: 'Time taken' },
+  'grammar.history.trimmed': {
+    vi: 'Chỉ hiện {count} lần gần nhất.',
+    en: 'Showing the latest {count} attempts.',
+  },
 
   // ── Lỗi ────────────────────────────────────────────────────────────────
   'error.lessonIndex': {

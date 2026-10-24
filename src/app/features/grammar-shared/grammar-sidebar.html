@@ -1,0 +1,100 @@
+<aside class="gcs" [class.is-open]="mobileOpen()">
+  <div class="gcs-head">
+    <!-- Trên màn hình hẹp, cả khối đầu là nút mở/đóng danh sách. Trên màn hình
+         rộng nút này bị ẩn và phần chữ bên dưới đứng một mình. -->
+    <button
+      type="button"
+      class="gcs-toggle"
+      (click)="toggleMobile()"
+      [attr.aria-expanded]="mobileOpen()"
+      aria-controls="gcs-list"
+    >
+      <span class="gcs-toggle-text">
+        <span class="gc-eyebrow">{{ t('grammar.sidebar.title') }}</span>
+        <span class="gcs-toggle-count">{{ completed() }}/{{ total }}</span>
+      </span>
+      <app-gc-icon name="chevron-down" class="gcs-caret" />
+    </button>
+
+    <p class="gc-eyebrow gcs-title">{{ t('grammar.sidebar.title') }}</p>
+    <div class="gcs-progress-row">
+      <span>{{ t('grammar.sidebar.progress') }}</span>
+      <span class="gcs-progress-count">{{ completed() }}/{{ total }}</span>
+    </div>
+    <div
+      class="gcs-bar"
+      role="progressbar"
+      [attr.aria-label]="t('grammar.sidebar.progress')"
+      aria-valuemin="0"
+      [attr.aria-valuemax]="total"
+      [attr.aria-valuenow]="completed()"
+    >
+      <span class="gcs-bar-fill" [style.width.%]="percent()"></span>
+    </div>
+  </div>
+
+  <nav id="gcs-list" class="gcs-list" [attr.aria-label]="t('grammar.sidebar.nav')">
+    @for (chapter of chapters(); track chapter.id) {
+      <section class="gcs-chapter">
+        <button
+          type="button"
+          class="gcs-chapter-head"
+          (click)="toggleChapter(chapter.id)"
+          [attr.aria-expanded]="chapter.open"
+          [attr.aria-controls]="'gcs-ch-' + chapter.id"
+        >
+          <span class="gcs-num" [class.is-done]="chapter.passed === chapter.lessons.length">
+            {{ chapter.number }}
+          </span>
+          <span class="gcs-chapter-text">
+            <span class="gcs-chapter-title">{{ chapter.title }}</span>
+            <span class="gcs-chapter-count">{{ chapter.passed }}/{{ chapter.lessons.length }}</span>
+          </span>
+          <app-gc-icon name="chevron-down" class="gcs-caret" />
+        </button>
+
+        @if (chapter.open) {
+          <ul class="gcs-lessons" [id]="'gcs-ch-' + chapter.id">
+            @for (lesson of chapter.lessons; track lesson.id) {
+              <li>
+                @if (lesson.state === 'locked') {
+                  <span
+                    class="gcs-lesson is-locked"
+                    [title]="t('grammar.sidebar.locked')"
+                    aria-disabled="true"
+                  >
+                    <app-gc-icon name="lock" class="gcs-lesson-icon" />
+                    <span class="gcs-lesson-text">
+                      <span class="gcs-lesson-code">{{ lesson.code }}</span> {{ lesson.title }}
+                      <span class="sr-only">({{ t('grammar.sidebar.lockedShort') }})</span>
+                    </span>
+                  </span>
+                } @else {
+                  <a
+                    [routerLink]="['/grammar', lesson.id]"
+                    class="gcs-lesson"
+                    [class.is-current]="lesson.current"
+                    [class.is-passed]="lesson.state === 'passed'"
+                    [attr.aria-current]="lesson.current ? 'page' : null"
+                    (click)="closeMobile()"
+                  >
+                    <app-gc-icon
+                      [name]="lesson.state === 'passed' ? 'check-circle' : 'circle'"
+                      class="gcs-lesson-icon"
+                    />
+                    <span class="gcs-lesson-text">
+                      <span class="gcs-lesson-code">{{ lesson.code }}</span> {{ lesson.title }}
+                      @if (lesson.state === 'passed') {
+                        <span class="sr-only">({{ t('grammar.sidebar.passedShort') }})</span>
+                      }
+                    </span>
+                  </a>
+                }
+              </li>
+            }
+          </ul>
+        }
+      </section>
+    }
+  </nav>
+</aside>

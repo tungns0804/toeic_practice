@@ -1,0 +1,305 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+/* Màn hình rộng: cột trái dính dưới header, cao bằng phần còn lại của khung nhìn.
+   Phần đầu (tiến độ) đứng yên, chỉ danh sách chương tự cuộn trong khung của nó —
+   59 bài dài hơn mọi màn hình, và cuộn cả trang thì mất luôn thanh tiến độ. */
+.gcs {
+  position: sticky;
+  top: var(--header-h);
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - var(--header-h));
+  background: var(--gc-card);
+  border-right: 1px solid var(--gc-border);
+}
+
+.gcs-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid var(--gc-border);
+}
+
+.gcs-toggle {
+  display: none;
+}
+
+.gcs-progress-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.gcs-progress-count {
+  color: var(--gc-blue);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.gcs-bar {
+  height: 6px;
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--gc-muted);
+}
+
+.gcs-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--gc-green), var(--gc-green-light));
+  transition: width 0.5s var(--gc-ease);
+}
+
+.gcs-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px 8px 24px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gc-border-strong) transparent;
+}
+
+/* --- Chương --- */
+
+.gcs-chapter + .gcs-chapter {
+  margin-top: 2px;
+}
+
+.gcs-chapter-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: var(--gc-radius);
+  background: transparent;
+  color: var(--gc-fg);
+  text-align: left;
+  transition: background-color 0.15s var(--gc-ease);
+}
+
+.gcs-chapter-head:hover {
+  background: var(--gc-muted);
+}
+
+.gcs-num {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--gc-blue-soft);
+  color: var(--gc-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Chương đã đạt hết: số chuyển sang nền xanh lá, liếc qua cả cột là thấy mình đã
+   đi được tới đâu. */
+.gcs-num.is-done {
+  background: var(--gc-green);
+  color: var(--gc-on-green);
+}
+
+.gcs-chapter-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.gcs-chapter-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.gcs-chapter-count {
+  color: var(--gc-fg-muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.gcs-caret {
+  color: var(--gc-fg-muted);
+  font-size: 16px;
+  transition: transform 0.2s var(--gc-ease);
+}
+
+[aria-expanded='true'] > .gcs-caret {
+  transform: rotate(180deg);
+}
+
+/* --- Bài --- */
+
+.gcs-lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 0 0 6px;
+  padding: 0 0 0 26px;
+  list-style: none;
+  animation: gc-fade 0.2s var(--gc-ease) both;
+}
+
+.gcs-lesson {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 7px 10px;
+  border-radius: var(--gc-radius-sm);
+  color: var(--gc-fg);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  transition: background-color 0.15s var(--gc-ease), color 0.15s var(--gc-ease);
+}
+
+a.gcs-lesson:hover {
+  background: var(--gc-muted);
+  text-decoration: none;
+}
+
+.gcs-lesson-icon {
+  margin-top: 2px;
+  color: var(--gc-blue);
+  font-size: 15px;
+}
+
+.gcs-lesson-code {
+  color: var(--gc-fg-muted);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.gcs-lesson.is-passed .gcs-lesson-icon {
+  color: var(--gc-green);
+}
+
+.gcs-lesson.is-current {
+  background: var(--gc-green-soft);
+  color: var(--gc-green-dark);
+  font-weight: 600;
+}
+
+.gcs-lesson.is-current .gcs-lesson-code {
+  color: inherit;
+}
+
+.gcs-lesson.is-locked {
+  color: var(--gc-fg-faint);
+  cursor: not-allowed;
+}
+
+.gcs-lesson.is-locked .gcs-lesson-icon {
+  color: var(--gc-fg-faint);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.gcs-lesson.is-locked .gcs-lesson-code {
+  color: inherit;
+}
+
+/* --- Màn hình hẹp: khối thu gọn nằm trên nội dung --- */
+
+@media (max-width: 1023px) {
+  .gcs {
+    position: static;
+    height: auto;
+    margin: var(--sp-4) max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
+    border: 1px solid var(--gc-border);
+    border-radius: var(--gc-radius-lg);
+    box-shadow: var(--gc-shadow);
+    overflow: hidden;
+  }
+
+  .gcs-head {
+    gap: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .gcs.is-open .gcs-head {
+    border-bottom: 1px solid var(--gc-border);
+  }
+
+  .gcs-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 16px 8px;
+    border: none;
+    background: transparent;
+    color: var(--gc-fg);
+    text-align: left;
+  }
+
+  .gcs-toggle-text {
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .gcs-toggle-count {
+    color: var(--gc-blue);
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .gcs-title,
+  .gcs-progress-row {
+    display: none;
+  }
+
+  .gcs-bar {
+    margin: 0 16px 14px;
+  }
+
+  .gcs-list {
+    display: none;
+    max-height: min(60vh, 520px);
+  }
+
+  .gcs.is-open .gcs-list {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .gcs {
+    margin-inline: max(14px, env(safe-area-inset-left)) max(14px, env(safe-area-inset-right));
+  }
+}
+
+/* Máy chạm: vùng bấm tối thiểu 44px, như quy ước chung của app. */
+@media (hover: none) {
+  .gcs-chapter-head,
+  .gcs-lesson {
+    min-height: 44px;
+  }
+
+  .gcs-lesson {
+    align-items: center;
+  }
+
+  .gcs-lesson-icon {
+    margin-top: 0;
+  }
+}

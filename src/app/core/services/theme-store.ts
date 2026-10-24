@@ -1,46 +1,56 @@
 import { Injectable, computed, effect, signal } from '@angular/core';
 
+import type { IconName } from '../../shared/icon';
 import type { MessageKey } from '../i18n/messages';
 import { readJson, writeJson } from './local-storage';
 
 const STORAGE_KEY = 'toeic-practice:theme';
 
-/** 'system' = đi theo cài đặt sáng/tối của hệ điều hành. */
-export type ThemePreference = 'system' | 'light' | 'dark';
+/**
+ * 'system' = đi theo cài đặt sáng/tối của hệ điều hành.
+ * 'night'  = đèn đêm: nền giấy ngà, ít ánh sáng xanh, giống Night light của Windows.
+ */
+export type ThemePreference = 'system' | 'light' | 'dark' | 'night';
 
-const ORDER: readonly ThemePreference[] = ['system', 'light', 'dark'];
+const ORDER: readonly ThemePreference[] = ['system', 'light', 'dark', 'night'];
 
 /** Nhãn là khoá thông điệp vì giao diện có hai ngôn ngữ. */
 const LABEL_KEY: Record<ThemePreference, MessageKey> = {
   system: 'theme.system',
   light: 'theme.light',
   dark: 'theme.dark',
+  night: 'theme.night',
 };
 
-const ICON: Record<ThemePreference, string> = {
-  system: '◐',
-  light: '☀',
-  dark: '☾',
+const ICON: Record<ThemePreference, IconName> = {
+  system: 'contrast',
+  light: 'sun',
+  dark: 'moon',
+  // Ngọn nến chứ không phải một mặt trời thứ hai: đây là dấu hiệu duy nhất trên
+  // nút khi thu gọn nhãn, hai hình mặt trời thì liếc qua không phân biệt nổi.
+  night: 'candle',
 };
+
+/** Tông thật sự đang vẽ ra màn hình — 'system' đã được quy đổi xong. */
+type ResolvedTheme = 'light' | 'dark' | 'night';
 
 /**
- * Màu thanh trình duyệt trên di động, khớp với nền của từng tông.
- *
- * Phải viết cứng chứ không đọc được từ `--accent`: thẻ <meta> chỉ nhận một mã màu
- * cụ thể, không hiểu biến CSS. Sửa bảng màu trong styles.css thì nhớ sửa cả ở đây,
- * nếu không thanh trình duyệt sẽ lệch tông so với trang.
+ * Màu thanh trình duyệt trên di động = màu nền thanh trên cùng (--bg-elevated)
+ * của từng tông, để hai dải liền nhau thành một khối.
  */
-const THEME_COLOR: Record<'light' | 'dark', string> = {
-  light: '#1d4ed8',
-  dark: '#0d1117',
+const THEME_COLOR: Record<ResolvedTheme, string> = {
+  light: '#ffffff',
+  dark: '#181d24',
+  night: '#fbf3e3',
 };
 
 /**
- * Lựa chọn giao diện sáng/tối.
+ * Lựa chọn giao diện: sáng, tối, hoặc đèn đêm.
  *
- * Bảng màu thật nằm trong `styles.css` dưới dạng `light-dark(sáng, tối)`; ở đây chỉ
- * cần đổi thuộc tính `color-scheme` qua `data-theme` trên thẻ <html> là toàn bộ
- * biến màu tự đổi theo.
+ * Bảng màu thật nằm trong `src/styles/tokens.css`. Sáng và tối khai báo chung bằng
+ * `light-dark(sáng, tối)`, nên ở đây chỉ cần đổi `color-scheme` qua `data-theme`
+ * trên thẻ <html> là toàn bộ biến màu đổi theo. Đèn đêm là bảng màu ấm viết riêng
+ * dưới `:root[data-theme='night']`, cũng chỉ cần đúng thuộc tính đó để bật.
  */
 @Injectable({ providedIn: 'root' })
 export class ThemeStore {
@@ -49,8 +59,11 @@ export class ThemeStore {
 
   readonly preference = this.preferenceRef.asReadonly();
 
-  /** Tông đang thực sự hiển thị, đã quy đổi 'system' thành sáng hoặc tối. */
-  readonly resolved = computed<'light' | 'dark'>(() => {
+  /**
+   * Tông đang thực sự hiển thị: 'system' đã quy đổi thành sáng hoặc tối, ba lựa
+   * chọn còn lại thì giữ nguyên.
+   */
+  readonly resolved = computed<ResolvedTheme>(() => {
     const preference = this.preferenceRef();
     if (preference !== 'system') return preference;
     return this.systemPrefersDark() ? 'dark' : 'light';
@@ -76,7 +89,7 @@ export class ThemeStore {
     writeJson(STORAGE_KEY, preference);
   }
 
-  /** Xoay vòng Tự động → Sáng → Tối → Tự động. */
+  /** Xoay vòng Tự động → Sáng → Tối → Đèn đêm → Tự động. */
   cycle(): void {
     this.set(nextPreference(this.preferenceRef()));
   }
@@ -88,7 +101,7 @@ function nextPreference(current: ThemePreference): ThemePreference {
 }
 
 function isThemePreference(value: unknown): value is ThemePreference {
-  return value === 'system' || value === 'light' || value === 'dark';
+  return ORDER.includes(value as ThemePreference);
 }
 
 function readPreference(): ThemePreference {
@@ -101,7 +114,7 @@ function systemPrefersDark(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
-function applyTheme(preference: ThemePreference, resolved: 'light' | 'dark'): void {
+function applyTheme(preference: ThemePreference, resolved: ResolvedTheme): void {
   if (typeof document === 'undefined') return;
 
   const root = document.documentElement;

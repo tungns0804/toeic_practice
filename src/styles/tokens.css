@@ -1,0 +1,260 @@
+/* ── Chữ ────────────────────────────────────────────────────────────────────
+   Montserrat + Quicksand, variable font, chỉ hai subset latin + vietnamese
+   (tổng 88 KB). Để trong src/ chứ không trong public/ để trình build gắn mã băm
+   vào tên file — đặt cache vĩnh viễn vẫn an toàn khi đổi font. */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/montserrat-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/montserrat-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('../fonts/quicksand-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('../fonts/quicksand-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ============================================================================
+   Design system dùng chung cho toàn ứng dụng.
+
+   Mỗi màu khai báo MỘT lần bằng light-dark(giá trị sáng, giá trị tối). Hàm này
+   chọn giá trị theo thuộc tính `color-scheme` đang có hiệu lực, nên muốn đổi tông
+   chỉ cần đổi color-scheme — không phải viết lại cả bảng màu lần thứ hai.
+
+   - Không có data-theme  -> color-scheme: light dark -> đi theo cài đặt hệ điều hành.
+   - data-theme="light"   -> ép sáng.
+   - data-theme="dark"    -> ép tối.
+   - data-theme="night"   -> đèn đêm: bảng màu ấm riêng, xem khối cuối phần này.
+
+   Thuộc tính data-theme do ThemeStore (src/app/core/services/theme-store.ts) đặt
+   trên thẻ <html>, và được khôi phục sớm bởi đoạn script nhỏ trong index.html để
+   trang không bị chớp sai màu lúc mới mở.
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  /* Bảng màu theo ByeTOEIC: sáng là nền trắng ngà ấm với chữ xanh than, tối là
+     nền navy gần đen. Giá trị gốc lấy từ biến CSS của trang đó, rồi chỉnh độ đậm
+     ở những chỗ chưa đạt tương phản (xem từng nhóm). */
+
+  /* --- Nền: bốn bậc, từ nền trang ra tới ô lõm sâu nhất -------------------- */
+  --bg: light-dark(#faf9f7, #0f1318);
+  --bg-elevated: light-dark(#ffffff, #181d24);
+  --bg-subtle: light-dark(#f3f1ee, #20262e);
+  --bg-inset: light-dark(#eae6e1, #29303a);
+
+  /* --- Chữ ---------------------------------------------------------------
+     Ba bậc, và cả ba đều phải ĐỌC ĐƯỢC: ≥ 4.5:1 (WCAG AA cho chữ nhỏ) trên nền
+     thẻ, vì bậc nhạt nhất dùng cho đúng loại chữ nhỏ nhất trong app — nhãn cột,
+     chú thích, dòng đếm số kết quả. Xám gốc của ByeTOEIC (#627284) chỉ đạt 4.3:1
+     trên ô lõm nên được kéo đậm thêm. */
+  --text: light-dark(#222d39, #edebe8);
+  --text-muted: light-dark(#4f5d70, #a0a6ae);
+  --text-faint: light-dark(#66727f, #868d97);
+
+  --border: light-dark(#e6e1db, #2a313a);
+  --border-strong: light-dark(#d2cac1, #3c4550);
+
+  /* Màu nhấn: xanh lá của khu học (Luyện nghe, Khóa ngữ pháp) — cho nút bắt đầu,
+     lựa chọn đang bật, liên kết trong nội dung. Xanh lá gốc rgb(32 180 134) chỉ
+     đạt 2.6:1 với chữ trắng nên bản sáng dùng tông đậm hơn, 4.6:1. */
+  --accent: light-dark(#15855f, #2cc594);
+  --accent-hover: light-dark(#0f6e4e, #56d4ab);
+  --accent-soft: light-dark(#e6f4ee, #173a31);
+  --accent-text: light-dark(#ffffff, #06140f);
+  /* Vòng sáng quanh phần tử đang focus hoặc đang được chọn. Màu trong suốt nên
+     chồng lên nền nào cũng hợp, không phải khai báo lại theo từng chỗ đặt. */
+  --accent-ring: light-dark(rgb(21 133 95 / 16%), rgb(44 197 148 / 22%));
+
+  /* Màu thương hiệu: xanh Mekong — chỉ cho khung ứng dụng (logo, breadcrumb, mục
+     menu đang mở), không dùng trong nội dung. Xem .nav-link.is-active ở app.css. */
+  --brand: light-dark(#0057b8, #5c9be0);
+  --brand-soft: light-dark(#e6eef8, #1e2f44);
+
+  --success: light-dark(#3d7a3d, #86c28f);
+  --success-soft: light-dark(#e9f3e7, #1b3223);
+  --success-border: light-dark(#a9d0a5, #3a6a45);
+
+  --danger: light-dark(#b3361f, #e0877b);
+  --danger-soft: light-dark(#fcebe7, #3a1f1c);
+  --danger-border: light-dark(#eba99c, #74392f);
+
+  --warning: light-dark(#94620b, #e0c77a);
+  --warning-soft: light-dark(#fdf3dc, #342a10);
+  --warning-border: light-dark(#ebd08c, #6d5a22);
+
+  --star: light-dark(#eaa416, #f2c14e);
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px light-dark(rgb(34 45 57 / 6%), rgb(0 0 0 / 30%));
+  --shadow: 0 4px 16px light-dark(rgb(34 45 57 / 8%), rgb(0 0 0 / 35%));
+  --shadow-lg: 0 12px 32px light-dark(rgb(34 45 57 / 12%), rgb(0 0 0 / 45%));
+
+  /* --- Thang cỡ chữ ------------------------------------------------------
+     Trước đây mỗi component tự đặt cỡ chữ theo cảm tính: 0.94rem, 0.92rem,
+     0.86rem, 0.82rem, 0.78rem, 0.76rem… Mắt không phân biệt nổi hai bậc cách
+     nhau 0.02rem, nên chúng không tạo ra thứ bậc, chỉ tạo ra sự lộn xộn. Sáu
+     bậc dưới đây cách nhau đủ xa để nhìn là biết cái nào quan trọng hơn. */
+  --fs-2xs: 0.72rem;
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.88rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.13rem;
+  --fs-xl: 1.3rem;
+  --fs-2xl: 1.6rem;
+
+  /* --- Nhịp khoảng cách ---------------------------------------------------
+     Bội số của 4px. Dùng token thay cho số lẻ tuỳ hứng thì các khối cách nhau
+     đều tay, trang có nhịp chứ không phải mỗi chỗ một kiểu. */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+
+  /* --- Chuyển động --------------------------------------------------------
+     Một đường cong duy nhất cho cả app: nhanh lúc đầu, chậm dần lúc kết, giống
+     cách vật thật dừng lại. Mắt thấy "mượt" chứ không thấy "có hiệu ứng". */
+  --ease: cubic-bezier(0.2, 0.8, 0.3, 1);
+  --dur: 0.18s;
+
+  /* Montserrat cho chữ thân, Quicksand cho tiêu đề — như ByeTOEIC và như dự án
+     minano_nihongo. Cả hai TỰ HOST trong src/fonts/ (khai @font-face ở đầu file
+     này), không gọi sang Google Fonts: thêm một vòng DNS + TLS tới tên miền khác
+     cho mỗi lần mở trang, và nơi chặn tên miền đó sẽ thấy chữ tụt về font hệ
+     thống. Segoe UI đứng ngay sau để lúc font chưa về vẫn ra đủ dấu tiếng Việt. */
+  --font-ui: 'Montserrat', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial,
+    sans-serif;
+  --font-display: 'Quicksand', var(--font-ui);
+
+  /* Ký hiệu phiên âm (ɪ ˈ ɡ ʃ ə ː) nằm ở khối IPA Extensions, KHÔNG có trong hai
+     subset Montserrat đang tải. Khai một stack riêng để chỗ đó rơi về một font đã
+     chọn trước và có phủ IPA, thay vì bất cứ thứ gì trình duyệt vớ được. */
+  --font-ipa: 'Segoe UI', 'Charis SIL', 'Doulos SIL', 'DejaVu Sans', 'Lucida Sans Unicode',
+    var(--font-ui);
+  --font-mono: 'Cascadia Code', Consolas, 'SF Mono', Menlo, monospace;
+
+  /* Bề rộng tối đa của mọi khung nội dung: đủ cho bảng từ vựng năm cột (từ, phiên
+     âm, từ loại, nghĩa, câu ví dụ) mà không mọc thanh cuộn ngang. */
+  --max-width: 1240px;
+
+  /* Chiều cao THẬT của header dính, tính cả phần chừa cho tai thỏ. Bốn chỗ cần
+     đúng con số này: scroll-padding-top của cả trang, mục lục dính trong bài ngữ
+     pháp, thanh tiến độ dính lúc luyện tập, và vệt báo đang chuyển trang.
+
+     Giá trị dưới đây chỉ là ước lượng cho lần vẽ đầu tiên (và cho trường hợp
+     không có JavaScript). Ngay khi chạy, app.ts đo header thật rồi ghi đè —
+     xem `App.trackHeaderHeight`.
+
+     Vì sao phải đo thay vì viết sẵn từng con số theo breakpoint: trên điện thoại
+     header gồm cả dải menu, trên máy tính thì không, và chữ trong đó dài ngắn
+     theo ngôn ngữ. Cách viết sẵn đã sai hai lần mỗi khi menu thêm mục. */
+  --header-h: calc(61px + env(safe-area-inset-top));
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+/* --- Đèn đêm --------------------------------------------------------------
+   Tông thứ ba, làm theo Night light của Windows: giữ độ sáng vừa phải của giao
+   diện sáng nhưng cắt bớt ánh sáng xanh, nên nền ngả màu giấy ngà và chữ là nâu
+   đậm thay vì xanh đen. Dành cho lúc học buổi tối, khi nền trắng thì chói mà nền
+   tối lại quá tương phản với đèn phòng.
+
+   Đây là bảng màu duy nhất phải viết tay lần thứ hai, vì light-dark() chỉ biết
+   đúng hai giá trị. Đổi lại, không component nào phải biết tông này tồn tại —
+   chúng vẫn chỉ đọc biến như cũ.
+
+   color-scheme vẫn là light: ô nhập liệu, thanh cuộn, hộp chọn của trình duyệt
+   đều lấy bản sáng, khớp với nền ngà chứ không phải nền tối.
+
+   Độ tương phản: ba bậc chữ và bốn màu trạng thái đều ≥ 4.5:1 trên nền thẻ lẫn
+   nền trang, tức đạt WCAG AA cho chữ nhỏ. Riêng trên ô lõm sâu nhất (--bg-inset)
+   bậc chữ nhạt nhất còn 4.0:1 — vẫn nhỉnh hơn chính bảng màu sáng ở trên (3.8:1),
+   chỗ đó chỉ có nhãn phụ chứ không có chữ để đọc lâu. Sửa màu thì phải đo lại. */
+:root[data-theme='night'] {
+  color-scheme: light;
+
+  --bg: #f1e7d5;
+  --bg-elevated: #fbf3e3;
+  --bg-subtle: #ece0cb;
+  --bg-inset: #e3d5bb;
+
+  --text: #2b2113;
+  --text-muted: #66502f;
+  --text-faint: #786243;
+
+  --border: #e0cfb1;
+  --border-strong: #c9b48f;
+
+  /* Chàm là màu xanh nhất trong bảng màu sáng, nên nó là thứ đầu tiên phải thay
+     khi cả tông này sinh ra để bớt ánh sáng xanh. Cam đất giữ đúng vai trò "màu
+     nhấn ấm" mà vẫn không lẫn với --warning (ngả vàng) hay --danger (ngả đỏ). */
+  --accent: #9a4c15;
+  --accent-hover: #7f3d0e;
+  --accent-soft: #f7e6cd;
+  --accent-text: #fffaf0;
+  --accent-ring: rgb(154 76 21 / 18%);
+
+  /* Thương hiệu nâu gỗ thay cho xanh Mekong, cùng lý do với màu nhấn ở trên. */
+  --brand: #6e4a1c;
+  --brand-soft: #f0e1c6;
+
+  --success: #4a6b1f;
+  --success-soft: #e7edd0;
+  --success-border: #b5c98a;
+
+  --danger: #a32e1e;
+  --danger-soft: #f8dfd5;
+  --danger-border: #e0a48c;
+
+  --warning: #7d5b05;
+  --warning-soft: #f4e6bd;
+  --warning-border: #d8bc71;
+
+  --star: #c07c0b;
+
+  /* Bóng đổ pha nâu chứ không pha xanh đen: bóng xám lạnh trên nền ngà nhìn ra
+     ngay là bẩn, vì nó là mảng duy nhất trong trang không cùng họ màu. */
+  --shadow-sm: 0 1px 2px rgb(74 48 14 / 10%);
+  --shadow: 0 4px 16px rgb(74 48 14 / 12%);
+  --shadow-lg: 0 12px 32px rgb(74 48 14 / 18%);
+}

@@ -1,0 +1,151 @@
+<div class="gc gc-shell">
+  <app-grammar-sidebar />
+
+  <div class="gc-main">
+    <div class="gc-column">
+      <!-- ── Lời giới thiệu ──────────────────────────────────────────────── -->
+      <header class="gcc-head">
+        <span class="gcc-illus" aria-hidden="true">
+          <svg viewBox="0 0 64 56" focusable="false">
+            <circle cx="6" cy="14" r="2" class="dot-green" />
+            <circle cx="58" cy="44" r="2.4" class="dot-orange" />
+            <circle cx="10" cy="46" r="1.6" class="dot-blue" />
+            <rect x="12" y="10" width="30" height="26" rx="8" class="bubble" />
+            <path d="M20 36 l0 8 l8 -8 z" class="bubble" />
+            <text x="27" y="29" text-anchor="middle" class="letter">A</text>
+            <rect x="32" y="22" width="22" height="26" rx="5" class="doc" />
+            <path d="M37 30h12M37 35h12M37 40h8" class="doc-line" />
+            <circle cx="52" cy="14" r="5" class="badge" />
+            <path d="M50 14l1.5 1.5 3-3" class="badge-check" />
+          </svg>
+        </span>
+        <div class="gcc-head-text">
+          <h1>{{ t('grammar.course.title') }}</h1>
+          <p class="gc-muted">
+            {{ t('grammar.course.lead', { chapters: chapterCount, lessons: lessonCount }) }}
+          </p>
+        </div>
+      </header>
+
+      <!-- ── Thẻ "Bài tiếp theo" ─────────────────────────────────────────── -->
+      <section class="gcc-next" [attr.aria-label]="t('grammar.course.nextLesson')">
+        <div class="gcc-next-main">
+          <app-progress-ring
+            class="gcc-ring"
+            [percent]="percent()"
+            role="img"
+            [attr.aria-label]="t('grammar.course.ringLabel', { percent: percent() })"
+          >
+            <strong class="gcc-ring-percent">{{ percent() }}%</strong>
+            <span class="gcc-ring-count">{{ completed() }}/{{ lessonCount }}</span>
+          </app-progress-ring>
+
+          <div class="gcc-next-body">
+            @if (next(); as lesson) {
+              <p class="gcc-next-eyebrow">{{ t('grammar.course.nextLesson') }}</p>
+              <h2 class="gcc-next-title">{{ lesson.title }}</h2>
+              <p class="gcc-next-meta">
+                {{
+                  t('grammar.course.nextMeta', {
+                    chapter: lesson.chapterNumber,
+                    count: questionsPerLesson,
+                  })
+                }}
+              </p>
+              <a [routerLink]="['/grammar', lesson.id]" class="gcc-next-btn">
+                {{ lesson.started ? t('grammar.course.continue') : t('grammar.course.start') }}
+                <app-gc-icon name="arrow-right" />
+              </a>
+            } @else {
+              <p class="gcc-next-eyebrow">{{ t('grammar.course.nextLesson') }}</p>
+              <h2 class="gcc-next-title">{{ t('grammar.course.allDone') }}</h2>
+              <p class="gcc-next-meta">{{ t('grammar.course.allDoneHint') }}</p>
+              <a [routerLink]="['/grammar', chapters()[0].targetId]" class="gcc-next-btn">
+                {{ t('grammar.course.review') }}
+                <app-gc-icon name="arrow-right" />
+              </a>
+            }
+          </div>
+        </div>
+
+        <div class="gcc-next-stats">
+          <span class="gcc-chip" [title]="t('grammar.stat.streakTitle')">
+            <app-gc-icon name="flame" class="gcc-chip-icon is-flame" />
+            {{ t('grammar.stat.streak', { count: streak() }) }}
+          </span>
+          <span class="gcc-chip" [title]="t('grammar.stat.xpTitle')">
+            <app-gc-icon name="zap" class="gcc-chip-icon is-zap" />
+            {{ t('grammar.stat.xp', { count: xp() }) }}
+          </span>
+        </div>
+      </section>
+
+      <!-- ── Bài 0 · Tổng quan ───────────────────────────────────────────── -->
+      <section class="gc-card gcc-overview">
+        <span class="gc-badge">
+          <app-gc-icon name="book-open" />
+          {{ t('grammar.course.lesson0') }}
+        </span>
+        <h2 class="gcc-overview-title">{{ t('grammar.course.title') }}</h2>
+        <p class="gc-muted gcc-overview-lead">
+          {{ t('grammar.course.lead', { chapters: chapterCount, lessons: lessonCount }) }}
+        </p>
+
+        <div class="gcc-block">
+          <p class="gc-eyebrow">{{ t('grammar.course.flowTitle') }}</p>
+          <ol class="gc-flow">
+            @for (step of steps; track step; let last = $last) {
+              <li>
+                <span class="gc-flow-step">{{ t(step) }}</span>
+                @if (!last) {
+                  <span class="gc-flow-arrow"><app-gc-icon name="arrow-right" /></span>
+                }
+              </li>
+            }
+          </ol>
+        </div>
+
+        <div class="gcc-block">
+          <div class="gcc-topics-head">
+            <p class="gc-eyebrow">{{ t('grammar.course.topicsTitle') }}</p>
+            <span class="gcc-topics-count">
+              {{ t('grammar.course.passedCount', { passed: completed(), total: lessonCount }) }}
+            </span>
+          </div>
+          <ul class="gcc-topics">
+            @for (chapter of chapters(); track chapter.id) {
+              <li>
+                <a
+                  [routerLink]="['/grammar', chapter.targetId]"
+                  class="gcc-topic"
+                  [class.is-done]="chapter.done"
+                >
+                  <span class="gcc-topic-num">{{ chapter.number }}</span>
+                  <span class="gcc-topic-title">{{ chapter.title }}</span>
+                  <span class="gcc-topic-count">
+                    @if (chapter.done) {
+                      <app-gc-icon name="check-circle" class="gcc-topic-check" />
+                    } @else if (chapter.passed > 0) {
+                      {{ t('grammar.course.chapterProgress', { passed: chapter.passed, count: chapter.total }) }}
+                    } @else {
+                      {{ t('grammar.course.lessonCount', { count: chapter.total }) }}
+                    }
+                  </span>
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      @if (hasProgress()) {
+        <div class="gcc-reset">
+          <button type="button" class="gc-btn gc-btn-danger-text" (click)="resetProgress()">
+            <app-gc-icon name="rotate" />
+            {{ t('grammar.course.reset') }}
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</div>

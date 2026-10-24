@@ -11,9 +11,11 @@
     "generate": "node scripts/generate-lessons.mjs",
     "generate:clean": "node scripts/generate-lessons.mjs --clean",
     "generate:check": "node scripts/generate-lessons.mjs --check",
-    "verify": "npm run verify:i18n && npm run verify:data && npm run generate:check",
+    "verify": "npm run verify:i18n && npm run verify:data && npm run verify:grammar && npm run verify:streak && npm run generate:check",
     "verify:i18n": "node scripts/verify-i18n.mjs",
-    "verify:data": "node --experimental-strip-types --no-warnings scripts/verify-data.mjs"
+    "verify:data": "node --experimental-strip-types --no-warnings scripts/verify-data.mjs",
+    "verify:grammar": "node --experimental-strip-types --no-warnings scripts/verify-grammar.mjs",
+    "verify:streak": "node --experimental-strip-types --no-warnings scripts/verify-streak.mjs"
   },
   "prettier": {
     "overrides": [

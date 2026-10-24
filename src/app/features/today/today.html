@@ -1,0 +1,263 @@
+<div class="container page">
+  <div class="stack stack-xl">
+    <section class="page-head">
+      <h1>{{ t('today.title') }}</h1>
+      <p>{{ t('today.subtitle') }}</p>
+    </section>
+
+    <!-- ── Chuỗi ngày học + kế hoạch hôm nay ─────────────────────────────────
+         Hai thứ người học cần thấy đầu tiên mỗi sáng: "mình đang giữ được bao lâu"
+         và "hôm nay làm gì cho đủ". -->
+    <div class="hero-grid">
+      <section class="card streak-card" [attr.data-state]="streak().state">
+        <div class="card-body stack">
+          <h2 class="today-card-title">
+            <app-icon name="flame" />
+            {{ t('streak.title') }}
+          </h2>
+
+          <div class="streak-figure">
+            <strong>{{ streak().current }}</strong>
+            <span>{{ t('streak.unit', { count: streak().current }) }}</span>
+          </div>
+          <p class="streak-hint">{{ streakHint() }}</p>
+
+          <div class="streak-today">
+            <div class="streak-today-row">
+              <span>{{ t('streak.today') }}</span>
+              <strong>{{ t('streak.todayCount', { answered: answered(), goal: goal() }) }}</strong>
+            </div>
+            <span class="plan-bar streak-bar" aria-hidden="true"><span [style.width.%]="goalPercent()"></span></span>
+          </div>
+
+          <!-- Bảy ngày gần nhất: chấm đặc là ngày đạt mục tiêu. -->
+          <ol class="streak-week" [attr.aria-label]="t('streak.weekAria')">
+            @for (day of week(); track day.day) {
+              <li [class.is-met]="day.met" [class.is-today]="day.isToday">
+                <span class="streak-dot" aria-hidden="true">
+                  @if (day.met) {
+                    <app-icon name="flame" />
+                  }
+                </span>
+                <span class="streak-dow">{{ t(day.label) }}</span>
+                <span class="sr-only">{{ t(day.met ? 'streak.dayMet' : 'streak.dayMissed') }}</span>
+              </li>
+            }
+          </ol>
+
+          <p class="small muted streak-best">{{ t('streak.best', { count: streak().best }) }}</p>
+        </div>
+      </section>
+
+      <section class="card plan-card">
+        <div class="card-body stack">
+          <h2 class="today-card-title">
+            <app-icon name="calendar" />
+            {{ t('plan.title') }}
+          </h2>
+
+          @if (planDone()) {
+            <p class="notice notice-success plan-all-done">{{ t('plan.allDone') }}</p>
+          }
+
+          <ol class="plan-list">
+            @for (item of plan(); track item.id) {
+              <li class="plan-item" [class.is-done]="item.done">
+                <span class="plan-check" aria-hidden="true">
+                  @if (item.done) {
+                    <app-icon name="check" />
+                  } @else {
+                    <app-icon [name]="item.icon" />
+                  }
+                </span>
+                <div class="plan-main">
+                  <span class="plan-title">{{ item.title }}</span>
+                  <span class="plan-detail">{{ item.detail }}</span>
+                  <span class="plan-bar" aria-hidden="true"><span [style.width.%]="item.percent"></span></span>
+                </div>
+                @if (!item.done) {
+                  <a class="btn btn-sm" [class.btn-primary]="$first" [routerLink]="item.path">
+                    {{ t(item.actionKey) }}
+                  </a>
+                }
+              </li>
+            }
+          </ol>
+
+          <!-- Mục tiêu số câu mỗi ngày + cách tính chuỗi. -->
+          <div class="goal-row">
+            <span class="small muted">{{ t('streak.goal') }}</span>
+            <div class="goal-options" role="group" [attr.aria-label]="t('streak.goal')">
+              @for (choice of goalChoices; track choice) {
+                <button
+                  type="button"
+                  class="goal-option"
+                  [class.is-active]="goal() === choice"
+                  [attr.aria-pressed]="goal() === choice"
+                  (click)="setGoal(choice)"
+                >
+                  {{ choice }}
+                </button>
+              }
+            </div>
+          </div>
+          <details class="how-it-works">
+            <summary>{{ t('streak.how.title') }}</summary>
+            <p class="small muted">{{ t('streak.how.body', { goal: goal() }) }}</p>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── Thống kê học tập ──────────────────────────────────────────────────── -->
+    <section class="card stats-card">
+      <div class="card-body stack">
+        <h2 class="today-card-title">
+          <app-icon name="chart" />
+          {{ t('stats.title') }}
+        </h2>
+
+        <dl class="stat-grid">
+          <div class="stat">
+            <dt>{{ t('stats.answered') }}</dt>
+            <dd class="tnum">{{ totals().answered }}</dd>
+          </div>
+          <div class="stat">
+            <dt>{{ t('stats.accuracy') }}</dt>
+            <dd class="tnum">{{ accuracy() === null ? '—' : accuracy() + '%' }}</dd>
+          </div>
+          <div class="stat">
+            <dt>{{ t('stats.activeDays') }}</dt>
+            <dd class="tnum">{{ totals().activeDays }}</dd>
+          </div>
+          <div class="stat">
+            <dt>{{ t('stats.bestStreak') }}</dt>
+            <dd class="tnum">{{ t('stats.days', { count: streak().best }) }}</dd>
+          </div>
+          <div class="stat">
+            <dt>{{ t('stats.grammar') }}</dt>
+            <dd class="tnum">{{ grammarPassed() }}/{{ grammarTotal }}</dd>
+          </div>
+          <div class="stat">
+            <dt>{{ t('stats.xp') }}</dt>
+            <dd class="tnum">{{ xp() }}</dd>
+          </div>
+        </dl>
+
+        <!-- Biểu đồ 30 ngày: một chuỗi số liệu nên không cần chú giải — tiêu đề đã
+             gọi tên. Rê chuột (hoặc focus bằng bàn phím) vào cột để xem số. -->
+        <figure class="activity-chart">
+          <figcaption class="activity-chart-head">
+            <span class="activity-chart-title">{{ t('stats.chart.title') }}</span>
+            <span class="activity-chart-goal">{{ t('stats.chart.goal', { goal: goal() }) }}</span>
+          </figcaption>
+          <div class="activity-plot">
+            <span class="activity-goal-line" [style.bottom.%]="chart().goalPercent" aria-hidden="true"></span>
+            @for (bar of chart().bars; track bar.day) {
+              <span
+                class="activity-bar"
+                [class.is-met]="bar.met"
+                [class.is-today]="bar.isToday"
+                tabindex="0"
+                [attr.aria-label]="bar.tip"
+                [attr.data-tip]="bar.tip"
+              >
+                <span class="activity-bar-fill" [style.height.%]="bar.height"></span>
+              </span>
+            }
+          </div>
+          <div class="activity-axis" aria-hidden="true">
+            <span>{{ chart().bars[0].label }}</span>
+            <span>{{ chart().bars[14].label }}</span>
+            <span>{{ t('streak.today') }}</span>
+          </div>
+          @if (!chart().hasData) {
+            <p class="small muted activity-empty">{{ t('stats.chart.empty') }}</p>
+          }
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── Bốn khu học ─────────────────────────────────────────────────────────── -->
+    <section class="stack">
+      <h2 class="section-title">{{ t('today.skills.title') }}</h2>
+      <div class="skill-grid">
+        <a class="card lesson-card skill-card" routerLink="/grammar">
+          <div class="lesson-card-top">
+            <app-icon class="skill-icon" name="cap" />
+            <h3 class="lesson-name">{{ t('home.card.grammar.title') }}</h3>
+          </div>
+          <p class="lesson-desc muted small">{{ t('home.card.grammar.desc') }}</p>
+          <div class="lesson-card-bottom">
+            <span class="badge badge-accent tnum">
+              {{ t('home.stat.grammar', { passed: grammarPassed(), total: grammarTotal }) }}
+            </span>
+            <span class="spacer"></span>
+            <span class="lesson-go" aria-hidden="true">→</span>
+          </div>
+        </a>
+        <a class="card lesson-card skill-card" routerLink="/tenses">
+          <div class="lesson-card-top">
+            <app-icon class="skill-icon" name="clock" />
+            <h3 class="lesson-name">{{ t('home.card.tense.title') }}</h3>
+          </div>
+          <p class="lesson-desc muted small">{{ t('home.card.tense.desc') }}</p>
+          <div class="lesson-card-bottom">
+            <span class="badge tnum">{{ t('home.stat.tenses', { count: tenseCount() }) }}</span>
+            <span class="spacer"></span>
+            <span class="lesson-go" aria-hidden="true">→</span>
+          </div>
+        </a>
+        <a class="card lesson-card skill-card" routerLink="/vocabulary">
+          <div class="lesson-card-top">
+            <app-icon class="skill-icon" name="book" />
+            <h3 class="lesson-name">{{ t('home.card.vocabulary.title') }}</h3>
+          </div>
+          <p class="lesson-desc muted small">{{ t('home.card.vocabulary.desc') }}</p>
+          <div class="lesson-card-bottom">
+            <span class="badge tnum">{{ t('home.stat.words', { count: wordCount() }) }}</span>
+            <span class="spacer"></span>
+            <span class="lesson-go" aria-hidden="true">→</span>
+          </div>
+        </a>
+        <a class="card lesson-card skill-card" routerLink="/exercise">
+          <div class="lesson-card-top">
+            <app-icon class="skill-icon" name="clipboard" />
+            <h3 class="lesson-name">{{ t('home.card.exercise.title') }}</h3>
+          </div>
+          <p class="lesson-desc muted small">{{ t('home.card.exercise.desc') }}</p>
+          <div class="lesson-card-bottom">
+            <span class="badge tnum">{{ t('home.stat.sentences', { count: sentenceCount }) }}</span>
+            <span class="spacer"></span>
+            <span class="lesson-go" aria-hidden="true">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Mục đã đánh dấu ★ ─────────────────────────────────────────────────── -->
+    <section class="card">
+      <div class="card-body stack">
+        <h2 class="today-card-title">
+          <app-icon name="star" class="favorite-icon" />
+          {{ t('home.favorites.title') }}
+          @if (totalFavorites() > 0) {
+            <span class="badge badge-warning tnum">{{ t('home.favorites.count', { count: totalFavorites() }) }}</span>
+          }
+        </h2>
+        @if (favoriteSections().length === 0) {
+          <p class="muted small">{{ t('home.favorites.empty') }}</p>
+        } @else {
+          <div class="favorite-row">
+            @for (section of favoriteSections(); track section.id) {
+              <a [routerLink]="section.link" class="favorite-chip">
+                <span>{{ section.name }}</span>
+                <span class="favorite-count tnum">★ {{ section.count }}</span>
+              </a>
+            }
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,19 +1,25 @@
 # Luyện thi TOEIC 990
 
 Web app luyện thi TOEIC, chạy hoàn toàn ở trình duyệt, không cần máy chủ và không
-cần tài khoản. Ba khu nội dung độc lập:
+cần tài khoản. Trang mở đầu là **Hôm nay**, cùng bốn khu học:
 
 | Khu | Đường dẫn | Nội dung |
 | --- | --- | --- |
+| **Hôm nay** | `/` | Chuỗi ngày học, kế hoạch hôm nay, thống kê học tập (số câu, tỉ lệ đúng, số ngày học, biểu đồ 30 ngày), lối tắt tới các khu và mục ★. |
+| **Khóa ngữ pháp** | `/grammar` | 18 chương, **59 bài học tuần tự** cho TOEIC Part 5 & 6. Mỗi bài: ví dụ lỗi sai → lý thuyết → 10 câu luyện tập kiểu Part 5 → kết quả. Đạt ≥ 70% mở khoá bài kế tiếp. |
 | **Các thì** | `/tenses` | 12 thì tiếng Anh chia thành 3 nhóm, mỗi thì có công thức, cách dùng, dấu hiệu nhận biết, lỗi hay gặp và 6 câu ví dụ. |
 | **Từ vựng** | `/vocabulary` | 557 từ chia theo 5 band điểm TOEIC (300–450 … 860–990), mỗi từ có phiên âm, từ loại, nghĩa và câu ví dụ. |
 | **Bài tập** | `/exercise` | Bài tập chuyên đề. Hiện có **thể bị động**: 60 câu qua 10 công thức thì, kèm các dạng đặc biệt. |
 
-Cả ba khu dùng chung một bộ máy luyện tập: chọn chiều hỏi → làm bài → xem kết quả
-→ đánh dấu ★ những mục chưa nhớ để lần sau luyện riêng nhóm đó.
+Ba khu Các thì / Từ vựng / Bài tập dùng chung một bộ máy luyện tập: chọn chiều hỏi
+→ làm bài → xem kết quả → đánh dấu ★ những mục chưa nhớ để lần sau luyện riêng nhóm
+đó. Khoá ngữ pháp có màn hình bài học riêng (xem bên dưới).
 
-Giao diện có **tiếng Việt và tiếng Anh** (đổi ngay không cần tải lại trang), và
-**tông sáng / tối / theo hệ điều hành**. Đa ngôn ngữ phủ cả chữ giao diện lẫn
+Giao diện dựng theo ByeTOEIC và dùng chung một ngôn ngữ thiết kế với dự án
+minano_nihongo: thanh menu bên trái (máy tính) / thanh menu đáy (điện thoại),
+breadcrumb và chip 🔥 chuỗi ngày trên thanh trên cùng, chữ Montserrat + Quicksand.
+Có **tiếng Việt và tiếng Anh** (đổi ngay không cần tải lại trang), và **tông sáng /
+tối / đèn đêm / theo hệ điều hành**. Đa ngôn ngữ phủ cả chữ giao diện lẫn
 metadata của nội dung — tên bài, mô tả bài và ghi chú của từng câu ví dụ đều đổi
 theo. Riêng NGỮ LIỆU thì luôn giữ nguyên tiếng Việt: nghĩa của từ và bản dịch câu
 chính là thứ người học đang tập dịch, dịch chúng sang tiếng Anh là xoá mất bài tập.
@@ -33,11 +39,39 @@ Lệnh khác:
 npm run build       # sinh dữ liệu + build bản production vào dist/
 npm run build:pages # build bản dành cho GitHub Pages (xem mục Triển khai)
 npm run generate    # chỉ sinh lại public/lessons/*.json từ data-source/
-npm run verify      # kiểm tra bảng thông điệp, dữ liệu bài tập và dữ liệu nguồn
+npm run verify      # kiểm tra thông điệp, dữ liệu bài tập, khoá ngữ pháp, chuỗi ngày và dữ liệu nguồn
 ```
 
 `npm start` và `npm run build` đều tự chạy `npm run generate` trước, nên không có
 chuyện quên sinh lại dữ liệu sau khi sửa `data-source/`.
+
+---
+
+## Khoá ngữ pháp và tiến độ
+
+**Khóa ngữ pháp** (`/grammar`, `/grammar/:id`)
+
+- Trang tổng quan: thanh "Nội dung khóa học" (18 chương xổ ra được, bài đã đạt /
+  đang mở / đang khoá), thẻ "Bài tiếp theo" với vòng tiến độ, lộ trình bốn bước và
+  lưới chương.
+- Mỗi bài bốn bước: **Ví dụ lỗi sai** (chỗ sai tô đỏ, chỗ sửa tô xanh) → **Lý
+  thuyết** → **Luyện tập** 10 câu kiểu Part 5 (thứ tự câu và lựa chọn trộn lại mỗi
+  lượt, phím tắt 1–4 / A–D / Enter) → **Kết quả** (điểm, chi tiết từng câu, lịch sử
+  các lần làm).
+- Đúng ≥ 7/10 là đạt và mở khoá bài kế tiếp. Mỗi câu đúng +10 XP, đạt bài lần đầu
+  +50 XP.
+
+**Những gì được lưu** (localStorage, không cần tài khoản)
+
+- Khoá ngữ pháp: mỗi bài đã làm bao nhiêu lần, điểm từng lần (30 lần gần nhất), điểm
+  cao nhất, đã đạt chưa, đang ở bước nào, và **lượt đang làm dở** — tải lại trang
+  giữa chừng vẫn quay về đúng câu cũ với đúng thứ tự lựa chọn cũ. Xoá được từ trang
+  tổng quan khoá học.
+- **Chuỗi ngày học**: mỗi câu trả lời xong ở bất kỳ khu nào đều được đếm. Đủ mục tiêu
+  trong ngày (10/20/30/50 câu, mặc định 20) là giữ chuỗi. Chuỗi tính tới hôm nay nếu
+  hôm nay đã đạt, còn chưa thì tính tới hôm qua — sáng ra chưa học vẫn chưa mất chuỗi.
+  Ngày đạt được chốt lúc đạt, nên hạ mục tiêu không bơm được chuỗi cũ.
+- Danh sách ★ như trước.
 
 ---
 
@@ -93,16 +127,24 @@ Angular 20, standalone component, signal, `ChangeDetectionStrategy.OnPush`, khô
 dùng thư viện ngoài nào ngoài Angular.
 
 ```
-src/app/
-├── core/
-│   ├── i18n/           messages.ts (toàn bộ chữ, hai ngôn ngữ), LanguageStore, <app-t>
-│   ├── models/         lesson.model.ts (nội dung), practice.model.ts (phiên luyện)
-│   ├── exercises/      bài tập chuyên đề — dữ liệu nằm thẳng trong mã nguồn
-│   ├── practice/       dựng câu hỏi cho từng khu (vocabulary / tense / passive)
-│   ├── services/       LessonStore, PracticeSessionStore, FavoriteStore, ThemeStore
-│   ├── guards/         chặn vào /practice và /result khi không có phiên
-│   └── utils/          chấm bài, khoét từ, trộn ngẫu nhiên, tìm kiếm
-└── features/           mỗi màn hình một thư mục (.ts + .html + .css)
+src/
+├── styles/             bộ style dùng chung với minano_nihongo (tokens, base, components…)
+│                       + toeic.css cho phần riêng của app này
+├── grammar.css         khung và biến riêng của khoá ngữ pháp
+└── app/
+    ├── core/
+    │   ├── activity/   chuỗi ngày học: model thuần (activity.model.ts) + ActivityStore
+    │   ├── grammar/    khoá ngữ pháp: mục lục, 59 file bài, tiến độ, bảng nạp bài
+    │   ├── navigation.ts  năm mục menu
+    │   ├── i18n/       messages.ts (toàn bộ chữ, hai ngôn ngữ), LanguageStore, <app-t>
+    │   ├── models/     lesson.model.ts (nội dung), practice.model.ts (phiên luyện)
+    │   ├── exercises/  bài tập chuyên đề — dữ liệu nằm thẳng trong mã nguồn
+    │   ├── practice/   dựng câu hỏi cho từng khu (vocabulary / tense / passive)
+    │   ├── services/   LessonStore, PracticeSessionStore, FavoriteStore, ThemeStore…
+    │   ├── guards/     chặn vào /practice và /result khi không có phiên
+    │   └── utils/      chấm bài, khoét từ, trộn ngẫu nhiên, tìm kiếm
+    ├── shared/         biểu tượng SVG dùng chung
+    └── features/       mỗi màn hình một thư mục (.ts + .html + .css)
 ```
 
 Vài quyết định đáng nhớ:
@@ -113,25 +155,25 @@ Vài quyết định đáng nhớ:
 - **Dịch lúc chạy, không dùng i18n biên dịch.** Đổi ngôn ngữ phải có hiệu lực
   ngay, và cả ứng dụng chỉ cần một bản build. Component `<app-t>` vẽ mọi bản dịch
   chồng lên nhau trong một ô grid nên đổi ngôn ngữ thì chữ đổi còn khung đứng yên.
-- **Không lưu lịch sử luyện tập.** Mỗi lần luyện là một lần mới; tải lại trang
-  giữa chừng là mất phiên (route guard đưa về trang chủ). Thứ duy nhất được lưu
-  giữa các phiên là danh sách ★.
+- **Ba khu luyện tập không lưu phiên.** Mỗi lần luyện là một lần mới; tải lại trang
+  giữa chừng là mất phiên (route guard đưa về trang Hôm nay). Thứ được lưu là ★ và
+  số câu đã làm mỗi ngày (chuỗi ngày học). Khoá ngữ pháp thì khác: nó là một LỘ
+  TRÌNH, bài sau chỉ mở khi bài trước đạt, nên lưu đầy đủ tiến độ từng bài.
 - **Id sinh từ nội dung, không đánh số.** Id của từ băm từ chính mặt chữ của từ,
   id của câu ví dụ băm từ chính câu tiếng Anh. Sửa nghĩa hay sửa bản dịch thì id
   giữ nguyên và dấu ★ không mất; chèn thêm một dòng vào giữa file cũng không làm
   lệch id của các dòng phía sau.
 - **Bảng màu khai một lần.** Mỗi màu viết bằng `light-dark(sáng, tối)` trong
-  `src/styles.css`; đổi tông chỉ là đổi `color-scheme`.
-- **Một họ chữ duy nhất, tự host.** Inter (biến thể variable, 57 KB cho hai subset
-  `latin` + `vietnamese`) nằm trong `src/fonts/`, không gọi sang Google Fonts. Bản
-  đầu dùng font có chân riêng cho ngữ liệu tiếng Anh; đã bỏ vì ở cỡ lớn trên nền
-  tối nét thanh của nó mảnh tới mức khó đọc — mà đó lại chính là chữ to nhất màn
-  hình luyện tập. Việc phân biệt ngữ liệu với chữ giao diện đã có cỡ chữ, độ đậm
-  và màu lo rồi.
+  `src/styles/tokens.css`; đổi tông chỉ là đổi `color-scheme`. Đèn đêm là bảng
+  màu ấm viết riêng ngay dưới đó. Khoá ngữ pháp trỏ biến của nó về biến chung nên
+  đổi tông là đổi theo.
+- **Chữ tự host.** Montserrat (chữ thân) và Quicksand (tiêu đề), biến thể variable,
+  88 KB cho hai subset `latin` + `vietnamese`, nằm trong `src/fonts/` — không gọi
+  sang Google Fonts.
 - **Khung thiết lập mặc định thu gọn.** Phần lớn người học bấm thẳng "Bắt đầu
   luyện" với thiết lập mặc định, nên thứ hiện ra trước phải là nút đó cùng một
   dòng tóm tắt — không phải sáu nhóm tuỳ chọn chiếm trọn màn hình đầu tiên.
-- **Chuyển động phải trả lời một câu hỏi.** Mỗi hiệu ứng trong `styles.css` gắn
+- **Chuyển động phải trả lời một câu hỏi.** Mỗi hiệu ứng trong `styles/motion.css` gắn
   với đúng một câu hỏi của người dùng: "trang vừa đổi phải không", "có gì mới
   xuất hiện", "tôi đúng hay sai". Mọi thời lượng dưới 320ms, vì đây là app làm
   liên tiếp năm sáu chục câu một lượt — quá ngưỡng đó thì chuyển động thôi không
@@ -247,6 +289,18 @@ rỗng cả hai thì câu đó chỉ bị bỏ qua ở dạng ấy, các dạng 
 Id của từng câu ví dụ **không viết tay** — trình sinh dữ liệu băm từ chính câu
 tiếng Anh, nên không bao giờ có hai câu trùng id.
 
+### Khoá ngữ pháp — `src/app/core/grammar/`
+
+- `grammar-catalog.ts`: thứ tự chương / bài (chính là lộ trình), tên bài hai ngôn
+  ngữ và `scope` — ghi chú cho người soạn về phạm vi của từng bài, để các bài cùng
+  chương không dạy chồng lên nhau. **Không đổi id**: tiến độ đã lưu gắn vào id.
+- `lessons/<id>.ts`: nội dung một bài (`GrammarLessonContent` trong
+  `grammar.model.ts`). Chữ hỗ trợ `**đậm**` ở mọi chỗ và `[[chỗ sai]]` trong ví dụ
+  lỗi sai. Mỗi bài là một chunk riêng, chỉ tải khi mở bài.
+- `lesson-loaders.ts`: mỗi bài một dòng `import()`.
+
+Thêm bài: thêm vào mục lục, viết file bài, thêm dòng nạp, chạy `npm run verify:grammar`.
+
 ### Bài tập chuyên đề
 
 Dữ liệu nằm trong `src/app/core/exercises/` chứ không nằm trong `data-source/`:
@@ -264,12 +318,14 @@ hàm dựng câu hỏi trong `core/practice/`, và khai số mục trong `exerci
 npm run verify
 ```
 
-Ba tầng, đều là những thứ TypeScript không diễn đạt được:
+Năm tầng, đều là những thứ TypeScript không diễn đạt được:
 
 | Lệnh | Bắt lỗi gì |
 | --- | --- |
 | `verify:i18n` | Khoá thiếu bản dịch một ngôn ngữ; tham số `{ten}` có ở bản này mà thiếu ở bản kia; khoá dùng trong template mà chưa khai; khoá khai rồi mà không nơi nào dùng. |
 | `verify:data` | Câu bị động trỏ tới công thức không tồn tại; câu đánh dấu đảo ngược được nhưng lại không có "by …"; từ vựng có câu ví dụ không chứa chính từ đó; **một từ bị xếp vào hai band**; metadata hoặc ghi chú còn thiếu một vế ngôn ngữ. |
+| `verify:grammar` | Mục lục và bảng nạp bài lệch nhau; bài không đủ đúng 10 câu, câu không có hoặc có hai chỗ trống `-------`, hai lựa chọn trùng nhau, đáp án ngoài khoảng 0–3; một vế ngôn ngữ bị trống hoặc vế tiếng Anh lẫn chữ tiếng Việt; dấu `**` / `[[ ]]` lẻ cặp; **một câu hỏi bị chép sang bài khác**. `--print <id>` in đề không đáp án, `--key <id>` in đáp án. |
+| `verify:streak` | Cách tính chuỗi ngày học: chưa học hôm nay thì chưa mất chuỗi, bỏ một ngày thì đứt, hạ mục tiêu không bơm được ngày cũ, dữ liệu localStorage hỏng không làm sập. |
 | `generate:check` | Chạy toàn bộ trình sinh dữ liệu nhưng không ghi file — dùng cho CI. |
 
 ---
