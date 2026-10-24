@@ -765,9 +765,16 @@ export const MESSAGES = {
   'speaking.vocab.start': { vi: 'Bắt đầu luyện từ', en: 'Start the drill' },
 
   'speaking.drill.lead': {
-    vi: '{count} câu trắc nghiệm: chọn cụm từ đúng nghĩa, hoặc hợp với chỗ trống trong câu ví dụ. Làm trước khi trả lời câu hỏi để có sẵn từ mà dùng.',
-    en: '{count} multiple-choice items: pick the phrase that matches the meaning or fits the gap in the example. Do it before the questions so the phrases are ready to use.',
+    vi: '{count} câu trắc nghiệm, mỗi cụm từ một câu. Làm trước khi trả lời câu hỏi để có sẵn từ mà dùng.',
+    en: '{count} multiple-choice items, one per phrase. Do it before the questions so the phrases are ready to use.',
   },
+  'speaking.drill.modeLabel': { vi: 'Dạng luyện', en: 'Drill type' },
+  'speaking.drill.mode.mixed': { vi: 'Trộn cả 4 dạng', en: 'Mix all 4 types' },
+  'speaking.drill.mode.enVi': { vi: 'Anh → Việt', en: 'English → Vietnamese' },
+  'speaking.drill.mode.viEn': { vi: 'Việt → Anh', en: 'Vietnamese → English' },
+  'speaking.drill.mode.cloze': { vi: 'Điền vào câu', en: 'Fill the gap' },
+  'speaking.drill.askEnVi': { vi: 'Cụm này nghĩa tiếng Việt là gì?', en: 'What does this phrase mean in Vietnamese?' },
+  'speaking.drill.askViEn': { vi: 'Cụm tiếng Anh nào có nghĩa này?', en: 'Which English phrase has this meaning?' },
   'speaking.drill.start': { vi: 'Bắt đầu', en: 'Start' },
   'speaking.drill.best': { vi: 'Điểm cao nhất: {correct}/{total}', en: 'Best score: {correct}/{total}' },
   'speaking.drill.progress': { vi: 'Câu {current}/{total}', en: 'Item {current}/{total}' },

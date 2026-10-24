@@ -3,6 +3,23 @@
     <div class="card">
       <div class="card-body stack">
         <p>{{ t('speaking.drill.lead', { count: topic().phrases.length }) }}</p>
+        <div class="stack stack-sm">
+          <p class="label">{{ t('speaking.drill.modeLabel') }}</p>
+          <div class="options drill-modes" role="radiogroup" [attr.aria-label]="t('speaking.drill.modeLabel')">
+            @for (m of modes; track m.id) {
+              <button
+                type="button"
+                class="option"
+                role="radio"
+                [class.is-active]="mode() === m.id"
+                [attr.aria-checked]="mode() === m.id"
+                (click)="mode.set(m.id)"
+              >
+                {{ t(m.key) }}
+              </button>
+            }
+          </div>
+        </div>
         <div class="row">
           <button type="button" class="btn btn-primary btn-lg" (click)="start()">
             {{ t('speaking.drill.start') }}
@@ -33,7 +50,17 @@
             <span [style.width.%]="((index() + (picked() ? 1 : 0)) / items().length) * 100"></span>
           </div>
 
-          @if (item.kind === 'meaning') {
+          @if (item.kind === 'enVi') {
+            <p class="drill-ask muted small">{{ t('speaking.drill.askEnVi') }}</p>
+            <div class="drill-prompt drill-prompt-en">
+              <span lang="en">{{ item.phrase.phrase }}</span>
+              <app-speak [text]="item.phrase.phrase" />
+            </div>
+            <p class="ipa muted drill-ipa">{{ item.phrase.ipa }} ({{ posAbbr[item.phrase.pos] }})</p>
+          } @else if (item.kind === 'viEn') {
+            <p class="drill-ask muted small">{{ t('speaking.drill.askViEn') }}</p>
+            <p class="drill-prompt">{{ item.phrase.short }}</p>
+          } @else if (item.kind === 'meaning') {
             <p class="drill-ask muted small">{{ t('speaking.drill.askMeaning') }}</p>
             <p class="drill-prompt">{{ item.phrase.meaning[language()] }}</p>
           } @else {
@@ -61,10 +88,10 @@
                 [attr.data-state]="optionState(option)"
                 [disabled]="picked() !== null && optionState(option) === 'idle'"
                 (click)="pick(option)"
-                lang="en"
+                [attr.lang]="item.kind === 'enVi' ? 'vi' : 'en'"
               >
                 <kbd class="drill-key" aria-hidden="true">{{ i + 1 }}</kbd>
-                <span>{{ option.phrase }}</span>
+                <span>{{ optionLabel(item, option) }}</span>
               </button>
             }
           </div>

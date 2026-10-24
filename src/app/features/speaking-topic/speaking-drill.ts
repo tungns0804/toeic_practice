@@ -10,6 +10,7 @@ import {
 
 import { ActivityStore } from '../../core/activity/activity-store';
 import { LanguageStore } from '../../core/i18n/language-store';
+import type { MessageKey } from '../../core/i18n/messages';
 import { SpeakingStore } from '../../core/speaking/speaking-store';
 import {
   type ExampleSegment,
@@ -21,10 +22,30 @@ import {
 import { pickRandom, shuffle } from '../../core/utils/random';
 import { SpeakButton } from '../../shared/speak-button';
 
+/**
+ * Dạng câu hỏi:
+ *  - enVi     thấy cụm tiếng Anh → chọn nghĩa tiếng Việt
+ *  - viEn     thấy nghĩa tiếng Việt → chọn cụm tiếng Anh
+ *  - meaning  thấy định nghĩa (theo ngôn ngữ giao diện) → chọn cụm
+ *  - cloze    câu ví dụ bị khoét cụm từ → chọn cụm hợp chỗ trống
+ */
+type DrillKind = 'enVi' | 'viEn' | 'meaning' | 'cloze';
+
+/** Dạng người học chọn ở màn hình bắt đầu; "mixed" xoay vòng cả bốn dạng. */
+export type DrillMode = 'mixed' | 'enVi' | 'viEn' | 'cloze';
+
+const MODES: readonly { id: DrillMode; key: MessageKey }[] = [
+  { id: 'mixed', key: 'speaking.drill.mode.mixed' },
+  { id: 'enVi', key: 'speaking.drill.mode.enVi' },
+  { id: 'viEn', key: 'speaking.drill.mode.viEn' },
+  { id: 'cloze', key: 'speaking.drill.mode.cloze' },
+];
+
+const MIXED_ORDER: readonly DrillKind[] = ['enVi', 'viEn', 'meaning', 'cloze'];
+
 interface DrillItem {
   readonly phrase: SpeakingPhrase;
-  /** Hỏi theo nghĩa, hay khoét cụm từ ra khỏi câu ví dụ. */
-  readonly kind: 'meaning' | 'cloze';
+  readonly kind: DrillKind;
   readonly options: readonly SpeakingPhrase[];
   readonly segments: readonly ExampleSegment[];
 }
@@ -33,7 +54,8 @@ const OPTION_COUNT = 4;
 
 /**
  * Luyện cụm từ của một chủ đề trước khi trả lời câu hỏi: mỗi cụm một câu trắc
- * nghiệm, xen kẽ hai dạng (chọn theo nghĩa / điền chỗ trống trong câu ví dụ).
+ * nghiệm, theo dạng người học chọn (Anh → Việt, Việt → Anh, điền chỗ trống, hoặc
+ * trộn cả bốn dạng).
  * Phương án nhiễu lấy từ chính chủ đề đó, nên câu nào cũng là một lần ôn lại
  * bốn cụm cùng lúc.
  */
@@ -57,6 +79,8 @@ export class SpeakingDrill {
   protected readonly language = this.lang.language;
   protected readonly posAbbr = POS_ABBR;
 
+  protected readonly modes = MODES;
+  protected readonly mode = signal<DrillMode>('mixed');
   protected readonly phase = signal<'intro' | 'run' | 'done'>('intro');
   protected readonly items = signal<readonly DrillItem[]>([]);
   protected readonly index = signal(0);
@@ -76,10 +100,11 @@ export class SpeakingDrill {
   protected start(only?: readonly string[]): void {
     const all = this.topic().phrases;
     const pool = only ? all.filter((phrase) => only.includes(phrase.id)) : all;
+    const mode = this.mode();
     // Xáo xong mới chia dạng câu, để dạng của mỗi cụm đổi theo từng lượt.
     const items = shuffle(pool).map<DrillItem>((phrase, i) => ({
       phrase,
-      kind: i % 2 === 0 ? 'meaning' : 'cloze',
+      kind: mode === 'mixed' ? MIXED_ORDER[i % MIXED_ORDER.length] : mode,
       options: shuffle([
         phrase,
         ...pickRandom(
@@ -121,6 +146,11 @@ export class SpeakingDrill {
       });
     }
     this.phase.set('done');
+  }
+
+  /** Chữ hiện trên phương án: nghĩa tiếng Việt ở dạng Anh → Việt, còn lại là cụm tiếng Anh. */
+  protected optionLabel(item: DrillItem, option: SpeakingPhrase): string {
+    return item.kind === 'enVi' ? option.short : option.phrase;
   }
 
   protected optionState(option: SpeakingPhrase): 'correct' | 'wrong' | 'idle' {

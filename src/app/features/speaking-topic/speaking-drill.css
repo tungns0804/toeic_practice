@@ -28,6 +28,21 @@
   line-height: 1.55;
 }
 
+.drill-modes {
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+}
+
+.drill-prompt-en {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-xl);
+}
+
+.drill-ipa {
+  margin: -6px 0 0;
+}
+
 .drill-gap {
   color: var(--accent);
   letter-spacing: 0.05em;
