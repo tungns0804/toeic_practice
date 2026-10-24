@@ -41,18 +41,22 @@
                     <div class="row phrase-top">
                       <strong class="phrase-name" lang="en">{{ phrase.phrase }}</strong>
                       <span class="phrase-pos">({{ posAbbr[phrase.pos] }})</span>
+                      <app-speak [text]="phrase.phrase" />
                       <span class="spacer"></span>
                       <span class="badge badge-accent">{{ t(posKey[phrase.pos]) }}</span>
                       <span class="badge">{{ t(typeKey[phrase.type]) }}</span>
                     </div>
+                    <p class="phrase-ipa ipa">{{ phrase.ipa }}</p>
                     <p class="phrase-short">{{ phrase.short }}</p>
                     <p class="phrase-meaning muted small">{{ phrase.meaning[language()] }}</p>
                     <ul class="word-gloss" [attr.aria-label]="t('speaking.words')">
                       @for (w of phrase.words; track w.word) {
                         <li>
                           <span lang="en" class="word-gloss-word">{{ w.word }}</span>
+                          <span class="word-gloss-ipa ipa">{{ w.ipa }}</span>
                           <span class="word-gloss-pos">({{ posAbbr[w.pos] }})</span>
                           {{ w.vi }}
+                          <app-speak class="word-gloss-speak" [text]="w.word" />
                         </li>
                       }
                     </ul>
@@ -132,7 +136,12 @@
                 <ul class="help-body help-phrases">
                   @for (phrase of topic.phrases; track phrase.id) {
                     <li>
-                      <span><strong lang="en">{{ phrase.phrase }}</strong> <span class="faint small">({{ posAbbr[phrase.pos] }})</span></span>
+                      <span class="help-phrase-head">
+                        <strong lang="en">{{ phrase.phrase }}</strong>
+                        <span class="faint small">({{ posAbbr[phrase.pos] }})</span>
+                        <app-speak [text]="phrase.phrase" />
+                      </span>
+                      <span class="ipa faint small">{{ phrase.ipa }}</span>
                       <span class="small">{{ phrase.short }}</span>
                     </li>
                   }

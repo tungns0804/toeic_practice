@@ -74,6 +74,13 @@
   cursor: default;
 }
 
+.drill-answer {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+
 .drill-score {
   font-size: var(--fs-xl);
 }

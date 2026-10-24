@@ -42,6 +42,11 @@
   font-style: italic;
 }
 
+.phrase-ipa {
+  margin: -4px 0 0;
+  color: var(--text-muted);
+}
+
 .phrase-short {
   margin: 0;
   font-weight: 650;
@@ -63,14 +68,37 @@
 }
 
 .word-gloss li {
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 2px;
+  padding: 3px 4px 3px 10px;
+  /* Bo góc nhẹ chứ không bo tròn: chip dài xuống dòng trên điện thoại thì viên thuốc thành hình bầu dục. */
+  border-radius: var(--radius-sm);
   background: var(--bg-inset);
   font-size: var(--fs-sm);
 }
 
 .word-gloss-word {
   font-weight: 650;
+}
+
+.word-gloss-ipa {
+  margin-left: 4px;
+  color: var(--text-muted);
+}
+
+/* Nút 🔊 trong chip nhỏ hơn nút ở tiêu đề thẻ. */
+.word-gloss-speak {
+  margin-left: 4px;
+  zoom: 0.85;
+}
+
+.help-phrase-head {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 6px;
 }
 
 .word-gloss-pos {

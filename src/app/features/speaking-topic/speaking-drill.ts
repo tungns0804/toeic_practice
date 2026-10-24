@@ -19,6 +19,7 @@ import {
   exampleSegments,
 } from '../../core/speaking/speaking.model';
 import { pickRandom, shuffle } from '../../core/utils/random';
+import { SpeakButton } from '../../shared/speak-button';
 
 interface DrillItem {
   readonly phrase: SpeakingPhrase;
@@ -38,6 +39,7 @@ const OPTION_COUNT = 4;
  */
 @Component({
   selector: 'app-speaking-drill',
+  imports: [SpeakButton],
   templateUrl: './speaking-drill.html',
   styleUrl: './speaking-drill.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

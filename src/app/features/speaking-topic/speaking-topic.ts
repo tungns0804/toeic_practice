@@ -16,6 +16,7 @@ import {
   type SpeakingQuestion,
   exampleSegments,
 } from '../../core/speaking/speaking.model';
+import { SpeakButton } from '../../shared/speak-button';
 import { SpeakingAnswer } from './speaking-answer';
 import { SpeakingDrill } from './speaking-drill';
 
@@ -39,7 +40,7 @@ const PART_DESC: Record<SpeakingPart, MessageKey> = {
  */
 @Component({
   selector: 'app-speaking-topic',
-  imports: [RouterLink, T, SpeakingAnswer, SpeakingDrill],
+  imports: [RouterLink, T, SpeakButton, SpeakingAnswer, SpeakingDrill],
   templateUrl: './speaking-topic.html',
   styleUrl: './speaking-topic.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

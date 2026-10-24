@@ -751,6 +751,7 @@ export const MESSAGES = {
     vi: '(n) danh từ · (v) động từ · (adj) tính từ · (adv) trạng từ',
     en: '(n) noun · (v) verb · (adj) adjective · (adv) adverb',
   },
+  'speaking.listen': { vi: 'Nghe đọc: {text}', en: 'Listen: {text}' },
   'speaking.words': { vi: 'Nghĩa từng từ', en: 'Word by word' },
   'speaking.type.collocation': { vi: 'Collocation', en: 'Collocation' },
   'speaking.type.idiom': { vi: 'Thành ngữ', en: 'Idiom' },

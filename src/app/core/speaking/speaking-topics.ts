@@ -47,12 +47,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'formal-education',
         phrase: 'formal education',
+        ipa: '/ˌfɔːrml ˌedʒuˈkeɪʃn/',
         type: 'collocation',
         pos: 'noun',
         short: 'giáo dục chính quy',
         words: [
-          { word: 'formal', pos: 'adj', vi: 'chính quy, chính thức' },
-          { word: 'education', pos: 'noun', vi: 'giáo dục' },
+          { word: 'formal', ipa: '/ˈfɔːrml/', pos: 'adj', vi: 'chính quy, chính thức' },
+          { word: 'education', ipa: '/ˌedʒuˈkeɪʃn/', pos: 'noun', vi: 'giáo dục' },
         ],
         meaning: {
           vi: 'Việc học ở trường lớp, đại học theo một hệ thống có tổ chức.',
@@ -66,12 +67,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'rote-learning',
         phrase: 'rote learning',
+        ipa: '/ˌroʊt ˈlɜːrnɪŋ/',
         type: 'collocation',
         pos: 'noun',
         short: 'học vẹt',
         words: [
-          { word: 'rote', pos: 'noun', vi: 'sự học thuộc lòng máy móc' },
-          { word: 'learning', pos: 'noun', vi: 'việc học' },
+          { word: 'rote', ipa: '/roʊt/', pos: 'noun', vi: 'sự học thuộc lòng máy móc' },
+          { word: 'learning', ipa: '/ˈlɜːrnɪŋ/', pos: 'noun', vi: 'việc học' },
         ],
         meaning: {
           vi: 'Học vẹt: nhắc đi nhắc lại để thuộc lòng mà không thật sự hiểu.',
@@ -85,12 +87,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'hands-on-experience',
         phrase: 'hands-on experience',
+        ipa: '/ˌhændz ˈɑːn ɪkˈspɪriəns/',
         type: 'collocation',
         pos: 'noun',
         short: 'kinh nghiệm thực tế',
         words: [
-          { word: 'hands-on', pos: 'adj', vi: 'thực hành, trực tiếp làm' },
-          { word: 'experience', pos: 'noun', vi: 'kinh nghiệm' },
+          { word: 'hands-on', ipa: '/ˌhændz ˈɑːn/', pos: 'adj', vi: 'thực hành, trực tiếp làm' },
+          { word: 'experience', ipa: '/ɪkˈspɪriəns/', pos: 'noun', vi: 'kinh nghiệm' },
         ],
         meaning: {
           vi: 'Kinh nghiệm thực tế có được nhờ trực tiếp bắt tay vào làm.',
@@ -102,12 +105,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'pass-with-flying-colors',
         phrase: 'pass with flying colors',
+        ipa: '/ˌpæs wɪð ˌflaɪɪŋ ˈkʌlərz/',
         type: 'idiom',
         pos: 'verb',
         short: 'thi đỗ với kết quả xuất sắc',
         words: [
-          { word: 'pass', pos: 'verb', vi: 'thi đỗ, vượt qua' },
-          { word: 'flying colors', pos: 'noun', vi: 'thành công rực rỡ' },
+          { word: 'pass', ipa: '/pæs/', pos: 'verb', vi: 'thi đỗ, vượt qua' },
+          { word: 'flying colors', ipa: '/ˌflaɪɪŋ ˈkʌlərz/', pos: 'noun', vi: 'thành công rực rỡ' },
         ],
         meaning: {
           vi: 'Vượt qua kỳ thi một cách dễ dàng, với điểm số xuất sắc.',
@@ -120,12 +124,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'higher-education',
         phrase: 'higher education',
+        ipa: '/ˌhaɪər ˌedʒuˈkeɪʃn/',
         type: 'collocation',
         pos: 'noun',
         short: 'giáo dục đại học',
         words: [
-          { word: 'higher', pos: 'adj', vi: 'cao hơn' },
-          { word: 'education', pos: 'noun', vi: 'giáo dục' },
+          { word: 'higher', ipa: '/ˈhaɪər/', pos: 'adj', vi: 'cao hơn' },
+          { word: 'education', ipa: '/ˌedʒuˈkeɪʃn/', pos: 'noun', vi: 'giáo dục' },
         ],
         meaning: {
           vi: 'Giáo dục bậc cao đẳng, đại học.',
@@ -138,12 +143,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'steep-learning-curve',
         phrase: 'a steep learning curve',
+        ipa: '/ə ˌstiːp ˈlɜːrnɪŋ kɜːrv/',
         type: 'phrase',
         pos: 'noun',
         short: 'giai đoạn đầu học rất vất vả',
         words: [
-          { word: 'steep', pos: 'adj', vi: 'dốc, gắt' },
-          { word: 'learning curve', pos: 'noun', vi: 'quá trình học hỏi' },
+          { word: 'steep', ipa: '/stiːp/', pos: 'adj', vi: 'dốc, gắt' },
+          { word: 'learning curve', ipa: '/ˈlɜːrnɪŋ kɜːrv/', pos: 'noun', vi: 'quá trình học hỏi' },
         ],
         meaning: {
           vi: 'Giai đoạn đầu học một thứ gì đó rất khó, phải tiếp thu nhiều trong thời gian ngắn.',
@@ -155,12 +161,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'academic-pressure',
         phrase: 'academic pressure',
+        ipa: '/ˌækəˌdemɪk ˈpreʃər/',
         type: 'collocation',
         pos: 'noun',
         short: 'áp lực học tập',
         words: [
-          { word: 'academic', pos: 'adj', vi: 'thuộc về học tập, học thuật' },
-          { word: 'pressure', pos: 'noun', vi: 'áp lực' },
+          { word: 'academic', ipa: '/ˌækəˈdemɪk/', pos: 'adj', vi: 'thuộc về học tập, học thuật' },
+          { word: 'pressure', ipa: '/ˈpreʃər/', pos: 'noun', vi: 'áp lực' },
         ],
         meaning: {
           vi: 'Áp lực học tập do thi cử, điểm số, khối lượng bài vở hay kỳ vọng.',
@@ -172,13 +179,14 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'develop-critical-thinking',
         phrase: 'develop critical thinking',
+        ipa: '/dɪˌveləp ˌkrɪtɪkl ˈθɪŋkɪŋ/',
         type: 'collocation',
         pos: 'verb',
         short: 'phát triển tư duy phản biện',
         words: [
-          { word: 'develop', pos: 'verb', vi: 'phát triển' },
-          { word: 'critical', pos: 'adj', vi: 'phản biện' },
-          { word: 'thinking', pos: 'noun', vi: 'tư duy, suy nghĩ' },
+          { word: 'develop', ipa: '/dɪˈveləp/', pos: 'verb', vi: 'phát triển' },
+          { word: 'critical', ipa: '/ˈkrɪtɪkl/', pos: 'adj', vi: 'phản biện' },
+          { word: 'thinking', ipa: '/ˈθɪŋkɪŋ/', pos: 'noun', vi: 'tư duy, suy nghĩ' },
         ],
         meaning: {
           vi: 'Rèn tư duy phản biện: biết phân tích thông tin và tự đưa ra nhận định.',
@@ -191,12 +199,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'practical-skills',
         phrase: 'practical skills',
+        ipa: '/ˌpræktɪkl ˈskɪlz/',
         type: 'collocation',
         pos: 'noun',
         short: 'kỹ năng thực tế',
         words: [
-          { word: 'practical', pos: 'adj', vi: 'thực tế, thiết thực' },
-          { word: 'skill', pos: 'noun', vi: 'kỹ năng' },
+          { word: 'practical', ipa: '/ˈpræktɪkl/', pos: 'adj', vi: 'thực tế, thiết thực' },
+          { word: 'skill', ipa: '/skɪl/', pos: 'noun', vi: 'kỹ năng' },
         ],
         meaning: {
           vi: 'Kỹ năng thực tế, dùng được cho công việc trong đời sống.',
@@ -208,12 +217,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'keep-up-with-the-workload',
         phrase: 'keep up with the workload',
+        ipa: '/ˌkiːp ˈʌp wɪð ðə ˈwɜːrkloʊd/',
         type: 'phrase',
         pos: 'verb',
         short: 'theo kịp khối lượng bài vở / công việc',
         words: [
-          { word: 'keep up with', pos: 'verb', vi: 'theo kịp' },
-          { word: 'workload', pos: 'noun', vi: 'khối lượng công việc' },
+          { word: 'keep up with', ipa: '/ˌkiːp ˈʌp wɪð/', pos: 'verb', vi: 'theo kịp' },
+          { word: 'workload', ipa: '/ˈwɜːrkloʊd/', pos: 'noun', vi: 'khối lượng công việc' },
         ],
         meaning: {
           vi: 'Theo kịp, hoàn thành được khối lượng bài vở hay công việc được giao.',
@@ -225,12 +235,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'lifelong-learning',
         phrase: 'lifelong learning',
+        ipa: '/ˌlaɪflɔːŋ ˈlɜːrnɪŋ/',
         type: 'collocation',
         pos: 'noun',
         short: 'học tập suốt đời',
         words: [
-          { word: 'lifelong', pos: 'adj', vi: 'suốt đời' },
-          { word: 'learning', pos: 'noun', vi: 'việc học' },
+          { word: 'lifelong', ipa: '/ˈlaɪflɔːŋ/', pos: 'adj', vi: 'suốt đời' },
+          { word: 'learning', ipa: '/ˈlɜːrnɪŋ/', pos: 'noun', vi: 'việc học' },
         ],
         meaning: {
           vi: 'Học tập suốt đời: tiếp tục học trong suốt cuộc đời.',
@@ -243,12 +254,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'access-to-education',
         phrase: 'access to education',
+        ipa: '/ˌækses tu ˌedʒuˈkeɪʃn/',
         type: 'collocation',
         pos: 'noun',
         short: 'cơ hội tiếp cận giáo dục',
         words: [
-          { word: 'access', pos: 'noun', vi: 'sự tiếp cận' },
-          { word: 'education', pos: 'noun', vi: 'giáo dục' },
+          { word: 'access', ipa: '/ˈækses/', pos: 'noun', vi: 'sự tiếp cận' },
+          { word: 'education', ipa: '/ˌedʒuˈkeɪʃn/', pos: 'noun', vi: 'giáo dục' },
         ],
         meaning: {
           vi: 'Cơ hội, khả năng được tiếp cận giáo dục.',
@@ -346,12 +358,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'job-satisfaction',
         phrase: 'job satisfaction',
+        ipa: '/ˌdʒɑːb ˌsætɪsˈfækʃn/',
         type: 'collocation',
         pos: 'noun',
         short: 'sự hài lòng với công việc',
         words: [
-          { word: 'job', pos: 'noun', vi: 'công việc' },
-          { word: 'satisfaction', pos: 'noun', vi: 'sự hài lòng' },
+          { word: 'job', ipa: '/dʒɑːb/', pos: 'noun', vi: 'công việc' },
+          { word: 'satisfaction', ipa: '/ˌsætɪsˈfækʃn/', pos: 'noun', vi: 'sự hài lòng' },
         ],
         meaning: {
           vi: 'Sự hài lòng, cảm giác được thoả mãn với công việc của mình.',
@@ -363,12 +376,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'career-progression',
         phrase: 'career progression',
+        ipa: '/kəˌrɪr prəˈɡreʃn/',
         type: 'collocation',
         pos: 'noun',
         short: 'sự thăng tiến trong sự nghiệp',
         words: [
-          { word: 'career', pos: 'noun', vi: 'sự nghiệp' },
-          { word: 'progression', pos: 'noun', vi: 'sự tiến lên, thăng tiến' },
+          { word: 'career', ipa: '/kəˈrɪr/', pos: 'noun', vi: 'sự nghiệp' },
+          { word: 'progression', ipa: '/prəˈɡreʃn/', pos: 'noun', vi: 'sự tiến lên, thăng tiến' },
         ],
         meaning: {
           vi: 'Sự thăng tiến: tiến lên những vị trí cao hơn trong sự nghiệp.',
@@ -380,12 +394,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'heavy-workload',
         phrase: 'a heavy workload',
+        ipa: '/ə ˌhevi ˈwɜːrkloʊd/',
         type: 'collocation',
         pos: 'noun',
         short: 'khối lượng công việc nặng',
         words: [
-          { word: 'heavy', pos: 'adj', vi: 'nặng' },
-          { word: 'workload', pos: 'noun', vi: 'khối lượng công việc' },
+          { word: 'heavy', ipa: '/ˈhevi/', pos: 'adj', vi: 'nặng' },
+          { word: 'workload', ipa: '/ˈwɜːrkloʊd/', pos: 'noun', vi: 'khối lượng công việc' },
         ],
         meaning: {
           vi: 'Khối lượng công việc nặng, nhiều việc phải hoàn thành.',
@@ -397,13 +412,14 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'work-life-balance',
         phrase: 'work-life balance',
+        ipa: '/ˌwɜːrk ˈlaɪf ˌbæləns/',
         type: 'collocation',
         pos: 'noun',
         short: 'cân bằng công việc và cuộc sống',
         words: [
-          { word: 'work', pos: 'noun', vi: 'công việc' },
-          { word: 'life', pos: 'noun', vi: 'cuộc sống' },
-          { word: 'balance', pos: 'noun', vi: 'sự cân bằng' },
+          { word: 'work', ipa: '/wɜːrk/', pos: 'noun', vi: 'công việc' },
+          { word: 'life', ipa: '/laɪf/', pos: 'noun', vi: 'cuộc sống' },
+          { word: 'balance', ipa: '/ˈbæləns/', pos: 'noun', vi: 'sự cân bằng' },
         ],
         meaning: {
           vi: 'Sự cân bằng lành mạnh giữa công việc và đời sống cá nhân.',
@@ -415,12 +431,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'meet-a-deadline',
         phrase: 'meet a deadline',
+        ipa: '/ˌmiːt ə ˈdedlaɪn/',
         type: 'collocation',
         pos: 'verb',
         short: 'kịp hạn chót',
         words: [
-          { word: 'meet', pos: 'verb', vi: 'đáp ứng, kịp' },
-          { word: 'deadline', pos: 'noun', vi: 'hạn chót' },
+          { word: 'meet', ipa: '/miːt/', pos: 'verb', vi: 'đáp ứng, kịp' },
+          { word: 'deadline', ipa: '/ˈdedlaɪn/', pos: 'noun', vi: 'hạn chót' },
         ],
         meaning: {
           vi: 'Hoàn thành công việc đúng thời hạn.',
@@ -432,13 +449,14 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'gain-valuable-experience',
         phrase: 'gain valuable experience',
+        ipa: '/ˌɡeɪn ˌvæljuəbl ɪkˈspɪriəns/',
         type: 'collocation',
         pos: 'verb',
         short: 'tích luỹ kinh nghiệm quý báu',
         words: [
-          { word: 'gain', pos: 'verb', vi: 'đạt được, tích luỹ' },
-          { word: 'valuable', pos: 'adj', vi: 'quý giá' },
-          { word: 'experience', pos: 'noun', vi: 'kinh nghiệm' },
+          { word: 'gain', ipa: '/ɡeɪn/', pos: 'verb', vi: 'đạt được, tích luỹ' },
+          { word: 'valuable', ipa: '/ˈvæljuəbl/', pos: 'adj', vi: 'quý giá' },
+          { word: 'experience', ipa: '/ɪkˈspɪriəns/', pos: 'noun', vi: 'kinh nghiệm' },
         ],
         meaning: {
           vi: 'Tích luỹ được kinh nghiệm, kỹ năng quý báu từ công việc.',
@@ -450,12 +468,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'job-security',
         phrase: 'job security',
+        ipa: '/ˌdʒɑːb sɪˈkjʊrəti/',
         type: 'collocation',
         pos: 'noun',
         short: 'sự ổn định công việc',
         words: [
-          { word: 'job', pos: 'noun', vi: 'công việc' },
-          { word: 'security', pos: 'noun', vi: 'sự an toàn, ổn định' },
+          { word: 'job', ipa: '/dʒɑːb/', pos: 'noun', vi: 'công việc' },
+          { word: 'security', ipa: '/sɪˈkjʊrəti/', pos: 'noun', vi: 'sự an toàn, ổn định' },
         ],
         meaning: {
           vi: 'Sự ổn định của công việc: khả năng giữ được việc lâu dài.',
@@ -467,12 +486,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'take-on-responsibility',
         phrase: 'take on responsibility',
+        ipa: '/ˌteɪk ˈɑːn rɪˌspɑːnsəˈbɪləti/',
         type: 'phrase',
         pos: 'verb',
         short: 'đảm nhận trách nhiệm',
         words: [
-          { word: 'take on', pos: 'verb', vi: 'đảm nhận, nhận làm' },
-          { word: 'responsibility', pos: 'noun', vi: 'trách nhiệm' },
+          { word: 'take on', ipa: '/ˌteɪk ˈɑːn/', pos: 'verb', vi: 'đảm nhận, nhận làm' },
+          { word: 'responsibility', ipa: '/rɪˌspɑːnsəˈbɪləti/', pos: 'noun', vi: 'trách nhiệm' },
         ],
         meaning: {
           vi: 'Nhận lấy, gánh vác trách nhiệm cho một việc hay một vai trò.',
@@ -484,12 +504,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'rewarding-career',
         phrase: 'a rewarding career',
+        ipa: '/ə rɪˌwɔːrdɪŋ kəˈrɪr/',
         type: 'collocation',
         pos: 'noun',
         short: 'sự nghiệp đáng giá, nhiều ý nghĩa',
         words: [
-          { word: 'rewarding', pos: 'adj', vi: 'đáng làm, mang lại sự thoả mãn' },
-          { word: 'career', pos: 'noun', vi: 'sự nghiệp' },
+          { word: 'rewarding', ipa: '/rɪˈwɔːrdɪŋ/', pos: 'adj', vi: 'đáng làm, mang lại sự thoả mãn' },
+          { word: 'career', ipa: '/kəˈrɪr/', pos: 'noun', vi: 'sự nghiệp' },
         ],
         meaning: {
           vi: 'Một sự nghiệp đáng giá, mang lại cảm giác thoả mãn và ý nghĩa.',
@@ -501,12 +522,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'work-remotely',
         phrase: 'work remotely',
+        ipa: '/ˌwɜːrk rɪˈmoʊtli/',
         type: 'collocation',
         pos: 'verb',
         short: 'làm việc từ xa',
         words: [
-          { word: 'work', pos: 'verb', vi: 'làm việc' },
-          { word: 'remotely', pos: 'adv', vi: 'từ xa' },
+          { word: 'work', ipa: '/wɜːrk/', pos: 'verb', vi: 'làm việc' },
+          { word: 'remotely', ipa: '/rɪˈmoʊtli/', pos: 'adv', vi: 'từ xa' },
         ],
         meaning: {
           vi: 'Làm việc từ xa: ở nhà hoặc nơi khác thay vì lên văn phòng.',
@@ -518,12 +540,13 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'career-prospects',
         phrase: 'career prospects',
+        ipa: '/kəˌrɪr ˈprɑːspekts/',
         type: 'collocation',
         pos: 'noun',
         short: 'triển vọng nghề nghiệp',
         words: [
-          { word: 'career', pos: 'noun', vi: 'sự nghiệp' },
-          { word: 'prospect', pos: 'noun', vi: 'triển vọng' },
+          { word: 'career', ipa: '/kəˈrɪr/', pos: 'noun', vi: 'sự nghiệp' },
+          { word: 'prospect', ipa: '/ˈprɑːspekt/', pos: 'noun', vi: 'triển vọng' },
         ],
         meaning: {
           vi: 'Triển vọng nghề nghiệp: những cơ hội mà một công việc có thể mang lại sau này.',
@@ -535,11 +558,12 @@ export const SPEAKING_TOPICS: readonly SpeakingTopic[] = [
       {
         id: 'burn-out',
         phrase: 'burn out',
+        ipa: '/ˌbɜːrn ˈaʊt/',
         type: 'phrasalVerb',
         pos: 'verb',
         short: 'kiệt sức (vì làm việc quá sức)',
         words: [
-          { word: 'burn out', pos: 'verb', vi: 'kiệt sức' },
+          { word: 'burn out', ipa: '/ˌbɜːrn ˈaʊt/', pos: 'verb', vi: 'kiệt sức' },
         ],
         meaning: {
           vi: 'Kiệt sức vì làm việc căng thẳng trong thời gian dài.',

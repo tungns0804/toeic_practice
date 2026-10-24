@@ -84,9 +84,11 @@
                     {{ t('speaking.drill.wrong') }} “{{ item.phrase.phrase }}”
                   }
                 </strong>
-                <span>
+                <span class="drill-answer">
                   <strong lang="en">{{ item.phrase.phrase }}</strong>
+                  <span class="ipa">{{ item.phrase.ipa }}</span>
                   ({{ posAbbr[item.phrase.pos] }}): {{ item.phrase.short }}
+                  <app-speak [text]="item.phrase.phrase" />
                 </span>
                 <span class="small">{{ item.phrase.meaning[language()] }}</span>
                 @if (item.kind === 'meaning') {
@@ -130,6 +132,7 @@
               @for (phrase of missedPhrases(); track phrase.id) {
                 <li>
                   <strong lang="en">{{ phrase.phrase }}</strong>
+                  <span class="ipa faint"> {{ phrase.ipa }}</span>
                   <span class="muted"> ({{ posAbbr[phrase.pos] }}) — {{ phrase.short }}</span>
                 </li>
               }

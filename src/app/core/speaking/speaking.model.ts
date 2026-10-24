@@ -39,6 +39,8 @@ export const POS_KEY: Record<SpeakingPos, MessageKey> = {
 /** Một từ trong cụm, kèm từ loại và nghĩa tiếng Việt. */
 export interface SpeakingWord {
   readonly word: string;
+  /** Phiên âm IPA giọng Mỹ, có hai dấu gạch chéo: /ˈskedʒuːl/. */
+  readonly ipa: string;
   readonly pos: SpeakingPos;
   readonly vi: string;
 }
@@ -47,6 +49,8 @@ export interface SpeakingPhrase {
   /** Duy nhất trong chủ đề; dùng làm khoá lưu "câu sai" của phần luyện từ. */
   readonly id: string;
   readonly phrase: string;
+  /** Phiên âm IPA của cả cụm, giọng Mỹ như kho từ vựng của app. */
+  readonly ipa: string;
   /** Loại cụm (collocation, idiom…) — theo sách. */
   readonly type: SpeakingPhraseType;
   /** Từ loại của CẢ cụm khi dùng trong câu: cụm danh từ hay cụm động từ. */

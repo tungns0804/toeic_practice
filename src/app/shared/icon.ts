@@ -16,7 +16,8 @@ export type IconName =
   | 'sun'
   | 'moon'
   | 'candle'
-  | 'mic';
+  | 'mic'
+  | 'volume';
 
 /**
  * Biểu tượng nét mảnh, vẽ bằng SVG nội tuyến.
@@ -110,6 +111,11 @@ export type IconName =
           <rect x="9" y="2.5" width="6" height="12" rx="3" />
           <path d="M5.5 11a6.5 6.5 0 0 0 13 0" />
           <path d="M12 17.5v4" />
+        }
+        @case ('volume') {
+          <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" />
+          <path d="M15.5 9a4 4 0 0 1 0 6" />
+          <path d="M18 6.5a7.5 7.5 0 0 1 0 11" />
         }
         @case ('candle') {
           <path d="M12 2.5c2 2.4 3 4.1 3 5.6a3 3 0 0 1-6 0c0-1.5 1-3.2 3-5.6z" />
